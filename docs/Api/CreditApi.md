@@ -1,0 +1,223 @@
+# Billwerk\CreditApi
+
+All URIs are relative to *https://api.reepay.com/api.reepay.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**cancelCredit**](CreditApi.md#cancelcredit) | **POST** /v1/credit/{handle}/cancel | Cancel credit
+[**createCreditJson**](CreditApi.md#createcreditjson) | **POST** /v1/credit | Create credit
+[**getCredit**](CreditApi.md#getcredit) | **GET** /v1/credit/{handle} | Get credit
+[**getCredits**](CreditApi.md#getcredits) | **GET** /v1/credit/subscription/{handle} | Get credits for subscription
+
+# **cancelCredit**
+> \Billwerk\Model\Credit cancelCredit($handle)
+
+Cancel credit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Billwerk\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Billwerk\API\CreditApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Credit handle
+
+try {
+    $result = $apiInstance->cancelCredit($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditApi->cancelCredit: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Credit handle |
+
+### Return type
+
+[**\Billwerk\Model\Credit**](../Model/Credit.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createCreditJson**
+> \Billwerk\Model\Credit createCreditJson($body)
+
+Create credit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Billwerk\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Billwerk\API\CreditApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Billwerk\Model\CreateCredit(); // \Billwerk\Model\CreateCredit | 
+
+try {
+    $result = $apiInstance->createCreditJson($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditApi->createCreditJson: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Billwerk\Model\CreateCredit**](../Model/CreateCredit.md)|  |
+
+### Return type
+
+[**\Billwerk\Model\Credit**](../Model/Credit.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCredit**
+> \Billwerk\Model\Credit getCredit($handle)
+
+Get credit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Billwerk\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Billwerk\API\CreditApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Credit handle
+
+try {
+    $result = $apiInstance->getCredit($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditApi->getCredit: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Credit handle |
+
+### Return type
+
+[**\Billwerk\Model\Credit**](../Model/Credit.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCredits**
+> \Billwerk\Model\Credit[] getCredits($handle)
+
+Get credits for subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Billwerk\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Billwerk\API\CreditApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Subscription handle
+
+try {
+    $result = $apiInstance->getCredits($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditApi->getCredits: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Subscription handle |
+
+### Return type
+
+[**\Billwerk\Model\Credit[]**](../Model/Credit.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
