@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/Billwerk/Billwerk API.git"
+      "url": "https://github.com/waitlyapp/billwerk-php-api.git"
     }
   ],
   "require": {
-    "Billwerk/Billwerk API": "*@dev"
+    "waitlyapp/billwerk-php-api": "*@dev"
   }
 }
 ```

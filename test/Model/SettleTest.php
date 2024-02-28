@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Billwerk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Billwerk;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Optional settle to perform after creation using a different payment method. If the settle fails the status will be &#x60;failed&#x60; if instant or &#x60;pending&#x60; if not instant. The &#x60;due&#x60; date will be ignored for subscription invoice create.
- * @package     Swagger\Client
+ * @package     Billwerk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

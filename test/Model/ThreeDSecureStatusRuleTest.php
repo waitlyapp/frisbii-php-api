@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Billwerk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Billwerk;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Rule matching 3D Secure status &#x60;Y&#x60; (fully authenticated) or &#x60;A&#x60; (attempted)
- * @package     Swagger\Client
+ * @package     Billwerk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

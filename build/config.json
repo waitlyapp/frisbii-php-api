@@ -1,0 +1,9 @@
+{
+	"name": "hello",
+    "modelPackage" : "Model",
+    "apiPackage" : "API",
+	"gitUserId" : "Billwerk",
+	"composerProjectName" : "billwerk-php-api",
+	"composerVendorName": "waitlyapp",
+	"invokerPackage" : "Billwerk"
+}

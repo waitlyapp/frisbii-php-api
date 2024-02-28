@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Billwerk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Billwerk;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description TemplateModel
- * @package     Swagger\Client
+ * @package     Billwerk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -74,41 +74,6 @@ class TemplateModelTest extends TestCase
      * Test "TemplateModel"
      */
     public function testTemplateModel()
-    {
-    }
-
-    /**
-     * Test attribute "card"
-     */
-    public function testPropertyCard()
-    {
-    }
-
-    /**
-     * Test attribute "user"
-     */
-    public function testPropertyUser()
-    {
-    }
-
-    /**
-     * Test attribute "subscription"
-     */
-    public function testPropertySubscription()
-    {
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "account"
-     */
-    public function testPropertyAccount()
     {
     }
 
@@ -176,6 +141,34 @@ class TemplateModelTest extends TestCase
     }
 
     /**
+     * Test attribute "subscription"
+     */
+    public function testPropertySubscription()
+    {
+    }
+
+    /**
+     * Test attribute "user"
+     */
+    public function testPropertyUser()
+    {
+    }
+
+    /**
+     * Test attribute "customer"
+     */
+    public function testPropertyCustomer()
+    {
+    }
+
+    /**
+     * Test attribute "account"
+     */
+    public function testPropertyAccount()
+    {
+    }
+
+    /**
      * Test attribute "refund"
      */
     public function testPropertyRefund()
@@ -186,6 +179,13 @@ class TemplateModelTest extends TestCase
      * Test attribute "plan"
      */
     public function testPropertyPlan()
+    {
+    }
+
+    /**
+     * Test attribute "card"
+     */
+    public function testPropertyCard()
     {
     }
 

@@ -56,22 +56,22 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'invoice' => 'map[string,object]',
+        'mps' => 'map[string,object]',
+        'test' => 'bool',
+        'refund' => 'map[string,object]',
+        'plan' => 'map[string,object]',
         'subscription_changed' => 'map[string,object]',
         'plan_changed' => 'map[string,object]',
         'compensation' => 'map[string,object]',
         'dunning' => 'map[string,object]',
         'webhook_alert' => 'map[string,object]',
         'user_account' => 'map[string,object]',
-        'mps' => 'map[string,object]',
-        'test' => 'bool',
-        'customer' => 'map[string,object]',
-        'account' => 'map[string,object]',
         'card' => 'map[string,object]',
         'subscription' => 'map[string,object]',
-        'refund' => 'map[string,object]',
-        'plan' => 'map[string,object]',
         'user' => 'map[string,object]',
-        'invoice' => 'map[string,object]',
+        'customer' => 'map[string,object]',
+        'account' => 'map[string,object]',
         'empty' => 'bool'
     ];
 
@@ -81,22 +81,22 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'invoice' => null,
+        'mps' => null,
+        'test' => null,
+        'refund' => null,
+        'plan' => null,
         'subscription_changed' => null,
         'plan_changed' => null,
         'compensation' => null,
         'dunning' => null,
         'webhook_alert' => null,
         'user_account' => null,
-        'mps' => null,
-        'test' => null,
-        'customer' => null,
-        'account' => null,
         'card' => null,
         'subscription' => null,
-        'refund' => null,
-        'plan' => null,
         'user' => null,
-        'invoice' => null,
+        'customer' => null,
+        'account' => null,
         'empty' => null
     ];
 
@@ -127,22 +127,22 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'invoice' => 'invoice',
+        'mps' => 'mps',
+        'test' => 'test',
+        'refund' => 'refund',
+        'plan' => 'plan',
         'subscription_changed' => 'subscriptionChanged',
         'plan_changed' => 'planChanged',
         'compensation' => 'compensation',
         'dunning' => 'dunning',
         'webhook_alert' => 'webhookAlert',
         'user_account' => 'userAccount',
-        'mps' => 'mps',
-        'test' => 'test',
-        'customer' => 'customer',
-        'account' => 'account',
         'card' => 'card',
         'subscription' => 'subscription',
-        'refund' => 'refund',
-        'plan' => 'plan',
         'user' => 'user',
-        'invoice' => 'invoice',
+        'customer' => 'customer',
+        'account' => 'account',
         'empty' => 'empty'
     ];
 
@@ -152,22 +152,22 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'invoice' => 'setInvoice',
+        'mps' => 'setMps',
+        'test' => 'setTest',
+        'refund' => 'setRefund',
+        'plan' => 'setPlan',
         'subscription_changed' => 'setSubscriptionChanged',
         'plan_changed' => 'setPlanChanged',
         'compensation' => 'setCompensation',
         'dunning' => 'setDunning',
         'webhook_alert' => 'setWebhookAlert',
         'user_account' => 'setUserAccount',
-        'mps' => 'setMps',
-        'test' => 'setTest',
-        'customer' => 'setCustomer',
-        'account' => 'setAccount',
         'card' => 'setCard',
         'subscription' => 'setSubscription',
-        'refund' => 'setRefund',
-        'plan' => 'setPlan',
         'user' => 'setUser',
-        'invoice' => 'setInvoice',
+        'customer' => 'setCustomer',
+        'account' => 'setAccount',
         'empty' => 'setEmpty'
     ];
 
@@ -177,22 +177,22 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'invoice' => 'getInvoice',
+        'mps' => 'getMps',
+        'test' => 'getTest',
+        'refund' => 'getRefund',
+        'plan' => 'getPlan',
         'subscription_changed' => 'getSubscriptionChanged',
         'plan_changed' => 'getPlanChanged',
         'compensation' => 'getCompensation',
         'dunning' => 'getDunning',
         'webhook_alert' => 'getWebhookAlert',
         'user_account' => 'getUserAccount',
-        'mps' => 'getMps',
-        'test' => 'getTest',
-        'customer' => 'getCustomer',
-        'account' => 'getAccount',
         'card' => 'getCard',
         'subscription' => 'getSubscription',
-        'refund' => 'getRefund',
-        'plan' => 'getPlan',
         'user' => 'getUser',
-        'invoice' => 'getInvoice',
+        'customer' => 'getCustomer',
+        'account' => 'getAccount',
         'empty' => 'getEmpty'
     ];
 
@@ -254,22 +254,22 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['invoice'] = isset($data['invoice']) ? $data['invoice'] : null;
+        $this->container['mps'] = isset($data['mps']) ? $data['mps'] : null;
+        $this->container['test'] = isset($data['test']) ? $data['test'] : null;
+        $this->container['refund'] = isset($data['refund']) ? $data['refund'] : null;
+        $this->container['plan'] = isset($data['plan']) ? $data['plan'] : null;
         $this->container['subscription_changed'] = isset($data['subscription_changed']) ? $data['subscription_changed'] : null;
         $this->container['plan_changed'] = isset($data['plan_changed']) ? $data['plan_changed'] : null;
         $this->container['compensation'] = isset($data['compensation']) ? $data['compensation'] : null;
         $this->container['dunning'] = isset($data['dunning']) ? $data['dunning'] : null;
         $this->container['webhook_alert'] = isset($data['webhook_alert']) ? $data['webhook_alert'] : null;
         $this->container['user_account'] = isset($data['user_account']) ? $data['user_account'] : null;
-        $this->container['mps'] = isset($data['mps']) ? $data['mps'] : null;
-        $this->container['test'] = isset($data['test']) ? $data['test'] : null;
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['account'] = isset($data['account']) ? $data['account'] : null;
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
         $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
-        $this->container['refund'] = isset($data['refund']) ? $data['refund'] : null;
-        $this->container['plan'] = isset($data['plan']) ? $data['plan'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['invoice'] = isset($data['invoice']) ? $data['invoice'] : null;
+        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['account'] = isset($data['account']) ? $data['account'] : null;
         $this->container['empty'] = isset($data['empty']) ? $data['empty'] : null;
     }
 
@@ -296,6 +296,126 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets invoice
+     *
+     * @return map[string,object]
+     */
+    public function getInvoice()
+    {
+        return $this->container['invoice'];
+    }
+
+    /**
+     * Sets invoice
+     *
+     * @param map[string,object] $invoice invoice
+     *
+     * @return $this
+     */
+    public function setInvoice($invoice)
+    {
+        $this->container['invoice'] = $invoice;
+
+        return $this;
+    }
+
+    /**
+     * Gets mps
+     *
+     * @return map[string,object]
+     */
+    public function getMps()
+    {
+        return $this->container['mps'];
+    }
+
+    /**
+     * Sets mps
+     *
+     * @param map[string,object] $mps mps
+     *
+     * @return $this
+     */
+    public function setMps($mps)
+    {
+        $this->container['mps'] = $mps;
+
+        return $this;
+    }
+
+    /**
+     * Gets test
+     *
+     * @return bool
+     */
+    public function getTest()
+    {
+        return $this->container['test'];
+    }
+
+    /**
+     * Sets test
+     *
+     * @param bool $test test
+     *
+     * @return $this
+     */
+    public function setTest($test)
+    {
+        $this->container['test'] = $test;
+
+        return $this;
+    }
+
+    /**
+     * Gets refund
+     *
+     * @return map[string,object]
+     */
+    public function getRefund()
+    {
+        return $this->container['refund'];
+    }
+
+    /**
+     * Sets refund
+     *
+     * @param map[string,object] $refund refund
+     *
+     * @return $this
+     */
+    public function setRefund($refund)
+    {
+        $this->container['refund'] = $refund;
+
+        return $this;
+    }
+
+    /**
+     * Gets plan
+     *
+     * @return map[string,object]
+     */
+    public function getPlan()
+    {
+        return $this->container['plan'];
+    }
+
+    /**
+     * Sets plan
+     *
+     * @param map[string,object] $plan plan
+     *
+     * @return $this
+     */
+    public function setPlan($plan)
+    {
+        $this->container['plan'] = $plan;
+
+        return $this;
+    }
 
     /**
      * Gets subscription_changed
@@ -442,102 +562,6 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets mps
-     *
-     * @return map[string,object]
-     */
-    public function getMps()
-    {
-        return $this->container['mps'];
-    }
-
-    /**
-     * Sets mps
-     *
-     * @param map[string,object] $mps mps
-     *
-     * @return $this
-     */
-    public function setMps($mps)
-    {
-        $this->container['mps'] = $mps;
-
-        return $this;
-    }
-
-    /**
-     * Gets test
-     *
-     * @return bool
-     */
-    public function getTest()
-    {
-        return $this->container['test'];
-    }
-
-    /**
-     * Sets test
-     *
-     * @param bool $test test
-     *
-     * @return $this
-     */
-    public function setTest($test)
-    {
-        $this->container['test'] = $test;
-
-        return $this;
-    }
-
-    /**
-     * Gets customer
-     *
-     * @return map[string,object]
-     */
-    public function getCustomer()
-    {
-        return $this->container['customer'];
-    }
-
-    /**
-     * Sets customer
-     *
-     * @param map[string,object] $customer customer
-     *
-     * @return $this
-     */
-    public function setCustomer($customer)
-    {
-        $this->container['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets account
-     *
-     * @return map[string,object]
-     */
-    public function getAccount()
-    {
-        return $this->container['account'];
-    }
-
-    /**
-     * Sets account
-     *
-     * @param map[string,object] $account account
-     *
-     * @return $this
-     */
-    public function setAccount($account)
-    {
-        $this->container['account'] = $account;
-
-        return $this;
-    }
-
-    /**
      * Gets card
      *
      * @return map[string,object]
@@ -586,54 +610,6 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets refund
-     *
-     * @return map[string,object]
-     */
-    public function getRefund()
-    {
-        return $this->container['refund'];
-    }
-
-    /**
-     * Sets refund
-     *
-     * @param map[string,object] $refund refund
-     *
-     * @return $this
-     */
-    public function setRefund($refund)
-    {
-        $this->container['refund'] = $refund;
-
-        return $this;
-    }
-
-    /**
-     * Gets plan
-     *
-     * @return map[string,object]
-     */
-    public function getPlan()
-    {
-        return $this->container['plan'];
-    }
-
-    /**
-     * Sets plan
-     *
-     * @param map[string,object] $plan plan
-     *
-     * @return $this
-     */
-    public function setPlan($plan)
-    {
-        $this->container['plan'] = $plan;
-
-        return $this;
-    }
-
-    /**
      * Gets user
      *
      * @return map[string,object]
@@ -658,25 +634,49 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets invoice
+     * Gets customer
      *
      * @return map[string,object]
      */
-    public function getInvoice()
+    public function getCustomer()
     {
-        return $this->container['invoice'];
+        return $this->container['customer'];
     }
 
     /**
-     * Sets invoice
+     * Sets customer
      *
-     * @param map[string,object] $invoice invoice
+     * @param map[string,object] $customer customer
      *
      * @return $this
      */
-    public function setInvoice($invoice)
+    public function setCustomer($customer)
     {
-        $this->container['invoice'] = $invoice;
+        $this->container['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets account
+     *
+     * @return map[string,object]
+     */
+    public function getAccount()
+    {
+        return $this->container['account'];
+    }
+
+    /**
+     * Sets account
+     *
+     * @param map[string,object] $account account
+     *
+     * @return $this
+     */
+    public function setAccount($account)
+    {
+        $this->container['account'] = $account;
 
         return $this;
     }
