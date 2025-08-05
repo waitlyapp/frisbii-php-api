@@ -1,6 +1,6 @@
-# Billwerk\CustomerApi
+# Frisbii\CustomerApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,15 +8,15 @@ Method | HTTP request | Description
 [**createCustomerJson**](CustomerApi.md#createcustomerjson) | **POST** /v1/customer | Create customer
 [**createCustomerNoteJson**](CustomerApi.md#createcustomernotejson) | **POST** /v1/customer/{handle}/note | Create customer note
 [**deleteCustomer**](CustomerApi.md#deletecustomer) | **DELETE** /v1/customer/{handle} | Delete customer
-[**deleteMetadata1**](CustomerApi.md#deletemetadata1) | **DELETE** /v1/customer/{handle}/metadata | Delete metadata
+[**deleteMetadata2**](CustomerApi.md#deletemetadata2) | **DELETE** /v1/customer/{handle}/metadata | Delete metadata
 [**getCustomer**](CustomerApi.md#getcustomer) | **GET** /v1/customer/{handle} | Get customer
 [**getCustomerNotes**](CustomerApi.md#getcustomernotes) | **GET** /v1/customer/{handle}/note | Get customer notes
-[**getMetadata1**](CustomerApi.md#getmetadata1) | **GET** /v1/customer/{handle}/metadata | Get metadata
+[**getMetadata2**](CustomerApi.md#getmetadata2) | **GET** /v1/customer/{handle}/metadata | Get metadata
 [**updateCustomerJson**](CustomerApi.md#updatecustomerjson) | **PUT** /v1/customer/{handle} | Update customer
-[**updateMetadata1**](CustomerApi.md#updatemetadata1) | **PUT** /v1/customer/{handle}/metadata | Create or update metadata
+[**updateMetadata2**](CustomerApi.md#updatemetadata2) | **PUT** /v1/customer/{handle}/metadata | Create or update metadata
 
 # **createCustomerInvoice**
-> \Billwerk\Model\Invoice createCustomerInvoice($body, $handle)
+> \Frisbii\lib/Model\Invoice createCustomerInvoice($body, $handle)
 
 Create invoice for customer
 
@@ -25,18 +25,18 @@ Create invoice for customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateCustomerInvoice(); // \Billwerk\Model\CreateCustomerInvoice | 
+$body = new \Frisbii\lib/Model\CreateCustomerInvoice(); // \Frisbii\lib/Model\CreateCustomerInvoice | 
 $handle = "handle_example"; // string | Customer handle
 
 try {
@@ -52,12 +52,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateCustomerInvoice**](../Model/CreateCustomerInvoice.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateCustomerInvoice**](../Model/CreateCustomerInvoice.md)|  |
  **handle** | **string**| Customer handle |
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCustomerJson**
-> \Billwerk\Model\Customer createCustomerJson($body)
+> \Frisbii\lib/Model\Customer createCustomerJson($body)
 
 Create customer
 
@@ -80,18 +80,18 @@ Create customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateCustomer(); // \Billwerk\Model\CreateCustomer | 
+$body = new \Frisbii\lib/Model\CreateCustomer(); // \Frisbii\lib/Model\CreateCustomer | 
 
 try {
     $result = $apiInstance->createCustomerJson($body);
@@ -106,11 +106,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateCustomer**](../Model/CreateCustomer.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateCustomer**](../Model/CreateCustomer.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCustomerNoteJson**
-> \Billwerk\Model\CustomerNote createCustomerNoteJson($body, $handle)
+> \Frisbii\lib/Model\CustomerNote createCustomerNoteJson($body, $handle)
 
 Create customer note
 
@@ -133,18 +133,18 @@ Create customer note
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateCustomerNote(); // \Billwerk\Model\CreateCustomerNote | 
+$body = new \Frisbii\lib/Model\CreateCustomerNote(); // \Frisbii\lib/Model\CreateCustomerNote | 
 $handle = "handle_example"; // string | 
 
 try {
@@ -160,12 +160,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateCustomerNote**](../Model/CreateCustomerNote.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateCustomerNote**](../Model/CreateCustomerNote.md)|  |
  **handle** | **string**|  |
 
 ### Return type
 
-[**\Billwerk\Model\CustomerNote**](../Model/CustomerNote.md)
+[**\Frisbii\lib/Model\CustomerNote**](../Model/CustomerNote.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCustomer**
-> \Billwerk\Model\Customer deleteCustomer($handle)
+> \Frisbii\lib/Model\Customer deleteCustomer($handle)
 
 Delete customer
 
@@ -188,12 +188,12 @@ Delete customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -231,8 +231,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteMetadata1**
-> deleteMetadata1($handle)
+# **deleteMetadata2**
+> deleteMetadata2($handle)
 
 Delete metadata
 
@@ -241,12 +241,12 @@ Delete metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,9 +255,9 @@ $apiInstance = new Billwerk\API\CustomerApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $apiInstance->deleteMetadata1($handle);
+    $apiInstance->deleteMetadata2($handle);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->deleteMetadata1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->deleteMetadata2: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -284,7 +284,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomer**
-> \Billwerk\Model\Customer getCustomer($handle)
+> \Frisbii\lib/Model\Customer getCustomer($handle)
 
 Get customer
 
@@ -293,12 +293,12 @@ Get customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerNotes**
-> \Billwerk\Model\CustomerNote[] getCustomerNotes($handle)
+> \Frisbii\lib/Model\CustomerNote[] getCustomerNotes($handle)
 
 Get customer notes
 
@@ -346,12 +346,12 @@ Get customer notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\CustomerNote[]**](../Model/CustomerNote.md)
+[**\Frisbii\lib/Model\CustomerNote[]**](../Model/CustomerNote.md)
 
 ### Authorization
 
@@ -389,8 +389,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getMetadata1**
-> map[string,object] getMetadata1($handle)
+# **getMetadata2**
+> map[string,object] getMetadata2($handle)
 
 Get metadata
 
@@ -399,12 +399,12 @@ Get metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -413,10 +413,10 @@ $apiInstance = new Billwerk\API\CustomerApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->getMetadata1($handle);
+    $result = $apiInstance->getMetadata2($handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->getMetadata1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->getMetadata2: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCustomerJson**
-> \Billwerk\Model\Customer updateCustomerJson($body, $handle)
+> \Frisbii\lib/Model\Customer updateCustomerJson($body, $handle)
 
 Update customer
 
@@ -452,18 +452,18 @@ Update customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateCustomer(); // \Billwerk\Model\UpdateCustomer | 
+$body = new \Frisbii\lib/Model\UpdateCustomer(); // \Frisbii\lib/Model\UpdateCustomer | 
 $handle = "handle_example"; // string | Customer handle
 
 try {
@@ -479,12 +479,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateCustomer**](../Model/UpdateCustomer.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateCustomer**](../Model/UpdateCustomer.md)|  |
  **handle** | **string**| Customer handle |
 
 ### Return type
 
-[**\Billwerk\Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -497,8 +497,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateMetadata1**
-> map[string,object] updateMetadata1($body, $handle)
+# **updateMetadata2**
+> map[string,object] updateMetadata2($body, $handle)
 
 Create or update metadata
 
@@ -507,25 +507,25 @@ Create or update metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CustomerApi(
+$apiInstance = new Frisbii\lib/Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->updateMetadata1($body, $handle);
+    $result = $apiInstance->updateMetadata2($body, $handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->updateMetadata1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->updateMetadata2: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

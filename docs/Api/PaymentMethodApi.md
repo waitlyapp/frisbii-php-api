@@ -1,26 +1,32 @@
-# Billwerk\PaymentMethodApi
+# Frisbii\PaymentMethodApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activatePaymentMethodV2**](PaymentMethodApi.md#activatepaymentmethodv2) | **POST** /v1/payment_method/{id}/activate | Activate payment method
+[**addOfflinePaymentMethod**](PaymentMethodApi.md#addofflinepaymentmethod) | **POST** /v1/payment_method/offline | Add offline payment method
 [**addPaymentMethodV2**](PaymentMethodApi.md#addpaymentmethodv2) | **POST** /v1/payment_method | Add payment method
 [**cardVerification**](PaymentMethodApi.md#cardverification) | **POST** /v1/payment_method/{id}/card/verify | Verify card validity
 [**copyCardPaymentMethodV2**](PaymentMethodApi.md#copycardpaymentmethodv2) | **POST** /v1/payment_method/{id}/card_copy | Copy card to customer
 [**deletePaymentMethodV2**](PaymentMethodApi.md#deletepaymentmethodv2) | **DELETE** /v1/payment_method/{id} | Delete payment method
 [**enrollCardPaymentMethodV2**](PaymentMethodApi.md#enrollcardpaymentmethodv2) | **POST** /v1/payment_method/{id}/card_enroll | Enroll card to EMV Token
+[**getCardBinInfo**](PaymentMethodApi.md#getcardbininfo) | **GET** /v1/payment_method/{id}/card_bin_info | Get latest bank identification number information for stored credit card
 [**getCardTokenDetails**](PaymentMethodApi.md#getcardtokendetails) | **GET** /v1/payment_method/card_token/{tokenid}/details | Get card token details
 [**getPaymentMethodDetailsV2**](PaymentMethodApi.md#getpaymentmethoddetailsv2) | **GET** /v1/payment_method/{id}/details | Get payment method details
 [**getPaymentMethodV2**](PaymentMethodApi.md#getpaymentmethodv2) | **GET** /v1/payment_method/{id} | Get payment method
 [**importMpsPaymentMethod**](PaymentMethodApi.md#importmpspaymentmethod) | **POST** /v1/payment_method/import_mps | Import MobilePay Subscription payment method
+[**importPaypalPaymentMethod**](PaymentMethodApi.md#importpaypalpaymentmethod) | **POST** /v1/payment_method/import_paypal | Import PayPal payment method
+[**importSepaEbicsPaymentMethod**](PaymentMethodApi.md#importsepaebicspaymentmethod) | **POST** /v1/payment_method/import_sepa_ebics | Import Sepa Ebics payment method
+[**importSepaPaymentMethod**](PaymentMethodApi.md#importsepapaymentmethod) | **POST** /v1/payment_method/import_sepa | Import Sepa payment method
+[**importTwintPaymentMethod**](PaymentMethodApi.md#importtwintpaymentmethod) | **POST** /v1/payment_method/import_twint | Import Twint payment method
 [**importVippsRecurringPaymentMethod**](PaymentMethodApi.md#importvippsrecurringpaymentmethod) | **POST** /v1/payment_method/import_vipps_recurring | Import Vipps Recurring payment method
 [**inactivatePaymentMethodV2**](PaymentMethodApi.md#inactivatepaymentmethodv2) | **POST** /v1/payment_method/{id}/inactivate | Inactivate payment method
 [**moveCardPaymentMethodV2**](PaymentMethodApi.md#movecardpaymentmethodv2) | **POST** /v1/payment_method/{id}/card_move | Move card to other agreement
 [**reactivateCardV2**](PaymentMethodApi.md#reactivatecardv2) | **POST** /v1/payment_method/{id}/card_reactivate | Reactivate failed card
 
 # **activatePaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 activatePaymentMethodV2($id)
+> \Frisbii\lib/Model\PaymentMethodV2 activatePaymentMethodV2($id)
 
 Activate payment method
 
@@ -29,12 +35,12 @@ Activate payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -72,8 +78,61 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **addOfflinePaymentMethod**
+> \Frisbii\lib/Model\PaymentMethodV2 addOfflinePaymentMethod($body)
+
+Add offline payment method
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\AddOfflinePaymentMethod(); // \Frisbii\lib/Model\AddOfflinePaymentMethod | 
+
+try {
+    $result = $apiInstance->addOfflinePaymentMethod($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentMethodApi->addOfflinePaymentMethod: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\AddOfflinePaymentMethod**](../Model/AddOfflinePaymentMethod.md)|  |
+
+### Return type
+
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **addPaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 addPaymentMethodV2($body)
+> \Frisbii\lib/Model\PaymentMethodV2 addPaymentMethodV2($body)
 
 Add payment method
 
@@ -82,18 +141,18 @@ Add payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\AddPaymentMethod(); // \Billwerk\Model\AddPaymentMethod | 
+$body = new \Frisbii\lib/Model\AddPaymentMethod(); // \Frisbii\lib/Model\AddPaymentMethod | 
 
 try {
     $result = $apiInstance->addPaymentMethodV2($body);
@@ -108,11 +167,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\AddPaymentMethod**](../Model/AddPaymentMethod.md)|  |
+ **body** | [**\Frisbii\lib/Model\AddPaymentMethod**](../Model/AddPaymentMethod.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -126,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardVerification**
-> \Billwerk\Model\CardVerification cardVerification($id, $body)
+> \Frisbii\lib/Model\CardVerification cardVerification($id, $body)
 
 Verify card validity
 
@@ -135,19 +194,19 @@ Verify card validity
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = "id_example"; // string | Card id
-$body = new \Billwerk\Model\CardVerificationRequest(); // \Billwerk\Model\CardVerificationRequest | 
+$body = new \Frisbii\lib/Model\CardVerificationRequest(); // \Frisbii\lib/Model\CardVerificationRequest | 
 
 try {
     $result = $apiInstance->cardVerification($id, $body);
@@ -163,11 +222,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Card id |
- **body** | [**\Billwerk\Model\CardVerificationRequest**](../Model/CardVerificationRequest.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\CardVerificationRequest**](../Model/CardVerificationRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\CardVerification**](../Model/CardVerification.md)
+[**\Frisbii\lib/Model\CardVerification**](../Model/CardVerification.md)
 
 ### Authorization
 
@@ -181,7 +240,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **copyCardPaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 copyCardPaymentMethodV2($body, $id)
+> \Frisbii\lib/Model\PaymentMethodV2 copyCardPaymentMethodV2($body, $id)
 
 Copy card to customer
 
@@ -190,18 +249,18 @@ Copy card to customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CopyCard(); // \Billwerk\Model\CopyCard | 
+$body = new \Frisbii\lib/Model\CopyCard(); // \Frisbii\lib/Model\CopyCard | 
 $id = "id_example"; // string | Card id
 
 try {
@@ -217,12 +276,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CopyCard**](../Model/CopyCard.md)|  |
+ **body** | [**\Frisbii\lib/Model\CopyCard**](../Model/CopyCard.md)|  |
  **id** | **string**| Card id |
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -236,7 +295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 deletePaymentMethodV2($id)
+> \Frisbii\lib/Model\PaymentMethodV2 deletePaymentMethodV2($id)
 
 Delete payment method
 
@@ -245,12 +304,12 @@ Delete payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -275,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -289,7 +348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **enrollCardPaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 enrollCardPaymentMethodV2($id)
+> \Frisbii\lib/Model\PaymentMethodV2 enrollCardPaymentMethodV2($id)
 
 Enroll card to EMV Token
 
@@ -298,12 +357,12 @@ Enroll card to EMV Token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -328,7 +387,60 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCardBinInfo**
+> \Frisbii\lib/Model\BinInfo getCardBinInfo($id)
+
+Get latest bank identification number information for stored credit card
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | 
+
+try {
+    $result = $apiInstance->getCardBinInfo($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentMethodApi->getCardBinInfo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+
+### Return type
+
+[**\Frisbii\lib/Model\BinInfo**](../Model/BinInfo.md)
 
 ### Authorization
 
@@ -342,7 +454,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCardTokenDetails**
-> \Billwerk\Model\CardTokenDto getCardTokenDetails($tokenid)
+> \Frisbii\lib/Model\CardTokenDto getCardTokenDetails($tokenid)
 
 Get card token details
 
@@ -351,12 +463,12 @@ Get card token details
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -381,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\CardTokenDto**](../Model/CardTokenDto.md)
+[**\Frisbii\lib/Model\CardTokenDto**](../Model/CardTokenDto.md)
 
 ### Authorization
 
@@ -404,12 +516,12 @@ Get payment method details
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -448,7 +560,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 getPaymentMethodV2($id)
+> \Frisbii\lib/Model\PaymentMethodV2 getPaymentMethodV2($id)
 
 Get payment method
 
@@ -457,12 +569,12 @@ Get payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -487,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -501,7 +613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **importMpsPaymentMethod**
-> \Billwerk\Model\PaymentMethodV2 importMpsPaymentMethod($body)
+> \Frisbii\lib/Model\PaymentMethodV2 importMpsPaymentMethod($body)
 
 Import MobilePay Subscription payment method
 
@@ -510,18 +622,18 @@ Import MobilePay Subscription payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ImportMpsPaymentMethodRequest(); // \Billwerk\Model\ImportMpsPaymentMethodRequest | 
+$body = new \Frisbii\lib/Model\ImportMpsPaymentMethodRequest(); // \Frisbii\lib/Model\ImportMpsPaymentMethodRequest | 
 
 try {
     $result = $apiInstance->importMpsPaymentMethod($body);
@@ -536,11 +648,223 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ImportMpsPaymentMethodRequest**](../Model/ImportMpsPaymentMethodRequest.md)|  |
+ **body** | [**\Frisbii\lib/Model\ImportMpsPaymentMethodRequest**](../Model/ImportMpsPaymentMethodRequest.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **importPaypalPaymentMethod**
+> \Frisbii\lib/Model\PaymentMethodV2 importPaypalPaymentMethod($body)
+
+Import PayPal payment method
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest(); // \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest | 
+
+try {
+    $result = $apiInstance->importPaypalPaymentMethod($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentMethodApi->importPaypalPaymentMethod: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\ImportPaypalPaymentMethodRequest**](../Model/ImportPaypalPaymentMethodRequest.md)|  |
+
+### Return type
+
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **importSepaEbicsPaymentMethod**
+> \Frisbii\lib/Model\PaymentMethodV2 importSepaEbicsPaymentMethod($body)
+
+Import Sepa Ebics payment method
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto(); // \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto | 
+
+try {
+    $result = $apiInstance->importSepaEbicsPaymentMethod($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentMethodApi->importSepaEbicsPaymentMethod: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto**](../Model/ImportSepaEbicsPaymentMethodRequestDto.md)|  |
+
+### Return type
+
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **importSepaPaymentMethod**
+> \Frisbii\lib/Model\PaymentMethodV2 importSepaPaymentMethod($body)
+
+Import Sepa payment method
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto(); // \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto | 
+
+try {
+    $result = $apiInstance->importSepaPaymentMethod($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentMethodApi->importSepaPaymentMethod: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto**](../Model/ImportSepaPaymentMethodRequestDto.md)|  |
+
+### Return type
+
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **importTwintPaymentMethod**
+> \Frisbii\lib/Model\PaymentMethodV2 importTwintPaymentMethod($body)
+
+Import Twint payment method
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\ImportTwintPaymentMethodRequest(); // \Frisbii\lib/Model\ImportTwintPaymentMethodRequest | 
+
+try {
+    $result = $apiInstance->importTwintPaymentMethod($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentMethodApi->importTwintPaymentMethod: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\ImportTwintPaymentMethodRequest**](../Model/ImportTwintPaymentMethodRequest.md)|  |
+
+### Return type
+
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -554,7 +878,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **importVippsRecurringPaymentMethod**
-> \Billwerk\Model\PaymentMethodV2 importVippsRecurringPaymentMethod($body)
+> \Frisbii\lib/Model\PaymentMethodV2 importVippsRecurringPaymentMethod($body)
 
 Import Vipps Recurring payment method
 
@@ -563,18 +887,18 @@ Import Vipps Recurring payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ImportVippsRecurringPaymentMethodRequest(); // \Billwerk\Model\ImportVippsRecurringPaymentMethodRequest | 
+$body = new \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest(); // \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest | 
 
 try {
     $result = $apiInstance->importVippsRecurringPaymentMethod($body);
@@ -589,11 +913,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ImportVippsRecurringPaymentMethodRequest**](../Model/ImportVippsRecurringPaymentMethodRequest.md)|  |
+ **body** | [**\Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest**](../Model/ImportVippsRecurringPaymentMethodRequest.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -607,7 +931,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inactivatePaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 inactivatePaymentMethodV2($id)
+> \Frisbii\lib/Model\PaymentMethodV2 inactivatePaymentMethodV2($id)
 
 Inactivate payment method
 
@@ -616,12 +940,12 @@ Inactivate payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -646,7 +970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -660,7 +984,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **moveCardPaymentMethodV2**
-> \Billwerk\Model\PaymentMethodV2 moveCardPaymentMethodV2($body, $id)
+> \Frisbii\lib/Model\PaymentMethodV2 moveCardPaymentMethodV2($body, $id)
 
 Move card to other agreement
 
@@ -669,18 +993,18 @@ Move card to other agreement
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\MoveCard(); // \Billwerk\Model\MoveCard | 
+$body = new \Frisbii\lib/Model\MoveCard(); // \Frisbii\lib/Model\MoveCard | 
 $id = "id_example"; // string | Card id
 
 try {
@@ -696,12 +1020,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\MoveCard**](../Model/MoveCard.md)|  |
+ **body** | [**\Frisbii\lib/Model\MoveCard**](../Model/MoveCard.md)|  |
  **id** | **string**| Card id |
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -715,7 +1039,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reactivateCardV2**
-> \Billwerk\Model\PaymentMethodV2 reactivateCardV2($id)
+> \Frisbii\lib/Model\PaymentMethodV2 reactivateCardV2($id)
 
 Reactivate failed card
 
@@ -724,12 +1048,12 @@ Reactivate failed card
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PaymentMethodApi(
+$apiInstance = new Frisbii\lib/Api\PaymentMethodApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -754,7 +1078,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 

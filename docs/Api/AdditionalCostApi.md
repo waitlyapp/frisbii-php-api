@@ -1,6 +1,6 @@
-# Billwerk\AdditionalCostApi
+# Frisbii\AdditionalCostApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getAdditionalCosts**](AdditionalCostApi.md#getadditionalcosts) | **GET** /v1/additional_cost/subscription/{handle} | Get additional costs for subscription
 
 # **cancelAdditionalCost**
-> \Billwerk\Model\AdditionalCost cancelAdditionalCost($handle)
+> \Frisbii\lib/Model\AdditionalCost cancelAdditionalCost($handle)
 
 Cancel pending additional cost
 
@@ -19,12 +19,12 @@ Cancel pending additional cost
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AdditionalCostApi(
+$apiInstance = new Frisbii\lib/Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AdditionalCost**](../Model/AdditionalCost.md)
+[**\Frisbii\lib/Model\AdditionalCost**](../Model/AdditionalCost.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAdditionalCostJson**
-> \Billwerk\Model\AdditionalCost createAdditionalCostJson($body)
+> \Frisbii\lib/Model\AdditionalCost createAdditionalCostJson($body)
 
 Create additional cost
 
@@ -72,18 +72,18 @@ Create additional cost
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AdditionalCostApi(
+$apiInstance = new Frisbii\lib/Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateAdditionalCost(); // \Billwerk\Model\CreateAdditionalCost | 
+$body = new \Frisbii\lib/Model\CreateAdditionalCost(); // \Frisbii\lib/Model\CreateAdditionalCost | 
 
 try {
     $result = $apiInstance->createAdditionalCostJson($body);
@@ -98,11 +98,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateAdditionalCost**](../Model/CreateAdditionalCost.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateAdditionalCost**](../Model/CreateAdditionalCost.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\AdditionalCost**](../Model/AdditionalCost.md)
+[**\Frisbii\lib/Model\AdditionalCost**](../Model/AdditionalCost.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAdditionalCost**
-> \Billwerk\Model\AdditionalCost getAdditionalCost($handle)
+> \Frisbii\lib/Model\AdditionalCost getAdditionalCost($handle)
 
 Get additional cost
 
@@ -125,12 +125,12 @@ Get additional cost
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AdditionalCostApi(
+$apiInstance = new Frisbii\lib/Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AdditionalCost**](../Model/AdditionalCost.md)
+[**\Frisbii\lib/Model\AdditionalCost**](../Model/AdditionalCost.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAdditionalCosts**
-> \Billwerk\Model\AdditionalCost[] getAdditionalCosts($handle)
+> \Frisbii\lib/Model\AdditionalCost[] getAdditionalCosts($handle)
 
 Get additional costs for subscription
 
@@ -178,12 +178,12 @@ Get additional costs for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AdditionalCostApi(
+$apiInstance = new Frisbii\lib/Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AdditionalCost[]**](../Model/AdditionalCost.md)
+[**\Frisbii\lib/Model\AdditionalCost[]**](../Model/AdditionalCost.md)
 
 ### Authorization
 

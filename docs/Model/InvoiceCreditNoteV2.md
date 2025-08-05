@@ -12,13 +12,16 @@ Name | Type | Description | Notes
 **currency** | **string** | Credit note currency in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) three letter alpha code | 
 **customer** | **string** | Customer handle | 
 **subscription** | **string** | Subscription handle, will be null for a one-time customer invoice | [optional] 
-**credits** | [**\Billwerk\Model\CreditInvoice[]**](CreditInvoice.md) | Credits applied to credit note | 
+**credits** | [**\Frisbii\lib/Model\CreditInvoice[]**](CreditInvoice.md) | Credits applied to credit note | 
 **amount_vat** | **int** | Credit note vat amount calculated as rounded summed fractional vats for each credit note lines | 
 **amount_ex_vat** | **int** | Credit note total amount excluding VAT calculated as summed amounts excl. vats for each credit note lines | [optional] 
-**credit_note_lines** | [**\Billwerk\Model\CreditNoteLine[]**](CreditNoteLine.md) | Credit note lines | 
+**credit_note_lines** | [**\Frisbii\lib/Model\CreditNoteLine[]**](CreditNoteLine.md) | Credit note lines | 
 **accounting_number** | **string** | Credit note accounting number | [optional] 
 **debtor_id** | **int** | Customer debtor id | [optional] 
+**download_url** | **string** | Link to the credit note PDF, available if PDF generation and accounting features are enabled (only for subscription invoices, not charges). Access requires authentication. See https://docs.frisbii.com/reference/authentication. The response is a binary PDF file. | [optional] 
+**accounting_created_date** | [**\DateTime**](\DateTime.md) | When the credit note was created. A credit note is created when a non-charging invoice is cancelled or refunded. Timestamp in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **payable_amount** | **int** | The credit note amount to be payed including VAT | [optional] 
+**amount_vat_lines** | [**\Frisbii\lib/Model\AmountVatLine[]**](AmountVatLine.md) | The list of VAT amounts grouped by VAT percentage | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

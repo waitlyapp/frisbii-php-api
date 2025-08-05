@@ -1,6 +1,6 @@
-# Billwerk\OrganisationApi
+# Frisbii\OrganisationApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**update**](OrganisationApi.md#update) | **PUT** /v1/organisation | Update organisation
 
 # **getOrganisation**
-> \Billwerk\Model\Organisation getOrganisation()
+> \Frisbii\lib/Model\Organisation getOrganisation()
 
 Get organisation
 
@@ -17,12 +17,12 @@ Get organisation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\OrganisationApi(
+$apiInstance = new Frisbii\lib/Api\OrganisationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\Organisation**](../Model/Organisation.md)
+[**\Frisbii\lib/Model\Organisation**](../Model/Organisation.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **update**
-> \Billwerk\Model\Organisation update($body)
+> \Frisbii\lib/Model\Organisation update($body)
 
 Update organisation
 
@@ -66,18 +66,18 @@ Update organisation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\OrganisationApi(
+$apiInstance = new Frisbii\lib/Api\OrganisationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateOrganisation(); // \Billwerk\Model\UpdateOrganisation | 
+$body = new \Frisbii\lib/Model\UpdateOrganisation(); // \Frisbii\lib/Model\UpdateOrganisation | 
 
 try {
     $result = $apiInstance->update($body);
@@ -92,11 +92,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateOrganisation**](../Model/UpdateOrganisation.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateOrganisation**](../Model/UpdateOrganisation.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Organisation**](../Model/Organisation.md)
+[**\Frisbii\lib/Model\Organisation**](../Model/Organisation.md)
 
 ### Authorization
 

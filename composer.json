@@ -1,5 +1,5 @@
 {
-    "name": "waitlyapp/billwerk-php-api",
+    "name": "waitlyapp/frisbii-php-api",
     "description": "",
     "keywords": [
         "swagger",
@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Billwerk\\" : "lib/" }
+        "psr-4": { "Frisbii\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Billwerk\\" : "test/" }
+        "psr-4": { "Frisbii\\" : "test/" }
     }
 }

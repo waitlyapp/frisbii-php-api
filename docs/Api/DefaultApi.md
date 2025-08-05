@@ -1,20 +1,19 @@
-# Billwerk\DefaultApi
+# Frisbii\DefaultApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createOrUpdateConfiguration**](DefaultApi.md#createorupdateconfiguration) | **POST** /v1/risk/configuration | Create or update risk configuration
 [**deleteConfiguration**](DefaultApi.md#deleteconfiguration) | **DELETE** /v1/risk/configuration | Delete risk configuration
 [**getAccountData**](DefaultApi.md#getaccountdata) | **GET** /v1/checkout/account | 
-[**getBlocklist**](DefaultApi.md#getblocklist) | **GET** /v1/blocklist | 
+[**getAuditEvent**](DefaultApi.md#getauditevent) | **GET** /v1/audit_log/{id} | Get audit log event
 [**getConfiguration**](DefaultApi.md#getconfiguration) | **GET** /v1/risk/configuration | Get risk configuration
 [**getErrorCodes**](DefaultApi.md#geterrorcodes) | **GET** /v1/error_codes | Get error codes
 [**getSessionData**](DefaultApi.md#getsessiondata) | **GET** /v1/checkout/session | 
-[**getSwaggerSpec**](DefaultApi.md#getswaggerspec) | **GET** /swagger.json | 
 
 # **createOrUpdateConfiguration**
-> \Billwerk\Model\RiskConfiguration createOrUpdateConfiguration($body)
+> \Frisbii\lib/Model\RiskConfiguration createOrUpdateConfiguration($body)
 
 Create or update risk configuration
 
@@ -23,18 +22,18 @@ Create or update risk configuration
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\RiskConfiguration(); // \Billwerk\Model\RiskConfiguration | 
+$body = new \Frisbii\lib/Model\RiskConfiguration(); // \Frisbii\lib/Model\RiskConfiguration | 
 
 try {
     $result = $apiInstance->createOrUpdateConfiguration($body);
@@ -49,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\RiskConfiguration**](../Model/RiskConfiguration.md)|  |
+ **body** | [**\Frisbii\lib/Model\RiskConfiguration**](../Model/RiskConfiguration.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\RiskConfiguration**](../Model/RiskConfiguration.md)
+[**\Frisbii\lib/Model\RiskConfiguration**](../Model/RiskConfiguration.md)
 
 ### Authorization
 
@@ -76,12 +75,12 @@ Delete risk configuration
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +114,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountData**
-> \Billwerk\Model\CheckoutAccountDataDto getAccountData()
+> \Frisbii\lib/Model\CheckoutAccountDataDto getAccountData()
 
 
 
@@ -124,7 +123,7 @@ void (empty response body)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -144,7 +143,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\CheckoutAccountDataDto**](../Model/CheckoutAccountDataDto.md)
+[**\Frisbii\lib/Model\CheckoutAccountDataDto**](../Model/CheckoutAccountDataDto.md)
 
 ### Authorization
 
@@ -157,28 +156,28 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getBlocklist**
-> string[] getBlocklist($date)
+# **getAuditEvent**
+> \Frisbii\lib/Model\AuditLogEventDto getAuditEvent($id)
 
-
+Get audit log event
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$date = "date_example"; // string | 
+$id = "id_example"; // string | Audit log event id
 
 try {
-    $result = $apiInstance->getBlocklist($date);
+    $result = $apiInstance->getAuditEvent($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->getBlocklist: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->getAuditEvent: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -187,11 +186,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **string**|  | [optional]
+ **id** | **string**| Audit log event id |
 
 ### Return type
 
-**string[]**
+[**\Frisbii\lib/Model\AuditLogEventDto**](../Model/AuditLogEventDto.md)
 
 ### Authorization
 
@@ -200,12 +199,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConfiguration**
-> \Billwerk\Model\RiskConfiguration getConfiguration()
+> \Frisbii\lib/Model\RiskConfiguration getConfiguration()
 
 Get risk configuration
 
@@ -214,12 +213,12 @@ Get risk configuration
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -240,7 +239,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\RiskConfiguration**](../Model/RiskConfiguration.md)
+[**\Frisbii\lib/Model\RiskConfiguration**](../Model/RiskConfiguration.md)
 
 ### Authorization
 
@@ -254,7 +253,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getErrorCodes**
-> \Billwerk\Model\ErrorCodeDto[] getErrorCodes()
+> \Frisbii\lib/Model\ErrorCodeDto[] getErrorCodes()
 
 Get error codes
 
@@ -263,7 +262,7 @@ Get error codes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -283,7 +282,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\ErrorCodeDto[]**](../Model/ErrorCodeDto.md)
+[**\Frisbii\lib/Model\ErrorCodeDto[]**](../Model/ErrorCodeDto.md)
 
 ### Authorization
 
@@ -297,7 +296,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSessionData**
-> \Billwerk\Model\CheckoutSessionDataDto getSessionData($customer, $charge, $subscription, $card_on_file)
+> \Frisbii\lib/Model\CheckoutSessionDataDto getSessionData($customer, $charge, $subscription, $card_on_file)
 
 
 
@@ -306,7 +305,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\DefaultApi(
+$apiInstance = new Frisbii\lib/Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -336,50 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\CheckoutSessionDataDto**](../Model/CheckoutSessionDataDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getSwaggerSpec**
-> string getSwaggerSpec()
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$apiInstance = new Billwerk\API\DefaultApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $result = $apiInstance->getSwaggerSpec();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->getSwaggerSpec: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**string**
+[**\Frisbii\lib/Model\CheckoutSessionDataDto**](../Model/CheckoutSessionDataDto.md)
 
 ### Authorization
 

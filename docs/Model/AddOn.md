@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **tax_policy** | **string** | Optional tax policy handle for add-on. Account default is used if none given. | [optional] 
 **all_plans** | **bool** | Whether all plans are eligible for this add-on. Defaults to false. | [optional] 
 **eligible_plans** | **string[]** | If not &#x60;all_plans&#x60; are set to true, then the set of eligible plan handles must be defined. | [optional] 
+**entitlements** | **string[]** | List of entitlement handles for the add-on. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

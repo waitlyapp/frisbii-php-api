@@ -1,23 +1,80 @@
-# Billwerk\PlanApi
+# Frisbii\PlanApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**changePlanAmountJson**](PlanApi.md#changeplanamountjson) | **PUT** /v1/plan/{handle}/amount | Change plan amount
 [**createPlanJson**](PlanApi.md#createplanjson) | **POST** /v1/plan | Create plan
-[**deleteMetadata3**](PlanApi.md#deletemetadata3) | **DELETE** /v1/plan/{handle}/metadata | Delete metadata
+[**deleteMetadata6**](PlanApi.md#deletemetadata6) | **DELETE** /v1/plan/{handle}/metadata | Delete metadata
 [**deletePlan**](PlanApi.md#deleteplan) | **DELETE** /v1/plan/{handle} | Delete plan
 [**getCurrentPlan**](PlanApi.md#getcurrentplan) | **GET** /v1/plan/{handle}/current | Get plan
-[**getMetadata3**](PlanApi.md#getmetadata3) | **GET** /v1/plan/{handle}/metadata | Get metadata
+[**getMetadata6**](PlanApi.md#getmetadata6) | **GET** /v1/plan/{handle}/metadata | Get metadata
 [**getPlan**](PlanApi.md#getplan) | **GET** /v1/plan/{handle}/{version} | Get plan version
+[**getPlanEntitlements**](PlanApi.md#getplanentitlements) | **GET** /v1/plan/{handle}/{version}/entitlement | Get plan entitlements
 [**getPlans**](PlanApi.md#getplans) | **GET** /v1/plan/{handle} | Get list of plan versions
 [**supersedePlanJson**](PlanApi.md#supersedeplanjson) | **POST** /v1/plan/{handle} | Supersede plan
 [**unDeletePlan**](PlanApi.md#undeleteplan) | **POST** /v1/plan/{handle}/undelete | Undelete plan
-[**updateMetadata3**](PlanApi.md#updatemetadata3) | **PUT** /v1/plan/{handle}/metadata | Create or update metadata
+[**updateMetadata6**](PlanApi.md#updatemetadata6) | **PUT** /v1/plan/{handle}/metadata | Create or update metadata
 [**updatePlanJson**](PlanApi.md#updateplanjson) | **PUT** /v1/plan/{handle} | Update plan
 
+# **changePlanAmountJson**
+> \Frisbii\lib/Model\Plan changePlanAmountJson($body, $handle)
+
+Change plan amount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PlanApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\ChangePlanAmount(); // \Frisbii\lib/Model\ChangePlanAmount | 
+$handle = "handle_example"; // string | Plan handle
+
+try {
+    $result = $apiInstance->changePlanAmountJson($body, $handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlanApi->changePlanAmountJson: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\ChangePlanAmount**](../Model/ChangePlanAmount.md)|  |
+ **handle** | **string**| Plan handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **createPlanJson**
-> \Billwerk\Model\Plan createPlanJson($body)
+> \Frisbii\lib/Model\Plan createPlanJson($body)
 
 Create plan
 
@@ -26,18 +83,18 @@ Create plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateSubscriptionPlan(); // \Billwerk\Model\CreateSubscriptionPlan | 
+$body = new \Frisbii\lib/Model\CreateSubscriptionPlan(); // \Frisbii\lib/Model\CreateSubscriptionPlan | 
 
 try {
     $result = $apiInstance->createPlanJson($body);
@@ -52,11 +109,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateSubscriptionPlan**](../Model/CreateSubscriptionPlan.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateSubscriptionPlan**](../Model/CreateSubscriptionPlan.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -69,8 +126,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteMetadata3**
-> deleteMetadata3($handle)
+# **deleteMetadata6**
+> deleteMetadata6($handle)
 
 Delete metadata
 
@@ -79,12 +136,12 @@ Delete metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -93,9 +150,9 @@ $apiInstance = new Billwerk\API\PlanApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $apiInstance->deleteMetadata3($handle);
+    $apiInstance->deleteMetadata6($handle);
 } catch (Exception $e) {
-    echo 'Exception when calling PlanApi->deleteMetadata3: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlanApi->deleteMetadata6: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -122,7 +179,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePlan**
-> \Billwerk\Model\Plan deletePlan($handle)
+> \Frisbii\lib/Model\Plan deletePlan($handle)
 
 Delete plan
 
@@ -131,12 +188,12 @@ Delete plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -161,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -175,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCurrentPlan**
-> \Billwerk\Model\Plan getCurrentPlan($handle, $tax_rate_for_country)
+> \Frisbii\lib/Model\Plan getCurrentPlan($handle, $tax_rate_for_country)
 
 Get plan
 
@@ -184,12 +241,12 @@ Get plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -229,8 +286,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getMetadata3**
-> map[string,object] getMetadata3($handle)
+# **getMetadata6**
+> map[string,object] getMetadata6($handle)
 
 Get metadata
 
@@ -239,12 +296,12 @@ Get metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,10 +310,10 @@ $apiInstance = new Billwerk\API\PlanApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->getMetadata3($handle);
+    $result = $apiInstance->getMetadata6($handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlanApi->getMetadata3: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlanApi->getMetadata6: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -283,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlan**
-> \Billwerk\Model\Plan getPlan($handle, $version, $tax_rate_for_country)
+> \Frisbii\lib/Model\Plan getPlan($handle, $version, $tax_rate_for_country)
 
 Get plan version
 
@@ -292,12 +349,12 @@ Get plan version
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -326,7 +383,62 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getPlanEntitlements**
+> \Frisbii\lib/Model\Entitlement[] getPlanEntitlements($handle, $version)
+
+Get plan entitlements
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\PlanApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Plan handle
+$version = 56; // int | Plan version
+
+try {
+    $result = $apiInstance->getPlanEntitlements($handle, $version);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlanApi->getPlanEntitlements: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Plan handle |
+ **version** | **int**| Plan version |
+
+### Return type
+
+[**\Frisbii\lib/Model\Entitlement[]**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -340,7 +452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlans**
-> \Billwerk\Model\Plan[] getPlans($handle, $tax_rate_for_country)
+> \Frisbii\lib/Model\Plan[] getPlans($handle, $tax_rate_for_country)
 
 Get list of plan versions
 
@@ -349,12 +461,12 @@ Get list of plan versions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -381,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Plan[]**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan[]**](../Model/Plan.md)
 
 ### Authorization
 
@@ -395,7 +507,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **supersedePlanJson**
-> \Billwerk\Model\Plan supersedePlanJson($body, $handle)
+> \Frisbii\lib/Model\Plan supersedePlanJson($body, $handle)
 
 Supersede plan
 
@@ -404,18 +516,18 @@ Supersede plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\SupersedeSubscriptionPlan(); // \Billwerk\Model\SupersedeSubscriptionPlan | 
+$body = new \Frisbii\lib/Model\SupersedeSubscriptionPlan(); // \Frisbii\lib/Model\SupersedeSubscriptionPlan | 
 $handle = "handle_example"; // string | Plan handle
 
 try {
@@ -431,12 +543,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\SupersedeSubscriptionPlan**](../Model/SupersedeSubscriptionPlan.md)|  |
+ **body** | [**\Frisbii\lib/Model\SupersedeSubscriptionPlan**](../Model/SupersedeSubscriptionPlan.md)|  |
  **handle** | **string**| Plan handle |
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -450,7 +562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unDeletePlan**
-> \Billwerk\Model\Plan unDeletePlan($handle)
+> \Frisbii\lib/Model\Plan unDeletePlan($handle)
 
 Undelete plan
 
@@ -459,12 +571,12 @@ Undelete plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -489,7 +601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -502,8 +614,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateMetadata3**
-> map[string,object] updateMetadata3($body, $handle)
+# **updateMetadata6**
+> map[string,object] updateMetadata6($body, $handle)
 
 Create or update metadata
 
@@ -512,25 +624,25 @@ Create or update metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->updateMetadata3($body, $handle);
+    $result = $apiInstance->updateMetadata6($body, $handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlanApi->updateMetadata3: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlanApi->updateMetadata6: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -558,7 +670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePlanJson**
-> \Billwerk\Model\Plan updatePlanJson($body, $handle)
+> \Frisbii\lib/Model\Plan updatePlanJson($body, $handle)
 
 Update plan
 
@@ -567,18 +679,18 @@ Update plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PlanApi(
+$apiInstance = new Frisbii\lib/Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateSubscriptionPlan(); // \Billwerk\Model\UpdateSubscriptionPlan | 
+$body = new \Frisbii\lib/Model\UpdateSubscriptionPlan(); // \Frisbii\lib/Model\UpdateSubscriptionPlan | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -594,12 +706,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateSubscriptionPlan**](../Model/UpdateSubscriptionPlan.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateSubscriptionPlan**](../Model/UpdateSubscriptionPlan.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\lib/Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 

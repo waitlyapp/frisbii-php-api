@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **handle** | **string** | Per account unique handle for the coupon | 
 **code** | **string** | The coupon code. Maximum 100 characters. | 
 **discount** | **string** | Discount to use for coupon | 
+**metadata** | **map[string,object]** | Custom metadata. | [optional] 
 **all_plans** | **bool** | Whether all plans are eligible for this coupon. Defaults to false. | [optional] 
 **eligible_plans** | **string[]** | If not all_plans are set to true, then the set of eligible plan handles must be defined. | [optional] 
 **max_redemptions** | **int** | Optional maximum number of times this coupon can be redeemed. | [optional] 

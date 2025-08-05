@@ -1,6 +1,6 @@
-# Billwerk\WebhookApi
+# Frisbii\WebhookApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**updateWebhooks**](WebhookApi.md#updatewebhooks) | **POST** /v1/webhook/update | Update and resend webhooks
 
 # **disableWebhooks**
-> \Billwerk\Model\Webhook[] disableWebhooks($body)
+> \Frisbii\lib/Model\Webhook[] disableWebhooks($body)
 
 Disable webhooks
 
@@ -21,18 +21,18 @@ Disable webhooks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\WebhookApi(
+$apiInstance = new Frisbii\lib/Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\WebhookDisableRequest(); // \Billwerk\Model\WebhookDisableRequest | 
+$body = new \Frisbii\lib/Model\WebhookDisableRequest(); // \Frisbii\lib/Model\WebhookDisableRequest | 
 
 try {
     $result = $apiInstance->disableWebhooks($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\WebhookDisableRequest**](../Model/WebhookDisableRequest.md)|  |
+ **body** | [**\Frisbii\lib/Model\WebhookDisableRequest**](../Model/WebhookDisableRequest.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\lib/Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhook**
-> \Billwerk\Model\Webhook[] getWebhook($id)
+> \Frisbii\lib/Model\Webhook[] getWebhook($id)
 
 Get webhooks
 
@@ -74,12 +74,12 @@ Get webhooks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\WebhookApi(
+$apiInstance = new Frisbii\lib/Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\lib/Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookRequests**
-> \Billwerk\Model\WebhookRequest[] getWebhookRequests($id)
+> \Frisbii\lib/Model\WebhookRequest[] getWebhookRequests($id)
 
 Get webhook requests
 
@@ -127,12 +127,12 @@ Get webhook requests
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\WebhookApi(
+$apiInstance = new Frisbii\lib/Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\WebhookRequest[]**](../Model/WebhookRequest.md)
+[**\Frisbii\lib/Model\WebhookRequest[]**](../Model/WebhookRequest.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhooks**
-> \Billwerk\Model\Webhook[] getWebhooks($created_before, $size, $state, $created_after)
+> \Frisbii\lib/Model\Webhook[] getWebhooks($created_before, $size, $state, $event, $created_after)
 
 Get list of webhooks
 
@@ -180,12 +180,12 @@ Get list of webhooks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\WebhookApi(
+$apiInstance = new Frisbii\lib/Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,10 +194,11 @@ $apiInstance = new Billwerk\API\WebhookApi(
 $created_before = "created_before_example"; // string | 
 $size = 100; // int | 
 $state = "state_example"; // string | 
+$event = "event_example"; // string | 
 $created_after = "created_after_example"; // string | 
 
 try {
-    $result = $apiInstance->getWebhooks($created_before, $size, $state, $created_after);
+    $result = $apiInstance->getWebhooks($created_before, $size, $state, $event, $created_after);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->getWebhooks: ', $e->getMessage(), PHP_EOL;
@@ -212,11 +213,12 @@ Name | Type | Description  | Notes
  **created_before** | **string**|  |
  **size** | **int**|  | [optional] [default to 100]
  **state** | **string**|  | [optional]
+ **event** | **string**|  | [optional]
  **created_after** | **string**|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\lib/Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -230,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resendJson**
-> \Billwerk\Model\Webhook[] resendJson($body)
+> \Frisbii\lib/Model\Webhook[] resendJson($body)
 
 Re-send webhooks
 
@@ -239,18 +241,18 @@ Re-send webhooks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\WebhookApi(
+$apiInstance = new Frisbii\lib/Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\WebhookResendRequest(); // \Billwerk\Model\WebhookResendRequest | 
+$body = new \Frisbii\lib/Model\WebhookResendRequest(); // \Frisbii\lib/Model\WebhookResendRequest | 
 
 try {
     $result = $apiInstance->resendJson($body);
@@ -265,11 +267,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\WebhookResendRequest**](../Model/WebhookResendRequest.md)|  |
+ **body** | [**\Frisbii\lib/Model\WebhookResendRequest**](../Model/WebhookResendRequest.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\lib/Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -283,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateWebhooks**
-> \Billwerk\Model\Webhook[] updateWebhooks($body)
+> \Frisbii\lib/Model\Webhook[] updateWebhooks($body)
 
 Update and resend webhooks
 
@@ -292,18 +294,18 @@ Update and resend webhooks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\WebhookApi(
+$apiInstance = new Frisbii\lib/Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\WebhookUpdateRequest(); // \Billwerk\Model\WebhookUpdateRequest | 
+$body = new \Frisbii\lib/Model\WebhookUpdateRequest(); // \Frisbii\lib/Model\WebhookUpdateRequest | 
 
 try {
     $result = $apiInstance->updateWebhooks($body);
@@ -318,11 +320,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\WebhookUpdateRequest**](../Model/WebhookUpdateRequest.md)|  |
+ **body** | [**\Frisbii\lib/Model\WebhookUpdateRequest**](../Model/WebhookUpdateRequest.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\lib/Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 

@@ -1,13 +1,13 @@
-# Billwerk\MailTemplateApi
+# Frisbii\MailTemplateApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getSample**](MailTemplateApi.md#getsample) | **GET** /v1/mail_template/sample | Get sample data
 
 # **getSample**
-> \Billwerk\Model\InlineResponse200 getSample()
+> \Frisbii\lib/Model\InlineResponse200 getSample()
 
 Get sample data
 
@@ -16,12 +16,12 @@ Get sample data
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\MailTemplateApi(
+$apiInstance = new Frisbii\lib/Api\MailTemplateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Frisbii\lib/Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

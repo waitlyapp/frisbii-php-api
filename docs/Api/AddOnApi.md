@@ -1,6 +1,6 @@
-# Billwerk\AddOnApi
+# Frisbii\AddOnApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,13 +8,14 @@ Method | HTTP request | Description
 [**deleteAddOn**](AddOnApi.md#deleteaddon) | **DELETE** /v1/add_on/{handle} | Delete add-on
 [**deleteMetadata**](AddOnApi.md#deletemetadata) | **DELETE** /v1/add_on/{handle}/metadata | Delete metadata
 [**getAddOn**](AddOnApi.md#getaddon) | **GET** /v1/add_on/{handle} | Get add-on
+[**getAddOnEntitlements**](AddOnApi.md#getaddonentitlements) | **GET** /v1/add_on/{handle}/entitlement | Get add-on entitlements
 [**getMetadata**](AddOnApi.md#getmetadata) | **GET** /v1/add_on/{handle}/metadata | Get metadata
 [**undeleteAddOn**](AddOnApi.md#undeleteaddon) | **POST** /v1/add_on/{handle}/undelete | Un-delete add-on
 [**updateAddOn**](AddOnApi.md#updateaddon) | **PUT** /v1/add_on/{handle} | Update add-on
 [**updateMetadata**](AddOnApi.md#updatemetadata) | **PUT** /v1/add_on/{handle}/metadata | Create or update metadata
 
 # **createAddOn**
-> \Billwerk\Model\AddOn createAddOn($body)
+> \Frisbii\lib/Model\AddOn createAddOn($body)
 
 Create add-on
 
@@ -23,18 +24,18 @@ Create add-on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateAddOn(); // \Billwerk\Model\CreateAddOn | 
+$body = new \Frisbii\lib/Model\CreateAddOn(); // \Frisbii\lib/Model\CreateAddOn | 
 
 try {
     $result = $apiInstance->createAddOn($body);
@@ -49,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateAddOn**](../Model/CreateAddOn.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateAddOn**](../Model/CreateAddOn.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\lib/Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -67,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAddOn**
-> \Billwerk\Model\AddOn deleteAddOn($handle)
+> \Frisbii\lib/Model\AddOn deleteAddOn($handle)
 
 Delete add-on
 
@@ -76,12 +77,12 @@ Delete add-on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\lib/Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -129,12 +130,12 @@ Delete metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +173,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAddOn**
-> \Billwerk\Model\AddOn getAddOn($handle, $tax_rate_for_country)
+> \Frisbii\lib/Model\AddOn getAddOn($handle, $tax_rate_for_country)
 
 Get add-on
 
@@ -181,12 +182,12 @@ Get add-on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -213,7 +214,60 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\lib/Model\AddOn**](../Model/AddOn.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getAddOnEntitlements**
+> \Frisbii\lib/Model\Entitlement[] getAddOnEntitlements($handle)
+
+Get add-on entitlements
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Add-on handle
+
+try {
+    $result = $apiInstance->getAddOnEntitlements($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AddOnApi->getAddOnEntitlements: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Add-on handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\Entitlement[]**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -236,12 +290,12 @@ Get metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -280,7 +334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **undeleteAddOn**
-> \Billwerk\Model\AddOn undeleteAddOn($handle)
+> \Frisbii\lib/Model\AddOn undeleteAddOn($handle)
 
 Un-delete add-on
 
@@ -289,12 +343,12 @@ Un-delete add-on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -319,7 +373,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\lib/Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -333,7 +387,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddOn**
-> \Billwerk\Model\AddOn updateAddOn($body, $handle)
+> \Frisbii\lib/Model\AddOn updateAddOn($body, $handle)
 
 Update add-on
 
@@ -342,18 +396,18 @@ Update add-on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateAddOn(); // \Billwerk\Model\UpdateAddOn | 
+$body = new \Frisbii\lib/Model\UpdateAddOn(); // \Frisbii\lib/Model\UpdateAddOn | 
 $handle = "handle_example"; // string | Add-on handle
 
 try {
@@ -369,12 +423,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateAddOn**](../Model/UpdateAddOn.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateAddOn**](../Model/UpdateAddOn.md)|  |
  **handle** | **string**| Add-on handle |
 
 ### Return type
 
-[**\Billwerk\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\lib/Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -397,18 +451,18 @@ Create or update metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\AddOnApi(
+$apiInstance = new Frisbii\lib/Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {

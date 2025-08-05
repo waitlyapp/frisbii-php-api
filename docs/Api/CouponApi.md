@@ -1,18 +1,21 @@
-# Billwerk\CouponApi
+# Frisbii\CouponApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCoupon**](CouponApi.md#createcoupon) | **POST** /v1/coupon | Create coupon
 [**deleteCoupon**](CouponApi.md#deletecoupon) | **DELETE** /v1/coupon/{handle} | Delete coupon
+[**deleteMetadata1**](CouponApi.md#deletemetadata1) | **DELETE** /v1/coupon/{handle}/metadata | Delete metadata
 [**expireCoupon**](CouponApi.md#expirecoupon) | **POST** /v1/coupon/{handle}/expire | Expire coupon
 [**getCoupon**](CouponApi.md#getcoupon) | **GET** /v1/coupon/{handle} | Get coupon
+[**getMetadata1**](CouponApi.md#getmetadata1) | **GET** /v1/coupon/{handle}/metadata | Get metadata
 [**updateCoupon**](CouponApi.md#updatecoupon) | **PUT** /v1/coupon/{handle} | Update coupon
+[**updateMetadata1**](CouponApi.md#updatemetadata1) | **PUT** /v1/coupon/{handle}/metadata | Create or update metadata
 [**validateCode**](CouponApi.md#validatecode) | **GET** /v1/coupon/code/validate | Validate coupon
 
 # **createCoupon**
-> \Billwerk\Model\Coupon createCoupon($body)
+> \Frisbii\lib/Model\Coupon createCoupon($body)
 
 Create coupon
 
@@ -21,18 +24,18 @@ Create coupon
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CouponApi(
+$apiInstance = new Frisbii\lib/Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateCoupon(); // \Billwerk\Model\CreateCoupon | 
+$body = new \Frisbii\lib/Model\CreateCoupon(); // \Frisbii\lib/Model\CreateCoupon | 
 
 try {
     $result = $apiInstance->createCoupon($body);
@@ -47,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateCoupon**](../Model/CreateCoupon.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateCoupon**](../Model/CreateCoupon.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\lib/Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -65,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCoupon**
-> \Billwerk\Model\Coupon deleteCoupon($handle)
+> \Frisbii\lib/Model\Coupon deleteCoupon($handle)
 
 Delete coupon
 
@@ -74,12 +77,12 @@ Delete coupon
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CouponApi(
+$apiInstance = new Frisbii\lib/Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +107,59 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\lib/Model\Coupon**](../Model/Coupon.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteMetadata1**
+> deleteMetadata1($handle)
+
+Delete metadata
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\CouponApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Resource handle
+
+try {
+    $apiInstance->deleteMetadata1($handle);
+} catch (Exception $e) {
+    echo 'Exception when calling CouponApi->deleteMetadata1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Resource handle |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -118,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **expireCoupon**
-> \Billwerk\Model\Coupon expireCoupon($handle)
+> \Frisbii\lib/Model\Coupon expireCoupon($handle)
 
 Expire coupon
 
@@ -127,12 +182,12 @@ Expire coupon
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CouponApi(
+$apiInstance = new Frisbii\lib/Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\lib/Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -171,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCoupon**
-> \Billwerk\Model\Coupon getCoupon($handle)
+> \Frisbii\lib/Model\Coupon getCoupon($handle)
 
 Get coupon
 
@@ -180,12 +235,12 @@ Get coupon
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CouponApi(
+$apiInstance = new Frisbii\lib/Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,7 +265,60 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\lib/Model\Coupon**](../Model/Coupon.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMetadata1**
+> map[string,object] getMetadata1($handle)
+
+Get metadata
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\CouponApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Resource handle
+
+try {
+    $result = $apiInstance->getMetadata1($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CouponApi->getMetadata1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Resource handle |
+
+### Return type
+
+**map[string,object]**
 
 ### Authorization
 
@@ -224,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCoupon**
-> \Billwerk\Model\Coupon updateCoupon($body, $handle)
+> \Frisbii\lib/Model\Coupon updateCoupon($body, $handle)
 
 Update coupon
 
@@ -233,18 +341,18 @@ Update coupon
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CouponApi(
+$apiInstance = new Frisbii\lib/Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateCoupon(); // \Billwerk\Model\UpdateCoupon | 
+$body = new \Frisbii\lib/Model\UpdateCoupon(); // \Frisbii\lib/Model\UpdateCoupon | 
 $handle = "handle_example"; // string | Coupon handle
 
 try {
@@ -260,12 +368,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateCoupon**](../Model/UpdateCoupon.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateCoupon**](../Model/UpdateCoupon.md)|  |
  **handle** | **string**| Coupon handle |
 
 ### Return type
 
-[**\Billwerk\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\lib/Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -278,8 +386,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **updateMetadata1**
+> map[string,object] updateMetadata1($body, $handle)
+
+Create or update metadata
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\CouponApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
+$handle = "handle_example"; // string | Resource handle
+
+try {
+    $result = $apiInstance->updateMetadata1($body, $handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CouponApi->updateMetadata1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**map[string,object]**](../Model/map.md)|  |
+ **handle** | **string**| Resource handle |
+
+### Return type
+
+**map[string,object]**
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **validateCode**
-> \Billwerk\Model\Coupon validateCode($code, $plan, $customer, $subscription)
+> \Frisbii\lib/Model\Coupon validateCode($code, $plan, $customer, $subscription)
 
 Validate coupon
 
@@ -288,12 +451,12 @@ Validate coupon
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CouponApi(
+$apiInstance = new Frisbii\lib/Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\lib/Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 

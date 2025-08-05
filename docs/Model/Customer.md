@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **phone** | **string** | Customer phone number | [optional] 
 **company** | **string** | Customer company | [optional] 
 **vat** | **string** | Customer vat number | [optional] 
+**language** | **string** | Customer language | [optional] 
 **handle** | **string** | Per account unique handle for the customer. Max length 255 with allowable characters [a-zA-Z0-9_.-@]. | 
 **test** | **bool** | Test flag | [optional] 
 **subscriptions** | **int** | Number of active subscriptions for this customer (deprecated, will be removed in a later version, use active_subscriptions) | 

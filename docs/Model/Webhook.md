@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique webhook id assigned by Reepay | 
+**id** | **string** | Unique webhook id assigned by Frisbii | 
 **event** | **string** | Event id of the event this webhook is for | 
 **state** | **string** | The webhook state, one of the following: &#x60;pending&#x60;, &#x60;retrying&#x60;, &#x60;disabled&#x60;, &#x60;failed&#x60;, &#x60;completed&#x60; | 
 **url** | **string** | Webhook url | 

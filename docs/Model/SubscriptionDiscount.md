@@ -9,15 +9,15 @@ Name | Type | Description | Notes
 **coupon** | **string** | Coupon reference if this discount was released by a coupon code | [optional] 
 **deleted** | [**\DateTime**](\DateTime.md) | Date when the discount was deleted if deleted. In ISO-8601 extended offset date-time format. | [optional] 
 **created** | [**\DateTime**](\DateTime.md) | Date when the discount was created. In ISO-8601 extended offset date-time format. | 
-**name** | **string** | Name of discount. Will be used as order line text. | 
-**description** | **string** | Optional description of discount | [optional] 
+**name** | **string** | Optional name overriding the discount name. If not defined the discount name will be used as order line text. | [optional] 
+**description** | **string** | Optional description overriding the discount description. If not defined the discount description will be used. | [optional] 
 **amount** | **int** | Fixed amount discount deducted from order line amounts including VAT | [optional] 
 **currency** | **string** | Currency of fixed amount discount in ISO 4217 three letter alpha code | [optional] 
 **percentage** | **int** | Percentage discount applied to each applicable order line | [optional] 
 **count** | **int** | Number of invoices this subscription discount has been applied to | 
 **invoices** | **string[]** | List of invoices this subscription discount has been applied to | 
-**discount_dto** | [**\Billwerk\Model\Discount**](Discount.md) |  | 
-**apply_to** | **string[]** | Which order lines the discount is applicable to: &#x60;all&#x60;, &#x60;setup_fee&#x60;, &#x60;plan&#x60;, &#x60;additional_cost&#x60;, &#x60;add_on&#x60; and &#x60;ondemand&#x60; | 
+**discount_dto** | [**\Frisbii\lib/Model\Discount**](Discount.md) |  | 
+**apply_to** | **string[]** | Which order lines the discount is applicable to: &#x60;all&#x60;, &#x60;setup_fee&#x60;, &#x60;plan&#x60;, &#x60;additional_cost&#x60;, &#x60;add_on&#x60;, &#x60;ondemand&#x60; and &#x60;metered_billing_product&#x60; | 
 **fixed_count** | **int** | Apply discount to a fixed number of invoices | [optional] 
 **fixed_period_unit** | **string** | Time unit use for fixed valid period | [optional] 
 **fixed_period** | **int** | Fixed period length e.g. 12 months or 14 days | [optional] 

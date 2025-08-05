@@ -1,6 +1,6 @@
-# Billwerk\InvoiceApi
+# Frisbii\InvoiceApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,23 +11,23 @@ Method | HTTP request | Description
 [**createOrUpdateBillingAddress**](InvoiceApi.md#createorupdatebillingaddress) | **PUT** /v1/invoice/{id}/billing_address | Create or update invoice billing address
 [**createOrUpdateShippingAddress**](InvoiceApi.md#createorupdateshippingaddress) | **PUT** /v1/invoice/{id}/shipping_address | Create or update invoice shipping address
 [**deleteBillingAddress**](InvoiceApi.md#deletebillingaddress) | **DELETE** /v1/invoice/{id}/billing_address | Delete invoice billing address
-[**deleteMetadata2**](InvoiceApi.md#deletemetadata2) | **DELETE** /v1/invoice/{handle}/metadata | Delete metadata
+[**deleteMetadata4**](InvoiceApi.md#deletemetadata4) | **DELETE** /v1/invoice/{handle}/metadata | Delete metadata
 [**deleteShippingAddress**](InvoiceApi.md#deleteshippingaddress) | **DELETE** /v1/invoice/{id}/shipping_address | Delete invoice shipping address
 [**detachFromSubscription**](InvoiceApi.md#detachfromsubscription) | **POST** /v1/invoice/{id}/detach | Detach from subscription
 [**extendKAuthTransaction**](InvoiceApi.md#extendkauthtransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/extend | Extend authorization transaction
 [**extendKlarnaTransaction**](InvoiceApi.md#extendklarnatransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/extend_klarna | Extend Klarna authorization transaction
 [**failInvoice**](InvoiceApi.md#failinvoice) | **POST** /v1/invoice/{id}/fail | Fail invoice
 [**getInvoice**](InvoiceApi.md#getinvoice) | **GET** /v1/invoice/{id} | Get invoice
-[**getMetadata2**](InvoiceApi.md#getmetadata2) | **GET** /v1/invoice/{handle}/metadata | Get metadata
+[**getMetadata4**](InvoiceApi.md#getmetadata4) | **GET** /v1/invoice/{handle}/metadata | Get metadata
 [**manualSettle**](InvoiceApi.md#manualsettle) | **POST** /v1/invoice/{id}/manual_settle | Manual settle
 [**reactivateInvoice**](InvoiceApi.md#reactivateinvoice) | **POST** /v1/invoice/{id}/reactivate | Reactivate invoice
 [**settle**](InvoiceApi.md#settle) | **POST** /v1/invoice/{id}/settle | Settle
 [**transaction**](InvoiceApi.md#transaction) | **GET** /v1/invoice/{id}/transaction/{transaction} | Get transaction
 [**transactionDetails**](InvoiceApi.md#transactiondetails) | **GET** /v1/invoice/{id}/transaction/{transaction}/details | Get transaction details
-[**updateMetadata2**](InvoiceApi.md#updatemetadata2) | **PUT** /v1/invoice/{handle}/metadata | Create or update metadata
+[**updateMetadata4**](InvoiceApi.md#updatemetadata4) | **PUT** /v1/invoice/{handle}/metadata | Create or update metadata
 
 # **cancelAllDunningPending**
-> \Billwerk\Model\Invoice[] cancelAllDunningPending($handle)
+> \Frisbii\lib/Model\Invoice[] cancelAllDunningPending($handle)
 
 Cancel all dunning and pending
 
@@ -36,12 +36,12 @@ Cancel all dunning and pending
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice[]**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cancelInvoice**
-> \Billwerk\Model\Invoice cancelInvoice($id)
+> \Frisbii\lib/Model\Invoice cancelInvoice($id)
 
 Cancel invoice
 
@@ -89,12 +89,12 @@ Cancel invoice
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cancelSettleLater**
-> \Billwerk\Model\Invoice cancelSettleLater($id)
+> \Frisbii\lib/Model\Invoice cancelSettleLater($id)
 
 Cancel settle later
 
@@ -142,12 +142,12 @@ Cancel settle later
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cancelTransaction**
-> \Billwerk\Model\Transaction cancelTransaction($id, $transaction)
+> \Frisbii\lib/Model\Transaction cancelTransaction($id, $transaction)
 
 Cancel transaction
 
@@ -195,12 +195,12 @@ Cancel transaction
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Transaction**](../Model/Transaction.md)
+[**\Frisbii\lib/Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createOrUpdateBillingAddress**
-> \Billwerk\Model\Invoice createOrUpdateBillingAddress($body, $id)
+> \Frisbii\lib/Model\Invoice createOrUpdateBillingAddress($body, $id)
 
 Create or update invoice billing address
 
@@ -250,18 +250,18 @@ Create or update invoice billing address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\InvoiceBillingAddress(); // \Billwerk\Model\InvoiceBillingAddress | 
+$body = new \Frisbii\lib/Model\InvoiceBillingAddress(); // \Frisbii\lib/Model\InvoiceBillingAddress | 
 $id = "id_example"; // string | Invoice id or handle
 
 try {
@@ -277,12 +277,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\InvoiceBillingAddress**](../Model/InvoiceBillingAddress.md)|  |
+ **body** | [**\Frisbii\lib/Model\InvoiceBillingAddress**](../Model/InvoiceBillingAddress.md)|  |
  **id** | **string**| Invoice id or handle |
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createOrUpdateShippingAddress**
-> \Billwerk\Model\Invoice createOrUpdateShippingAddress($body, $id)
+> \Frisbii\lib/Model\Invoice createOrUpdateShippingAddress($body, $id)
 
 Create or update invoice shipping address
 
@@ -305,18 +305,18 @@ Create or update invoice shipping address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\InvoiceShippingAddress(); // \Billwerk\Model\InvoiceShippingAddress | 
+$body = new \Frisbii\lib/Model\InvoiceShippingAddress(); // \Frisbii\lib/Model\InvoiceShippingAddress | 
 $id = "id_example"; // string | Invoice id or handle
 
 try {
@@ -332,12 +332,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\InvoiceShippingAddress**](../Model/InvoiceShippingAddress.md)|  |
+ **body** | [**\Frisbii\lib/Model\InvoiceShippingAddress**](../Model/InvoiceShippingAddress.md)|  |
  **id** | **string**| Invoice id or handle |
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteBillingAddress**
-> \Billwerk\Model\Invoice deleteBillingAddress($id)
+> \Frisbii\lib/Model\Invoice deleteBillingAddress($id)
 
 Delete invoice billing address
 
@@ -360,12 +360,12 @@ Delete invoice billing address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -403,8 +403,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteMetadata2**
-> deleteMetadata2($handle)
+# **deleteMetadata4**
+> deleteMetadata4($handle)
 
 Delete metadata
 
@@ -413,12 +413,12 @@ Delete metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -427,9 +427,9 @@ $apiInstance = new Billwerk\API\InvoiceApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $apiInstance->deleteMetadata2($handle);
+    $apiInstance->deleteMetadata4($handle);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoiceApi->deleteMetadata2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoiceApi->deleteMetadata4: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -456,7 +456,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteShippingAddress**
-> \Billwerk\Model\Invoice deleteShippingAddress($id)
+> \Frisbii\lib/Model\Invoice deleteShippingAddress($id)
 
 Delete invoice shipping address
 
@@ -465,12 +465,12 @@ Delete invoice shipping address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **detachFromSubscription**
-> \Billwerk\Model\Invoice detachFromSubscription($id)
+> \Frisbii\lib/Model\Invoice detachFromSubscription($id)
 
 Detach from subscription
 
@@ -518,12 +518,12 @@ Detach from subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **extendKAuthTransaction**
-> \Billwerk\Model\ExtendAuthResponse extendKAuthTransaction($id, $transaction)
+> \Frisbii\lib/Model\ExtendAuthResponse extendKAuthTransaction($id, $transaction)
 
 Extend authorization transaction
 
@@ -571,12 +571,12 @@ Extend authorization transaction
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\ExtendAuthResponse**](../Model/ExtendAuthResponse.md)
+[**\Frisbii\lib/Model\ExtendAuthResponse**](../Model/ExtendAuthResponse.md)
 
 ### Authorization
 
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **extendKlarnaTransaction**
-> \Billwerk\Model\ExtendKlarnaAuthResponse extendKlarnaTransaction($id, $transaction)
+> \Frisbii\lib/Model\ExtendKlarnaAuthResponse extendKlarnaTransaction($id, $transaction)
 
 Extend Klarna authorization transaction
 
@@ -626,12 +626,12 @@ Extend Klarna authorization transaction
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\ExtendKlarnaAuthResponse**](../Model/ExtendKlarnaAuthResponse.md)
+[**\Frisbii\lib/Model\ExtendKlarnaAuthResponse**](../Model/ExtendKlarnaAuthResponse.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **failInvoice**
-> \Billwerk\Model\Invoice failInvoice($id)
+> \Frisbii\lib/Model\Invoice failInvoice($id)
 
 Fail invoice
 
@@ -681,12 +681,12 @@ Fail invoice
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -711,7 +711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoice**
-> \Billwerk\Model\Invoice getInvoice($id)
+> \Frisbii\lib/Model\Invoice getInvoice($id)
 
 Get invoice
 
@@ -734,12 +734,12 @@ Get invoice
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -764,7 +764,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -777,8 +777,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getMetadata2**
-> map[string,object] getMetadata2($handle)
+# **getMetadata4**
+> map[string,object] getMetadata4($handle)
 
 Get metadata
 
@@ -787,12 +787,12 @@ Get metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -801,10 +801,10 @@ $apiInstance = new Billwerk\API\InvoiceApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->getMetadata2($handle);
+    $result = $apiInstance->getMetadata4($handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoiceApi->getMetadata2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoiceApi->getMetadata4: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -831,7 +831,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **manualSettle**
-> \Billwerk\Model\Invoice manualSettle($body, $id)
+> \Frisbii\lib/Model\Invoice manualSettle($body, $id)
 
 Manual settle
 
@@ -840,18 +840,18 @@ Manual settle
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ManualSettleTransfer(); // \Billwerk\Model\ManualSettleTransfer | 
+$body = new \Frisbii\lib/Model\ManualSettleTransfer(); // \Frisbii\lib/Model\ManualSettleTransfer | 
 $id = "id_example"; // string | Invoice id or handle
 
 try {
@@ -867,12 +867,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ManualSettleTransfer**](../Model/ManualSettleTransfer.md)|  |
+ **body** | [**\Frisbii\lib/Model\ManualSettleTransfer**](../Model/ManualSettleTransfer.md)|  |
  **id** | **string**| Invoice id or handle |
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reactivateInvoice**
-> \Billwerk\Model\Invoice reactivateInvoice($id)
+> \Frisbii\lib/Model\Invoice reactivateInvoice($id)
 
 Reactivate invoice
 
@@ -895,12 +895,12 @@ Reactivate invoice
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -925,7 +925,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -939,7 +939,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **settle**
-> \Billwerk\Model\Invoice settle($body, $id)
+> \Frisbii\lib/Model\Invoice settle($body, $id)
 
 Settle
 
@@ -948,18 +948,18 @@ Settle
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\Settle(); // \Billwerk\Model\Settle | 
+$body = new \Frisbii\lib/Model\Settle(); // \Frisbii\lib/Model\Settle | 
 $id = "id_example"; // string | Invoice id or handle
 
 try {
@@ -975,12 +975,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\Settle**](../Model/Settle.md)|  |
+ **body** | [**\Frisbii\lib/Model\Settle**](../Model/Settle.md)|  |
  **id** | **string**| Invoice id or handle |
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -994,7 +994,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transaction**
-> \Billwerk\Model\Transaction transaction($id, $transaction)
+> \Frisbii\lib/Model\Transaction transaction($id, $transaction)
 
 Get transaction
 
@@ -1003,12 +1003,12 @@ Get transaction
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1035,7 +1035,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Transaction**](../Model/Transaction.md)
+[**\Frisbii\lib/Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -1058,12 +1058,12 @@ Get transaction details
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1103,8 +1103,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateMetadata2**
-> map[string,object] updateMetadata2($body, $handle)
+# **updateMetadata4**
+> map[string,object] updateMetadata4($body, $handle)
 
 Create or update metadata
 
@@ -1113,25 +1113,25 @@ Create or update metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\InvoiceApi(
+$apiInstance = new Frisbii\lib/Api\InvoiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->updateMetadata2($body, $handle);
+    $result = $apiInstance->updateMetadata4($body, $handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoiceApi->updateMetadata2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoiceApi->updateMetadata4: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
