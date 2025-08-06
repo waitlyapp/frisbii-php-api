@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -65,7 +65,7 @@ class SubscriptionChange implements ModelInterface, ArrayAccess
         'updated' => '\DateTime',
         'created' => '\DateTime',
         'amount_incl_vat' => 'bool',
-        'subscription_add_ons' => '\Frisbii\lib/Model\SubscriptionAddOn[]',
+        'subscription_add_ons' => '\Frisbii\lib\Model\SubscriptionAddOn[]',
         'remove_add_ons' => 'string[]'
     ];
 
@@ -457,7 +457,7 @@ class SubscriptionChange implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_add_ons
      *
-     * @return \Frisbii\lib/Model\SubscriptionAddOn[]
+     * @return \Frisbii\lib\Model\SubscriptionAddOn[]
      */
     public function getSubscriptionAddOns()
     {
@@ -467,7 +467,7 @@ class SubscriptionChange implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_add_ons
      *
-     * @param \Frisbii\lib/Model\SubscriptionAddOn[] $subscription_add_ons List of subscription add-ons to create in change
+     * @param \Frisbii\lib\Model\SubscriptionAddOn[] $subscription_add_ons List of subscription add-ons to create in change
      *
      * @return $this
      */

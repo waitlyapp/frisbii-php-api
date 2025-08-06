@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class WebhookApi
      *
      * Disable webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookDisableRequest $body body (required)
+     * @param  \Frisbii\lib\Model\WebhookDisableRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Webhook[]
+     * @return \Frisbii\lib\Model\Webhook[]
      */
     public function disableWebhooks($body)
     {
@@ -108,15 +108,15 @@ class WebhookApi
      *
      * Disable webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookDisableRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookDisableRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function disableWebhooksWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->disableWebhooksRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Webhook[]',
+                        '\Frisbii\lib\Model\Webhook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class WebhookApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class WebhookApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class WebhookApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class WebhookApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class WebhookApi
      *
      * Disable webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookDisableRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookDisableRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class WebhookApi
      *
      * Disable webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookDisableRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookDisableRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function disableWebhooksAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->disableWebhooksRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class WebhookApi
     /**
      * Create request for operation 'disableWebhooks'
      *
-     * @param  \Frisbii\lib/Model\WebhookDisableRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookDisableRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -404,7 +404,7 @@ class WebhookApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Webhook[]
+     * @return \Frisbii\lib\Model\Webhook[]
      */
     public function getWebhook($id)
     {
@@ -421,11 +421,11 @@ class WebhookApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhookWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->getWebhookRequest($id);
 
         try {
@@ -477,7 +477,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Webhook[]',
+                        '\Frisbii\lib\Model\Webhook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -493,7 +493,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class WebhookApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -509,7 +509,7 @@ class WebhookApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -517,7 +517,7 @@ class WebhookApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -525,7 +525,7 @@ class WebhookApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -567,7 +567,7 @@ class WebhookApi
      */
     public function getWebhookAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->getWebhookRequest($id);
 
         return $this->client
@@ -718,7 +718,7 @@ class WebhookApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\WebhookRequest[]
+     * @return \Frisbii\lib\Model\WebhookRequest[]
      */
     public function getWebhookRequests($id)
     {
@@ -735,11 +735,11 @@ class WebhookApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\WebhookRequest[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\WebhookRequest[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhookRequestsWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\WebhookRequest[]';
+        $returnType = '\Frisbii\lib\Model\WebhookRequest[]';
         $request = $this->getWebhookRequestsRequest($id);
 
         try {
@@ -791,7 +791,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\WebhookRequest[]',
+                        '\Frisbii\lib\Model\WebhookRequest[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -815,7 +815,7 @@ class WebhookApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class WebhookApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class WebhookApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class WebhookApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class WebhookApi
      */
     public function getWebhookRequestsAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\WebhookRequest[]';
+        $returnType = '\Frisbii\lib\Model\WebhookRequest[]';
         $request = $this->getWebhookRequestsRequest($id);
 
         return $this->client
@@ -1036,7 +1036,7 @@ class WebhookApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Webhook[]
+     * @return \Frisbii\lib\Model\Webhook[]
      */
     public function getWebhooks($created_before, $size = '100', $state = null, $event = null, $created_after = null)
     {
@@ -1057,11 +1057,11 @@ class WebhookApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhooksWithHttpInfo($created_before, $size = '100', $state = null, $event = null, $created_after = null)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->getWebhooksRequest($created_before, $size, $state, $event, $created_after);
 
         try {
@@ -1113,7 +1113,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Webhook[]',
+                        '\Frisbii\lib\Model\Webhook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1121,7 +1121,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1129,7 +1129,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1137,7 +1137,7 @@ class WebhookApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1145,7 +1145,7 @@ class WebhookApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,7 +1153,7 @@ class WebhookApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1161,7 +1161,7 @@ class WebhookApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1211,7 +1211,7 @@ class WebhookApi
      */
     public function getWebhooksAsyncWithHttpInfo($created_before, $size = '100', $state = null, $event = null, $created_after = null)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->getWebhooksRequest($created_before, $size, $state, $event, $created_after);
 
         return $this->client
@@ -1374,11 +1374,11 @@ class WebhookApi
      *
      * Re-send webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookResendRequest $body body (required)
+     * @param  \Frisbii\lib\Model\WebhookResendRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Webhook[]
+     * @return \Frisbii\lib\Model\Webhook[]
      */
     public function resendJson($body)
     {
@@ -1391,15 +1391,15 @@ class WebhookApi
      *
      * Re-send webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookResendRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookResendRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function resendJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->resendJsonRequest($body);
 
         try {
@@ -1451,7 +1451,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Webhook[]',
+                        '\Frisbii\lib\Model\Webhook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1459,7 +1459,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1467,7 +1467,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1475,7 +1475,7 @@ class WebhookApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1483,7 +1483,7 @@ class WebhookApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1491,7 +1491,7 @@ class WebhookApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1499,7 +1499,7 @@ class WebhookApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1514,7 +1514,7 @@ class WebhookApi
      *
      * Re-send webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookResendRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookResendRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1534,14 +1534,14 @@ class WebhookApi
      *
      * Re-send webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookResendRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookResendRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function resendJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->resendJsonRequest($body);
 
         return $this->client
@@ -1584,7 +1584,7 @@ class WebhookApi
     /**
      * Create request for operation 'resendJson'
      *
-     * @param  \Frisbii\lib/Model\WebhookResendRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookResendRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1683,11 +1683,11 @@ class WebhookApi
      *
      * Update and resend webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookUpdateRequest $body body (required)
+     * @param  \Frisbii\lib\Model\WebhookUpdateRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Webhook[]
+     * @return \Frisbii\lib\Model\Webhook[]
      */
     public function updateWebhooks($body)
     {
@@ -1700,15 +1700,15 @@ class WebhookApi
      *
      * Update and resend webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookUpdateRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookUpdateRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Webhook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWebhooksWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->updateWebhooksRequest($body);
 
         try {
@@ -1760,7 +1760,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Webhook[]',
+                        '\Frisbii\lib\Model\Webhook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1768,7 +1768,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1776,7 +1776,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1784,7 +1784,7 @@ class WebhookApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1792,7 +1792,7 @@ class WebhookApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1800,7 +1800,7 @@ class WebhookApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1808,7 +1808,7 @@ class WebhookApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1823,7 +1823,7 @@ class WebhookApi
      *
      * Update and resend webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookUpdateRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookUpdateRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1843,14 +1843,14 @@ class WebhookApi
      *
      * Update and resend webhooks
      *
-     * @param  \Frisbii\lib/Model\WebhookUpdateRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookUpdateRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateWebhooksAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Webhook[]';
+        $returnType = '\Frisbii\lib\Model\Webhook[]';
         $request = $this->updateWebhooksRequest($body);
 
         return $this->client
@@ -1893,7 +1893,7 @@ class WebhookApi
     /**
      * Create request for operation 'updateWebhooks'
      *
-     * @param  \Frisbii\lib/Model\WebhookUpdateRequest $body (required)
+     * @param  \Frisbii\lib\Model\WebhookUpdateRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

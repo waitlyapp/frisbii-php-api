@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,7 +56,7 @@ class StandardTaxRatesResponseDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'rates' => '\Frisbii\lib/Model\TaxRate[]'
+        'rates' => '\Frisbii\lib\Model\TaxRate[]'
     ];
 
     /**
@@ -204,7 +204,7 @@ class StandardTaxRatesResponseDto implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Frisbii\lib/Model\TaxRate[]
+     * @return \Frisbii\lib\Model\TaxRate[]
      */
     public function getRates()
     {
@@ -214,7 +214,7 @@ class StandardTaxRatesResponseDto implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Frisbii\lib/Model\TaxRate[] $rates List of standard tax rates
+     * @param \Frisbii\lib\Model\TaxRate[] $rates List of standard tax rates
      *
      * @return $this
      */

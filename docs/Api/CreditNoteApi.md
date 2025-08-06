@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCreditNote**](CreditNoteApi.md#getcreditnote) | **GET** /v1/credit_note/{id} | Get credit note
 
 # **creditInvoice**
-> \Frisbii\lib/Model\InvoiceCreditNoteV2 creditInvoice($body, $id)
+> \Frisbii\lib\Model\InvoiceCreditNoteV2 creditInvoice($body, $id)
 
 Create credit note and credit from Invoice. Available only for subscription invoices
 
@@ -22,13 +22,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CreditNoteApi(
+$apiInstance = new Frisbii\lib\Api\CreditNoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateCreditInvoice(); // \Frisbii\lib/Model\CreateCreditInvoice | 
+$body = new \Frisbii\lib\Model\CreateCreditInvoice(); // \Frisbii\lib\Model\CreateCreditInvoice | 
 $id = "id_example"; // string | Invoice id
 
 try {
@@ -44,12 +44,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateCreditInvoice**](../Model/CreateCreditInvoice.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateCreditInvoice**](../Model/CreateCreditInvoice.md)|  |
  **id** | **string**| Invoice id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\InvoiceCreditNoteV2**](../Model/InvoiceCreditNoteV2.md)
+[**\Frisbii\lib\Model\InvoiceCreditNoteV2**](../Model/InvoiceCreditNoteV2.md)
 
 ### Authorization
 
@@ -57,13 +57,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCreditNote**
-> \Frisbii\lib/Model\InvoiceCreditNoteV2 getCreditNote($id)
+> \Frisbii\lib\Model\InvoiceCreditNoteV2 getCreditNote($id)
 
 Get credit note
 
@@ -77,7 +77,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CreditNoteApi(
+$apiInstance = new Frisbii\lib\Api\CreditNoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\InvoiceCreditNoteV2**](../Model/InvoiceCreditNoteV2.md)
+[**\Frisbii\lib\Model\InvoiceCreditNoteV2**](../Model/InvoiceCreditNoteV2.md)
 
 ### Authorization
 

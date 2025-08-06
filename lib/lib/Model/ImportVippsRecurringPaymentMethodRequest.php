@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class ImportVippsRecurringPaymentMethodRequest implements ModelInterface, ArrayA
       */
     protected static $swaggerTypes = [
         'reference' => 'string',
-        'customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'customer' => '\Frisbii\lib\Model\CreateCustomer',
         'currency' => 'string',
         'customer_handle' => 'string',
         'vipps_agreement_id' => 'string'
@@ -258,7 +258,7 @@ class ImportVippsRecurringPaymentMethodRequest implements ModelInterface, ArrayA
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCustomer()
     {
@@ -268,7 +268,7 @@ class ImportVippsRecurringPaymentMethodRequest implements ModelInterface, ArrayA
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $customer customer
+     * @param \Frisbii\lib\Model\CreateCustomer $customer customer
      *
      * @return $this
      */

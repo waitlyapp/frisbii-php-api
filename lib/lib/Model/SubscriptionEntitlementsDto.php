@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,9 +56,9 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'entitlements' => '\Frisbii\lib/Model\Entitlement[]',
-        'additional_entitlements' => '\Frisbii\lib/Model\Entitlement[]',
-        'excluded_entitlements' => '\Frisbii\lib/Model\Entitlement[]'
+        'entitlements' => '\Frisbii\lib\Model\Entitlement[]',
+        'additional_entitlements' => '\Frisbii\lib\Model\Entitlement[]',
+        'excluded_entitlements' => '\Frisbii\lib\Model\Entitlement[]'
     ];
 
     /**
@@ -216,7 +216,7 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
     /**
      * Gets entitlements
      *
-     * @return \Frisbii\lib/Model\Entitlement[]
+     * @return \Frisbii\lib\Model\Entitlement[]
      */
     public function getEntitlements()
     {
@@ -226,7 +226,7 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
     /**
      * Sets entitlements
      *
-     * @param \Frisbii\lib/Model\Entitlement[] $entitlements An aggregated set of entitlements based off of the plan, addons and additional entitlements. Any entitlements present in the excluded entitlements are removed from this list
+     * @param \Frisbii\lib\Model\Entitlement[] $entitlements An aggregated set of entitlements based off of the plan, addons and additional entitlements. Any entitlements present in the excluded entitlements are removed from this list
      *
      * @return $this
      */
@@ -240,7 +240,7 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
     /**
      * Gets additional_entitlements
      *
-     * @return \Frisbii\lib/Model\Entitlement[]
+     * @return \Frisbii\lib\Model\Entitlement[]
      */
     public function getAdditionalEntitlements()
     {
@@ -250,7 +250,7 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
     /**
      * Sets additional_entitlements
      *
-     * @param \Frisbii\lib/Model\Entitlement[] $additional_entitlements List of additional entitlements added to the subscription
+     * @param \Frisbii\lib\Model\Entitlement[] $additional_entitlements List of additional entitlements added to the subscription
      *
      * @return $this
      */
@@ -264,7 +264,7 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
     /**
      * Gets excluded_entitlements
      *
-     * @return \Frisbii\lib/Model\Entitlement[]
+     * @return \Frisbii\lib\Model\Entitlement[]
      */
     public function getExcludedEntitlements()
     {
@@ -274,7 +274,7 @@ class SubscriptionEntitlementsDto implements ModelInterface, ArrayAccess
     /**
      * Sets excluded_entitlements
      *
-     * @param \Frisbii\lib/Model\Entitlement[] $excluded_entitlements List of entitlements excluded from the subscription
+     * @param \Frisbii\lib\Model\Entitlement[] $excluded_entitlements List of entitlements excluded from the subscription
      *
      * @return $this
      */

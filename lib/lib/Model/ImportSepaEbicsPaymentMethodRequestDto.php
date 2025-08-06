@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class ImportSepaEbicsPaymentMethodRequestDto implements ModelInterface, ArrayAcc
       */
     protected static $swaggerTypes = [
         'reference' => 'string',
-        'customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'customer' => '\Frisbii\lib\Model\CreateCustomer',
         'iban' => 'string',
         'bic' => 'string',
         'customer_handle' => 'string',
@@ -267,7 +267,7 @@ class ImportSepaEbicsPaymentMethodRequestDto implements ModelInterface, ArrayAcc
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCustomer()
     {
@@ -277,7 +277,7 @@ class ImportSepaEbicsPaymentMethodRequestDto implements ModelInterface, ArrayAcc
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $customer customer
+     * @param \Frisbii\lib\Model\CreateCustomer $customer customer
      *
      * @return $this
      */

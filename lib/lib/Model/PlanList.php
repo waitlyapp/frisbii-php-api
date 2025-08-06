@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -61,7 +61,7 @@ class PlanList implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\Plan[]',
+        'content' => '\Frisbii\lib\Model\Plan[]',
         'range' => 'string',
         'next_page_token' => 'string'
     ];
@@ -372,7 +372,7 @@ class PlanList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Plan[]
+     * @return \Frisbii\lib\Model\Plan[]
      */
     public function getContent()
     {
@@ -382,7 +382,7 @@ class PlanList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Plan[] $content List of plans for current page
+     * @param \Frisbii\lib\Model\Plan[] $content List of plans for current page
      *
      * @return $this
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class SubscriptionPeriodBalance implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'date' => '\DateTime',
-        'invoice' => '\Frisbii\lib/Model\Invoice',
+        'invoice' => '\Frisbii\lib\Model\Invoice',
         'paid' => 'int',
         'consumed' => 'int',
         'remaining' => 'int',
@@ -270,7 +270,7 @@ class SubscriptionPeriodBalance implements ModelInterface, ArrayAccess
     /**
      * Gets invoice
      *
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function getInvoice()
     {
@@ -280,7 +280,7 @@ class SubscriptionPeriodBalance implements ModelInterface, ArrayAccess
     /**
      * Sets invoice
      *
-     * @param \Frisbii\lib/Model\Invoice $invoice invoice
+     * @param \Frisbii\lib\Model\Invoice $invoice invoice
      *
      * @return $this
      */

@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -95,7 +95,7 @@ class CreditApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Credit
+     * @return \Frisbii\lib\Model\Credit
      */
     public function cancelCredit($handle)
     {
@@ -112,11 +112,11 @@ class CreditApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Credit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Credit, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelCreditWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Credit';
+        $returnType = '\Frisbii\lib\Model\Credit';
         $request = $this->cancelCreditRequest($handle);
 
         try {
@@ -168,7 +168,7 @@ class CreditApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Credit',
+                        '\Frisbii\lib\Model\Credit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class CreditApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class CreditApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class CreditApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class CreditApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class CreditApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class CreditApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -258,7 +258,7 @@ class CreditApi
      */
     public function cancelCreditAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Credit';
+        $returnType = '\Frisbii\lib\Model\Credit';
         $request = $this->cancelCreditRequest($handle);
 
         return $this->client
@@ -405,11 +405,11 @@ class CreditApi
      *
      * Create credit
      *
-     * @param  \Frisbii\lib/Model\CreateCredit $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCredit $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Credit
+     * @return \Frisbii\lib\Model\Credit
      */
     public function createCreditJson($body)
     {
@@ -422,15 +422,15 @@ class CreditApi
      *
      * Create credit
      *
-     * @param  \Frisbii\lib/Model\CreateCredit $body (required)
+     * @param  \Frisbii\lib\Model\CreateCredit $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Credit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Credit, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCreditJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Credit';
+        $returnType = '\Frisbii\lib\Model\Credit';
         $request = $this->createCreditJsonRequest($body);
 
         try {
@@ -482,7 +482,7 @@ class CreditApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Credit',
+                        '\Frisbii\lib\Model\Credit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class CreditApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class CreditApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class CreditApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +514,7 @@ class CreditApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class CreditApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class CreditApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class CreditApi
      *
      * Create credit
      *
-     * @param  \Frisbii\lib/Model\CreateCredit $body (required)
+     * @param  \Frisbii\lib\Model\CreateCredit $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -565,14 +565,14 @@ class CreditApi
      *
      * Create credit
      *
-     * @param  \Frisbii\lib/Model\CreateCredit $body (required)
+     * @param  \Frisbii\lib\Model\CreateCredit $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCreditJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Credit';
+        $returnType = '\Frisbii\lib\Model\Credit';
         $request = $this->createCreditJsonRequest($body);
 
         return $this->client
@@ -615,7 +615,7 @@ class CreditApi
     /**
      * Create request for operation 'createCreditJson'
      *
-     * @param  \Frisbii\lib/Model\CreateCredit $body (required)
+     * @param  \Frisbii\lib\Model\CreateCredit $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -718,7 +718,7 @@ class CreditApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Credit
+     * @return \Frisbii\lib\Model\Credit
      */
     public function getCredit($handle)
     {
@@ -735,11 +735,11 @@ class CreditApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Credit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Credit, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Credit';
+        $returnType = '\Frisbii\lib\Model\Credit';
         $request = $this->getCreditRequest($handle);
 
         try {
@@ -791,7 +791,7 @@ class CreditApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Credit',
+                        '\Frisbii\lib\Model\Credit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class CreditApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class CreditApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -815,7 +815,7 @@ class CreditApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class CreditApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class CreditApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class CreditApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class CreditApi
      */
     public function getCreditAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Credit';
+        $returnType = '\Frisbii\lib\Model\Credit';
         $request = $this->getCreditRequest($handle);
 
         return $this->client
@@ -1032,7 +1032,7 @@ class CreditApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Credit[]
+     * @return \Frisbii\lib\Model\Credit[]
      */
     public function getCredits($handle)
     {
@@ -1049,11 +1049,11 @@ class CreditApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Credit[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Credit[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Credit[]';
+        $returnType = '\Frisbii\lib\Model\Credit[]';
         $request = $this->getCreditsRequest($handle);
 
         try {
@@ -1105,7 +1105,7 @@ class CreditApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Credit[]',
+                        '\Frisbii\lib\Model\Credit[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1113,7 +1113,7 @@ class CreditApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1121,7 +1121,7 @@ class CreditApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1129,7 +1129,7 @@ class CreditApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1137,7 +1137,7 @@ class CreditApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1145,7 +1145,7 @@ class CreditApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,7 +1153,7 @@ class CreditApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class CreditApi
      */
     public function getCreditsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Credit[]';
+        $returnType = '\Frisbii\lib\Model\Credit[]';
         $request = $this->getCreditsRequest($handle);
 
         return $this->client

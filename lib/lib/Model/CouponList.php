@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class CouponList implements ModelInterface, ArrayAccess
         'to' => 'string',
         'from' => 'string',
         'range' => 'string',
-        'content' => '\Frisbii\lib/Model\Coupon[]',
+        'content' => '\Frisbii\lib\Model\Coupon[]',
         'next_page_token' => 'string'
     ];
 
@@ -405,7 +405,7 @@ class CouponList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Coupon[]
+     * @return \Frisbii\lib\Model\Coupon[]
      */
     public function getContent()
     {
@@ -415,7 +415,7 @@ class CouponList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Coupon[] $content List of coupons for current page
+     * @param \Frisbii\lib\Model\Coupon[] $content List of coupons for current page
      *
      * @return $this
      */

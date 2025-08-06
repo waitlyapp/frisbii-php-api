@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -58,7 +58,7 @@ class RiskConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'disabled' => 'bool',
-        'rule_sets' => '\Frisbii\lib/Model\RiskRuleSet[]'
+        'rule_sets' => '\Frisbii\lib\Model\RiskRuleSet[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class RiskConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets rule_sets
      *
-     * @return \Frisbii\lib/Model\RiskRuleSet[]
+     * @return \Frisbii\lib\Model\RiskRuleSet[]
      */
     public function getRuleSets()
     {
@@ -248,7 +248,7 @@ class RiskConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets rule_sets
      *
-     * @param \Frisbii\lib/Model\RiskRuleSet[] $rule_sets Prioritized list of rule sets
+     * @param \Frisbii\lib\Model\RiskRuleSet[] $rule_sets Prioritized list of rule sets
      *
      * @return $this
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -70,7 +70,7 @@ class SubscriptionDiscount implements ModelInterface, ArrayAccess
         'percentage' => 'int',
         'count' => 'int',
         'invoices' => 'string[]',
-        'discount_dto' => '\Frisbii\lib/Model\Discount',
+        'discount_dto' => '\Frisbii\lib\Model\Discount',
         'apply_to' => 'string[]',
         'fixed_count' => 'int',
         'fixed_period_unit' => 'string',
@@ -714,7 +714,7 @@ class SubscriptionDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets discount_dto
      *
-     * @return \Frisbii\lib/Model\Discount
+     * @return \Frisbii\lib\Model\Discount
      */
     public function getDiscountDto()
     {
@@ -724,7 +724,7 @@ class SubscriptionDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets discount_dto
      *
-     * @param \Frisbii\lib/Model\Discount $discount_dto discount_dto
+     * @param \Frisbii\lib\Model\Discount $discount_dto discount_dto
      *
      * @return $this
      */

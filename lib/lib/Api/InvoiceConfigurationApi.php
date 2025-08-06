@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class InvoiceConfigurationApi
      *
      * Set invoice sequence configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceSequenceConfiguration $body body (required)
+     * @param  \Frisbii\lib\Model\InvoiceSequenceConfiguration $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceSequenceConfiguration
+     * @return \Frisbii\lib\Model\InvoiceSequenceConfiguration
      */
     public function createInvoiceSequenceConfiguration($body)
     {
@@ -108,15 +108,15 @@ class InvoiceConfigurationApi
      *
      * Set invoice sequence configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceSequenceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceSequenceConfiguration $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceSequenceConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceSequenceConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function createInvoiceSequenceConfigurationWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceSequenceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceSequenceConfiguration';
         $request = $this->createInvoiceSequenceConfigurationRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class InvoiceConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceSequenceConfiguration',
+                        '\Frisbii\lib\Model\InvoiceSequenceConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class InvoiceConfigurationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class InvoiceConfigurationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class InvoiceConfigurationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class InvoiceConfigurationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class InvoiceConfigurationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class InvoiceConfigurationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class InvoiceConfigurationApi
      *
      * Set invoice sequence configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceSequenceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceSequenceConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class InvoiceConfigurationApi
      *
      * Set invoice sequence configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceSequenceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceSequenceConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createInvoiceSequenceConfigurationAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceSequenceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceSequenceConfiguration';
         $request = $this->createInvoiceSequenceConfigurationRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class InvoiceConfigurationApi
     /**
      * Create request for operation 'createInvoiceSequenceConfiguration'
      *
-     * @param  \Frisbii\lib/Model\InvoiceSequenceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceSequenceConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -337,7 +337,7 @@ class InvoiceConfigurationApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -403,7 +403,7 @@ class InvoiceConfigurationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CustomerDebtorSettings
+     * @return \Frisbii\lib\Model\CustomerDebtorSettings
      */
     public function getDebtorSettings()
     {
@@ -419,11 +419,11 @@ class InvoiceConfigurationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CustomerDebtorSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CustomerDebtorSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDebtorSettingsWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\CustomerDebtorSettings';
+        $returnType = '\Frisbii\lib\Model\CustomerDebtorSettings';
         $request = $this->getDebtorSettingsRequest();
 
         try {
@@ -475,7 +475,7 @@ class InvoiceConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CustomerDebtorSettings',
+                        '\Frisbii\lib\Model\CustomerDebtorSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -483,7 +483,7 @@ class InvoiceConfigurationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class InvoiceConfigurationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -499,7 +499,7 @@ class InvoiceConfigurationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -507,7 +507,7 @@ class InvoiceConfigurationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class InvoiceConfigurationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -523,7 +523,7 @@ class InvoiceConfigurationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -563,7 +563,7 @@ class InvoiceConfigurationApi
      */
     public function getDebtorSettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\CustomerDebtorSettings';
+        $returnType = '\Frisbii\lib\Model\CustomerDebtorSettings';
         $request = $this->getDebtorSettingsRequest();
 
         return $this->client
@@ -698,7 +698,7 @@ class InvoiceConfigurationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceConfiguration
+     * @return \Frisbii\lib\Model\InvoiceConfiguration
      */
     public function getInvoiceConfiguration()
     {
@@ -714,11 +714,11 @@ class InvoiceConfigurationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceConfigurationWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceConfiguration';
         $request = $this->getInvoiceConfigurationRequest();
 
         try {
@@ -770,7 +770,7 @@ class InvoiceConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceConfiguration',
+                        '\Frisbii\lib\Model\InvoiceConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class InvoiceConfigurationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class InvoiceConfigurationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -794,7 +794,7 @@ class InvoiceConfigurationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -802,7 +802,7 @@ class InvoiceConfigurationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -810,7 +810,7 @@ class InvoiceConfigurationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class InvoiceConfigurationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class InvoiceConfigurationApi
      */
     public function getInvoiceConfigurationAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceConfiguration';
         $request = $this->getInvoiceConfigurationRequest();
 
         return $this->client
@@ -993,7 +993,7 @@ class InvoiceConfigurationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceSequenceConfiguration
+     * @return \Frisbii\lib\Model\InvoiceSequenceConfiguration
      */
     public function getInvoiceSequenceConfiguration()
     {
@@ -1009,11 +1009,11 @@ class InvoiceConfigurationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceSequenceConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceSequenceConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceSequenceConfigurationWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceSequenceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceSequenceConfiguration';
         $request = $this->getInvoiceSequenceConfigurationRequest();
 
         try {
@@ -1065,7 +1065,7 @@ class InvoiceConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceSequenceConfiguration',
+                        '\Frisbii\lib\Model\InvoiceSequenceConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1073,7 +1073,7 @@ class InvoiceConfigurationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1081,7 +1081,7 @@ class InvoiceConfigurationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1089,7 +1089,7 @@ class InvoiceConfigurationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1097,7 +1097,7 @@ class InvoiceConfigurationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1105,7 +1105,7 @@ class InvoiceConfigurationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1113,7 +1113,7 @@ class InvoiceConfigurationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,7 +1153,7 @@ class InvoiceConfigurationApi
      */
     public function getInvoiceSequenceConfigurationAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceSequenceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceSequenceConfiguration';
         $request = $this->getInvoiceSequenceConfigurationRequest();
 
         return $this->client
@@ -1285,11 +1285,11 @@ class InvoiceConfigurationApi
      *
      * Create or update customer debtor settings
      *
-     * @param  \Frisbii\lib/Model\CustomerDebtorSettings $body body (required)
+     * @param  \Frisbii\lib\Model\CustomerDebtorSettings $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CustomerDebtorSettings
+     * @return \Frisbii\lib\Model\CustomerDebtorSettings
      */
     public function updateDebtorSettings($body)
     {
@@ -1302,15 +1302,15 @@ class InvoiceConfigurationApi
      *
      * Create or update customer debtor settings
      *
-     * @param  \Frisbii\lib/Model\CustomerDebtorSettings $body (required)
+     * @param  \Frisbii\lib\Model\CustomerDebtorSettings $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CustomerDebtorSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CustomerDebtorSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDebtorSettingsWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerDebtorSettings';
+        $returnType = '\Frisbii\lib\Model\CustomerDebtorSettings';
         $request = $this->updateDebtorSettingsRequest($body);
 
         try {
@@ -1362,7 +1362,7 @@ class InvoiceConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CustomerDebtorSettings',
+                        '\Frisbii\lib\Model\CustomerDebtorSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1370,7 +1370,7 @@ class InvoiceConfigurationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1378,7 +1378,7 @@ class InvoiceConfigurationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1386,7 +1386,7 @@ class InvoiceConfigurationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1394,7 +1394,7 @@ class InvoiceConfigurationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1402,7 +1402,7 @@ class InvoiceConfigurationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1410,7 +1410,7 @@ class InvoiceConfigurationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1425,7 +1425,7 @@ class InvoiceConfigurationApi
      *
      * Create or update customer debtor settings
      *
-     * @param  \Frisbii\lib/Model\CustomerDebtorSettings $body (required)
+     * @param  \Frisbii\lib\Model\CustomerDebtorSettings $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1445,14 +1445,14 @@ class InvoiceConfigurationApi
      *
      * Create or update customer debtor settings
      *
-     * @param  \Frisbii\lib/Model\CustomerDebtorSettings $body (required)
+     * @param  \Frisbii\lib\Model\CustomerDebtorSettings $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateDebtorSettingsAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerDebtorSettings';
+        $returnType = '\Frisbii\lib\Model\CustomerDebtorSettings';
         $request = $this->updateDebtorSettingsRequest($body);
 
         return $this->client
@@ -1495,7 +1495,7 @@ class InvoiceConfigurationApi
     /**
      * Create request for operation 'updateDebtorSettings'
      *
-     * @param  \Frisbii\lib/Model\CustomerDebtorSettings $body (required)
+     * @param  \Frisbii\lib\Model\CustomerDebtorSettings $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1531,7 +1531,7 @@ class InvoiceConfigurationApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1594,11 +1594,11 @@ class InvoiceConfigurationApi
      *
      * Create or update invoice configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceConfiguration $body body (required)
+     * @param  \Frisbii\lib\Model\InvoiceConfiguration $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceConfiguration
+     * @return \Frisbii\lib\Model\InvoiceConfiguration
      */
     public function updateInvoiceConfiguration($body)
     {
@@ -1611,15 +1611,15 @@ class InvoiceConfigurationApi
      *
      * Create or update invoice configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceConfiguration $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateInvoiceConfigurationWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceConfiguration';
         $request = $this->updateInvoiceConfigurationRequest($body);
 
         try {
@@ -1671,7 +1671,7 @@ class InvoiceConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceConfiguration',
+                        '\Frisbii\lib\Model\InvoiceConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1679,7 +1679,7 @@ class InvoiceConfigurationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1687,7 +1687,7 @@ class InvoiceConfigurationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1695,7 +1695,7 @@ class InvoiceConfigurationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1703,7 +1703,7 @@ class InvoiceConfigurationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1711,7 +1711,7 @@ class InvoiceConfigurationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1719,7 +1719,7 @@ class InvoiceConfigurationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1734,7 +1734,7 @@ class InvoiceConfigurationApi
      *
      * Create or update invoice configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1754,14 +1754,14 @@ class InvoiceConfigurationApi
      *
      * Create or update invoice configuration
      *
-     * @param  \Frisbii\lib/Model\InvoiceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateInvoiceConfigurationAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceConfiguration';
+        $returnType = '\Frisbii\lib\Model\InvoiceConfiguration';
         $request = $this->updateInvoiceConfigurationRequest($body);
 
         return $this->client
@@ -1804,7 +1804,7 @@ class InvoiceConfigurationApi
     /**
      * Create request for operation 'updateInvoiceConfiguration'
      *
-     * @param  \Frisbii\lib/Model\InvoiceConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\InvoiceConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1840,7 +1840,7 @@ class InvoiceConfigurationApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

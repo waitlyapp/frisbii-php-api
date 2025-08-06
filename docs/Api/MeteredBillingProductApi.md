@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**updateMeteredBillingProduct**](MeteredBillingProductApi.md#updatemeteredbillingproduct) | **PUT** /v1/metered_billing_product/{uuidOrHandle} | Update a metered billing product
 
 # **createMeteredBillingProduct**
-> \Frisbii\lib/Model\MeteredBillingProduct createMeteredBillingProduct($body)
+> \Frisbii\lib\Model\MeteredBillingProduct createMeteredBillingProduct($body)
 
 Create a metered billing product
 
@@ -27,13 +27,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateMeteredBillingProduct(); // \Frisbii\lib/Model\CreateMeteredBillingProduct | 
+$body = new \Frisbii\lib\Model\CreateMeteredBillingProduct(); // \Frisbii\lib\Model\CreateMeteredBillingProduct | 
 
 try {
     $result = $apiInstance->createMeteredBillingProduct($body);
@@ -48,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateMeteredBillingProduct**](../Model/CreateMeteredBillingProduct.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateMeteredBillingProduct**](../Model/CreateMeteredBillingProduct.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
+[**\Frisbii\lib\Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -80,7 +80,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteMeteredBillingProduct**
-> \Frisbii\lib/Model\MeteredBillingProduct deleteMeteredBillingProduct($uuid_or_handle)
+> \Frisbii\lib\Model\MeteredBillingProduct deleteMeteredBillingProduct($uuid_or_handle)
 
 Delete a metered billing product
 
@@ -132,7 +132,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
+[**\Frisbii\lib\Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMeteredBillingProduct**
-> \Frisbii\lib/Model\MeteredBillingProduct getMeteredBillingProduct($uuid_or_handle)
+> \Frisbii\lib\Model\MeteredBillingProduct getMeteredBillingProduct($uuid_or_handle)
 
 Get metered billing product
 
@@ -238,7 +238,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
+[**\Frisbii\lib\Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
 
 ### Authorization
 
@@ -291,13 +291,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib\Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
@@ -326,13 +326,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMeteredBillingProduct**
-> \Frisbii\lib/Model\MeteredBillingProduct updateMeteredBillingProduct($body, $uuid_or_handle)
+> \Frisbii\lib\Model\MeteredBillingProduct updateMeteredBillingProduct($body, $uuid_or_handle)
 
 Update a metered billing product
 
@@ -346,13 +346,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MeteredBillingProductApi(
+$apiInstance = new Frisbii\lib\Api\MeteredBillingProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateMeteredBillingProduct(); // \Frisbii\lib/Model\UpdateMeteredBillingProduct | 
+$body = new \Frisbii\lib\Model\UpdateMeteredBillingProduct(); // \Frisbii\lib\Model\UpdateMeteredBillingProduct | 
 $uuid_or_handle = "uuid_or_handle_example"; // string | uuid or handle of the metered billing product
 
 try {
@@ -368,12 +368,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateMeteredBillingProduct**](../Model/UpdateMeteredBillingProduct.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateMeteredBillingProduct**](../Model/UpdateMeteredBillingProduct.md)|  |
  **uuid_or_handle** | **string**| uuid or handle of the metered billing product |
 
 ### Return type
 
-[**\Frisbii\lib/Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
+[**\Frisbii\lib\Model\MeteredBillingProduct**](../Model/MeteredBillingProduct.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

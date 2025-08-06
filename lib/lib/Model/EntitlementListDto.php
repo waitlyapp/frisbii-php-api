@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class EntitlementListDto implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\Entitlement[]',
+        'content' => '\Frisbii\lib\Model\Entitlement[]',
         'range' => 'string',
         'next_page_token' => 'string'
     ];
@@ -371,7 +371,7 @@ class EntitlementListDto implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Entitlement[]
+     * @return \Frisbii\lib\Model\Entitlement[]
      */
     public function getContent()
     {
@@ -381,7 +381,7 @@ class EntitlementListDto implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Entitlement[] $content List of entitlements for current page
+     * @param \Frisbii\lib\Model\Entitlement[] $content List of entitlements for current page
      *
      * @return $this
      */

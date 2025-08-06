@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class CreateVippsAgreement implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'merchant_serial_number' => 'string',
-        'merchant_onboarding_dto' => '\Frisbii\lib/Model\VippsMerchantOnboarding'
+        'merchant_onboarding_dto' => '\Frisbii\lib\Model\VippsMerchantOnboarding'
     ];
 
     /**
@@ -234,7 +234,7 @@ class CreateVippsAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets merchant_onboarding_dto
      *
-     * @return \Frisbii\lib/Model\VippsMerchantOnboarding
+     * @return \Frisbii\lib\Model\VippsMerchantOnboarding
      */
     public function getMerchantOnboardingDto()
     {
@@ -244,7 +244,7 @@ class CreateVippsAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_onboarding_dto
      *
-     * @param \Frisbii\lib/Model\VippsMerchantOnboarding $merchant_onboarding_dto merchant_onboarding_dto
+     * @param \Frisbii\lib\Model\VippsMerchantOnboarding $merchant_onboarding_dto merchant_onboarding_dto
      *
      * @return $this
      */

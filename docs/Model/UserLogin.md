@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **token** | **string** | Authentication token to use in X-Auth-Token | 
-**user** | [**\Frisbii\lib/Model\User**](User.md) |  | 
-**account** | [**\Frisbii\lib/Model\Account**](Account.md) |  | 
-**organisation** | [**\Frisbii\lib/Model\Organisation**](Organisation.md) |  | 
-**organisations** | [**\Frisbii\lib/Model\OrganisationLogin[]**](OrganisationLogin.md) | List of organisations for user | 
+**user** | [**\Frisbii\lib\Model\User**](User.md) |  | 
+**account** | [**\Frisbii\lib\Model\Account**](Account.md) |  | 
+**organisation** | [**\Frisbii\lib\Model\Organisation**](Organisation.md) |  | 
+**organisations** | [**\Frisbii\lib\Model\OrganisationLogin[]**](OrganisationLogin.md) | List of organisations for user | 
 **groups** | **string[]** | List user groups | 
 **permissions** | **string[]** | List user permissions | 
 **entitlements** | **string[]** | List user entitlements | 

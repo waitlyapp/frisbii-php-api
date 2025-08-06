@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class PaypalTransaction implements ModelInterface, ArrayAccess
         'error_state' => 'string',
         'acquirer_message' => 'string',
         'paypal_id' => 'string',
-        'paypal_mandate' => '\Frisbii\lib/Model\PaypalMandate'
+        'paypal_mandate' => '\Frisbii\lib\Model\PaypalMandate'
     ];
 
     /**
@@ -390,7 +390,7 @@ class PaypalTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets paypal_mandate
      *
-     * @return \Frisbii\lib/Model\PaypalMandate
+     * @return \Frisbii\lib\Model\PaypalMandate
      */
     public function getPaypalMandate()
     {
@@ -400,7 +400,7 @@ class PaypalTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets paypal_mandate
      *
-     * @param \Frisbii\lib/Model\PaypalMandate $paypal_mandate paypal_mandate
+     * @param \Frisbii\lib\Model\PaypalMandate $paypal_mandate paypal_mandate
      *
      * @return $this
      */

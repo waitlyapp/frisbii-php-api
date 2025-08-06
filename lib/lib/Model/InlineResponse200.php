@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,20 +56,20 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'plan_changed' => 'map[string,object]',
         'subscription_changed' => 'map[string,object]',
+        'plan_changed' => 'map[string,object]',
         'webhook_alert' => 'map[string,object]',
         'mps' => 'map[string,object]',
         'subscription' => 'map[string,object]',
-        'test' => 'bool',
-        'dunning' => 'map[string,object]',
-        'compensation' => 'map[string,object]',
         'user_account' => 'map[string,object]',
-        'card' => 'map[string,object]',
+        'compensation' => 'map[string,object]',
         'plan' => 'map[string,object]',
         'invoice' => 'map[string,object]',
         'refund' => 'map[string,object]',
+        'test' => 'bool',
+        'dunning' => 'map[string,object]',
         'user' => 'map[string,object]',
+        'card' => 'map[string,object]',
         'customer' => 'map[string,object]',
         'account' => 'map[string,object]',
         'empty' => 'bool'
@@ -81,20 +81,20 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'plan_changed' => null,
         'subscription_changed' => null,
+        'plan_changed' => null,
         'webhook_alert' => null,
         'mps' => null,
         'subscription' => null,
-        'test' => null,
-        'dunning' => null,
-        'compensation' => null,
         'user_account' => null,
-        'card' => null,
+        'compensation' => null,
         'plan' => null,
         'invoice' => null,
         'refund' => null,
+        'test' => null,
+        'dunning' => null,
         'user' => null,
+        'card' => null,
         'customer' => null,
         'account' => null,
         'empty' => null
@@ -127,20 +127,20 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'plan_changed' => 'planChanged',
         'subscription_changed' => 'subscriptionChanged',
+        'plan_changed' => 'planChanged',
         'webhook_alert' => 'webhookAlert',
         'mps' => 'mps',
         'subscription' => 'subscription',
-        'test' => 'test',
-        'dunning' => 'dunning',
-        'compensation' => 'compensation',
         'user_account' => 'userAccount',
-        'card' => 'card',
+        'compensation' => 'compensation',
         'plan' => 'plan',
         'invoice' => 'invoice',
         'refund' => 'refund',
+        'test' => 'test',
+        'dunning' => 'dunning',
         'user' => 'user',
+        'card' => 'card',
         'customer' => 'customer',
         'account' => 'account',
         'empty' => 'empty'
@@ -152,20 +152,20 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'plan_changed' => 'setPlanChanged',
         'subscription_changed' => 'setSubscriptionChanged',
+        'plan_changed' => 'setPlanChanged',
         'webhook_alert' => 'setWebhookAlert',
         'mps' => 'setMps',
         'subscription' => 'setSubscription',
-        'test' => 'setTest',
-        'dunning' => 'setDunning',
-        'compensation' => 'setCompensation',
         'user_account' => 'setUserAccount',
-        'card' => 'setCard',
+        'compensation' => 'setCompensation',
         'plan' => 'setPlan',
         'invoice' => 'setInvoice',
         'refund' => 'setRefund',
+        'test' => 'setTest',
+        'dunning' => 'setDunning',
         'user' => 'setUser',
+        'card' => 'setCard',
         'customer' => 'setCustomer',
         'account' => 'setAccount',
         'empty' => 'setEmpty'
@@ -177,20 +177,20 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'plan_changed' => 'getPlanChanged',
         'subscription_changed' => 'getSubscriptionChanged',
+        'plan_changed' => 'getPlanChanged',
         'webhook_alert' => 'getWebhookAlert',
         'mps' => 'getMps',
         'subscription' => 'getSubscription',
-        'test' => 'getTest',
-        'dunning' => 'getDunning',
-        'compensation' => 'getCompensation',
         'user_account' => 'getUserAccount',
-        'card' => 'getCard',
+        'compensation' => 'getCompensation',
         'plan' => 'getPlan',
         'invoice' => 'getInvoice',
         'refund' => 'getRefund',
+        'test' => 'getTest',
+        'dunning' => 'getDunning',
         'user' => 'getUser',
+        'card' => 'getCard',
         'customer' => 'getCustomer',
         'account' => 'getAccount',
         'empty' => 'getEmpty'
@@ -254,20 +254,20 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['plan_changed'] = isset($data['plan_changed']) ? $data['plan_changed'] : null;
         $this->container['subscription_changed'] = isset($data['subscription_changed']) ? $data['subscription_changed'] : null;
+        $this->container['plan_changed'] = isset($data['plan_changed']) ? $data['plan_changed'] : null;
         $this->container['webhook_alert'] = isset($data['webhook_alert']) ? $data['webhook_alert'] : null;
         $this->container['mps'] = isset($data['mps']) ? $data['mps'] : null;
         $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
-        $this->container['test'] = isset($data['test']) ? $data['test'] : null;
-        $this->container['dunning'] = isset($data['dunning']) ? $data['dunning'] : null;
-        $this->container['compensation'] = isset($data['compensation']) ? $data['compensation'] : null;
         $this->container['user_account'] = isset($data['user_account']) ? $data['user_account'] : null;
-        $this->container['card'] = isset($data['card']) ? $data['card'] : null;
+        $this->container['compensation'] = isset($data['compensation']) ? $data['compensation'] : null;
         $this->container['plan'] = isset($data['plan']) ? $data['plan'] : null;
         $this->container['invoice'] = isset($data['invoice']) ? $data['invoice'] : null;
         $this->container['refund'] = isset($data['refund']) ? $data['refund'] : null;
+        $this->container['test'] = isset($data['test']) ? $data['test'] : null;
+        $this->container['dunning'] = isset($data['dunning']) ? $data['dunning'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['card'] = isset($data['card']) ? $data['card'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
         $this->container['account'] = isset($data['account']) ? $data['account'] : null;
         $this->container['empty'] = isset($data['empty']) ? $data['empty'] : null;
@@ -298,30 +298,6 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets plan_changed
-     *
-     * @return map[string,object]
-     */
-    public function getPlanChanged()
-    {
-        return $this->container['plan_changed'];
-    }
-
-    /**
-     * Sets plan_changed
-     *
-     * @param map[string,object] $plan_changed plan_changed
-     *
-     * @return $this
-     */
-    public function setPlanChanged($plan_changed)
-    {
-        $this->container['plan_changed'] = $plan_changed;
-
-        return $this;
-    }
-
-    /**
      * Gets subscription_changed
      *
      * @return map[string,object]
@@ -341,6 +317,30 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     public function setSubscriptionChanged($subscription_changed)
     {
         $this->container['subscription_changed'] = $subscription_changed;
+
+        return $this;
+    }
+
+    /**
+     * Gets plan_changed
+     *
+     * @return map[string,object]
+     */
+    public function getPlanChanged()
+    {
+        return $this->container['plan_changed'];
+    }
+
+    /**
+     * Sets plan_changed
+     *
+     * @param map[string,object] $plan_changed plan_changed
+     *
+     * @return $this
+     */
+    public function setPlanChanged($plan_changed)
+    {
+        $this->container['plan_changed'] = $plan_changed;
 
         return $this;
     }
@@ -418,78 +418,6 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets test
-     *
-     * @return bool
-     */
-    public function getTest()
-    {
-        return $this->container['test'];
-    }
-
-    /**
-     * Sets test
-     *
-     * @param bool $test test
-     *
-     * @return $this
-     */
-    public function setTest($test)
-    {
-        $this->container['test'] = $test;
-
-        return $this;
-    }
-
-    /**
-     * Gets dunning
-     *
-     * @return map[string,object]
-     */
-    public function getDunning()
-    {
-        return $this->container['dunning'];
-    }
-
-    /**
-     * Sets dunning
-     *
-     * @param map[string,object] $dunning dunning
-     *
-     * @return $this
-     */
-    public function setDunning($dunning)
-    {
-        $this->container['dunning'] = $dunning;
-
-        return $this;
-    }
-
-    /**
-     * Gets compensation
-     *
-     * @return map[string,object]
-     */
-    public function getCompensation()
-    {
-        return $this->container['compensation'];
-    }
-
-    /**
-     * Sets compensation
-     *
-     * @param map[string,object] $compensation compensation
-     *
-     * @return $this
-     */
-    public function setCompensation($compensation)
-    {
-        $this->container['compensation'] = $compensation;
-
-        return $this;
-    }
-
-    /**
      * Gets user_account
      *
      * @return map[string,object]
@@ -514,25 +442,25 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets card
+     * Gets compensation
      *
      * @return map[string,object]
      */
-    public function getCard()
+    public function getCompensation()
     {
-        return $this->container['card'];
+        return $this->container['compensation'];
     }
 
     /**
-     * Sets card
+     * Sets compensation
      *
-     * @param map[string,object] $card card
+     * @param map[string,object] $compensation compensation
      *
      * @return $this
      */
-    public function setCard($card)
+    public function setCompensation($compensation)
     {
-        $this->container['card'] = $card;
+        $this->container['compensation'] = $compensation;
 
         return $this;
     }
@@ -610,6 +538,54 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets test
+     *
+     * @return bool
+     */
+    public function getTest()
+    {
+        return $this->container['test'];
+    }
+
+    /**
+     * Sets test
+     *
+     * @param bool $test test
+     *
+     * @return $this
+     */
+    public function setTest($test)
+    {
+        $this->container['test'] = $test;
+
+        return $this;
+    }
+
+    /**
+     * Gets dunning
+     *
+     * @return map[string,object]
+     */
+    public function getDunning()
+    {
+        return $this->container['dunning'];
+    }
+
+    /**
+     * Sets dunning
+     *
+     * @param map[string,object] $dunning dunning
+     *
+     * @return $this
+     */
+    public function setDunning($dunning)
+    {
+        $this->container['dunning'] = $dunning;
+
+        return $this;
+    }
+
+    /**
      * Gets user
      *
      * @return map[string,object]
@@ -629,6 +605,30 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     public function setUser($user)
     {
         $this->container['user'] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Gets card
+     *
+     * @return map[string,object]
+     */
+    public function getCard()
+    {
+        return $this->container['card'];
+    }
+
+    /**
+     * Sets card
+     *
+     * @param map[string,object] $card card
+     *
+     * @return $this
+     */
+    public function setCard($card)
+    {
+        $this->container['card'] = $card;
 
         return $this;
     }

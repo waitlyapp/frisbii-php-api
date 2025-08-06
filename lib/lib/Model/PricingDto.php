@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -65,7 +65,7 @@ class PricingDto implements ModelInterface, ArrayAccess
         'amount_incl_vat' => 'bool',
         'tax_policy' => 'string',
         'pricing_model' => 'string',
-        'unit_ranges' => '\Frisbii\lib/Model\UnitRangeDto[]'
+        'unit_ranges' => '\Frisbii\lib\Model\UnitRangeDto[]'
     ];
 
     /**
@@ -490,7 +490,7 @@ class PricingDto implements ModelInterface, ArrayAccess
     /**
      * Gets unit_ranges
      *
-     * @return \Frisbii\lib/Model\UnitRangeDto[]
+     * @return \Frisbii\lib\Model\UnitRangeDto[]
      */
     public function getUnitRanges()
     {
@@ -500,7 +500,7 @@ class PricingDto implements ModelInterface, ArrayAccess
     /**
      * Sets unit_ranges
      *
-     * @param \Frisbii\lib/Model\UnitRangeDto[] $unit_ranges Unit ranges for this product
+     * @param \Frisbii\lib\Model\UnitRangeDto[] $unit_ranges Unit ranges for this product
      *
      * @return $this
      */

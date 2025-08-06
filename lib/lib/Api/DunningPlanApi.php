@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class DunningPlanApi
      *
      * Create dunning plan
      *
-     * @param  \Frisbii\lib/Model\CreateDunningPlan $body body (required)
+     * @param  \Frisbii\lib\Model\CreateDunningPlan $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DunningPlan
+     * @return \Frisbii\lib\Model\DunningPlan
      */
     public function createDunningPlanJson($body)
     {
@@ -108,15 +108,15 @@ class DunningPlanApi
      *
      * Create dunning plan
      *
-     * @param  \Frisbii\lib/Model\CreateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateDunningPlan $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDunningPlanJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->createDunningPlanJsonRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class DunningPlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DunningPlan',
+                        '\Frisbii\lib\Model\DunningPlan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class DunningPlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class DunningPlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class DunningPlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class DunningPlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class DunningPlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class DunningPlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class DunningPlanApi
      *
      * Create dunning plan
      *
-     * @param  \Frisbii\lib/Model\CreateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateDunningPlan $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class DunningPlanApi
      *
      * Create dunning plan
      *
-     * @param  \Frisbii\lib/Model\CreateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateDunningPlan $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createDunningPlanJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->createDunningPlanJsonRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class DunningPlanApi
     /**
      * Create request for operation 'createDunningPlanJson'
      *
-     * @param  \Frisbii\lib/Model\CreateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateDunningPlan $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -404,7 +404,7 @@ class DunningPlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DunningPlan
+     * @return \Frisbii\lib\Model\DunningPlan
      */
     public function deleteDunningPlan($handle)
     {
@@ -421,11 +421,11 @@ class DunningPlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteDunningPlanWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->deleteDunningPlanRequest($handle);
 
         try {
@@ -477,7 +477,7 @@ class DunningPlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DunningPlan',
+                        '\Frisbii\lib\Model\DunningPlan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class DunningPlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -493,7 +493,7 @@ class DunningPlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class DunningPlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -509,7 +509,7 @@ class DunningPlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -517,7 +517,7 @@ class DunningPlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -525,7 +525,7 @@ class DunningPlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -567,7 +567,7 @@ class DunningPlanApi
      */
     public function deleteDunningPlanAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->deleteDunningPlanRequest($handle);
 
         return $this->client
@@ -718,7 +718,7 @@ class DunningPlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DunningPlan
+     * @return \Frisbii\lib\Model\DunningPlan
      */
     public function getDunningPlan($handle)
     {
@@ -735,11 +735,11 @@ class DunningPlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDunningPlanWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->getDunningPlanRequest($handle);
 
         try {
@@ -791,7 +791,7 @@ class DunningPlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DunningPlan',
+                        '\Frisbii\lib\Model\DunningPlan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class DunningPlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class DunningPlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -815,7 +815,7 @@ class DunningPlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class DunningPlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class DunningPlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class DunningPlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class DunningPlanApi
      */
     public function getDunningPlanAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->getDunningPlanRequest($handle);
 
         return $this->client
@@ -1031,7 +1031,7 @@ class DunningPlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DunningPlan[]
+     * @return \Frisbii\lib\Model\DunningPlan[]
      */
     public function getDunningPlans()
     {
@@ -1047,11 +1047,11 @@ class DunningPlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DunningPlan[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DunningPlan[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDunningPlansWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan[]';
+        $returnType = '\Frisbii\lib\Model\DunningPlan[]';
         $request = $this->getDunningPlansRequest();
 
         try {
@@ -1103,7 +1103,7 @@ class DunningPlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DunningPlan[]',
+                        '\Frisbii\lib\Model\DunningPlan[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1111,7 +1111,7 @@ class DunningPlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1119,7 +1119,7 @@ class DunningPlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1127,7 +1127,7 @@ class DunningPlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1135,7 +1135,7 @@ class DunningPlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1143,7 +1143,7 @@ class DunningPlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1151,7 +1151,7 @@ class DunningPlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1191,7 +1191,7 @@ class DunningPlanApi
      */
     public function getDunningPlansAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan[]';
+        $returnType = '\Frisbii\lib\Model\DunningPlan[]';
         $request = $this->getDunningPlansRequest();
 
         return $this->client
@@ -1323,12 +1323,12 @@ class DunningPlanApi
      *
      * Update dunning plan
      *
-     * @param  \Frisbii\lib/Model\UpdateDunningPlan $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateDunningPlan $body body (required)
      * @param  string $handle Dunning plan handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DunningPlan
+     * @return \Frisbii\lib\Model\DunningPlan
      */
     public function updateJson($body, $handle)
     {
@@ -1341,16 +1341,16 @@ class DunningPlanApi
      *
      * Update dunning plan
      *
-     * @param  \Frisbii\lib/Model\UpdateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateDunningPlan $body (required)
      * @param  string $handle Dunning plan handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DunningPlan, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->updateJsonRequest($body, $handle);
 
         try {
@@ -1402,7 +1402,7 @@ class DunningPlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DunningPlan',
+                        '\Frisbii\lib\Model\DunningPlan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1410,7 +1410,7 @@ class DunningPlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1418,7 +1418,7 @@ class DunningPlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1426,7 +1426,7 @@ class DunningPlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1434,7 +1434,7 @@ class DunningPlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1442,7 +1442,7 @@ class DunningPlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1450,7 +1450,7 @@ class DunningPlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1465,7 +1465,7 @@ class DunningPlanApi
      *
      * Update dunning plan
      *
-     * @param  \Frisbii\lib/Model\UpdateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateDunningPlan $body (required)
      * @param  string $handle Dunning plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1486,7 +1486,7 @@ class DunningPlanApi
      *
      * Update dunning plan
      *
-     * @param  \Frisbii\lib/Model\UpdateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateDunningPlan $body (required)
      * @param  string $handle Dunning plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1494,7 +1494,7 @@ class DunningPlanApi
      */
     public function updateJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\DunningPlan';
+        $returnType = '\Frisbii\lib\Model\DunningPlan';
         $request = $this->updateJsonRequest($body, $handle);
 
         return $this->client
@@ -1537,7 +1537,7 @@ class DunningPlanApi
     /**
      * Create request for operation 'updateJson'
      *
-     * @param  \Frisbii\lib/Model\UpdateDunningPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateDunningPlan $body (required)
      * @param  string $handle Dunning plan handle (required)
      *
      * @throws \InvalidArgumentException

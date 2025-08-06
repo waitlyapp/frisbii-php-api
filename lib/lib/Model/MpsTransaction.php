@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class MpsTransaction implements ModelInterface, ArrayAccess
         'error_state' => 'string',
         'acquirer_message' => 'string',
         'mps_id' => 'string',
-        'mps_subscription' => '\Frisbii\lib/Model\MpsSubscription',
+        'mps_subscription' => '\Frisbii\lib\Model\MpsSubscription',
         'mps_payment_type' => 'string'
     ];
 
@@ -429,7 +429,7 @@ class MpsTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets mps_subscription
      *
-     * @return \Frisbii\lib/Model\MpsSubscription
+     * @return \Frisbii\lib\Model\MpsSubscription
      */
     public function getMpsSubscription()
     {
@@ -439,7 +439,7 @@ class MpsTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets mps_subscription
      *
-     * @param \Frisbii\lib/Model\MpsSubscription $mps_subscription mps_subscription
+     * @param \Frisbii\lib\Model\MpsSubscription $mps_subscription mps_subscription
      *
      * @return $this
      */

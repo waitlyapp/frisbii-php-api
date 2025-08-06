@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class ImportMpsPaymentMethodRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'reference' => 'string',
-        'customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'customer' => '\Frisbii\lib\Model\CreateCustomer',
         'customer_handle' => 'string',
         'mobile_pay_id' => 'string',
         'cancel_redirect_url' => 'string'
@@ -255,7 +255,7 @@ class ImportMpsPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCustomer()
     {
@@ -265,7 +265,7 @@ class ImportMpsPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $customer customer
+     * @param \Frisbii\lib\Model\CreateCustomer $customer customer
      *
      * @return $this
      */

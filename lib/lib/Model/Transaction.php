@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -70,47 +70,47 @@ class Transaction implements ModelInterface, ArrayAccess
         'created' => '\DateTime',
         'payment_type' => 'string',
         'payment_method' => 'string',
-        'card_transaction' => '\Frisbii\lib/Model\CardTransaction',
-        'mpo_transaction' => '\Frisbii\lib/Model\CardTransaction',
-        'vipps_transaction' => '\Frisbii\lib/Model\CardTransaction',
-        'applepay_transaction' => '\Frisbii\lib/Model\CardTransaction',
-        'googlepay_transaction' => '\Frisbii\lib/Model\CardTransaction',
-        'manual_transaction' => '\Frisbii\lib/Model\ManualTransaction',
-        'viabill_transaction' => '\Frisbii\lib/Model\ViabillTransaction',
-        'anyday_transaction' => '\Frisbii\lib/Model\AnydayTransaction',
-        'santander_transaction' => '\Frisbii\lib/Model\SantanderTransaction',
-        'resurs_transaction' => '\Frisbii\lib/Model\ResursTransaction',
-        'klarna_transaction' => '\Frisbii\lib/Model\KlarnaTransaction',
-        'swish_transaction' => '\Frisbii\lib/Model\SwishTransaction',
-        'paypal_transaction' => '\Frisbii\lib/Model\PaypalTransaction',
-        'bancomatpay_transaction' => '\Frisbii\lib/Model\BancomatPayTransaction',
-        'bancontact_transaction' => '\Frisbii\lib/Model\BancontactTransaction',
-        'blik_transaction' => '\Frisbii\lib/Model\BlikTransaction',
-        'giropay_transaction' => '\Frisbii\lib/Model\GiropayTransaction',
-        'ideal_transaction' => '\Frisbii\lib/Model\IdealTransaction',
-        'p24_transaction' => '\Frisbii\lib/Model\P24Transaction',
-        'sepa_transaction' => '\Frisbii\lib/Model\SepaTransaction',
-        'sepa_ebics_transaction' => '\Frisbii\lib/Model\SepaEbicsTransaction',
-        'trustly_transaction' => '\Frisbii\lib/Model\TrustlyTransaction',
-        'verkkopankki_transaction' => '\Frisbii\lib/Model\VerkkopankkiTransaction',
-        'eps_transaction' => '\Frisbii\lib/Model\EpsTransaction',
-        'estonia_banks_transaction' => '\Frisbii\lib/Model\EstoniaBanksTransaction',
-        'latvia_banks_transaction' => '\Frisbii\lib/Model\LatviaBanksTransaction',
-        'lithuania_banks_transaction' => '\Frisbii\lib/Model\LithuaniaBanksTransaction',
-        'mbway_transaction' => '\Frisbii\lib/Model\MbwayTransaction',
-        'multibanco_transaction' => '\Frisbii\lib/Model\MultibancoTransaction',
-        'mybank_transaction' => '\Frisbii\lib/Model\MybankTransaction',
-        'payconiq_transaction' => '\Frisbii\lib/Model\PayconiqTransaction',
-        'paysafecard_transaction' => '\Frisbii\lib/Model\PaysafecardTransaction',
-        'paysera_transaction' => '\Frisbii\lib/Model\PayseraTransaction',
-        'postfinance_transaction' => '\Frisbii\lib/Model\PostfinanceTransaction',
-        'satispay_transaction' => '\Frisbii\lib/Model\SatispayTransaction',
-        'twint_transaction' => '\Frisbii\lib/Model\TwintTransaction',
-        'wechatpay_transaction' => '\Frisbii\lib/Model\WeChatPayTransaction',
-        'mps_transaction' => '\Frisbii\lib/Model\MpsTransaction',
-        'vipps_epayment_transaction' => '\Frisbii\lib/Model\VippsEpaymentTransaction',
-        'vipps_recurring_transaction' => '\Frisbii\lib/Model\VippsRecurringTransaction',
-        'offline_transaction' => '\Frisbii\lib/Model\OfflineTransaction',
+        'card_transaction' => '\Frisbii\lib\Model\CardTransaction',
+        'mpo_transaction' => '\Frisbii\lib\Model\CardTransaction',
+        'vipps_transaction' => '\Frisbii\lib\Model\CardTransaction',
+        'applepay_transaction' => '\Frisbii\lib\Model\CardTransaction',
+        'googlepay_transaction' => '\Frisbii\lib\Model\CardTransaction',
+        'manual_transaction' => '\Frisbii\lib\Model\ManualTransaction',
+        'viabill_transaction' => '\Frisbii\lib\Model\ViabillTransaction',
+        'anyday_transaction' => '\Frisbii\lib\Model\AnydayTransaction',
+        'santander_transaction' => '\Frisbii\lib\Model\SantanderTransaction',
+        'resurs_transaction' => '\Frisbii\lib\Model\ResursTransaction',
+        'klarna_transaction' => '\Frisbii\lib\Model\KlarnaTransaction',
+        'swish_transaction' => '\Frisbii\lib\Model\SwishTransaction',
+        'paypal_transaction' => '\Frisbii\lib\Model\PaypalTransaction',
+        'bancomatpay_transaction' => '\Frisbii\lib\Model\BancomatPayTransaction',
+        'bancontact_transaction' => '\Frisbii\lib\Model\BancontactTransaction',
+        'blik_transaction' => '\Frisbii\lib\Model\BlikTransaction',
+        'giropay_transaction' => '\Frisbii\lib\Model\GiropayTransaction',
+        'ideal_transaction' => '\Frisbii\lib\Model\IdealTransaction',
+        'p24_transaction' => '\Frisbii\lib\Model\P24Transaction',
+        'sepa_transaction' => '\Frisbii\lib\Model\SepaTransaction',
+        'sepa_ebics_transaction' => '\Frisbii\lib\Model\SepaEbicsTransaction',
+        'trustly_transaction' => '\Frisbii\lib\Model\TrustlyTransaction',
+        'verkkopankki_transaction' => '\Frisbii\lib\Model\VerkkopankkiTransaction',
+        'eps_transaction' => '\Frisbii\lib\Model\EpsTransaction',
+        'estonia_banks_transaction' => '\Frisbii\lib\Model\EstoniaBanksTransaction',
+        'latvia_banks_transaction' => '\Frisbii\lib\Model\LatviaBanksTransaction',
+        'lithuania_banks_transaction' => '\Frisbii\lib\Model\LithuaniaBanksTransaction',
+        'mbway_transaction' => '\Frisbii\lib\Model\MbwayTransaction',
+        'multibanco_transaction' => '\Frisbii\lib\Model\MultibancoTransaction',
+        'mybank_transaction' => '\Frisbii\lib\Model\MybankTransaction',
+        'payconiq_transaction' => '\Frisbii\lib\Model\PayconiqTransaction',
+        'paysafecard_transaction' => '\Frisbii\lib\Model\PaysafecardTransaction',
+        'paysera_transaction' => '\Frisbii\lib\Model\PayseraTransaction',
+        'postfinance_transaction' => '\Frisbii\lib\Model\PostfinanceTransaction',
+        'satispay_transaction' => '\Frisbii\lib\Model\SatispayTransaction',
+        'twint_transaction' => '\Frisbii\lib\Model\TwintTransaction',
+        'wechatpay_transaction' => '\Frisbii\lib\Model\WeChatPayTransaction',
+        'mps_transaction' => '\Frisbii\lib\Model\MpsTransaction',
+        'vipps_epayment_transaction' => '\Frisbii\lib\Model\VippsEpaymentTransaction',
+        'vipps_recurring_transaction' => '\Frisbii\lib\Model\VippsRecurringTransaction',
+        'offline_transaction' => '\Frisbii\lib\Model\OfflineTransaction',
         'payment_context' => 'string',
         'accounting_invoice' => 'string',
         'debtor_id' => 'int',
@@ -1081,7 +1081,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets card_transaction
      *
-     * @return \Frisbii\lib/Model\CardTransaction
+     * @return \Frisbii\lib\Model\CardTransaction
      */
     public function getCardTransaction()
     {
@@ -1091,7 +1091,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets card_transaction
      *
-     * @param \Frisbii\lib/Model\CardTransaction $card_transaction card_transaction
+     * @param \Frisbii\lib\Model\CardTransaction $card_transaction card_transaction
      *
      * @return $this
      */
@@ -1105,7 +1105,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets mpo_transaction
      *
-     * @return \Frisbii\lib/Model\CardTransaction
+     * @return \Frisbii\lib\Model\CardTransaction
      */
     public function getMpoTransaction()
     {
@@ -1115,7 +1115,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets mpo_transaction
      *
-     * @param \Frisbii\lib/Model\CardTransaction $mpo_transaction mpo_transaction
+     * @param \Frisbii\lib\Model\CardTransaction $mpo_transaction mpo_transaction
      *
      * @return $this
      */
@@ -1129,7 +1129,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_transaction
      *
-     * @return \Frisbii\lib/Model\CardTransaction
+     * @return \Frisbii\lib\Model\CardTransaction
      */
     public function getVippsTransaction()
     {
@@ -1139,7 +1139,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_transaction
      *
-     * @param \Frisbii\lib/Model\CardTransaction $vipps_transaction vipps_transaction
+     * @param \Frisbii\lib\Model\CardTransaction $vipps_transaction vipps_transaction
      *
      * @return $this
      */
@@ -1153,7 +1153,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets applepay_transaction
      *
-     * @return \Frisbii\lib/Model\CardTransaction
+     * @return \Frisbii\lib\Model\CardTransaction
      */
     public function getApplepayTransaction()
     {
@@ -1163,7 +1163,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets applepay_transaction
      *
-     * @param \Frisbii\lib/Model\CardTransaction $applepay_transaction applepay_transaction
+     * @param \Frisbii\lib\Model\CardTransaction $applepay_transaction applepay_transaction
      *
      * @return $this
      */
@@ -1177,7 +1177,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets googlepay_transaction
      *
-     * @return \Frisbii\lib/Model\CardTransaction
+     * @return \Frisbii\lib\Model\CardTransaction
      */
     public function getGooglepayTransaction()
     {
@@ -1187,7 +1187,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets googlepay_transaction
      *
-     * @param \Frisbii\lib/Model\CardTransaction $googlepay_transaction googlepay_transaction
+     * @param \Frisbii\lib\Model\CardTransaction $googlepay_transaction googlepay_transaction
      *
      * @return $this
      */
@@ -1201,7 +1201,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets manual_transaction
      *
-     * @return \Frisbii\lib/Model\ManualTransaction
+     * @return \Frisbii\lib\Model\ManualTransaction
      */
     public function getManualTransaction()
     {
@@ -1211,7 +1211,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets manual_transaction
      *
-     * @param \Frisbii\lib/Model\ManualTransaction $manual_transaction manual_transaction
+     * @param \Frisbii\lib\Model\ManualTransaction $manual_transaction manual_transaction
      *
      * @return $this
      */
@@ -1225,7 +1225,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets viabill_transaction
      *
-     * @return \Frisbii\lib/Model\ViabillTransaction
+     * @return \Frisbii\lib\Model\ViabillTransaction
      */
     public function getViabillTransaction()
     {
@@ -1235,7 +1235,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets viabill_transaction
      *
-     * @param \Frisbii\lib/Model\ViabillTransaction $viabill_transaction viabill_transaction
+     * @param \Frisbii\lib\Model\ViabillTransaction $viabill_transaction viabill_transaction
      *
      * @return $this
      */
@@ -1249,7 +1249,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets anyday_transaction
      *
-     * @return \Frisbii\lib/Model\AnydayTransaction
+     * @return \Frisbii\lib\Model\AnydayTransaction
      */
     public function getAnydayTransaction()
     {
@@ -1259,7 +1259,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets anyday_transaction
      *
-     * @param \Frisbii\lib/Model\AnydayTransaction $anyday_transaction anyday_transaction
+     * @param \Frisbii\lib\Model\AnydayTransaction $anyday_transaction anyday_transaction
      *
      * @return $this
      */
@@ -1273,7 +1273,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets santander_transaction
      *
-     * @return \Frisbii\lib/Model\SantanderTransaction
+     * @return \Frisbii\lib\Model\SantanderTransaction
      */
     public function getSantanderTransaction()
     {
@@ -1283,7 +1283,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets santander_transaction
      *
-     * @param \Frisbii\lib/Model\SantanderTransaction $santander_transaction santander_transaction
+     * @param \Frisbii\lib\Model\SantanderTransaction $santander_transaction santander_transaction
      *
      * @return $this
      */
@@ -1297,7 +1297,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets resurs_transaction
      *
-     * @return \Frisbii\lib/Model\ResursTransaction
+     * @return \Frisbii\lib\Model\ResursTransaction
      */
     public function getResursTransaction()
     {
@@ -1307,7 +1307,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets resurs_transaction
      *
-     * @param \Frisbii\lib/Model\ResursTransaction $resurs_transaction resurs_transaction
+     * @param \Frisbii\lib\Model\ResursTransaction $resurs_transaction resurs_transaction
      *
      * @return $this
      */
@@ -1321,7 +1321,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets klarna_transaction
      *
-     * @return \Frisbii\lib/Model\KlarnaTransaction
+     * @return \Frisbii\lib\Model\KlarnaTransaction
      */
     public function getKlarnaTransaction()
     {
@@ -1331,7 +1331,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets klarna_transaction
      *
-     * @param \Frisbii\lib/Model\KlarnaTransaction $klarna_transaction klarna_transaction
+     * @param \Frisbii\lib\Model\KlarnaTransaction $klarna_transaction klarna_transaction
      *
      * @return $this
      */
@@ -1345,7 +1345,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets swish_transaction
      *
-     * @return \Frisbii\lib/Model\SwishTransaction
+     * @return \Frisbii\lib\Model\SwishTransaction
      */
     public function getSwishTransaction()
     {
@@ -1355,7 +1355,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets swish_transaction
      *
-     * @param \Frisbii\lib/Model\SwishTransaction $swish_transaction swish_transaction
+     * @param \Frisbii\lib\Model\SwishTransaction $swish_transaction swish_transaction
      *
      * @return $this
      */
@@ -1369,7 +1369,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets paypal_transaction
      *
-     * @return \Frisbii\lib/Model\PaypalTransaction
+     * @return \Frisbii\lib\Model\PaypalTransaction
      */
     public function getPaypalTransaction()
     {
@@ -1379,7 +1379,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets paypal_transaction
      *
-     * @param \Frisbii\lib/Model\PaypalTransaction $paypal_transaction paypal_transaction
+     * @param \Frisbii\lib\Model\PaypalTransaction $paypal_transaction paypal_transaction
      *
      * @return $this
      */
@@ -1393,7 +1393,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets bancomatpay_transaction
      *
-     * @return \Frisbii\lib/Model\BancomatPayTransaction
+     * @return \Frisbii\lib\Model\BancomatPayTransaction
      */
     public function getBancomatpayTransaction()
     {
@@ -1403,7 +1403,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets bancomatpay_transaction
      *
-     * @param \Frisbii\lib/Model\BancomatPayTransaction $bancomatpay_transaction bancomatpay_transaction
+     * @param \Frisbii\lib\Model\BancomatPayTransaction $bancomatpay_transaction bancomatpay_transaction
      *
      * @return $this
      */
@@ -1417,7 +1417,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets bancontact_transaction
      *
-     * @return \Frisbii\lib/Model\BancontactTransaction
+     * @return \Frisbii\lib\Model\BancontactTransaction
      */
     public function getBancontactTransaction()
     {
@@ -1427,7 +1427,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets bancontact_transaction
      *
-     * @param \Frisbii\lib/Model\BancontactTransaction $bancontact_transaction bancontact_transaction
+     * @param \Frisbii\lib\Model\BancontactTransaction $bancontact_transaction bancontact_transaction
      *
      * @return $this
      */
@@ -1441,7 +1441,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets blik_transaction
      *
-     * @return \Frisbii\lib/Model\BlikTransaction
+     * @return \Frisbii\lib\Model\BlikTransaction
      */
     public function getBlikTransaction()
     {
@@ -1451,7 +1451,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets blik_transaction
      *
-     * @param \Frisbii\lib/Model\BlikTransaction $blik_transaction blik_transaction
+     * @param \Frisbii\lib\Model\BlikTransaction $blik_transaction blik_transaction
      *
      * @return $this
      */
@@ -1465,7 +1465,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets giropay_transaction
      *
-     * @return \Frisbii\lib/Model\GiropayTransaction
+     * @return \Frisbii\lib\Model\GiropayTransaction
      */
     public function getGiropayTransaction()
     {
@@ -1475,7 +1475,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets giropay_transaction
      *
-     * @param \Frisbii\lib/Model\GiropayTransaction $giropay_transaction giropay_transaction
+     * @param \Frisbii\lib\Model\GiropayTransaction $giropay_transaction giropay_transaction
      *
      * @return $this
      */
@@ -1489,7 +1489,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets ideal_transaction
      *
-     * @return \Frisbii\lib/Model\IdealTransaction
+     * @return \Frisbii\lib\Model\IdealTransaction
      */
     public function getIdealTransaction()
     {
@@ -1499,7 +1499,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets ideal_transaction
      *
-     * @param \Frisbii\lib/Model\IdealTransaction $ideal_transaction ideal_transaction
+     * @param \Frisbii\lib\Model\IdealTransaction $ideal_transaction ideal_transaction
      *
      * @return $this
      */
@@ -1513,7 +1513,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets p24_transaction
      *
-     * @return \Frisbii\lib/Model\P24Transaction
+     * @return \Frisbii\lib\Model\P24Transaction
      */
     public function getP24Transaction()
     {
@@ -1523,7 +1523,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets p24_transaction
      *
-     * @param \Frisbii\lib/Model\P24Transaction $p24_transaction p24_transaction
+     * @param \Frisbii\lib\Model\P24Transaction $p24_transaction p24_transaction
      *
      * @return $this
      */
@@ -1537,7 +1537,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets sepa_transaction
      *
-     * @return \Frisbii\lib/Model\SepaTransaction
+     * @return \Frisbii\lib\Model\SepaTransaction
      */
     public function getSepaTransaction()
     {
@@ -1547,7 +1547,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets sepa_transaction
      *
-     * @param \Frisbii\lib/Model\SepaTransaction $sepa_transaction sepa_transaction
+     * @param \Frisbii\lib\Model\SepaTransaction $sepa_transaction sepa_transaction
      *
      * @return $this
      */
@@ -1561,7 +1561,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets sepa_ebics_transaction
      *
-     * @return \Frisbii\lib/Model\SepaEbicsTransaction
+     * @return \Frisbii\lib\Model\SepaEbicsTransaction
      */
     public function getSepaEbicsTransaction()
     {
@@ -1571,7 +1571,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets sepa_ebics_transaction
      *
-     * @param \Frisbii\lib/Model\SepaEbicsTransaction $sepa_ebics_transaction sepa_ebics_transaction
+     * @param \Frisbii\lib\Model\SepaEbicsTransaction $sepa_ebics_transaction sepa_ebics_transaction
      *
      * @return $this
      */
@@ -1585,7 +1585,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets trustly_transaction
      *
-     * @return \Frisbii\lib/Model\TrustlyTransaction
+     * @return \Frisbii\lib\Model\TrustlyTransaction
      */
     public function getTrustlyTransaction()
     {
@@ -1595,7 +1595,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets trustly_transaction
      *
-     * @param \Frisbii\lib/Model\TrustlyTransaction $trustly_transaction trustly_transaction
+     * @param \Frisbii\lib\Model\TrustlyTransaction $trustly_transaction trustly_transaction
      *
      * @return $this
      */
@@ -1609,7 +1609,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets verkkopankki_transaction
      *
-     * @return \Frisbii\lib/Model\VerkkopankkiTransaction
+     * @return \Frisbii\lib\Model\VerkkopankkiTransaction
      */
     public function getVerkkopankkiTransaction()
     {
@@ -1619,7 +1619,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets verkkopankki_transaction
      *
-     * @param \Frisbii\lib/Model\VerkkopankkiTransaction $verkkopankki_transaction verkkopankki_transaction
+     * @param \Frisbii\lib\Model\VerkkopankkiTransaction $verkkopankki_transaction verkkopankki_transaction
      *
      * @return $this
      */
@@ -1633,7 +1633,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets eps_transaction
      *
-     * @return \Frisbii\lib/Model\EpsTransaction
+     * @return \Frisbii\lib\Model\EpsTransaction
      */
     public function getEpsTransaction()
     {
@@ -1643,7 +1643,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets eps_transaction
      *
-     * @param \Frisbii\lib/Model\EpsTransaction $eps_transaction eps_transaction
+     * @param \Frisbii\lib\Model\EpsTransaction $eps_transaction eps_transaction
      *
      * @return $this
      */
@@ -1657,7 +1657,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets estonia_banks_transaction
      *
-     * @return \Frisbii\lib/Model\EstoniaBanksTransaction
+     * @return \Frisbii\lib\Model\EstoniaBanksTransaction
      */
     public function getEstoniaBanksTransaction()
     {
@@ -1667,7 +1667,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets estonia_banks_transaction
      *
-     * @param \Frisbii\lib/Model\EstoniaBanksTransaction $estonia_banks_transaction estonia_banks_transaction
+     * @param \Frisbii\lib\Model\EstoniaBanksTransaction $estonia_banks_transaction estonia_banks_transaction
      *
      * @return $this
      */
@@ -1681,7 +1681,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets latvia_banks_transaction
      *
-     * @return \Frisbii\lib/Model\LatviaBanksTransaction
+     * @return \Frisbii\lib\Model\LatviaBanksTransaction
      */
     public function getLatviaBanksTransaction()
     {
@@ -1691,7 +1691,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets latvia_banks_transaction
      *
-     * @param \Frisbii\lib/Model\LatviaBanksTransaction $latvia_banks_transaction latvia_banks_transaction
+     * @param \Frisbii\lib\Model\LatviaBanksTransaction $latvia_banks_transaction latvia_banks_transaction
      *
      * @return $this
      */
@@ -1705,7 +1705,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets lithuania_banks_transaction
      *
-     * @return \Frisbii\lib/Model\LithuaniaBanksTransaction
+     * @return \Frisbii\lib\Model\LithuaniaBanksTransaction
      */
     public function getLithuaniaBanksTransaction()
     {
@@ -1715,7 +1715,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets lithuania_banks_transaction
      *
-     * @param \Frisbii\lib/Model\LithuaniaBanksTransaction $lithuania_banks_transaction lithuania_banks_transaction
+     * @param \Frisbii\lib\Model\LithuaniaBanksTransaction $lithuania_banks_transaction lithuania_banks_transaction
      *
      * @return $this
      */
@@ -1729,7 +1729,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets mbway_transaction
      *
-     * @return \Frisbii\lib/Model\MbwayTransaction
+     * @return \Frisbii\lib\Model\MbwayTransaction
      */
     public function getMbwayTransaction()
     {
@@ -1739,7 +1739,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets mbway_transaction
      *
-     * @param \Frisbii\lib/Model\MbwayTransaction $mbway_transaction mbway_transaction
+     * @param \Frisbii\lib\Model\MbwayTransaction $mbway_transaction mbway_transaction
      *
      * @return $this
      */
@@ -1753,7 +1753,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets multibanco_transaction
      *
-     * @return \Frisbii\lib/Model\MultibancoTransaction
+     * @return \Frisbii\lib\Model\MultibancoTransaction
      */
     public function getMultibancoTransaction()
     {
@@ -1763,7 +1763,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets multibanco_transaction
      *
-     * @param \Frisbii\lib/Model\MultibancoTransaction $multibanco_transaction multibanco_transaction
+     * @param \Frisbii\lib\Model\MultibancoTransaction $multibanco_transaction multibanco_transaction
      *
      * @return $this
      */
@@ -1777,7 +1777,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets mybank_transaction
      *
-     * @return \Frisbii\lib/Model\MybankTransaction
+     * @return \Frisbii\lib\Model\MybankTransaction
      */
     public function getMybankTransaction()
     {
@@ -1787,7 +1787,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets mybank_transaction
      *
-     * @param \Frisbii\lib/Model\MybankTransaction $mybank_transaction mybank_transaction
+     * @param \Frisbii\lib\Model\MybankTransaction $mybank_transaction mybank_transaction
      *
      * @return $this
      */
@@ -1801,7 +1801,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets payconiq_transaction
      *
-     * @return \Frisbii\lib/Model\PayconiqTransaction
+     * @return \Frisbii\lib\Model\PayconiqTransaction
      */
     public function getPayconiqTransaction()
     {
@@ -1811,7 +1811,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets payconiq_transaction
      *
-     * @param \Frisbii\lib/Model\PayconiqTransaction $payconiq_transaction payconiq_transaction
+     * @param \Frisbii\lib\Model\PayconiqTransaction $payconiq_transaction payconiq_transaction
      *
      * @return $this
      */
@@ -1825,7 +1825,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets paysafecard_transaction
      *
-     * @return \Frisbii\lib/Model\PaysafecardTransaction
+     * @return \Frisbii\lib\Model\PaysafecardTransaction
      */
     public function getPaysafecardTransaction()
     {
@@ -1835,7 +1835,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets paysafecard_transaction
      *
-     * @param \Frisbii\lib/Model\PaysafecardTransaction $paysafecard_transaction paysafecard_transaction
+     * @param \Frisbii\lib\Model\PaysafecardTransaction $paysafecard_transaction paysafecard_transaction
      *
      * @return $this
      */
@@ -1849,7 +1849,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets paysera_transaction
      *
-     * @return \Frisbii\lib/Model\PayseraTransaction
+     * @return \Frisbii\lib\Model\PayseraTransaction
      */
     public function getPayseraTransaction()
     {
@@ -1859,7 +1859,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets paysera_transaction
      *
-     * @param \Frisbii\lib/Model\PayseraTransaction $paysera_transaction paysera_transaction
+     * @param \Frisbii\lib\Model\PayseraTransaction $paysera_transaction paysera_transaction
      *
      * @return $this
      */
@@ -1873,7 +1873,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets postfinance_transaction
      *
-     * @return \Frisbii\lib/Model\PostfinanceTransaction
+     * @return \Frisbii\lib\Model\PostfinanceTransaction
      */
     public function getPostfinanceTransaction()
     {
@@ -1883,7 +1883,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets postfinance_transaction
      *
-     * @param \Frisbii\lib/Model\PostfinanceTransaction $postfinance_transaction postfinance_transaction
+     * @param \Frisbii\lib\Model\PostfinanceTransaction $postfinance_transaction postfinance_transaction
      *
      * @return $this
      */
@@ -1897,7 +1897,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets satispay_transaction
      *
-     * @return \Frisbii\lib/Model\SatispayTransaction
+     * @return \Frisbii\lib\Model\SatispayTransaction
      */
     public function getSatispayTransaction()
     {
@@ -1907,7 +1907,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets satispay_transaction
      *
-     * @param \Frisbii\lib/Model\SatispayTransaction $satispay_transaction satispay_transaction
+     * @param \Frisbii\lib\Model\SatispayTransaction $satispay_transaction satispay_transaction
      *
      * @return $this
      */
@@ -1921,7 +1921,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets twint_transaction
      *
-     * @return \Frisbii\lib/Model\TwintTransaction
+     * @return \Frisbii\lib\Model\TwintTransaction
      */
     public function getTwintTransaction()
     {
@@ -1931,7 +1931,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets twint_transaction
      *
-     * @param \Frisbii\lib/Model\TwintTransaction $twint_transaction twint_transaction
+     * @param \Frisbii\lib\Model\TwintTransaction $twint_transaction twint_transaction
      *
      * @return $this
      */
@@ -1945,7 +1945,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets wechatpay_transaction
      *
-     * @return \Frisbii\lib/Model\WeChatPayTransaction
+     * @return \Frisbii\lib\Model\WeChatPayTransaction
      */
     public function getWechatpayTransaction()
     {
@@ -1955,7 +1955,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets wechatpay_transaction
      *
-     * @param \Frisbii\lib/Model\WeChatPayTransaction $wechatpay_transaction wechatpay_transaction
+     * @param \Frisbii\lib\Model\WeChatPayTransaction $wechatpay_transaction wechatpay_transaction
      *
      * @return $this
      */
@@ -1969,7 +1969,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets mps_transaction
      *
-     * @return \Frisbii\lib/Model\MpsTransaction
+     * @return \Frisbii\lib\Model\MpsTransaction
      */
     public function getMpsTransaction()
     {
@@ -1979,7 +1979,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets mps_transaction
      *
-     * @param \Frisbii\lib/Model\MpsTransaction $mps_transaction mps_transaction
+     * @param \Frisbii\lib\Model\MpsTransaction $mps_transaction mps_transaction
      *
      * @return $this
      */
@@ -1993,7 +1993,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_epayment_transaction
      *
-     * @return \Frisbii\lib/Model\VippsEpaymentTransaction
+     * @return \Frisbii\lib\Model\VippsEpaymentTransaction
      */
     public function getVippsEpaymentTransaction()
     {
@@ -2003,7 +2003,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_epayment_transaction
      *
-     * @param \Frisbii\lib/Model\VippsEpaymentTransaction $vipps_epayment_transaction vipps_epayment_transaction
+     * @param \Frisbii\lib\Model\VippsEpaymentTransaction $vipps_epayment_transaction vipps_epayment_transaction
      *
      * @return $this
      */
@@ -2017,7 +2017,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_recurring_transaction
      *
-     * @return \Frisbii\lib/Model\VippsRecurringTransaction
+     * @return \Frisbii\lib\Model\VippsRecurringTransaction
      */
     public function getVippsRecurringTransaction()
     {
@@ -2027,7 +2027,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_recurring_transaction
      *
-     * @param \Frisbii\lib/Model\VippsRecurringTransaction $vipps_recurring_transaction vipps_recurring_transaction
+     * @param \Frisbii\lib\Model\VippsRecurringTransaction $vipps_recurring_transaction vipps_recurring_transaction
      *
      * @return $this
      */
@@ -2041,7 +2041,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets offline_transaction
      *
-     * @return \Frisbii\lib/Model\OfflineTransaction
+     * @return \Frisbii\lib\Model\OfflineTransaction
      */
     public function getOfflineTransaction()
     {
@@ -2051,7 +2051,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets offline_transaction
      *
-     * @param \Frisbii\lib/Model\OfflineTransaction $offline_transaction offline_transaction
+     * @param \Frisbii\lib\Model\OfflineTransaction $offline_transaction offline_transaction
      *
      * @return $this
      */

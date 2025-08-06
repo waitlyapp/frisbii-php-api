@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,23 +60,23 @@ class CreateCharge implements ModelInterface, ArrayAccess
         'key' => 'string',
         'amount' => 'int',
         'currency' => 'string',
-        'customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'customer' => '\Frisbii\lib\Model\CreateCustomer',
         'metadata' => 'map[string,object]',
         'source' => 'string',
         'settle' => 'bool',
         'recurring' => 'bool',
-        'parameters' => '\Frisbii\lib/Model\ChargeParameters',
+        'parameters' => '\Frisbii\lib\Model\ChargeParameters',
         'ordertext' => 'string',
-        'order_lines' => '\Frisbii\lib/Model\CreateOrderLine[]',
+        'order_lines' => '\Frisbii\lib\Model\CreateOrderLine[]',
         'customer_handle' => 'string',
-        'billing_address' => '\Frisbii\lib/Model\InvoiceBillingAddress',
-        'shipping_address' => '\Frisbii\lib/Model\InvoiceShippingAddress',
+        'billing_address' => '\Frisbii\lib\Model\InvoiceBillingAddress',
+        'shipping_address' => '\Frisbii\lib\Model\InvoiceShippingAddress',
         'use_pm_for_subscription' => 'bool',
         'text_on_statement' => 'string',
         'payment_method_reference' => 'string',
         'async' => 'bool',
         'acquirer_reference' => 'string',
-        'account_funding_information' => '\Frisbii\lib/Model\AccountFundingInformation',
+        'account_funding_information' => '\Frisbii\lib\Model\AccountFundingInformation',
         'account_funding' => 'bool'
     ];
 
@@ -432,7 +432,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCustomer()
     {
@@ -442,7 +442,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $customer customer
+     * @param \Frisbii\lib\Model\CreateCustomer $customer customer
      *
      * @return $this
      */
@@ -552,7 +552,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Frisbii\lib/Model\ChargeParameters
+     * @return \Frisbii\lib\Model\ChargeParameters
      */
     public function getParameters()
     {
@@ -562,7 +562,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Frisbii\lib/Model\ChargeParameters $parameters parameters
+     * @param \Frisbii\lib\Model\ChargeParameters $parameters parameters
      *
      * @return $this
      */
@@ -600,7 +600,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Frisbii\lib/Model\CreateOrderLine[]
+     * @return \Frisbii\lib\Model\CreateOrderLine[]
      */
     public function getOrderLines()
     {
@@ -610,7 +610,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Frisbii\lib/Model\CreateOrderLine[] $order_lines Order lines for the charge. The order lines controls the amount. Only required if charge/invoice does not already exist. If given for existing charge the order lines and amount are adjusted. A maximum of 100 order lines is allowed.
+     * @param \Frisbii\lib\Model\CreateOrderLine[] $order_lines Order lines for the charge. The order lines controls the amount. Only required if charge/invoice does not already exist. If given for existing charge the order lines and amount are adjusted. A maximum of 100 order lines is allowed.
      *
      * @return $this
      */
@@ -648,7 +648,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Frisbii\lib/Model\InvoiceBillingAddress
+     * @return \Frisbii\lib\Model\InvoiceBillingAddress
      */
     public function getBillingAddress()
     {
@@ -658,7 +658,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Frisbii\lib/Model\InvoiceBillingAddress $billing_address billing_address
+     * @param \Frisbii\lib\Model\InvoiceBillingAddress $billing_address billing_address
      *
      * @return $this
      */
@@ -672,7 +672,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Frisbii\lib/Model\InvoiceShippingAddress
+     * @return \Frisbii\lib\Model\InvoiceShippingAddress
      */
     public function getShippingAddress()
     {
@@ -682,7 +682,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Frisbii\lib/Model\InvoiceShippingAddress $shipping_address shipping_address
+     * @param \Frisbii\lib\Model\InvoiceShippingAddress $shipping_address shipping_address
      *
      * @return $this
      */
@@ -816,7 +816,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Gets account_funding_information
      *
-     * @return \Frisbii\lib/Model\AccountFundingInformation
+     * @return \Frisbii\lib\Model\AccountFundingInformation
      */
     public function getAccountFundingInformation()
     {
@@ -826,7 +826,7 @@ class CreateCharge implements ModelInterface, ArrayAccess
     /**
      * Sets account_funding_information
      *
-     * @param \Frisbii\lib/Model\AccountFundingInformation $account_funding_information account_funding_information
+     * @param \Frisbii\lib\Model\AccountFundingInformation $account_funding_information account_funding_information
      *
      * @return $this
      */

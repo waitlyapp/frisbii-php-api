@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -63,9 +63,9 @@ class Credit implements ModelInterface, ArrayAccess
         'state' => 'string',
         'created' => '\DateTime',
         'valid_from' => 'string',
-        'credit_invoices' => '\Frisbii\lib/Model\CreditInvoice[]',
+        'credit_invoices' => '\Frisbii\lib\Model\CreditInvoice[]',
         'pending_amount' => 'int',
-        'invoice_credit_note' => '\Frisbii\lib/Model\InvoiceCreditNote'
+        'invoice_credit_note' => '\Frisbii\lib\Model\InvoiceCreditNote'
     ];
 
     /**
@@ -480,7 +480,7 @@ class Credit implements ModelInterface, ArrayAccess
     /**
      * Gets credit_invoices
      *
-     * @return \Frisbii\lib/Model\CreditInvoice[]
+     * @return \Frisbii\lib\Model\CreditInvoice[]
      */
     public function getCreditInvoices()
     {
@@ -490,7 +490,7 @@ class Credit implements ModelInterface, ArrayAccess
     /**
      * Sets credit_invoices
      *
-     * @param \Frisbii\lib/Model\CreditInvoice[] $credit_invoices List of invoices where the credit is applied
+     * @param \Frisbii\lib\Model\CreditInvoice[] $credit_invoices List of invoices where the credit is applied
      *
      * @return $this
      */
@@ -528,7 +528,7 @@ class Credit implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_credit_note
      *
-     * @return \Frisbii\lib/Model\InvoiceCreditNote
+     * @return \Frisbii\lib\Model\InvoiceCreditNote
      */
     public function getInvoiceCreditNote()
     {
@@ -538,7 +538,7 @@ class Credit implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_credit_note
      *
-     * @param \Frisbii\lib/Model\InvoiceCreditNote $invoice_credit_note invoice_credit_note
+     * @param \Frisbii\lib\Model\InvoiceCreditNote $invoice_credit_note invoice_credit_note
      *
      * @return $this
      */

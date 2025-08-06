@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,8 +56,8 @@ class CouponRedemption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'coupon' => '\Frisbii\lib/Model\Coupon',
-        'subscription_discount' => '\Frisbii\lib/Model\SubscriptionDiscount'
+        'coupon' => '\Frisbii\lib\Model\Coupon',
+        'subscription_discount' => '\Frisbii\lib\Model\SubscriptionDiscount'
     ];
 
     /**
@@ -216,7 +216,7 @@ class CouponRedemption implements ModelInterface, ArrayAccess
     /**
      * Gets coupon
      *
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function getCoupon()
     {
@@ -226,7 +226,7 @@ class CouponRedemption implements ModelInterface, ArrayAccess
     /**
      * Sets coupon
      *
-     * @param \Frisbii\lib/Model\Coupon $coupon coupon
+     * @param \Frisbii\lib\Model\Coupon $coupon coupon
      *
      * @return $this
      */
@@ -240,7 +240,7 @@ class CouponRedemption implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_discount
      *
-     * @return \Frisbii\lib/Model\SubscriptionDiscount
+     * @return \Frisbii\lib\Model\SubscriptionDiscount
      */
     public function getSubscriptionDiscount()
     {
@@ -250,7 +250,7 @@ class CouponRedemption implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_discount
      *
-     * @param \Frisbii\lib/Model\SubscriptionDiscount $subscription_discount subscription_discount
+     * @param \Frisbii\lib\Model\SubscriptionDiscount $subscription_discount subscription_discount
      *
      * @return $this
      */

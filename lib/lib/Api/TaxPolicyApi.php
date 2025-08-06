@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class TaxPolicyApi
      *
      * Create tax policy
      *
-     * @param  \Frisbii\lib/Model\CreateTaxPolicy $body body (optional)
+     * @param  \Frisbii\lib\Model\CreateTaxPolicy $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\TaxPolicy
+     * @return \Frisbii\lib\Model\TaxPolicy
      */
     public function createTaxPolicies($body = null)
     {
@@ -108,15 +108,15 @@ class TaxPolicyApi
      *
      * Create tax policy
      *
-     * @param  \Frisbii\lib/Model\CreateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\CreateTaxPolicy $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\TaxPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\TaxPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTaxPoliciesWithHttpInfo($body = null)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicy';
+        $returnType = '\Frisbii\lib\Model\TaxPolicy';
         $request = $this->createTaxPoliciesRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class TaxPolicyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\TaxPolicy',
+                        '\Frisbii\lib\Model\TaxPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class TaxPolicyApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class TaxPolicyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class TaxPolicyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class TaxPolicyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class TaxPolicyApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class TaxPolicyApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -224,7 +224,7 @@ class TaxPolicyApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class TaxPolicyApi
      *
      * Create tax policy
      *
-     * @param  \Frisbii\lib/Model\CreateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\CreateTaxPolicy $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,14 +259,14 @@ class TaxPolicyApi
      *
      * Create tax policy
      *
-     * @param  \Frisbii\lib/Model\CreateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\CreateTaxPolicy $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createTaxPoliciesAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicy';
+        $returnType = '\Frisbii\lib\Model\TaxPolicy';
         $request = $this->createTaxPoliciesRequest($body);
 
         return $this->client
@@ -309,7 +309,7 @@ class TaxPolicyApi
     /**
      * Create request for operation 'createTaxPolicies'
      *
-     * @param  \Frisbii\lib/Model\CreateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\CreateTaxPolicy $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -339,7 +339,7 @@ class TaxPolicyApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -464,7 +464,7 @@ class TaxPolicyApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class TaxPolicyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -480,7 +480,7 @@ class TaxPolicyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -488,7 +488,7 @@ class TaxPolicyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -496,7 +496,7 @@ class TaxPolicyApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class TaxPolicyApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class TaxPolicyApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -690,7 +690,7 @@ class TaxPolicyApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\StandardTaxRatesResponseDto
+     * @return \Frisbii\lib\Model\StandardTaxRatesResponseDto
      */
     public function getStandardTaxRates()
     {
@@ -706,11 +706,11 @@ class TaxPolicyApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\StandardTaxRatesResponseDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\StandardTaxRatesResponseDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStandardTaxRatesWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\StandardTaxRatesResponseDto';
+        $returnType = '\Frisbii\lib\Model\StandardTaxRatesResponseDto';
         $request = $this->getStandardTaxRatesRequest();
 
         try {
@@ -762,7 +762,7 @@ class TaxPolicyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\StandardTaxRatesResponseDto',
+                        '\Frisbii\lib\Model\StandardTaxRatesResponseDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class TaxPolicyApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class TaxPolicyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class TaxPolicyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -794,7 +794,7 @@ class TaxPolicyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -802,7 +802,7 @@ class TaxPolicyApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -810,7 +810,7 @@ class TaxPolicyApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class TaxPolicyApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class TaxPolicyApi
      */
     public function getStandardTaxRatesAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\StandardTaxRatesResponseDto';
+        $returnType = '\Frisbii\lib\Model\StandardTaxRatesResponseDto';
         $request = $this->getStandardTaxRatesRequest();
 
         return $this->client
@@ -994,7 +994,7 @@ class TaxPolicyApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\TaxPolicy
+     * @return \Frisbii\lib\Model\TaxPolicy
      */
     public function getTaxPolicies($handle)
     {
@@ -1011,11 +1011,11 @@ class TaxPolicyApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\TaxPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\TaxPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaxPoliciesWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicy';
+        $returnType = '\Frisbii\lib\Model\TaxPolicy';
         $request = $this->getTaxPoliciesRequest($handle);
 
         try {
@@ -1067,7 +1067,7 @@ class TaxPolicyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\TaxPolicy',
+                        '\Frisbii\lib\Model\TaxPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1075,7 +1075,7 @@ class TaxPolicyApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1083,7 +1083,7 @@ class TaxPolicyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1091,7 +1091,7 @@ class TaxPolicyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1099,7 +1099,7 @@ class TaxPolicyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1107,7 +1107,7 @@ class TaxPolicyApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1115,7 +1115,7 @@ class TaxPolicyApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1123,7 +1123,7 @@ class TaxPolicyApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1165,7 +1165,7 @@ class TaxPolicyApi
      */
     public function getTaxPoliciesAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicy';
+        $returnType = '\Frisbii\lib\Model\TaxPolicy';
         $request = $this->getTaxPoliciesRequest($handle);
 
         return $this->client
@@ -1317,7 +1317,7 @@ class TaxPolicyApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\TaxRate
+     * @return \Frisbii\lib\Model\TaxRate
      */
     public function getTaxRate($handle, $country)
     {
@@ -1335,11 +1335,11 @@ class TaxPolicyApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\TaxRate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\TaxRate, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaxRateWithHttpInfo($handle, $country)
     {
-        $returnType = '\Frisbii\lib/Model\TaxRate';
+        $returnType = '\Frisbii\lib\Model\TaxRate';
         $request = $this->getTaxRateRequest($handle, $country);
 
         try {
@@ -1391,7 +1391,7 @@ class TaxPolicyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\TaxRate',
+                        '\Frisbii\lib\Model\TaxRate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1399,7 +1399,7 @@ class TaxPolicyApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1407,7 +1407,7 @@ class TaxPolicyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1415,7 +1415,7 @@ class TaxPolicyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1423,7 +1423,7 @@ class TaxPolicyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1431,7 +1431,7 @@ class TaxPolicyApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1439,7 +1439,7 @@ class TaxPolicyApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1447,7 +1447,7 @@ class TaxPolicyApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1491,7 +1491,7 @@ class TaxPolicyApi
      */
     public function getTaxRateAsyncWithHttpInfo($handle, $country)
     {
-        $returnType = '\Frisbii\lib/Model\TaxRate';
+        $returnType = '\Frisbii\lib\Model\TaxRate';
         $request = $this->getTaxRateRequest($handle, $country);
 
         return $this->client
@@ -1654,11 +1654,11 @@ class TaxPolicyApi
      * Update tax policy
      *
      * @param  string $handle Tax policy handle (required)
-     * @param  \Frisbii\lib/Model\UpdateTaxPolicy $body body (optional)
+     * @param  \Frisbii\lib\Model\UpdateTaxPolicy $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\TaxPolicy
+     * @return \Frisbii\lib\Model\TaxPolicy
      */
     public function updateTaxPolicies($handle, $body = null)
     {
@@ -1672,15 +1672,15 @@ class TaxPolicyApi
      * Update tax policy
      *
      * @param  string $handle Tax policy handle (required)
-     * @param  \Frisbii\lib/Model\UpdateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\UpdateTaxPolicy $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\TaxPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\TaxPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTaxPoliciesWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicy';
+        $returnType = '\Frisbii\lib\Model\TaxPolicy';
         $request = $this->updateTaxPoliciesRequest($handle, $body);
 
         try {
@@ -1732,7 +1732,7 @@ class TaxPolicyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\TaxPolicy',
+                        '\Frisbii\lib\Model\TaxPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1740,7 +1740,7 @@ class TaxPolicyApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1748,7 +1748,7 @@ class TaxPolicyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1756,7 +1756,7 @@ class TaxPolicyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1764,7 +1764,7 @@ class TaxPolicyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1772,7 +1772,7 @@ class TaxPolicyApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1780,7 +1780,7 @@ class TaxPolicyApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class TaxPolicyApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1804,7 +1804,7 @@ class TaxPolicyApi
      * Update tax policy
      *
      * @param  string $handle Tax policy handle (required)
-     * @param  \Frisbii\lib/Model\UpdateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\UpdateTaxPolicy $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1825,14 +1825,14 @@ class TaxPolicyApi
      * Update tax policy
      *
      * @param  string $handle Tax policy handle (required)
-     * @param  \Frisbii\lib/Model\UpdateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\UpdateTaxPolicy $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateTaxPoliciesAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicy';
+        $returnType = '\Frisbii\lib\Model\TaxPolicy';
         $request = $this->updateTaxPoliciesRequest($handle, $body);
 
         return $this->client
@@ -1876,7 +1876,7 @@ class TaxPolicyApi
      * Create request for operation 'updateTaxPolicies'
      *
      * @param  string $handle Tax policy handle (required)
-     * @param  \Frisbii\lib/Model\UpdateTaxPolicy $body (optional)
+     * @param  \Frisbii\lib\Model\UpdateTaxPolicy $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1920,7 +1920,7 @@ class TaxPolicyApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

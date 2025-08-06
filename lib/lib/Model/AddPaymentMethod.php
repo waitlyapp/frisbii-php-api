@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class AddPaymentMethod implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'reference' => 'string',
-        'customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'customer' => '\Frisbii\lib\Model\CreateCustomer',
         'source' => 'string',
         'customer_handle' => 'string'
     ];
@@ -249,7 +249,7 @@ class AddPaymentMethod implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCustomer()
     {
@@ -259,7 +259,7 @@ class AddPaymentMethod implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $customer customer
+     * @param \Frisbii\lib\Model\CreateCustomer $customer customer
      *
      * @return $this
      */

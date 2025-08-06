@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -59,9 +59,9 @@ class SettleCharge implements ModelInterface, ArrayAccess
         'key' => 'string',
         'amount' => 'int',
         'ordertext' => 'string',
-        'order_lines' => '\Frisbii\lib/Model\CreateOrderLine[]',
+        'order_lines' => '\Frisbii\lib\Model\CreateOrderLine[]',
         'acquirer_reference' => 'string',
-        'manual_settle' => '\Frisbii\lib/Model\ManualSettleTransfer'
+        'manual_settle' => '\Frisbii\lib\Model\ManualSettleTransfer'
     ];
 
     /**
@@ -306,7 +306,7 @@ class SettleCharge implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Frisbii\lib/Model\CreateOrderLine[]
+     * @return \Frisbii\lib\Model\CreateOrderLine[]
      */
     public function getOrderLines()
     {
@@ -316,7 +316,7 @@ class SettleCharge implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Frisbii\lib/Model\CreateOrderLine[] $order_lines Optional new order lines to replace old order lines for the charge. The order lines controls the amount. The new amount must be less than or equal to the authorized amount. See `amount`.
+     * @param \Frisbii\lib\Model\CreateOrderLine[] $order_lines Optional new order lines to replace old order lines for the charge. The order lines controls the amount. The new amount must be less than or equal to the authorized amount. See `amount`.
      *
      * @return $this
      */
@@ -354,7 +354,7 @@ class SettleCharge implements ModelInterface, ArrayAccess
     /**
      * Gets manual_settle
      *
-     * @return \Frisbii\lib/Model\ManualSettleTransfer
+     * @return \Frisbii\lib\Model\ManualSettleTransfer
      */
     public function getManualSettle()
     {
@@ -364,7 +364,7 @@ class SettleCharge implements ModelInterface, ArrayAccess
     /**
      * Sets manual_settle
      *
-     * @param \Frisbii\lib/Model\ManualSettleTransfer $manual_settle manual_settle
+     * @param \Frisbii\lib\Model\ManualSettleTransfer $manual_settle manual_settle
      *
      * @return $this
      */

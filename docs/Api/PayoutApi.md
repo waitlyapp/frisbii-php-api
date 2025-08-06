@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**transactionDetails1**](PayoutApi.md#transactiondetails1) | **GET** /v1/payout/{id}/transaction/{transaction}/details | Get transaction details
 
 # **createPayout**
-> \Frisbii\lib/Model\Payout createPayout($body)
+> \Frisbii\lib\Model\Payout createPayout($body)
 
 Create payout
 
@@ -23,13 +23,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\PayoutApi(
+$apiInstance = new Frisbii\lib\Api\PayoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreatePayout(); // \Frisbii\lib/Model\CreatePayout | 
+$body = new \Frisbii\lib\Model\CreatePayout(); // \Frisbii\lib\Model\CreatePayout | 
 
 try {
     $result = $apiInstance->createPayout($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreatePayout**](../Model/CreatePayout.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreatePayout**](../Model/CreatePayout.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Payout**](../Model/Payout.md)
+[**\Frisbii\lib\Model\Payout**](../Model/Payout.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayout**
-> \Frisbii\lib/Model\Payout getPayout($handle)
+> \Frisbii\lib\Model\Payout getPayout($handle)
 
 Get payout
 
@@ -76,7 +76,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\PayoutApi(
+$apiInstance = new Frisbii\lib\Api\PayoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Payout**](../Model/Payout.md)
+[**\Frisbii\lib\Model\Payout**](../Model/Payout.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\PayoutApi(
+$apiInstance = new Frisbii\lib\Api\PayoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

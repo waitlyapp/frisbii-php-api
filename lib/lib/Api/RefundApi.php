@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class RefundApi
      *
      * Create refund
      *
-     * @param  \Frisbii\lib/Model\CreateRefund $body body (required)
+     * @param  \Frisbii\lib\Model\CreateRefund $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Refund
+     * @return \Frisbii\lib\Model\Refund
      */
     public function createRefund($body)
     {
@@ -108,15 +108,15 @@ class RefundApi
      *
      * Create refund
      *
-     * @param  \Frisbii\lib/Model\CreateRefund $body (required)
+     * @param  \Frisbii\lib\Model\CreateRefund $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Refund, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Refund, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRefundWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Refund';
+        $returnType = '\Frisbii\lib\Model\Refund';
         $request = $this->createRefundRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class RefundApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Refund',
+                        '\Frisbii\lib\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class RefundApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class RefundApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class RefundApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class RefundApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class RefundApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class RefundApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class RefundApi
      *
      * Create refund
      *
-     * @param  \Frisbii\lib/Model\CreateRefund $body (required)
+     * @param  \Frisbii\lib\Model\CreateRefund $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class RefundApi
      *
      * Create refund
      *
-     * @param  \Frisbii\lib/Model\CreateRefund $body (required)
+     * @param  \Frisbii\lib\Model\CreateRefund $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createRefundAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Refund';
+        $returnType = '\Frisbii\lib\Model\Refund';
         $request = $this->createRefundRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class RefundApi
     /**
      * Create request for operation 'createRefund'
      *
-     * @param  \Frisbii\lib/Model\CreateRefund $body (required)
+     * @param  \Frisbii\lib\Model\CreateRefund $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -404,7 +404,7 @@ class RefundApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Refund
+     * @return \Frisbii\lib\Model\Refund
      */
     public function getRefund($id)
     {
@@ -421,11 +421,11 @@ class RefundApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Refund, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Refund, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRefundWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\Refund';
+        $returnType = '\Frisbii\lib\Model\Refund';
         $request = $this->getRefundRequest($id);
 
         try {
@@ -477,7 +477,7 @@ class RefundApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Refund',
+                        '\Frisbii\lib\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class RefundApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -493,7 +493,7 @@ class RefundApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class RefundApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -509,7 +509,7 @@ class RefundApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -517,7 +517,7 @@ class RefundApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -525,7 +525,7 @@ class RefundApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -567,7 +567,7 @@ class RefundApi
      */
     public function getRefundAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\Refund';
+        $returnType = '\Frisbii\lib\Model\Refund';
         $request = $this->getRefundRequest($id);
 
         return $this->client

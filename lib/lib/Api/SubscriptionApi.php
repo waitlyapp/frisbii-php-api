@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,12 +91,12 @@ class SubscriptionApi
      *
      * Activate pending subscription
      *
-     * @param  \Frisbii\lib/Model\ActivateSubscription $body body (required)
+     * @param  \Frisbii\lib\Model\ActivateSubscription $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function activate($body, $handle)
     {
@@ -109,16 +109,16 @@ class SubscriptionApi
      *
      * Activate pending subscription
      *
-     * @param  \Frisbii\lib/Model\ActivateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ActivateSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function activateWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->activateRequest($body, $handle);
 
         try {
@@ -170,7 +170,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -233,7 +233,7 @@ class SubscriptionApi
      *
      * Activate pending subscription
      *
-     * @param  \Frisbii\lib/Model\ActivateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ActivateSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -254,7 +254,7 @@ class SubscriptionApi
      *
      * Activate pending subscription
      *
-     * @param  \Frisbii\lib/Model\ActivateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ActivateSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -262,7 +262,7 @@ class SubscriptionApi
      */
     public function activateAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->activateRequest($body, $handle);
 
         return $this->client
@@ -305,7 +305,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'activate'
      *
-     * @param  \Frisbii\lib/Model\ActivateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ActivateSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -420,11 +420,11 @@ class SubscriptionApi
      * Preview subscription cancel
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionCancelPreview
+     * @return \Frisbii\lib\Model\SubscriptionCancelPreview
      */
     public function cancelPreviewSubscription($handle, $body = null)
     {
@@ -438,15 +438,15 @@ class SubscriptionApi
      * Preview subscription cancel
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionCancelPreview, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionCancelPreview, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelPreviewSubscriptionWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionCancelPreview';
+        $returnType = '\Frisbii\lib\Model\SubscriptionCancelPreview';
         $request = $this->cancelPreviewSubscriptionRequest($handle, $body);
 
         try {
@@ -498,7 +498,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionCancelPreview',
+                        '\Frisbii\lib\Model\SubscriptionCancelPreview',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +514,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -538,7 +538,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -546,7 +546,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -562,7 +562,7 @@ class SubscriptionApi
      * Preview subscription cancel
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -583,14 +583,14 @@ class SubscriptionApi
      * Preview subscription cancel
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function cancelPreviewSubscriptionAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionCancelPreview';
+        $returnType = '\Frisbii\lib\Model\SubscriptionCancelPreview';
         $request = $this->cancelPreviewSubscriptionRequest($handle, $body);
 
         return $this->client
@@ -634,7 +634,7 @@ class SubscriptionApi
      * Create request for operation 'cancelPreviewSubscription'
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -678,7 +678,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -742,11 +742,11 @@ class SubscriptionApi
      * Cancel subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function cancelSubscription($handle, $body = null)
     {
@@ -760,15 +760,15 @@ class SubscriptionApi
      * Cancel subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelSubscriptionWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->cancelSubscriptionRequest($handle, $body);
 
         try {
@@ -820,7 +820,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -828,7 +828,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -844,7 +844,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -852,7 +852,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -860,7 +860,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -868,7 +868,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +884,7 @@ class SubscriptionApi
      * Cancel subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -905,14 +905,14 @@ class SubscriptionApi
      * Cancel subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function cancelSubscriptionAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->cancelSubscriptionRequest($handle, $body);
 
         return $this->client
@@ -956,7 +956,7 @@ class SubscriptionApi
      * Create request for operation 'cancelSubscription'
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\CancelSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\CancelSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1000,7 +1000,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1063,12 +1063,12 @@ class SubscriptionApi
      *
      * Change next renewal date
      *
-     * @param  \Frisbii\lib/Model\ChangeNextPeriodStart $body body (required)
+     * @param  \Frisbii\lib\Model\ChangeNextPeriodStart $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function changeNextPeriodStartJson($body, $handle)
     {
@@ -1081,16 +1081,16 @@ class SubscriptionApi
      *
      * Change next renewal date
      *
-     * @param  \Frisbii\lib/Model\ChangeNextPeriodStart $body (required)
+     * @param  \Frisbii\lib\Model\ChangeNextPeriodStart $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeNextPeriodStartJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->changeNextPeriodStartJsonRequest($body, $handle);
 
         try {
@@ -1142,7 +1142,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1150,7 +1150,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1158,7 +1158,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1166,7 +1166,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1174,7 +1174,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1182,7 +1182,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1190,7 +1190,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1205,7 +1205,7 @@ class SubscriptionApi
      *
      * Change next renewal date
      *
-     * @param  \Frisbii\lib/Model\ChangeNextPeriodStart $body (required)
+     * @param  \Frisbii\lib\Model\ChangeNextPeriodStart $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1226,7 +1226,7 @@ class SubscriptionApi
      *
      * Change next renewal date
      *
-     * @param  \Frisbii\lib/Model\ChangeNextPeriodStart $body (required)
+     * @param  \Frisbii\lib\Model\ChangeNextPeriodStart $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1234,7 +1234,7 @@ class SubscriptionApi
      */
     public function changeNextPeriodStartJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->changeNextPeriodStartJsonRequest($body, $handle);
 
         return $this->client
@@ -1277,7 +1277,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'changeNextPeriodStartJson'
      *
-     * @param  \Frisbii\lib/Model\ChangeNextPeriodStart $body (required)
+     * @param  \Frisbii\lib\Model\ChangeNextPeriodStart $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1391,12 +1391,12 @@ class SubscriptionApi
      *
      * Change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function changeSubscription($body, $handle)
     {
@@ -1409,16 +1409,16 @@ class SubscriptionApi
      *
      * Change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeSubscriptionWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->changeSubscriptionRequest($body, $handle);
 
         try {
@@ -1470,7 +1470,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1478,7 +1478,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1486,7 +1486,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1494,7 +1494,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1502,7 +1502,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1510,7 +1510,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1518,7 +1518,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1533,7 +1533,7 @@ class SubscriptionApi
      *
      * Change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1554,7 +1554,7 @@ class SubscriptionApi
      *
      * Change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1562,7 +1562,7 @@ class SubscriptionApi
      */
     public function changeSubscriptionAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->changeSubscriptionRequest($body, $handle);
 
         return $this->client
@@ -1605,7 +1605,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'changeSubscription'
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1719,13 +1719,13 @@ class SubscriptionApi
      *
      * Create metered usage record
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredUsageRecord $body body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredUsageRecord $body body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredUsageRecord
+     * @return \Frisbii\lib\Model\MeteredUsageRecord
      */
     public function createMeteredUsageRecord($body, $handle, $metered_billing_handle)
     {
@@ -1738,17 +1738,17 @@ class SubscriptionApi
      *
      * Create metered usage record
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredUsageRecord, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredUsageRecord, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMeteredUsageRecordWithHttpInfo($body, $handle, $metered_billing_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredUsageRecord';
+        $returnType = '\Frisbii\lib\Model\MeteredUsageRecord';
         $request = $this->createMeteredUsageRecordRequest($body, $handle, $metered_billing_handle);
 
         try {
@@ -1800,7 +1800,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredUsageRecord',
+                        '\Frisbii\lib\Model\MeteredUsageRecord',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1808,7 +1808,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1816,7 +1816,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1824,7 +1824,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1832,7 +1832,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1840,7 +1840,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1848,7 +1848,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1863,7 +1863,7 @@ class SubscriptionApi
      *
      * Create metered usage record
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      *
@@ -1885,7 +1885,7 @@ class SubscriptionApi
      *
      * Create metered usage record
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      *
@@ -1894,7 +1894,7 @@ class SubscriptionApi
      */
     public function createMeteredUsageRecordAsyncWithHttpInfo($body, $handle, $metered_billing_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredUsageRecord';
+        $returnType = '\Frisbii\lib\Model\MeteredUsageRecord';
         $request = $this->createMeteredUsageRecordRequest($body, $handle, $metered_billing_handle);
 
         return $this->client
@@ -1937,7 +1937,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'createMeteredUsageRecord'
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      *
@@ -2003,7 +2003,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -2066,12 +2066,12 @@ class SubscriptionApi
      *
      * Add subscription discount
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionDiscount $body body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionDiscount $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionDiscount
+     * @return \Frisbii\lib\Model\SubscriptionDiscount
      */
     public function createSubscriptionDiscount($body, $handle)
     {
@@ -2084,16 +2084,16 @@ class SubscriptionApi
      *
      * Add subscription discount
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionDiscount $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionDiscount $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionDiscount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionDiscount, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionDiscountWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount';
         $request = $this->createSubscriptionDiscountRequest($body, $handle);
 
         try {
@@ -2145,7 +2145,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionDiscount',
+                        '\Frisbii\lib\Model\SubscriptionDiscount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2153,7 +2153,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2161,7 +2161,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2169,7 +2169,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2177,7 +2177,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2185,7 +2185,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2193,7 +2193,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2208,7 +2208,7 @@ class SubscriptionApi
      *
      * Add subscription discount
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionDiscount $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionDiscount $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2229,7 +2229,7 @@ class SubscriptionApi
      *
      * Add subscription discount
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionDiscount $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionDiscount $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2237,7 +2237,7 @@ class SubscriptionApi
      */
     public function createSubscriptionDiscountAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount';
         $request = $this->createSubscriptionDiscountRequest($body, $handle);
 
         return $this->client
@@ -2280,7 +2280,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'createSubscriptionDiscount'
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionDiscount $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionDiscount $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2331,7 +2331,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -2394,12 +2394,12 @@ class SubscriptionApi
      *
      * Create invoice ondemand for subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionInvoice $body body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionInvoice $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function createSubscriptionInvoice($body, $handle)
     {
@@ -2412,16 +2412,16 @@ class SubscriptionApi
      *
      * Create invoice ondemand for subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionInvoice $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionInvoiceWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->createSubscriptionInvoiceRequest($body, $handle);
 
         try {
@@ -2473,7 +2473,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Invoice',
+                        '\Frisbii\lib\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2481,7 +2481,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2489,7 +2489,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2497,7 +2497,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2505,7 +2505,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2513,7 +2513,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2521,7 +2521,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2536,7 +2536,7 @@ class SubscriptionApi
      *
      * Create invoice ondemand for subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionInvoice $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2557,7 +2557,7 @@ class SubscriptionApi
      *
      * Create invoice ondemand for subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionInvoice $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2565,7 +2565,7 @@ class SubscriptionApi
      */
     public function createSubscriptionInvoiceAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->createSubscriptionInvoiceRequest($body, $handle);
 
         return $this->client
@@ -2608,7 +2608,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'createSubscriptionInvoice'
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionInvoice $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2722,11 +2722,11 @@ class SubscriptionApi
      *
      * Create subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscription $body body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscription $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function createSubscriptionJson($body)
     {
@@ -2739,15 +2739,15 @@ class SubscriptionApi
      *
      * Create subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscription $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->createSubscriptionJsonRequest($body);
 
         try {
@@ -2799,7 +2799,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2807,7 +2807,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2815,7 +2815,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2823,7 +2823,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2831,7 +2831,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2839,7 +2839,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2847,7 +2847,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2862,7 +2862,7 @@ class SubscriptionApi
      *
      * Create subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2882,14 +2882,14 @@ class SubscriptionApi
      *
      * Create subscription
      *
-     * @param  \Frisbii\lib/Model\CreateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createSubscriptionJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->createSubscriptionJsonRequest($body);
 
         return $this->client
@@ -2932,7 +2932,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'createSubscriptionJson'
      *
-     * @param  \Frisbii\lib/Model\CreateSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3031,12 +3031,12 @@ class SubscriptionApi
      *
      * Create subscription metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct $body body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionMeteredBillingProduct
+     * @return \Frisbii\lib\Model\SubscriptionMeteredBillingProduct
      */
     public function createSubscriptionMeteredBillingProduct($body, $handle)
     {
@@ -3049,16 +3049,16 @@ class SubscriptionApi
      *
      * Create subscription metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionMeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionMeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionMeteredBillingProductWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct';
         $request = $this->createSubscriptionMeteredBillingProductRequest($body, $handle);
 
         try {
@@ -3110,7 +3110,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct',
+                        '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3118,7 +3118,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3126,7 +3126,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3134,7 +3134,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3142,7 +3142,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3150,7 +3150,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3158,7 +3158,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3173,7 +3173,7 @@ class SubscriptionApi
      *
      * Create subscription metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3194,7 +3194,7 @@ class SubscriptionApi
      *
      * Create subscription metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3202,7 +3202,7 @@ class SubscriptionApi
      */
     public function createSubscriptionMeteredBillingProductAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct';
         $request = $this->createSubscriptionMeteredBillingProductRequest($body, $handle);
 
         return $this->client
@@ -3245,7 +3245,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'createSubscriptionMeteredBillingProduct'
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3421,7 +3421,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3429,7 +3429,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3437,7 +3437,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3445,7 +3445,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3453,7 +3453,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3461,7 +3461,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3698,7 +3698,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3706,7 +3706,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3714,7 +3714,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3722,7 +3722,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3730,7 +3730,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3738,7 +3738,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3918,7 +3918,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionDiscount
+     * @return \Frisbii\lib\Model\SubscriptionDiscount
      */
     public function deleteSubscriptionDiscount($handle, $sd_handle)
     {
@@ -3936,11 +3936,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionDiscount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionDiscount, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSubscriptionDiscountWithHttpInfo($handle, $sd_handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount';
         $request = $this->deleteSubscriptionDiscountRequest($handle, $sd_handle);
 
         try {
@@ -3992,7 +3992,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionDiscount',
+                        '\Frisbii\lib\Model\SubscriptionDiscount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4000,7 +4000,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4008,7 +4008,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4016,7 +4016,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4024,7 +4024,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4032,7 +4032,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4040,7 +4040,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4084,7 +4084,7 @@ class SubscriptionApi
      */
     public function deleteSubscriptionDiscountAsyncWithHttpInfo($handle, $sd_handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount';
         $request = $this->deleteSubscriptionDiscountRequest($handle, $sd_handle);
 
         return $this->client
@@ -4252,7 +4252,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionMeteredBillingProduct
+     * @return \Frisbii\lib\Model\SubscriptionMeteredBillingProduct
      */
     public function deleteSubscriptionMeteredBillingProduct($handle, $metered_billing_handle, $unbilled_usage_strategy = null)
     {
@@ -4271,11 +4271,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionMeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionMeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSubscriptionMeteredBillingProductWithHttpInfo($handle, $metered_billing_handle, $unbilled_usage_strategy = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct';
         $request = $this->deleteSubscriptionMeteredBillingProductRequest($handle, $metered_billing_handle, $unbilled_usage_strategy);
 
         try {
@@ -4327,7 +4327,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct',
+                        '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4335,7 +4335,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4343,7 +4343,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4351,7 +4351,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4359,7 +4359,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4367,7 +4367,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4375,7 +4375,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4421,7 +4421,7 @@ class SubscriptionApi
      */
     public function deleteSubscriptionMeteredBillingProductAsyncWithHttpInfo($handle, $metered_billing_handle, $unbilled_usage_strategy = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct';
         $request = $this->deleteSubscriptionMeteredBillingProductRequest($handle, $metered_billing_handle, $unbilled_usage_strategy);
 
         return $this->client
@@ -4589,11 +4589,11 @@ class SubscriptionApi
      * Expire subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ExpireSubscription $body body (optional)
+     * @param  \Frisbii\lib\Model\ExpireSubscription $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function expire($handle, $body = null)
     {
@@ -4607,15 +4607,15 @@ class SubscriptionApi
      * Expire subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ExpireSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ExpireSubscription $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function expireWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->expireRequest($handle, $body);
 
         try {
@@ -4667,7 +4667,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4675,7 +4675,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4683,7 +4683,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4691,7 +4691,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4699,7 +4699,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4707,7 +4707,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4715,7 +4715,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4731,7 +4731,7 @@ class SubscriptionApi
      * Expire subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ExpireSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ExpireSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4752,14 +4752,14 @@ class SubscriptionApi
      * Expire subscription
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ExpireSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ExpireSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function expireAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->expireRequest($handle, $body);
 
         return $this->client
@@ -4803,7 +4803,7 @@ class SubscriptionApi
      * Create request for operation 'expire'
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ExpireSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ExpireSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4847,7 +4847,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -4916,7 +4916,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredUsages
+     * @return \Frisbii\lib\Model\MeteredUsages
      */
     public function getLatestMeteredUsages($handle, $metered_billing_handle, $size = '10')
     {
@@ -4935,11 +4935,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredUsages, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredUsages, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLatestMeteredUsagesWithHttpInfo($handle, $metered_billing_handle, $size = '10')
     {
-        $returnType = '\Frisbii\lib/Model\MeteredUsages';
+        $returnType = '\Frisbii\lib\Model\MeteredUsages';
         $request = $this->getLatestMeteredUsagesRequest($handle, $metered_billing_handle, $size);
 
         try {
@@ -4991,7 +4991,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredUsages',
+                        '\Frisbii\lib\Model\MeteredUsages',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4999,7 +4999,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5007,7 +5007,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5015,7 +5015,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5023,7 +5023,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5031,7 +5031,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5039,7 +5039,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5085,7 +5085,7 @@ class SubscriptionApi
      */
     public function getLatestMeteredUsagesAsyncWithHttpInfo($handle, $metered_billing_handle, $size = '10')
     {
-        $returnType = '\Frisbii\lib/Model\MeteredUsages';
+        $returnType = '\Frisbii\lib\Model\MeteredUsages';
         $request = $this->getLatestMeteredUsagesRequest($handle, $metered_billing_handle, $size);
 
         return $this->client
@@ -5337,7 +5337,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5345,7 +5345,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5353,7 +5353,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5361,7 +5361,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5369,7 +5369,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5377,7 +5377,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5570,7 +5570,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function getPayableInvoice($handle)
     {
@@ -5587,11 +5587,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPayableInvoiceWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->getPayableInvoiceRequest($handle);
 
         try {
@@ -5643,7 +5643,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Invoice',
+                        '\Frisbii\lib\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5651,7 +5651,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5659,7 +5659,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5667,7 +5667,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5675,7 +5675,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5683,7 +5683,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5691,7 +5691,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5733,7 +5733,7 @@ class SubscriptionApi
      */
     public function getPayableInvoiceAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->getPayableInvoiceRequest($handle);
 
         return $this->client
@@ -5884,7 +5884,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function getSubscription($handle)
     {
@@ -5901,11 +5901,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->getSubscriptionRequest($handle);
 
         try {
@@ -5957,7 +5957,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5965,7 +5965,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5973,7 +5973,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5981,7 +5981,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5989,7 +5989,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5997,7 +5997,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6005,7 +6005,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6047,7 +6047,7 @@ class SubscriptionApi
      */
     public function getSubscriptionAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->getSubscriptionRequest($handle);
 
         return $this->client
@@ -6199,7 +6199,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionAddOn
+     * @return \Frisbii\lib\Model\SubscriptionAddOn
      */
     public function getSubscriptionAddOn($handle, $sa_handle)
     {
@@ -6217,11 +6217,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionAddOn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionAddOn, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionAddOnWithHttpInfo($handle, $sa_handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionAddOn';
+        $returnType = '\Frisbii\lib\Model\SubscriptionAddOn';
         $request = $this->getSubscriptionAddOnRequest($handle, $sa_handle);
 
         try {
@@ -6273,7 +6273,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionAddOn',
+                        '\Frisbii\lib\Model\SubscriptionAddOn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6281,7 +6281,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6289,7 +6289,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6297,7 +6297,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6305,7 +6305,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6313,7 +6313,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6321,7 +6321,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6365,7 +6365,7 @@ class SubscriptionApi
      */
     public function getSubscriptionAddOnAsyncWithHttpInfo($handle, $sa_handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionAddOn';
+        $returnType = '\Frisbii\lib\Model\SubscriptionAddOn';
         $request = $this->getSubscriptionAddOnRequest($handle, $sa_handle);
 
         return $this->client
@@ -6531,7 +6531,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionAddOn[]
+     * @return \Frisbii\lib\Model\SubscriptionAddOn[]
      */
     public function getSubscriptionAddOns($handle)
     {
@@ -6548,11 +6548,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionAddOn[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionAddOn[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionAddOnsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionAddOn[]';
+        $returnType = '\Frisbii\lib\Model\SubscriptionAddOn[]';
         $request = $this->getSubscriptionAddOnsRequest($handle);
 
         try {
@@ -6604,7 +6604,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionAddOn[]',
+                        '\Frisbii\lib\Model\SubscriptionAddOn[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6612,7 +6612,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6620,7 +6620,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6628,7 +6628,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6636,7 +6636,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6644,7 +6644,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6652,7 +6652,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6694,7 +6694,7 @@ class SubscriptionApi
      */
     public function getSubscriptionAddOnsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionAddOn[]';
+        $returnType = '\Frisbii\lib\Model\SubscriptionAddOn[]';
         $request = $this->getSubscriptionAddOnsRequest($handle);
 
         return $this->client
@@ -6846,7 +6846,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionDiscount
+     * @return \Frisbii\lib\Model\SubscriptionDiscount
      */
     public function getSubscriptionDiscount($handle, $sd_handle)
     {
@@ -6864,11 +6864,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionDiscount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionDiscount, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionDiscountWithHttpInfo($handle, $sd_handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount';
         $request = $this->getSubscriptionDiscountRequest($handle, $sd_handle);
 
         try {
@@ -6920,7 +6920,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionDiscount',
+                        '\Frisbii\lib\Model\SubscriptionDiscount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6928,7 +6928,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6936,7 +6936,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6944,7 +6944,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6952,7 +6952,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6960,7 +6960,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6968,7 +6968,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7012,7 +7012,7 @@ class SubscriptionApi
      */
     public function getSubscriptionDiscountAsyncWithHttpInfo($handle, $sd_handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount';
         $request = $this->getSubscriptionDiscountRequest($handle, $sd_handle);
 
         return $this->client
@@ -7178,7 +7178,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionDiscount[]
+     * @return \Frisbii\lib\Model\SubscriptionDiscount[]
      */
     public function getSubscriptionDiscounts($handle)
     {
@@ -7195,11 +7195,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionDiscount[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionDiscount[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionDiscountsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount[]';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount[]';
         $request = $this->getSubscriptionDiscountsRequest($handle);
 
         try {
@@ -7251,7 +7251,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionDiscount[]',
+                        '\Frisbii\lib\Model\SubscriptionDiscount[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7259,7 +7259,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7267,7 +7267,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7275,7 +7275,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7283,7 +7283,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7291,7 +7291,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7299,7 +7299,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7341,7 +7341,7 @@ class SubscriptionApi
      */
     public function getSubscriptionDiscountsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionDiscount[]';
+        $returnType = '\Frisbii\lib\Model\SubscriptionDiscount[]';
         $request = $this->getSubscriptionDiscountsRequest($handle);
 
         return $this->client
@@ -7492,7 +7492,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionEntitlementsDto
+     * @return \Frisbii\lib\Model\SubscriptionEntitlementsDto
      */
     public function getSubscriptionEntitlements($handle)
     {
@@ -7509,11 +7509,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionEntitlementsDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionEntitlementsDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionEntitlementsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionEntitlementsDto';
+        $returnType = '\Frisbii\lib\Model\SubscriptionEntitlementsDto';
         $request = $this->getSubscriptionEntitlementsRequest($handle);
 
         try {
@@ -7565,7 +7565,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionEntitlementsDto',
+                        '\Frisbii\lib\Model\SubscriptionEntitlementsDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7573,7 +7573,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7581,7 +7581,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7589,7 +7589,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7597,7 +7597,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7605,7 +7605,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7613,7 +7613,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7655,7 +7655,7 @@ class SubscriptionApi
      */
     public function getSubscriptionEntitlementsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionEntitlementsDto';
+        $returnType = '\Frisbii\lib\Model\SubscriptionEntitlementsDto';
         $request = $this->getSubscriptionEntitlementsRequest($handle);
 
         return $this->client
@@ -7806,7 +7806,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionMeteredBillingProductList
+     * @return \Frisbii\lib\Model\SubscriptionMeteredBillingProductList
      */
     public function getSubscriptionMeteredBillingProducts($handle)
     {
@@ -7823,11 +7823,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionMeteredBillingProductList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionMeteredBillingProductList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionMeteredBillingProductsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredBillingProductList';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredBillingProductList';
         $request = $this->getSubscriptionMeteredBillingProductsRequest($handle);
 
         try {
@@ -7879,7 +7879,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionMeteredBillingProductList',
+                        '\Frisbii\lib\Model\SubscriptionMeteredBillingProductList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7887,7 +7887,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7895,7 +7895,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7903,7 +7903,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7911,7 +7911,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7919,7 +7919,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7927,7 +7927,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7969,7 +7969,7 @@ class SubscriptionApi
      */
     public function getSubscriptionMeteredBillingProductsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredBillingProductList';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredBillingProductList';
         $request = $this->getSubscriptionMeteredBillingProductsRequest($handle);
 
         return $this->client
@@ -8120,7 +8120,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2[]
+     * @return \Frisbii\lib\Model\PaymentMethodV2[]
      */
     public function getSubscriptionPaymentMethod($handle)
     {
@@ -8137,11 +8137,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionPaymentMethodWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->getSubscriptionPaymentMethodRequest($handle);
 
         try {
@@ -8193,7 +8193,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2[]',
+                        '\Frisbii\lib\Model\PaymentMethodV2[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8201,7 +8201,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8209,7 +8209,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8217,7 +8217,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8225,7 +8225,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8233,7 +8233,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8241,7 +8241,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8283,7 +8283,7 @@ class SubscriptionApi
      */
     public function getSubscriptionPaymentMethodAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->getSubscriptionPaymentMethodRequest($handle);
 
         return $this->client
@@ -8435,7 +8435,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionPeriodBalance
+     * @return \Frisbii\lib\Model\SubscriptionPeriodBalance
      */
     public function getSubscriptionPeriodBalance($handle, $date = null)
     {
@@ -8453,11 +8453,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionPeriodBalance, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionPeriodBalance, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionPeriodBalanceWithHttpInfo($handle, $date = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionPeriodBalance';
+        $returnType = '\Frisbii\lib\Model\SubscriptionPeriodBalance';
         $request = $this->getSubscriptionPeriodBalanceRequest($handle, $date);
 
         try {
@@ -8509,7 +8509,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionPeriodBalance',
+                        '\Frisbii\lib\Model\SubscriptionPeriodBalance',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8517,7 +8517,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8525,7 +8525,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8533,7 +8533,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8541,7 +8541,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8549,7 +8549,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8557,7 +8557,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8601,7 +8601,7 @@ class SubscriptionApi
      */
     public function getSubscriptionPeriodBalanceAsyncWithHttpInfo($handle, $date = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionPeriodBalance';
+        $returnType = '\Frisbii\lib\Model\SubscriptionPeriodBalance';
         $request = $this->getSubscriptionPeriodBalanceRequest($handle, $date);
 
         return $this->client
@@ -8759,7 +8759,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\IntervalAmount
+     * @return \Frisbii\lib\Model\IntervalAmount
      */
     public function intervalAmount($handle, $from, $to)
     {
@@ -8778,11 +8778,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\IntervalAmount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\IntervalAmount, HTTP status code, HTTP response headers (array of strings)
      */
     public function intervalAmountWithHttpInfo($handle, $from, $to)
     {
-        $returnType = '\Frisbii\lib/Model\IntervalAmount';
+        $returnType = '\Frisbii\lib\Model\IntervalAmount';
         $request = $this->intervalAmountRequest($handle, $from, $to);
 
         try {
@@ -8834,7 +8834,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\IntervalAmount',
+                        '\Frisbii\lib\Model\IntervalAmount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8842,7 +8842,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8850,7 +8850,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8858,7 +8858,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8866,7 +8866,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8874,7 +8874,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8882,7 +8882,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8928,7 +8928,7 @@ class SubscriptionApi
      */
     public function intervalAmountAsyncWithHttpInfo($handle, $from, $to)
     {
-        $returnType = '\Frisbii\lib/Model\IntervalAmount';
+        $returnType = '\Frisbii\lib\Model\IntervalAmount';
         $request = $this->intervalAmountRequest($handle, $from, $to);
 
         return $this->client
@@ -9098,11 +9098,11 @@ class SubscriptionApi
      * Subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\OnHoldSubscription $body body (optional)
+     * @param  \Frisbii\lib\Model\OnHoldSubscription $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function onHold($handle, $body = null)
     {
@@ -9116,15 +9116,15 @@ class SubscriptionApi
      * Subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\OnHoldSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\OnHoldSubscription $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function onHoldWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->onHoldRequest($handle, $body);
 
         try {
@@ -9176,7 +9176,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9184,7 +9184,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9192,7 +9192,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9200,7 +9200,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9208,7 +9208,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9216,7 +9216,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9224,7 +9224,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9240,7 +9240,7 @@ class SubscriptionApi
      * Subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\OnHoldSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\OnHoldSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9261,14 +9261,14 @@ class SubscriptionApi
      * Subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\OnHoldSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\OnHoldSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function onHoldAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->onHoldRequest($handle, $body);
 
         return $this->client
@@ -9312,7 +9312,7 @@ class SubscriptionApi
      * Create request for operation 'onHold'
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\OnHoldSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\OnHoldSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9356,7 +9356,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -9419,11 +9419,11 @@ class SubscriptionApi
      *
      * Prepare pending subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PreparedSubscription
+     * @return \Frisbii\lib\Model\PreparedSubscription
      */
     public function prepareSubscription($body)
     {
@@ -9436,15 +9436,15 @@ class SubscriptionApi
      *
      * Prepare pending subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PreparedSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PreparedSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function prepareSubscriptionWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PreparedSubscription';
+        $returnType = '\Frisbii\lib\Model\PreparedSubscription';
         $request = $this->prepareSubscriptionRequest($body);
 
         try {
@@ -9496,7 +9496,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PreparedSubscription',
+                        '\Frisbii\lib\Model\PreparedSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9504,7 +9504,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9512,7 +9512,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9520,7 +9520,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9528,7 +9528,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9536,7 +9536,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9544,7 +9544,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9559,7 +9559,7 @@ class SubscriptionApi
      *
      * Prepare pending subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9579,14 +9579,14 @@ class SubscriptionApi
      *
      * Prepare pending subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function prepareSubscriptionAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PreparedSubscription';
+        $returnType = '\Frisbii\lib\Model\PreparedSubscription';
         $request = $this->prepareSubscriptionRequest($body);
 
         return $this->client
@@ -9629,7 +9629,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'prepareSubscription'
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9728,12 +9728,12 @@ class SubscriptionApi
      *
      * Preview change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\ChangedSubscription
+     * @return \Frisbii\lib\Model\ChangedSubscription
      */
     public function previewChangeSubscription($body, $handle)
     {
@@ -9746,16 +9746,16 @@ class SubscriptionApi
      *
      * Preview change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\ChangedSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\ChangedSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function previewChangeSubscriptionWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\ChangedSubscription';
+        $returnType = '\Frisbii\lib\Model\ChangedSubscription';
         $request = $this->previewChangeSubscriptionRequest($body, $handle);
 
         try {
@@ -9807,7 +9807,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ChangedSubscription',
+                        '\Frisbii\lib\Model\ChangedSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9815,7 +9815,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9823,7 +9823,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9831,7 +9831,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9839,7 +9839,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9847,7 +9847,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9855,7 +9855,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9870,7 +9870,7 @@ class SubscriptionApi
      *
      * Preview change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -9891,7 +9891,7 @@ class SubscriptionApi
      *
      * Preview change subscription
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -9899,7 +9899,7 @@ class SubscriptionApi
      */
     public function previewChangeSubscriptionAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\ChangedSubscription';
+        $returnType = '\Frisbii\lib\Model\ChangedSubscription';
         $request = $this->previewChangeSubscriptionRequest($body, $handle);
 
         return $this->client
@@ -9942,7 +9942,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'previewChangeSubscription'
      *
-     * @param  \Frisbii\lib/Model\ChangeSubscription $body (required)
+     * @param  \Frisbii\lib\Model\ChangeSubscription $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -10060,7 +10060,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function previewNextSubscriptionInvoice($handle)
     {
@@ -10077,11 +10077,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function previewNextSubscriptionInvoiceWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->previewNextSubscriptionInvoiceRequest($handle);
 
         try {
@@ -10133,7 +10133,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Invoice',
+                        '\Frisbii\lib\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10141,7 +10141,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10149,7 +10149,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10157,7 +10157,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10165,7 +10165,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10173,7 +10173,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10181,7 +10181,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10223,7 +10223,7 @@ class SubscriptionApi
      */
     public function previewNextSubscriptionInvoiceAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->previewNextSubscriptionInvoiceRequest($handle);
 
         return $this->client
@@ -10370,11 +10370,11 @@ class SubscriptionApi
      *
      * Preview subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PreparedSubscription
+     * @return \Frisbii\lib\Model\PreparedSubscription
      */
     public function previewSubscription($body)
     {
@@ -10387,15 +10387,15 @@ class SubscriptionApi
      *
      * Preview subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PreparedSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PreparedSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function previewSubscriptionWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PreparedSubscription';
+        $returnType = '\Frisbii\lib\Model\PreparedSubscription';
         $request = $this->previewSubscriptionRequest($body);
 
         try {
@@ -10447,7 +10447,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PreparedSubscription',
+                        '\Frisbii\lib\Model\PreparedSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10455,7 +10455,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10463,7 +10463,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10471,7 +10471,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10479,7 +10479,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10487,7 +10487,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10495,7 +10495,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10510,7 +10510,7 @@ class SubscriptionApi
      *
      * Preview subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10530,14 +10530,14 @@ class SubscriptionApi
      *
      * Preview subscription
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function previewSubscriptionAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PreparedSubscription';
+        $returnType = '\Frisbii\lib\Model\PreparedSubscription';
         $request = $this->previewSubscriptionRequest($body);
 
         return $this->client
@@ -10580,7 +10580,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'previewSubscription'
      *
-     * @param  \Frisbii\lib/Model\CreatePreparedSubscription $body (required)
+     * @param  \Frisbii\lib\Model\CreatePreparedSubscription $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10680,11 +10680,11 @@ class SubscriptionApi
      * Reactivate subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ReactivateSubscription $body body (optional)
+     * @param  \Frisbii\lib\Model\ReactivateSubscription $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function reactivateSubscription($handle, $body = null)
     {
@@ -10698,15 +10698,15 @@ class SubscriptionApi
      * Reactivate subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ReactivateSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ReactivateSubscription $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function reactivateSubscriptionWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->reactivateSubscriptionRequest($handle, $body);
 
         try {
@@ -10758,7 +10758,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10766,7 +10766,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10774,7 +10774,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10782,7 +10782,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10790,7 +10790,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10798,7 +10798,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10806,7 +10806,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10822,7 +10822,7 @@ class SubscriptionApi
      * Reactivate subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ReactivateSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ReactivateSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10843,14 +10843,14 @@ class SubscriptionApi
      * Reactivate subscription on hold
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ReactivateSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ReactivateSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function reactivateSubscriptionAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->reactivateSubscriptionRequest($handle, $body);
 
         return $this->client
@@ -10894,7 +10894,7 @@ class SubscriptionApi
      * Create request for operation 'reactivateSubscription'
      *
      * @param  string $handle Subscription handle (required)
-     * @param  \Frisbii\lib/Model\ReactivateSubscription $body (optional)
+     * @param  \Frisbii\lib\Model\ReactivateSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10938,7 +10938,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -11001,12 +11001,12 @@ class SubscriptionApi
      *
      * Redeem coupon code for subscription
      *
-     * @param  \Frisbii\lib/Model\RedeemCouponCode $body body (required)
+     * @param  \Frisbii\lib\Model\RedeemCouponCode $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CouponRedemption
+     * @return \Frisbii\lib\Model\CouponRedemption
      */
     public function redeemCouponCode($body, $handle)
     {
@@ -11019,16 +11019,16 @@ class SubscriptionApi
      *
      * Redeem coupon code for subscription
      *
-     * @param  \Frisbii\lib/Model\RedeemCouponCode $body (required)
+     * @param  \Frisbii\lib\Model\RedeemCouponCode $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CouponRedemption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CouponRedemption, HTTP status code, HTTP response headers (array of strings)
      */
     public function redeemCouponCodeWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\CouponRedemption';
+        $returnType = '\Frisbii\lib\Model\CouponRedemption';
         $request = $this->redeemCouponCodeRequest($body, $handle);
 
         try {
@@ -11080,7 +11080,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CouponRedemption',
+                        '\Frisbii\lib\Model\CouponRedemption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11088,7 +11088,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11096,7 +11096,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11104,7 +11104,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11112,7 +11112,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11120,7 +11120,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11128,7 +11128,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11143,7 +11143,7 @@ class SubscriptionApi
      *
      * Redeem coupon code for subscription
      *
-     * @param  \Frisbii\lib/Model\RedeemCouponCode $body (required)
+     * @param  \Frisbii\lib\Model\RedeemCouponCode $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -11164,7 +11164,7 @@ class SubscriptionApi
      *
      * Redeem coupon code for subscription
      *
-     * @param  \Frisbii\lib/Model\RedeemCouponCode $body (required)
+     * @param  \Frisbii\lib\Model\RedeemCouponCode $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -11172,7 +11172,7 @@ class SubscriptionApi
      */
     public function redeemCouponCodeAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\CouponRedemption';
+        $returnType = '\Frisbii\lib\Model\CouponRedemption';
         $request = $this->redeemCouponCodeRequest($body, $handle);
 
         return $this->client
@@ -11215,7 +11215,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'redeemCouponCode'
      *
-     * @param  \Frisbii\lib/Model\RedeemCouponCode $body (required)
+     * @param  \Frisbii\lib\Model\RedeemCouponCode $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -11266,7 +11266,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -11333,7 +11333,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2[]
+     * @return \Frisbii\lib\Model\PaymentMethodV2[]
      */
     public function removeAllSubscriptionPaymentMethods($handle)
     {
@@ -11350,11 +11350,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
      */
     public function removeAllSubscriptionPaymentMethodsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->removeAllSubscriptionPaymentMethodsRequest($handle);
 
         try {
@@ -11406,7 +11406,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2[]',
+                        '\Frisbii\lib\Model\PaymentMethodV2[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11414,7 +11414,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11422,7 +11422,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11430,7 +11430,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11438,7 +11438,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11446,7 +11446,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11454,7 +11454,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11496,7 +11496,7 @@ class SubscriptionApi
      */
     public function removeAllSubscriptionPaymentMethodsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->removeAllSubscriptionPaymentMethodsRequest($handle);
 
         return $this->client
@@ -11648,7 +11648,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2[]
+     * @return \Frisbii\lib\Model\PaymentMethodV2[]
      */
     public function removeSubscriptionPaymentMethod($handle, $method_id)
     {
@@ -11666,11 +11666,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
      */
     public function removeSubscriptionPaymentMethodWithHttpInfo($handle, $method_id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->removeSubscriptionPaymentMethodRequest($handle, $method_id);
 
         try {
@@ -11722,7 +11722,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2[]',
+                        '\Frisbii\lib\Model\PaymentMethodV2[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11730,7 +11730,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11738,7 +11738,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11746,7 +11746,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11754,7 +11754,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11762,7 +11762,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11770,7 +11770,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11814,7 +11814,7 @@ class SubscriptionApi
      */
     public function removeSubscriptionPaymentMethodAsyncWithHttpInfo($handle, $method_id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->removeSubscriptionPaymentMethodRequest($handle, $method_id);
 
         return $this->client
@@ -11976,12 +11976,12 @@ class SubscriptionApi
      *
      * Set payment method
      *
-     * @param  \Frisbii\lib/Model\SetPaymentMethod $body body (required)
+     * @param  \Frisbii\lib\Model\SetPaymentMethod $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2[]
+     * @return \Frisbii\lib\Model\PaymentMethodV2[]
      */
     public function setSubscriptionPaymentMethod($body, $handle)
     {
@@ -11994,16 +11994,16 @@ class SubscriptionApi
      *
      * Set payment method
      *
-     * @param  \Frisbii\lib/Model\SetPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\SetPaymentMethod $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2[], HTTP status code, HTTP response headers (array of strings)
      */
     public function setSubscriptionPaymentMethodWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->setSubscriptionPaymentMethodRequest($body, $handle);
 
         try {
@@ -12055,7 +12055,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2[]',
+                        '\Frisbii\lib\Model\PaymentMethodV2[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12063,7 +12063,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12071,7 +12071,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12079,7 +12079,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12087,7 +12087,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12095,7 +12095,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12103,7 +12103,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12118,7 +12118,7 @@ class SubscriptionApi
      *
      * Set payment method
      *
-     * @param  \Frisbii\lib/Model\SetPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\SetPaymentMethod $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -12139,7 +12139,7 @@ class SubscriptionApi
      *
      * Set payment method
      *
-     * @param  \Frisbii\lib/Model\SetPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\SetPaymentMethod $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -12147,7 +12147,7 @@ class SubscriptionApi
      */
     public function setSubscriptionPaymentMethodAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2[]';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2[]';
         $request = $this->setSubscriptionPaymentMethodRequest($body, $handle);
 
         return $this->client
@@ -12190,7 +12190,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'setSubscriptionPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\SetPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\SetPaymentMethod $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -12308,7 +12308,7 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function uncancel($handle)
     {
@@ -12325,11 +12325,11 @@ class SubscriptionApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function uncancelWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->uncancelRequest($handle);
 
         try {
@@ -12381,7 +12381,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12389,7 +12389,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12397,7 +12397,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12405,7 +12405,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12413,7 +12413,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12421,7 +12421,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12429,7 +12429,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12471,7 +12471,7 @@ class SubscriptionApi
      */
     public function uncancelAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->uncancelRequest($handle);
 
         return $this->client
@@ -12618,12 +12618,12 @@ class SubscriptionApi
      *
      * Update end date on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEndDate $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEndDate $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function updateEndDate($body, $handle)
     {
@@ -12636,16 +12636,16 @@ class SubscriptionApi
      *
      * Update end date on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEndDate $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEndDate $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEndDateWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->updateEndDateRequest($body, $handle);
 
         try {
@@ -12697,7 +12697,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12705,7 +12705,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12713,7 +12713,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12721,7 +12721,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12729,7 +12729,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12737,7 +12737,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12745,7 +12745,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12760,7 +12760,7 @@ class SubscriptionApi
      *
      * Update end date on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEndDate $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEndDate $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -12781,7 +12781,7 @@ class SubscriptionApi
      *
      * Update end date on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEndDate $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEndDate $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -12789,7 +12789,7 @@ class SubscriptionApi
      */
     public function updateEndDateAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->updateEndDateRequest($body, $handle);
 
         return $this->client
@@ -12832,7 +12832,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'updateEndDate'
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEndDate $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEndDate $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -12883,7 +12883,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -12946,12 +12946,12 @@ class SubscriptionApi
      *
      * Update entitlements on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEntitlement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEntitlement $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function updateEntitlements($body, $handle)
     {
@@ -12964,16 +12964,16 @@ class SubscriptionApi
      *
      * Update entitlements on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEntitlement $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEntitlementsWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->updateEntitlementsRequest($body, $handle);
 
         try {
@@ -13025,7 +13025,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Subscription',
+                        '\Frisbii\lib\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13033,7 +13033,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13041,7 +13041,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13049,7 +13049,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13057,7 +13057,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13065,7 +13065,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13073,7 +13073,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13088,7 +13088,7 @@ class SubscriptionApi
      *
      * Update entitlements on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEntitlement $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -13109,7 +13109,7 @@ class SubscriptionApi
      *
      * Update entitlements on subscription
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEntitlement $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -13117,7 +13117,7 @@ class SubscriptionApi
      */
     public function updateEntitlementsAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Subscription';
+        $returnType = '\Frisbii\lib\Model\Subscription';
         $request = $this->updateEntitlementsRequest($body, $handle);
 
         return $this->client
@@ -13160,7 +13160,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'updateEntitlements'
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionEntitlement $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -13211,7 +13211,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -13361,7 +13361,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13369,7 +13369,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13377,7 +13377,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13385,7 +13385,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13393,7 +13393,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13401,7 +13401,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13539,7 +13539,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -13602,14 +13602,14 @@ class SubscriptionApi
      *
      * Update metered usage record
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredUsageRecord $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredUsageRecord $body body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      * @param  string $metered_usage_record_uuid Metered usage record id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredUsageRecord
+     * @return \Frisbii\lib\Model\MeteredUsageRecord
      */
     public function updateMeteredUsageRecord($body, $handle, $metered_billing_handle, $metered_usage_record_uuid)
     {
@@ -13622,18 +13622,18 @@ class SubscriptionApi
      *
      * Update metered usage record
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      * @param  string $metered_usage_record_uuid Metered usage record id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredUsageRecord, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredUsageRecord, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMeteredUsageRecordWithHttpInfo($body, $handle, $metered_billing_handle, $metered_usage_record_uuid)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredUsageRecord';
+        $returnType = '\Frisbii\lib\Model\MeteredUsageRecord';
         $request = $this->updateMeteredUsageRecordRequest($body, $handle, $metered_billing_handle, $metered_usage_record_uuid);
 
         try {
@@ -13685,7 +13685,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredUsageRecord',
+                        '\Frisbii\lib\Model\MeteredUsageRecord',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13693,7 +13693,7 @@ class SubscriptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13701,7 +13701,7 @@ class SubscriptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13709,7 +13709,7 @@ class SubscriptionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13717,7 +13717,7 @@ class SubscriptionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13725,7 +13725,7 @@ class SubscriptionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13733,7 +13733,7 @@ class SubscriptionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13748,7 +13748,7 @@ class SubscriptionApi
      *
      * Update metered usage record
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      * @param  string $metered_usage_record_uuid Metered usage record id (required)
@@ -13771,7 +13771,7 @@ class SubscriptionApi
      *
      * Update metered usage record
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      * @param  string $metered_usage_record_uuid Metered usage record id (required)
@@ -13781,7 +13781,7 @@ class SubscriptionApi
      */
     public function updateMeteredUsageRecordAsyncWithHttpInfo($body, $handle, $metered_billing_handle, $metered_usage_record_uuid)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredUsageRecord';
+        $returnType = '\Frisbii\lib\Model\MeteredUsageRecord';
         $request = $this->updateMeteredUsageRecordRequest($body, $handle, $metered_billing_handle, $metered_usage_record_uuid);
 
         return $this->client
@@ -13824,7 +13824,7 @@ class SubscriptionApi
     /**
      * Create request for operation 'updateMeteredUsageRecord'
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredUsageRecord $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredUsageRecord $body (required)
      * @param  string $handle Subscription handle (required)
      * @param  string $metered_billing_handle Metered billing product handle (required)
      * @param  string $metered_usage_record_uuid Metered usage record id (required)
@@ -13905,7 +13905,7 @@ class SubscriptionApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

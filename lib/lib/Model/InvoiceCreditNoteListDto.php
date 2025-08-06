@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class InvoiceCreditNoteListDto implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\InvoiceCreditNoteV2[]',
+        'content' => '\Frisbii\lib\Model\InvoiceCreditNoteV2[]',
         'range' => 'string',
         'next_page_token' => 'string'
     ];
@@ -374,7 +374,7 @@ class InvoiceCreditNoteListDto implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\InvoiceCreditNoteV2[]
+     * @return \Frisbii\lib\Model\InvoiceCreditNoteV2[]
      */
     public function getContent()
     {
@@ -384,7 +384,7 @@ class InvoiceCreditNoteListDto implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\InvoiceCreditNoteV2[] $content List of credit notes for current page
+     * @param \Frisbii\lib\Model\InvoiceCreditNoteV2[] $content List of credit notes for current page
      *
      * @return $this
      */

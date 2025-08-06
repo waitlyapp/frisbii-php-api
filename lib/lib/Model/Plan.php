@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -91,6 +91,7 @@ class Plan implements ModelInterface, ArrayAccess
         'interval_length' => 'int',
         'schedule_type' => 'string',
         'schedule_fixed_day' => 'int',
+        'schedule_fixed_hour' => 'int',
         'base_month' => 'int',
         'notice_periods' => 'int',
         'notice_periods_after_current' => 'bool',
@@ -139,6 +140,7 @@ class Plan implements ModelInterface, ArrayAccess
         'interval_length' => 'int32',
         'schedule_type' => null,
         'schedule_fixed_day' => 'int32',
+        'schedule_fixed_hour' => 'int32',
         'base_month' => 'int32',
         'notice_periods' => 'int32',
         'notice_periods_after_current' => null,
@@ -208,6 +210,7 @@ class Plan implements ModelInterface, ArrayAccess
         'interval_length' => 'interval_length',
         'schedule_type' => 'schedule_type',
         'schedule_fixed_day' => 'schedule_fixed_day',
+        'schedule_fixed_hour' => 'schedule_fixed_hour',
         'base_month' => 'base_month',
         'notice_periods' => 'notice_periods',
         'notice_periods_after_current' => 'notice_periods_after_current',
@@ -256,6 +259,7 @@ class Plan implements ModelInterface, ArrayAccess
         'interval_length' => 'setIntervalLength',
         'schedule_type' => 'setScheduleType',
         'schedule_fixed_day' => 'setScheduleFixedDay',
+        'schedule_fixed_hour' => 'setScheduleFixedHour',
         'base_month' => 'setBaseMonth',
         'notice_periods' => 'setNoticePeriods',
         'notice_periods_after_current' => 'setNoticePeriodsAfterCurrent',
@@ -304,6 +308,7 @@ class Plan implements ModelInterface, ArrayAccess
         'interval_length' => 'getIntervalLength',
         'schedule_type' => 'getScheduleType',
         'schedule_fixed_day' => 'getScheduleFixedDay',
+        'schedule_fixed_hour' => 'getScheduleFixedHour',
         'base_month' => 'getBaseMonth',
         'notice_periods' => 'getNoticePeriods',
         'notice_periods_after_current' => 'getNoticePeriodsAfterCurrent',
@@ -488,6 +493,7 @@ class Plan implements ModelInterface, ArrayAccess
         $this->container['interval_length'] = isset($data['interval_length']) ? $data['interval_length'] : null;
         $this->container['schedule_type'] = isset($data['schedule_type']) ? $data['schedule_type'] : null;
         $this->container['schedule_fixed_day'] = isset($data['schedule_fixed_day']) ? $data['schedule_fixed_day'] : null;
+        $this->container['schedule_fixed_hour'] = isset($data['schedule_fixed_hour']) ? $data['schedule_fixed_hour'] : null;
         $this->container['base_month'] = isset($data['base_month']) ? $data['base_month'] : null;
         $this->container['notice_periods'] = isset($data['notice_periods']) ? $data['notice_periods'] : null;
         $this->container['notice_periods_after_current'] = isset($data['notice_periods_after_current']) ? $data['notice_periods_after_current'] : null;
@@ -1441,6 +1447,30 @@ class Plan implements ModelInterface, ArrayAccess
     public function setScheduleFixedDay($schedule_fixed_day)
     {
         $this->container['schedule_fixed_day'] = $schedule_fixed_day;
+
+        return $this;
+    }
+
+    /**
+     * Gets schedule_fixed_hour
+     *
+     * @return int
+     */
+    public function getScheduleFixedHour()
+    {
+        return $this->container['schedule_fixed_hour'];
+    }
+
+    /**
+     * Sets schedule_fixed_hour
+     *
+     * @param int $schedule_fixed_hour Fixed hour (0-23) for monthly and weekly fixed day schedules. If not null, subscription will be scheduled at this hour.
+     *
+     * @return $this
+     */
+    public function setScheduleFixedHour($schedule_fixed_hour)
+    {
+        $this->container['schedule_fixed_hour'] = $schedule_fixed_hour;
 
         return $this;
     }

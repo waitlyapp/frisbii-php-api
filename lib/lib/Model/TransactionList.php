@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class TransactionList implements ModelInterface, ArrayAccess
         'to' => 'string',
         'from' => 'string',
         'range' => 'string',
-        'content' => '\Frisbii\lib/Model\Transaction[]',
+        'content' => '\Frisbii\lib\Model\Transaction[]',
         'next_page_token' => 'string'
     ];
 
@@ -405,7 +405,7 @@ class TransactionList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Transaction[]
+     * @return \Frisbii\lib\Model\Transaction[]
      */
     public function getContent()
     {
@@ -415,7 +415,7 @@ class TransactionList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Transaction[] $content List of transactions for current page
+     * @param \Frisbii\lib\Model\Transaction[] $content List of transactions for current page
      *
      * @return $this
      */

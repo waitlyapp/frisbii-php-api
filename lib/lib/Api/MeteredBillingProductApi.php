@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class MeteredBillingProductApi
      *
      * Create a metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredBillingProduct $body body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredBillingProduct $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredBillingProduct
+     * @return \Frisbii\lib\Model\MeteredBillingProduct
      */
     public function createMeteredBillingProduct($body)
     {
@@ -108,15 +108,15 @@ class MeteredBillingProductApi
      *
      * Create a metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredBillingProduct $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMeteredBillingProductWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->createMeteredBillingProductRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class MeteredBillingProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredBillingProduct',
+                        '\Frisbii\lib\Model\MeteredBillingProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class MeteredBillingProductApi
      *
      * Create a metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredBillingProduct $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class MeteredBillingProductApi
      *
      * Create a metered billing product
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredBillingProduct $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createMeteredBillingProductAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->createMeteredBillingProductRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class MeteredBillingProductApi
     /**
      * Create request for operation 'createMeteredBillingProduct'
      *
-     * @param  \Frisbii\lib/Model\CreateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\CreateMeteredBillingProduct $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -337,7 +337,7 @@ class MeteredBillingProductApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -462,7 +462,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -470,7 +470,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -478,7 +478,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -494,7 +494,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -502,7 +502,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -681,7 +681,7 @@ class MeteredBillingProductApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredBillingProduct
+     * @return \Frisbii\lib\Model\MeteredBillingProduct
      */
     public function deleteMeteredBillingProduct($uuid_or_handle)
     {
@@ -698,11 +698,11 @@ class MeteredBillingProductApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteMeteredBillingProductWithHttpInfo($uuid_or_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->deleteMeteredBillingProductRequest($uuid_or_handle);
 
         try {
@@ -754,7 +754,7 @@ class MeteredBillingProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredBillingProduct',
+                        '\Frisbii\lib\Model\MeteredBillingProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -762,7 +762,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -794,7 +794,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -802,7 +802,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -844,7 +844,7 @@ class MeteredBillingProductApi
      */
     public function deleteMeteredBillingProductAsyncWithHttpInfo($uuid_or_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->deleteMeteredBillingProductRequest($uuid_or_handle);
 
         return $this->client
@@ -1076,7 +1076,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1084,7 +1084,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1092,7 +1092,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1108,7 +1108,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1116,7 +1116,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class MeteredBillingProductApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredBillingProduct
+     * @return \Frisbii\lib\Model\MeteredBillingProduct
      */
     public function getMeteredBillingProduct($uuid_or_handle)
     {
@@ -1326,11 +1326,11 @@ class MeteredBillingProductApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMeteredBillingProductWithHttpInfo($uuid_or_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->getMeteredBillingProductRequest($uuid_or_handle);
 
         try {
@@ -1382,7 +1382,7 @@ class MeteredBillingProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredBillingProduct',
+                        '\Frisbii\lib\Model\MeteredBillingProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1390,7 +1390,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1398,7 +1398,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1406,7 +1406,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1414,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1422,7 +1422,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1430,7 +1430,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1472,7 +1472,7 @@ class MeteredBillingProductApi
      */
     public function getMeteredBillingProductAsyncWithHttpInfo($uuid_or_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->getMeteredBillingProductRequest($uuid_or_handle);
 
         return $this->client
@@ -1706,7 +1706,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1714,7 +1714,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1722,7 +1722,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1730,7 +1730,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1738,7 +1738,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1746,7 +1746,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1884,7 +1884,7 @@ class MeteredBillingProductApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1947,12 +1947,12 @@ class MeteredBillingProductApi
      *
      * Update a metered billing product
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredBillingProduct $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredBillingProduct $body body (required)
      * @param  string $uuid_or_handle uuid or handle of the metered billing product (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredBillingProduct
+     * @return \Frisbii\lib\Model\MeteredBillingProduct
      */
     public function updateMeteredBillingProduct($body, $uuid_or_handle)
     {
@@ -1965,16 +1965,16 @@ class MeteredBillingProductApi
      *
      * Update a metered billing product
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredBillingProduct $body (required)
      * @param  string $uuid_or_handle uuid or handle of the metered billing product (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredBillingProduct, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMeteredBillingProductWithHttpInfo($body, $uuid_or_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->updateMeteredBillingProductRequest($body, $uuid_or_handle);
 
         try {
@@ -2026,7 +2026,7 @@ class MeteredBillingProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredBillingProduct',
+                        '\Frisbii\lib\Model\MeteredBillingProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2034,7 +2034,7 @@ class MeteredBillingProductApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2042,7 +2042,7 @@ class MeteredBillingProductApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2050,7 +2050,7 @@ class MeteredBillingProductApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2058,7 +2058,7 @@ class MeteredBillingProductApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2066,7 +2066,7 @@ class MeteredBillingProductApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2074,7 +2074,7 @@ class MeteredBillingProductApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2089,7 +2089,7 @@ class MeteredBillingProductApi
      *
      * Update a metered billing product
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredBillingProduct $body (required)
      * @param  string $uuid_or_handle uuid or handle of the metered billing product (required)
      *
      * @throws \InvalidArgumentException
@@ -2110,7 +2110,7 @@ class MeteredBillingProductApi
      *
      * Update a metered billing product
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredBillingProduct $body (required)
      * @param  string $uuid_or_handle uuid or handle of the metered billing product (required)
      *
      * @throws \InvalidArgumentException
@@ -2118,7 +2118,7 @@ class MeteredBillingProductApi
      */
     public function updateMeteredBillingProductAsyncWithHttpInfo($body, $uuid_or_handle)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProduct';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProduct';
         $request = $this->updateMeteredBillingProductRequest($body, $uuid_or_handle);
 
         return $this->client
@@ -2161,7 +2161,7 @@ class MeteredBillingProductApi
     /**
      * Create request for operation 'updateMeteredBillingProduct'
      *
-     * @param  \Frisbii\lib/Model\UpdateMeteredBillingProduct $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMeteredBillingProduct $body (required)
      * @param  string $uuid_or_handle uuid or handle of the metered billing product (required)
      *
      * @throws \InvalidArgumentException
@@ -2212,7 +2212,7 @@ class MeteredBillingProductApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

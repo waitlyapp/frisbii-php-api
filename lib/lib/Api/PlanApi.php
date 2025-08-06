@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,12 +91,12 @@ class PlanApi
      *
      * Change plan amount
      *
-     * @param  \Frisbii\lib/Model\ChangePlanAmount $body body (required)
+     * @param  \Frisbii\lib\Model\ChangePlanAmount $body body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function changePlanAmountJson($body, $handle)
     {
@@ -109,16 +109,16 @@ class PlanApi
      *
      * Change plan amount
      *
-     * @param  \Frisbii\lib/Model\ChangePlanAmount $body (required)
+     * @param  \Frisbii\lib\Model\ChangePlanAmount $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function changePlanAmountJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->changePlanAmountJsonRequest($body, $handle);
 
         try {
@@ -170,7 +170,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -233,7 +233,7 @@ class PlanApi
      *
      * Change plan amount
      *
-     * @param  \Frisbii\lib/Model\ChangePlanAmount $body (required)
+     * @param  \Frisbii\lib\Model\ChangePlanAmount $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -254,7 +254,7 @@ class PlanApi
      *
      * Change plan amount
      *
-     * @param  \Frisbii\lib/Model\ChangePlanAmount $body (required)
+     * @param  \Frisbii\lib\Model\ChangePlanAmount $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -262,7 +262,7 @@ class PlanApi
      */
     public function changePlanAmountJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->changePlanAmountJsonRequest($body, $handle);
 
         return $this->client
@@ -305,7 +305,7 @@ class PlanApi
     /**
      * Create request for operation 'changePlanAmountJson'
      *
-     * @param  \Frisbii\lib/Model\ChangePlanAmount $body (required)
+     * @param  \Frisbii\lib\Model\ChangePlanAmount $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -419,11 +419,11 @@ class PlanApi
      *
      * Create plan
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionPlan $body body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionPlan $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function createPlanJson($body)
     {
@@ -436,15 +436,15 @@ class PlanApi
      *
      * Create plan
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionPlan $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPlanJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->createPlanJsonRequest($body);
 
         try {
@@ -496,7 +496,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +520,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -536,7 +536,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -544,7 +544,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -559,7 +559,7 @@ class PlanApi
      *
      * Create plan
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionPlan $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -579,14 +579,14 @@ class PlanApi
      *
      * Create plan
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionPlan $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPlanJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->createPlanJsonRequest($body);
 
         return $this->client
@@ -629,7 +629,7 @@ class PlanApi
     /**
      * Create request for operation 'createPlanJson'
      *
-     * @param  \Frisbii\lib/Model\CreateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\CreateSubscriptionPlan $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -790,7 +790,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -798,7 +798,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -806,7 +806,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -814,7 +814,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -830,7 +830,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1009,7 +1009,7 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function deletePlan($handle)
     {
@@ -1026,11 +1026,11 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePlanWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->deletePlanRequest($handle);
 
         try {
@@ -1082,7 +1082,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1090,7 +1090,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1098,7 +1098,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1106,7 +1106,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1114,7 +1114,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1122,7 +1122,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1130,7 +1130,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1172,7 +1172,7 @@ class PlanApi
      */
     public function deletePlanAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->deletePlanRequest($handle);
 
         return $this->client
@@ -1324,7 +1324,7 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function getCurrentPlan($handle, $tax_rate_for_country = null)
     {
@@ -1342,11 +1342,11 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCurrentPlanWithHttpInfo($handle, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->getCurrentPlanRequest($handle, $tax_rate_for_country);
 
         try {
@@ -1398,7 +1398,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1406,7 +1406,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1414,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1422,7 +1422,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1430,7 +1430,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1438,7 +1438,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1446,7 +1446,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1490,7 +1490,7 @@ class PlanApi
      */
     public function getCurrentPlanAsyncWithHttpInfo($handle, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->getCurrentPlanRequest($handle, $tax_rate_for_country);
 
         return $this->client
@@ -1727,7 +1727,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1735,7 +1735,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1743,7 +1743,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1751,7 +1751,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1759,7 +1759,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1767,7 +1767,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1962,7 +1962,7 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function getPlan($handle, $version, $tax_rate_for_country = null)
     {
@@ -1981,11 +1981,11 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlanWithHttpInfo($handle, $version, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->getPlanRequest($handle, $version, $tax_rate_for_country);
 
         try {
@@ -2037,7 +2037,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2045,7 +2045,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2053,7 +2053,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2061,7 +2061,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2069,7 +2069,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2077,7 +2077,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2085,7 +2085,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2131,7 +2131,7 @@ class PlanApi
      */
     public function getPlanAsyncWithHttpInfo($handle, $version, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->getPlanRequest($handle, $version, $tax_rate_for_country);
 
         return $this->client
@@ -2303,7 +2303,7 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Entitlement[]
+     * @return \Frisbii\lib\Model\Entitlement[]
      */
     public function getPlanEntitlements($handle, $version)
     {
@@ -2321,11 +2321,11 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Entitlement[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Entitlement[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlanEntitlementsWithHttpInfo($handle, $version)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement[]';
+        $returnType = '\Frisbii\lib\Model\Entitlement[]';
         $request = $this->getPlanEntitlementsRequest($handle, $version);
 
         try {
@@ -2377,7 +2377,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Entitlement[]',
+                        '\Frisbii\lib\Model\Entitlement[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2385,7 +2385,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2393,7 +2393,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2401,7 +2401,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2409,7 +2409,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2417,7 +2417,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2425,7 +2425,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2469,7 +2469,7 @@ class PlanApi
      */
     public function getPlanEntitlementsAsyncWithHttpInfo($handle, $version)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement[]';
+        $returnType = '\Frisbii\lib\Model\Entitlement[]';
         $request = $this->getPlanEntitlementsRequest($handle, $version);
 
         return $this->client
@@ -2636,7 +2636,7 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan[]
+     * @return \Frisbii\lib\Model\Plan[]
      */
     public function getPlans($handle, $tax_rate_for_country = null)
     {
@@ -2654,11 +2654,11 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlansWithHttpInfo($handle, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\Plan[]';
+        $returnType = '\Frisbii\lib\Model\Plan[]';
         $request = $this->getPlansRequest($handle, $tax_rate_for_country);
 
         try {
@@ -2710,7 +2710,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan[]',
+                        '\Frisbii\lib\Model\Plan[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2718,7 +2718,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2726,7 +2726,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2734,7 +2734,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2742,7 +2742,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2750,7 +2750,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2758,7 +2758,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2802,7 +2802,7 @@ class PlanApi
      */
     public function getPlansAsyncWithHttpInfo($handle, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\Plan[]';
+        $returnType = '\Frisbii\lib\Model\Plan[]';
         $request = $this->getPlansRequest($handle, $tax_rate_for_country);
 
         return $this->client
@@ -2954,12 +2954,12 @@ class PlanApi
      *
      * Supersede plan
      *
-     * @param  \Frisbii\lib/Model\SupersedeSubscriptionPlan $body body (required)
+     * @param  \Frisbii\lib\Model\SupersedeSubscriptionPlan $body body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function supersedePlanJson($body, $handle)
     {
@@ -2972,16 +2972,16 @@ class PlanApi
      *
      * Supersede plan
      *
-     * @param  \Frisbii\lib/Model\SupersedeSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\SupersedeSubscriptionPlan $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function supersedePlanJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->supersedePlanJsonRequest($body, $handle);
 
         try {
@@ -3033,7 +3033,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3041,7 +3041,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3049,7 +3049,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3057,7 +3057,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3065,7 +3065,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3073,7 +3073,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3081,7 +3081,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3096,7 +3096,7 @@ class PlanApi
      *
      * Supersede plan
      *
-     * @param  \Frisbii\lib/Model\SupersedeSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\SupersedeSubscriptionPlan $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3117,7 +3117,7 @@ class PlanApi
      *
      * Supersede plan
      *
-     * @param  \Frisbii\lib/Model\SupersedeSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\SupersedeSubscriptionPlan $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3125,7 +3125,7 @@ class PlanApi
      */
     public function supersedePlanJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->supersedePlanJsonRequest($body, $handle);
 
         return $this->client
@@ -3168,7 +3168,7 @@ class PlanApi
     /**
      * Create request for operation 'supersedePlanJson'
      *
-     * @param  \Frisbii\lib/Model\SupersedeSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\SupersedeSubscriptionPlan $body (required)
      * @param  string $handle Plan handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3286,7 +3286,7 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function unDeletePlan($handle)
     {
@@ -3303,11 +3303,11 @@ class PlanApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function unDeletePlanWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->unDeletePlanRequest($handle);
 
         try {
@@ -3359,7 +3359,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3367,7 +3367,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3375,7 +3375,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3383,7 +3383,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3391,7 +3391,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3399,7 +3399,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3407,7 +3407,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3449,7 +3449,7 @@ class PlanApi
      */
     public function unDeletePlanAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->unDeletePlanRequest($handle);
 
         return $this->client
@@ -3683,7 +3683,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3691,7 +3691,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3699,7 +3699,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3707,7 +3707,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3715,7 +3715,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3723,7 +3723,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3861,7 +3861,7 @@ class PlanApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -3924,12 +3924,12 @@ class PlanApi
      *
      * Update plan
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionPlan $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionPlan $body body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function updatePlanJson($body, $handle)
     {
@@ -3942,16 +3942,16 @@ class PlanApi
      *
      * Update plan
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionPlan $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Plan, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Plan, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePlanJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->updatePlanJsonRequest($body, $handle);
 
         try {
@@ -4003,7 +4003,7 @@ class PlanApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Plan',
+                        '\Frisbii\lib\Model\Plan',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4011,7 +4011,7 @@ class PlanApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4019,7 +4019,7 @@ class PlanApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4027,7 +4027,7 @@ class PlanApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4035,7 +4035,7 @@ class PlanApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4043,7 +4043,7 @@ class PlanApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4051,7 +4051,7 @@ class PlanApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4066,7 +4066,7 @@ class PlanApi
      *
      * Update plan
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionPlan $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -4087,7 +4087,7 @@ class PlanApi
      *
      * Update plan
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionPlan $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException
@@ -4095,7 +4095,7 @@ class PlanApi
      */
     public function updatePlanJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Plan';
+        $returnType = '\Frisbii\lib\Model\Plan';
         $request = $this->updatePlanJsonRequest($body, $handle);
 
         return $this->client
@@ -4138,7 +4138,7 @@ class PlanApi
     /**
      * Create request for operation 'updatePlanJson'
      *
-     * @param  \Frisbii\lib/Model\UpdateSubscriptionPlan $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSubscriptionPlan $body (required)
      * @param  string $handle Subscription handle (required)
      *
      * @throws \InvalidArgumentException

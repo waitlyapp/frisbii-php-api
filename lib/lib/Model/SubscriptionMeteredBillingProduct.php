@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -58,7 +58,7 @@ class SubscriptionMeteredBillingProduct implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'handle' => 'string',
         'uuid' => 'string',
-        'pricing' => '\Frisbii\lib/Model\PricingDto',
+        'pricing' => '\Frisbii\lib\Model\PricingDto',
         'name' => 'string',
         'description' => 'string',
         'entitlements' => 'string[]',
@@ -300,7 +300,7 @@ class SubscriptionMeteredBillingProduct implements ModelInterface, ArrayAccess
     /**
      * Gets pricing
      *
-     * @return \Frisbii\lib/Model\PricingDto
+     * @return \Frisbii\lib\Model\PricingDto
      */
     public function getPricing()
     {
@@ -310,7 +310,7 @@ class SubscriptionMeteredBillingProduct implements ModelInterface, ArrayAccess
     /**
      * Sets pricing
      *
-     * @param \Frisbii\lib/Model\PricingDto $pricing pricing
+     * @param \Frisbii\lib\Model\PricingDto $pricing pricing
      *
      * @return $this
      */

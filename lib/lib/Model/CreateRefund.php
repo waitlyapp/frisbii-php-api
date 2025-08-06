@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,8 +62,8 @@ class CreateRefund implements ModelInterface, ArrayAccess
         'vat' => 'float',
         'text' => 'string',
         'amount_incl_vat' => 'bool',
-        'note_lines' => '\Frisbii\lib/Model\CreateCreditNoteLine[]',
-        'manual_transfer' => '\Frisbii\lib/Model\ManualRefundTransfer',
+        'note_lines' => '\Frisbii\lib\Model\CreateCreditNoteLine[]',
+        'manual_transfer' => '\Frisbii\lib\Model\ManualRefundTransfer',
         'acquirer_reference' => 'string'
     ];
 
@@ -399,7 +399,7 @@ class CreateRefund implements ModelInterface, ArrayAccess
     /**
      * Gets note_lines
      *
-     * @return \Frisbii\lib/Model\CreateCreditNoteLine[]
+     * @return \Frisbii\lib\Model\CreateCreditNoteLine[]
      */
     public function getNoteLines()
     {
@@ -409,7 +409,7 @@ class CreateRefund implements ModelInterface, ArrayAccess
     /**
      * Sets note_lines
      *
-     * @param \Frisbii\lib/Model\CreateCreditNoteLine[] $note_lines Refund credit note lines to give detailed information for credit note. Alternative to `amount`.
+     * @param \Frisbii\lib\Model\CreateCreditNoteLine[] $note_lines Refund credit note lines to give detailed information for credit note. Alternative to `amount`.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class CreateRefund implements ModelInterface, ArrayAccess
     /**
      * Gets manual_transfer
      *
-     * @return \Frisbii\lib/Model\ManualRefundTransfer
+     * @return \Frisbii\lib\Model\ManualRefundTransfer
      */
     public function getManualTransfer()
     {
@@ -433,7 +433,7 @@ class CreateRefund implements ModelInterface, ArrayAccess
     /**
      * Sets manual_transfer
      *
-     * @param \Frisbii\lib/Model\ManualRefundTransfer $manual_transfer manual_transfer
+     * @param \Frisbii\lib\Model\ManualRefundTransfer $manual_transfer manual_transfer
      *
      * @return $this
      */

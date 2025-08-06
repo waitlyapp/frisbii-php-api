@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,13 +57,13 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'handle' => 'string',
-        'settle' => '\Frisbii\lib/Model\Settle',
+        'settle' => '\Frisbii\lib\Model\Settle',
         'metadata' => 'map[string,object]',
         'currency' => 'string',
-        'order_lines' => '\Frisbii\lib/Model\CreateOrderLine[]',
-        'manual_transfer' => '\Frisbii\lib/Model\ManualSettleTransfer',
-        'billing_address' => '\Frisbii\lib/Model\InvoiceBillingAddress',
-        'shipping_address' => '\Frisbii\lib/Model\InvoiceShippingAddress'
+        'order_lines' => '\Frisbii\lib\Model\CreateOrderLine[]',
+        'manual_transfer' => '\Frisbii\lib\Model\ManualSettleTransfer',
+        'billing_address' => '\Frisbii\lib\Model\InvoiceBillingAddress',
+        'shipping_address' => '\Frisbii\lib\Model\InvoiceShippingAddress'
     ];
 
     /**
@@ -276,7 +276,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets settle
      *
-     * @return \Frisbii\lib/Model\Settle
+     * @return \Frisbii\lib\Model\Settle
      */
     public function getSettle()
     {
@@ -286,7 +286,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets settle
      *
-     * @param \Frisbii\lib/Model\Settle $settle settle
+     * @param \Frisbii\lib\Model\Settle $settle settle
      *
      * @return $this
      */
@@ -348,7 +348,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Frisbii\lib/Model\CreateOrderLine[]
+     * @return \Frisbii\lib\Model\CreateOrderLine[]
      */
     public function getOrderLines()
     {
@@ -358,7 +358,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Frisbii\lib/Model\CreateOrderLine[] $order_lines Order lines for the invoice. A maximum of 100 order lines is allowed.
+     * @param \Frisbii\lib\Model\CreateOrderLine[] $order_lines Order lines for the invoice. A maximum of 100 order lines is allowed.
      *
      * @return $this
      */
@@ -372,7 +372,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets manual_transfer
      *
-     * @return \Frisbii\lib/Model\ManualSettleTransfer
+     * @return \Frisbii\lib\Model\ManualSettleTransfer
      */
     public function getManualTransfer()
     {
@@ -382,7 +382,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets manual_transfer
      *
-     * @param \Frisbii\lib/Model\ManualSettleTransfer $manual_transfer manual_transfer
+     * @param \Frisbii\lib\Model\ManualSettleTransfer $manual_transfer manual_transfer
      *
      * @return $this
      */
@@ -396,7 +396,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Frisbii\lib/Model\InvoiceBillingAddress
+     * @return \Frisbii\lib\Model\InvoiceBillingAddress
      */
     public function getBillingAddress()
     {
@@ -406,7 +406,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Frisbii\lib/Model\InvoiceBillingAddress $billing_address billing_address
+     * @param \Frisbii\lib\Model\InvoiceBillingAddress $billing_address billing_address
      *
      * @return $this
      */
@@ -420,7 +420,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Frisbii\lib/Model\InvoiceShippingAddress
+     * @return \Frisbii\lib\Model\InvoiceShippingAddress
      */
     public function getShippingAddress()
     {
@@ -430,7 +430,7 @@ class CreateCustomerInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Frisbii\lib/Model\InvoiceShippingAddress $shipping_address shipping_address
+     * @param \Frisbii\lib\Model\InvoiceShippingAddress $shipping_address shipping_address
      *
      * @return $this
      */

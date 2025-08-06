@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -95,7 +95,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function activatePaymentMethodV2($id)
     {
@@ -112,11 +112,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function activatePaymentMethodV2WithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->activatePaymentMethodV2Request($id);
 
         try {
@@ -168,7 +168,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -258,7 +258,7 @@ class PaymentMethodApi
      */
     public function activatePaymentMethodV2AsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->activatePaymentMethodV2Request($id);
 
         return $this->client
@@ -405,11 +405,11 @@ class PaymentMethodApi
      *
      * Add offline payment method
      *
-     * @param  \Frisbii\lib/Model\AddOfflinePaymentMethod $body body (required)
+     * @param  \Frisbii\lib\Model\AddOfflinePaymentMethod $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function addOfflinePaymentMethod($body)
     {
@@ -422,15 +422,15 @@ class PaymentMethodApi
      *
      * Add offline payment method
      *
-     * @param  \Frisbii\lib/Model\AddOfflinePaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddOfflinePaymentMethod $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function addOfflinePaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->addOfflinePaymentMethodRequest($body);
 
         try {
@@ -482,7 +482,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +514,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class PaymentMethodApi
      *
      * Add offline payment method
      *
-     * @param  \Frisbii\lib/Model\AddOfflinePaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddOfflinePaymentMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -565,14 +565,14 @@ class PaymentMethodApi
      *
      * Add offline payment method
      *
-     * @param  \Frisbii\lib/Model\AddOfflinePaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddOfflinePaymentMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addOfflinePaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->addOfflinePaymentMethodRequest($body);
 
         return $this->client
@@ -615,7 +615,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'addOfflinePaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\AddOfflinePaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddOfflinePaymentMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -714,11 +714,11 @@ class PaymentMethodApi
      *
      * Add payment method
      *
-     * @param  \Frisbii\lib/Model\AddPaymentMethod $body body (required)
+     * @param  \Frisbii\lib\Model\AddPaymentMethod $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function addPaymentMethodV2($body)
     {
@@ -731,15 +731,15 @@ class PaymentMethodApi
      *
      * Add payment method
      *
-     * @param  \Frisbii\lib/Model\AddPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddPaymentMethod $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function addPaymentMethodV2WithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->addPaymentMethodV2Request($body);
 
         try {
@@ -791,7 +791,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -815,7 +815,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class PaymentMethodApi
      *
      * Add payment method
      *
-     * @param  \Frisbii\lib/Model\AddPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddPaymentMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -874,14 +874,14 @@ class PaymentMethodApi
      *
      * Add payment method
      *
-     * @param  \Frisbii\lib/Model\AddPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddPaymentMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addPaymentMethodV2AsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->addPaymentMethodV2Request($body);
 
         return $this->client
@@ -924,7 +924,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'addPaymentMethodV2'
      *
-     * @param  \Frisbii\lib/Model\AddPaymentMethod $body (required)
+     * @param  \Frisbii\lib\Model\AddPaymentMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1024,11 +1024,11 @@ class PaymentMethodApi
      * Verify card validity
      *
      * @param  string $id Card id (required)
-     * @param  \Frisbii\lib/Model\CardVerificationRequest $body body (optional)
+     * @param  \Frisbii\lib\Model\CardVerificationRequest $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CardVerification
+     * @return \Frisbii\lib\Model\CardVerification
      */
     public function cardVerification($id, $body = null)
     {
@@ -1042,15 +1042,15 @@ class PaymentMethodApi
      * Verify card validity
      *
      * @param  string $id Card id (required)
-     * @param  \Frisbii\lib/Model\CardVerificationRequest $body (optional)
+     * @param  \Frisbii\lib\Model\CardVerificationRequest $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CardVerification, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CardVerification, HTTP status code, HTTP response headers (array of strings)
      */
     public function cardVerificationWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\CardVerification';
+        $returnType = '\Frisbii\lib\Model\CardVerification';
         $request = $this->cardVerificationRequest($id, $body);
 
         try {
@@ -1102,7 +1102,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CardVerification',
+                        '\Frisbii\lib\Model\CardVerification',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1110,7 +1110,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1118,7 +1118,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1126,7 +1126,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1134,7 +1134,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1142,7 +1142,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1150,7 +1150,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1166,7 +1166,7 @@ class PaymentMethodApi
      * Verify card validity
      *
      * @param  string $id Card id (required)
-     * @param  \Frisbii\lib/Model\CardVerificationRequest $body (optional)
+     * @param  \Frisbii\lib\Model\CardVerificationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1187,14 +1187,14 @@ class PaymentMethodApi
      * Verify card validity
      *
      * @param  string $id Card id (required)
-     * @param  \Frisbii\lib/Model\CardVerificationRequest $body (optional)
+     * @param  \Frisbii\lib\Model\CardVerificationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function cardVerificationAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\CardVerification';
+        $returnType = '\Frisbii\lib\Model\CardVerification';
         $request = $this->cardVerificationRequest($id, $body);
 
         return $this->client
@@ -1238,7 +1238,7 @@ class PaymentMethodApi
      * Create request for operation 'cardVerification'
      *
      * @param  string $id Card id (required)
-     * @param  \Frisbii\lib/Model\CardVerificationRequest $body (optional)
+     * @param  \Frisbii\lib\Model\CardVerificationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1345,12 +1345,12 @@ class PaymentMethodApi
      *
      * Copy card to customer
      *
-     * @param  \Frisbii\lib/Model\CopyCard $body body (required)
+     * @param  \Frisbii\lib\Model\CopyCard $body body (required)
      * @param  string $id Card id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function copyCardPaymentMethodV2($body, $id)
     {
@@ -1363,16 +1363,16 @@ class PaymentMethodApi
      *
      * Copy card to customer
      *
-     * @param  \Frisbii\lib/Model\CopyCard $body (required)
+     * @param  \Frisbii\lib\Model\CopyCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function copyCardPaymentMethodV2WithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->copyCardPaymentMethodV2Request($body, $id);
 
         try {
@@ -1424,7 +1424,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1432,7 +1432,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1440,7 +1440,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1448,7 +1448,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1456,7 +1456,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1464,7 +1464,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1472,7 +1472,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1487,7 +1487,7 @@ class PaymentMethodApi
      *
      * Copy card to customer
      *
-     * @param  \Frisbii\lib/Model\CopyCard $body (required)
+     * @param  \Frisbii\lib\Model\CopyCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \InvalidArgumentException
@@ -1508,7 +1508,7 @@ class PaymentMethodApi
      *
      * Copy card to customer
      *
-     * @param  \Frisbii\lib/Model\CopyCard $body (required)
+     * @param  \Frisbii\lib\Model\CopyCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \InvalidArgumentException
@@ -1516,7 +1516,7 @@ class PaymentMethodApi
      */
     public function copyCardPaymentMethodV2AsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->copyCardPaymentMethodV2Request($body, $id);
 
         return $this->client
@@ -1559,7 +1559,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'copyCardPaymentMethodV2'
      *
-     * @param  \Frisbii\lib/Model\CopyCard $body (required)
+     * @param  \Frisbii\lib\Model\CopyCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \InvalidArgumentException
@@ -1610,7 +1610,7 @@ class PaymentMethodApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1677,7 +1677,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function deletePaymentMethodV2($id)
     {
@@ -1694,11 +1694,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePaymentMethodV2WithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->deletePaymentMethodV2Request($id);
 
         try {
@@ -1750,7 +1750,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1758,7 +1758,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1766,7 +1766,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1774,7 +1774,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1782,7 +1782,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1790,7 +1790,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1798,7 +1798,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1840,7 +1840,7 @@ class PaymentMethodApi
      */
     public function deletePaymentMethodV2AsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->deletePaymentMethodV2Request($id);
 
         return $this->client
@@ -1991,7 +1991,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function enrollCardPaymentMethodV2($id)
     {
@@ -2008,11 +2008,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function enrollCardPaymentMethodV2WithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->enrollCardPaymentMethodV2Request($id);
 
         try {
@@ -2064,7 +2064,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2072,7 +2072,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2080,7 +2080,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2088,7 +2088,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2096,7 +2096,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2104,7 +2104,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2112,7 +2112,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2154,7 +2154,7 @@ class PaymentMethodApi
      */
     public function enrollCardPaymentMethodV2AsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->enrollCardPaymentMethodV2Request($id);
 
         return $this->client
@@ -2305,7 +2305,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\BinInfo
+     * @return \Frisbii\lib\Model\BinInfo
      */
     public function getCardBinInfo($id)
     {
@@ -2322,11 +2322,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\BinInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\BinInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardBinInfoWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\BinInfo';
+        $returnType = '\Frisbii\lib\Model\BinInfo';
         $request = $this->getCardBinInfoRequest($id);
 
         try {
@@ -2378,7 +2378,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\BinInfo',
+                        '\Frisbii\lib\Model\BinInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2386,7 +2386,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2394,7 +2394,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2402,7 +2402,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2410,7 +2410,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2418,7 +2418,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2426,7 +2426,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2468,7 +2468,7 @@ class PaymentMethodApi
      */
     public function getCardBinInfoAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\BinInfo';
+        $returnType = '\Frisbii\lib\Model\BinInfo';
         $request = $this->getCardBinInfoRequest($id);
 
         return $this->client
@@ -2619,7 +2619,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CardTokenDto
+     * @return \Frisbii\lib\Model\CardTokenDto
      */
     public function getCardTokenDetails($tokenid)
     {
@@ -2636,11 +2636,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CardTokenDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CardTokenDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardTokenDetailsWithHttpInfo($tokenid)
     {
-        $returnType = '\Frisbii\lib/Model\CardTokenDto';
+        $returnType = '\Frisbii\lib\Model\CardTokenDto';
         $request = $this->getCardTokenDetailsRequest($tokenid);
 
         try {
@@ -2692,7 +2692,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CardTokenDto',
+                        '\Frisbii\lib\Model\CardTokenDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2700,7 +2700,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2708,7 +2708,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2716,7 +2716,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2724,7 +2724,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2732,7 +2732,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2740,7 +2740,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2782,7 +2782,7 @@ class PaymentMethodApi
      */
     public function getCardTokenDetailsAsyncWithHttpInfo($tokenid)
     {
-        $returnType = '\Frisbii\lib/Model\CardTokenDto';
+        $returnType = '\Frisbii\lib\Model\CardTokenDto';
         $request = $this->getCardTokenDetailsRequest($tokenid);
 
         return $this->client
@@ -3014,7 +3014,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3022,7 +3022,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3030,7 +3030,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3038,7 +3038,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3046,7 +3046,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3054,7 +3054,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3247,7 +3247,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function getPaymentMethodV2($id)
     {
@@ -3264,11 +3264,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPaymentMethodV2WithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->getPaymentMethodV2Request($id);
 
         try {
@@ -3320,7 +3320,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3328,7 +3328,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3336,7 +3336,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3344,7 +3344,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3352,7 +3352,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3360,7 +3360,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3368,7 +3368,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3410,7 +3410,7 @@ class PaymentMethodApi
      */
     public function getPaymentMethodV2AsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->getPaymentMethodV2Request($id);
 
         return $this->client
@@ -3557,11 +3557,11 @@ class PaymentMethodApi
      *
      * Import MobilePay Subscription payment method
      *
-     * @param  \Frisbii\lib/Model\ImportMpsPaymentMethodRequest $body body (required)
+     * @param  \Frisbii\lib\Model\ImportMpsPaymentMethodRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function importMpsPaymentMethod($body)
     {
@@ -3574,15 +3574,15 @@ class PaymentMethodApi
      *
      * Import MobilePay Subscription payment method
      *
-     * @param  \Frisbii\lib/Model\ImportMpsPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportMpsPaymentMethodRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function importMpsPaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importMpsPaymentMethodRequest($body);
 
         try {
@@ -3634,7 +3634,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3642,7 +3642,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3650,7 +3650,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3658,7 +3658,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3666,7 +3666,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3674,7 +3674,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3682,7 +3682,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3697,7 +3697,7 @@ class PaymentMethodApi
      *
      * Import MobilePay Subscription payment method
      *
-     * @param  \Frisbii\lib/Model\ImportMpsPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportMpsPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3717,14 +3717,14 @@ class PaymentMethodApi
      *
      * Import MobilePay Subscription payment method
      *
-     * @param  \Frisbii\lib/Model\ImportMpsPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportMpsPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function importMpsPaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importMpsPaymentMethodRequest($body);
 
         return $this->client
@@ -3767,7 +3767,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'importMpsPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\ImportMpsPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportMpsPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3866,11 +3866,11 @@ class PaymentMethodApi
      *
      * Import PayPal payment method
      *
-     * @param  \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest $body body (required)
+     * @param  \Frisbii\lib\Model\ImportPaypalPaymentMethodRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function importPaypalPaymentMethod($body)
     {
@@ -3883,15 +3883,15 @@ class PaymentMethodApi
      *
      * Import PayPal payment method
      *
-     * @param  \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportPaypalPaymentMethodRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function importPaypalPaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importPaypalPaymentMethodRequest($body);
 
         try {
@@ -3943,7 +3943,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3951,7 +3951,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3959,7 +3959,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3967,7 +3967,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3975,7 +3975,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3983,7 +3983,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3991,7 +3991,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4006,7 +4006,7 @@ class PaymentMethodApi
      *
      * Import PayPal payment method
      *
-     * @param  \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportPaypalPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4026,14 +4026,14 @@ class PaymentMethodApi
      *
      * Import PayPal payment method
      *
-     * @param  \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportPaypalPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function importPaypalPaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importPaypalPaymentMethodRequest($body);
 
         return $this->client
@@ -4076,7 +4076,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'importPaypalPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\ImportPaypalPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportPaypalPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4175,11 +4175,11 @@ class PaymentMethodApi
      *
      * Import Sepa Ebics payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto $body body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaEbicsPaymentMethodRequestDto $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function importSepaEbicsPaymentMethod($body)
     {
@@ -4192,15 +4192,15 @@ class PaymentMethodApi
      *
      * Import Sepa Ebics payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function importSepaEbicsPaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importSepaEbicsPaymentMethodRequest($body);
 
         try {
@@ -4252,7 +4252,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4260,7 +4260,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4268,7 +4268,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4276,7 +4276,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4284,7 +4284,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4292,7 +4292,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4300,7 +4300,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4315,7 +4315,7 @@ class PaymentMethodApi
      *
      * Import Sepa Ebics payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4335,14 +4335,14 @@ class PaymentMethodApi
      *
      * Import Sepa Ebics payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function importSepaEbicsPaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importSepaEbicsPaymentMethodRequest($body);
 
         return $this->client
@@ -4385,7 +4385,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'importSepaEbicsPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaEbicsPaymentMethodRequestDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4484,11 +4484,11 @@ class PaymentMethodApi
      *
      * Import Sepa payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto $body body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaPaymentMethodRequestDto $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function importSepaPaymentMethod($body)
     {
@@ -4501,15 +4501,15 @@ class PaymentMethodApi
      *
      * Import Sepa payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaPaymentMethodRequestDto $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function importSepaPaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importSepaPaymentMethodRequest($body);
 
         try {
@@ -4561,7 +4561,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4569,7 +4569,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4577,7 +4577,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4585,7 +4585,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4593,7 +4593,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4601,7 +4601,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4609,7 +4609,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4624,7 +4624,7 @@ class PaymentMethodApi
      *
      * Import Sepa payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaPaymentMethodRequestDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4644,14 +4644,14 @@ class PaymentMethodApi
      *
      * Import Sepa payment method
      *
-     * @param  \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaPaymentMethodRequestDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function importSepaPaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importSepaPaymentMethodRequest($body);
 
         return $this->client
@@ -4694,7 +4694,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'importSepaPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\ImportSepaPaymentMethodRequestDto $body (required)
+     * @param  \Frisbii\lib\Model\ImportSepaPaymentMethodRequestDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4793,11 +4793,11 @@ class PaymentMethodApi
      *
      * Import Twint payment method
      *
-     * @param  \Frisbii\lib/Model\ImportTwintPaymentMethodRequest $body body (required)
+     * @param  \Frisbii\lib\Model\ImportTwintPaymentMethodRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function importTwintPaymentMethod($body)
     {
@@ -4810,15 +4810,15 @@ class PaymentMethodApi
      *
      * Import Twint payment method
      *
-     * @param  \Frisbii\lib/Model\ImportTwintPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportTwintPaymentMethodRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function importTwintPaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importTwintPaymentMethodRequest($body);
 
         try {
@@ -4870,7 +4870,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4878,7 +4878,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4886,7 +4886,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4894,7 +4894,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4902,7 +4902,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4910,7 +4910,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4918,7 +4918,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4933,7 +4933,7 @@ class PaymentMethodApi
      *
      * Import Twint payment method
      *
-     * @param  \Frisbii\lib/Model\ImportTwintPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportTwintPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4953,14 +4953,14 @@ class PaymentMethodApi
      *
      * Import Twint payment method
      *
-     * @param  \Frisbii\lib/Model\ImportTwintPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportTwintPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function importTwintPaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importTwintPaymentMethodRequest($body);
 
         return $this->client
@@ -5003,7 +5003,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'importTwintPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\ImportTwintPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportTwintPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5102,11 +5102,11 @@ class PaymentMethodApi
      *
      * Import Vipps Recurring payment method
      *
-     * @param  \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest $body body (required)
+     * @param  \Frisbii\lib\Model\ImportVippsRecurringPaymentMethodRequest $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function importVippsRecurringPaymentMethod($body)
     {
@@ -5119,15 +5119,15 @@ class PaymentMethodApi
      *
      * Import Vipps Recurring payment method
      *
-     * @param  \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportVippsRecurringPaymentMethodRequest $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function importVippsRecurringPaymentMethodWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importVippsRecurringPaymentMethodRequest($body);
 
         try {
@@ -5179,7 +5179,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5187,7 +5187,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5195,7 +5195,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5203,7 +5203,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5211,7 +5211,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5219,7 +5219,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5227,7 +5227,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5242,7 +5242,7 @@ class PaymentMethodApi
      *
      * Import Vipps Recurring payment method
      *
-     * @param  \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportVippsRecurringPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5262,14 +5262,14 @@ class PaymentMethodApi
      *
      * Import Vipps Recurring payment method
      *
-     * @param  \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportVippsRecurringPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function importVippsRecurringPaymentMethodAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->importVippsRecurringPaymentMethodRequest($body);
 
         return $this->client
@@ -5312,7 +5312,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'importVippsRecurringPaymentMethod'
      *
-     * @param  \Frisbii\lib/Model\ImportVippsRecurringPaymentMethodRequest $body (required)
+     * @param  \Frisbii\lib\Model\ImportVippsRecurringPaymentMethodRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5415,7 +5415,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function inactivatePaymentMethodV2($id)
     {
@@ -5432,11 +5432,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function inactivatePaymentMethodV2WithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->inactivatePaymentMethodV2Request($id);
 
         try {
@@ -5488,7 +5488,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5496,7 +5496,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5504,7 +5504,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5512,7 +5512,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5520,7 +5520,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5528,7 +5528,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5536,7 +5536,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5578,7 +5578,7 @@ class PaymentMethodApi
      */
     public function inactivatePaymentMethodV2AsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->inactivatePaymentMethodV2Request($id);
 
         return $this->client
@@ -5725,12 +5725,12 @@ class PaymentMethodApi
      *
      * Move card to other agreement
      *
-     * @param  \Frisbii\lib/Model\MoveCard $body body (required)
+     * @param  \Frisbii\lib\Model\MoveCard $body body (required)
      * @param  string $id Card id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function moveCardPaymentMethodV2($body, $id)
     {
@@ -5743,16 +5743,16 @@ class PaymentMethodApi
      *
      * Move card to other agreement
      *
-     * @param  \Frisbii\lib/Model\MoveCard $body (required)
+     * @param  \Frisbii\lib\Model\MoveCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function moveCardPaymentMethodV2WithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->moveCardPaymentMethodV2Request($body, $id);
 
         try {
@@ -5804,7 +5804,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5812,7 +5812,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5820,7 +5820,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5828,7 +5828,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5836,7 +5836,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5844,7 +5844,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5852,7 +5852,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5867,7 +5867,7 @@ class PaymentMethodApi
      *
      * Move card to other agreement
      *
-     * @param  \Frisbii\lib/Model\MoveCard $body (required)
+     * @param  \Frisbii\lib\Model\MoveCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \InvalidArgumentException
@@ -5888,7 +5888,7 @@ class PaymentMethodApi
      *
      * Move card to other agreement
      *
-     * @param  \Frisbii\lib/Model\MoveCard $body (required)
+     * @param  \Frisbii\lib\Model\MoveCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \InvalidArgumentException
@@ -5896,7 +5896,7 @@ class PaymentMethodApi
      */
     public function moveCardPaymentMethodV2AsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->moveCardPaymentMethodV2Request($body, $id);
 
         return $this->client
@@ -5939,7 +5939,7 @@ class PaymentMethodApi
     /**
      * Create request for operation 'moveCardPaymentMethodV2'
      *
-     * @param  \Frisbii\lib/Model\MoveCard $body (required)
+     * @param  \Frisbii\lib\Model\MoveCard $body (required)
      * @param  string $id Card id (required)
      *
      * @throws \InvalidArgumentException
@@ -5990,7 +5990,7 @@ class PaymentMethodApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -6057,7 +6057,7 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function reactivateCardV2($id)
     {
@@ -6074,11 +6074,11 @@ class PaymentMethodApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function reactivateCardV2WithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->reactivateCardV2Request($id);
 
         try {
@@ -6130,7 +6130,7 @@ class PaymentMethodApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodV2',
+                        '\Frisbii\lib\Model\PaymentMethodV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6138,7 +6138,7 @@ class PaymentMethodApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6146,7 +6146,7 @@ class PaymentMethodApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6154,7 +6154,7 @@ class PaymentMethodApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6162,7 +6162,7 @@ class PaymentMethodApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6170,7 +6170,7 @@ class PaymentMethodApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6178,7 +6178,7 @@ class PaymentMethodApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6220,7 +6220,7 @@ class PaymentMethodApi
      */
     public function reactivateCardV2AsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodV2';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodV2';
         $request = $this->reactivateCardV2Request($id);
 
         return $this->client

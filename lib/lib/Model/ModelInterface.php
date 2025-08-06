@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Frisbii\lib/Model
+ * @package  Frisbii\lib\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Frisbii\lib/Model
+ * @package Frisbii\lib\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

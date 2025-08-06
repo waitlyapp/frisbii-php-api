@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,13 +60,13 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
         'key' => 'string',
         'amount' => 'int',
         'currency' => 'string',
-        'customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'customer' => '\Frisbii\lib\Model\CreateCustomer',
         'metadata' => 'map[string,object]',
         'ordertext' => 'string',
-        'order_lines' => '\Frisbii\lib/Model\CreateOrderLine[]',
+        'order_lines' => '\Frisbii\lib\Model\CreateOrderLine[]',
         'customer_handle' => 'string',
-        'billing_address' => '\Frisbii\lib/Model\InvoiceBillingAddress',
-        'shipping_address' => '\Frisbii\lib/Model\InvoiceShippingAddress'
+        'billing_address' => '\Frisbii\lib\Model\InvoiceBillingAddress',
+        'shipping_address' => '\Frisbii\lib\Model\InvoiceShippingAddress'
     ];
 
     /**
@@ -363,7 +363,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCustomer()
     {
@@ -373,7 +373,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $customer customer
+     * @param \Frisbii\lib\Model\CreateCustomer $customer customer
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Frisbii\lib/Model\CreateOrderLine[]
+     * @return \Frisbii\lib\Model\CreateOrderLine[]
      */
     public function getOrderLines()
     {
@@ -445,7 +445,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Frisbii\lib/Model\CreateOrderLine[] $order_lines Order lines for the charge. The order lines controls the amount. Only required if charge/invoice does not already exist. If given for existing charge the order lines and amount are adjusted. A maximum of 100 order lines is allowed.
+     * @param \Frisbii\lib\Model\CreateOrderLine[] $order_lines Order lines for the charge. The order lines controls the amount. Only required if charge/invoice does not already exist. If given for existing charge the order lines and amount are adjusted. A maximum of 100 order lines is allowed.
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Frisbii\lib/Model\InvoiceBillingAddress
+     * @return \Frisbii\lib\Model\InvoiceBillingAddress
      */
     public function getBillingAddress()
     {
@@ -493,7 +493,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Frisbii\lib/Model\InvoiceBillingAddress $billing_address billing_address
+     * @param \Frisbii\lib\Model\InvoiceBillingAddress $billing_address billing_address
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Frisbii\lib/Model\InvoiceShippingAddress
+     * @return \Frisbii\lib\Model\InvoiceShippingAddress
      */
     public function getShippingAddress()
     {
@@ -517,7 +517,7 @@ class PrepareChargeDto implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Frisbii\lib/Model\InvoiceShippingAddress $shipping_address shipping_address
+     * @param \Frisbii\lib\Model\InvoiceShippingAddress $shipping_address shipping_address
      *
      * @return $this
      */

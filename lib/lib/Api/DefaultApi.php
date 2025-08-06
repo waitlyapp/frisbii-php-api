@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class DefaultApi
      *
      * Create or update risk configuration
      *
-     * @param  \Frisbii\lib/Model\RiskConfiguration $body body (required)
+     * @param  \Frisbii\lib\Model\RiskConfiguration $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\RiskConfiguration
+     * @return \Frisbii\lib\Model\RiskConfiguration
      */
     public function createOrUpdateConfiguration($body)
     {
@@ -108,15 +108,15 @@ class DefaultApi
      *
      * Create or update risk configuration
      *
-     * @param  \Frisbii\lib/Model\RiskConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\RiskConfiguration $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\RiskConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\RiskConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrUpdateConfigurationWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\RiskConfiguration';
+        $returnType = '\Frisbii\lib\Model\RiskConfiguration';
         $request = $this->createOrUpdateConfigurationRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\RiskConfiguration',
+                        '\Frisbii\lib\Model\RiskConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class DefaultApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class DefaultApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class DefaultApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class DefaultApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class DefaultApi
      *
      * Create or update risk configuration
      *
-     * @param  \Frisbii\lib/Model\RiskConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\RiskConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class DefaultApi
      *
      * Create or update risk configuration
      *
-     * @param  \Frisbii\lib/Model\RiskConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\RiskConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOrUpdateConfigurationAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\RiskConfiguration';
+        $returnType = '\Frisbii\lib\Model\RiskConfiguration';
         $request = $this->createOrUpdateConfigurationRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class DefaultApi
     /**
      * Create request for operation 'createOrUpdateConfiguration'
      *
-     * @param  \Frisbii\lib/Model\RiskConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\RiskConfiguration $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -337,7 +337,7 @@ class DefaultApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -460,7 +460,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -468,7 +468,7 @@ class DefaultApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -476,7 +476,7 @@ class DefaultApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -484,7 +484,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -492,7 +492,7 @@ class DefaultApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -500,7 +500,7 @@ class DefaultApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -659,7 +659,7 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CheckoutAccountDataDto
+     * @return \Frisbii\lib\Model\CheckoutAccountDataDto
      */
     public function getAccountData()
     {
@@ -673,11 +673,11 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CheckoutAccountDataDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CheckoutAccountDataDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountDataWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\CheckoutAccountDataDto';
+        $returnType = '\Frisbii\lib\Model\CheckoutAccountDataDto';
         $request = $this->getAccountDataRequest();
 
         try {
@@ -729,7 +729,7 @@ class DefaultApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CheckoutAccountDataDto',
+                        '\Frisbii\lib\Model\CheckoutAccountDataDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -769,7 +769,7 @@ class DefaultApi
      */
     public function getAccountDataAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\CheckoutAccountDataDto';
+        $returnType = '\Frisbii\lib\Model\CheckoutAccountDataDto';
         $request = $this->getAccountDataRequest();
 
         return $this->client
@@ -901,7 +901,7 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AuditLogEventDto
+     * @return \Frisbii\lib\Model\AuditLogEventDto
      */
     public function getAuditEvent($id)
     {
@@ -918,11 +918,11 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AuditLogEventDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AuditLogEventDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditEventWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\AuditLogEventDto';
+        $returnType = '\Frisbii\lib\Model\AuditLogEventDto';
         $request = $this->getAuditEventRequest($id);
 
         try {
@@ -974,7 +974,7 @@ class DefaultApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AuditLogEventDto',
+                        '\Frisbii\lib\Model\AuditLogEventDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1016,7 +1016,7 @@ class DefaultApi
      */
     public function getAuditEventAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\AuditLogEventDto';
+        $returnType = '\Frisbii\lib\Model\AuditLogEventDto';
         $request = $this->getAuditEventRequest($id);
 
         return $this->client
@@ -1162,7 +1162,7 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\RiskConfiguration
+     * @return \Frisbii\lib\Model\RiskConfiguration
      */
     public function getConfiguration()
     {
@@ -1178,11 +1178,11 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\RiskConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\RiskConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConfigurationWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\RiskConfiguration';
+        $returnType = '\Frisbii\lib\Model\RiskConfiguration';
         $request = $this->getConfigurationRequest();
 
         try {
@@ -1234,7 +1234,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\RiskConfiguration',
+                        '\Frisbii\lib\Model\RiskConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1242,7 +1242,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1250,7 +1250,7 @@ class DefaultApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1258,7 +1258,7 @@ class DefaultApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1266,7 +1266,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1274,7 +1274,7 @@ class DefaultApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1282,7 +1282,7 @@ class DefaultApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1322,7 +1322,7 @@ class DefaultApi
      */
     public function getConfigurationAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\RiskConfiguration';
+        $returnType = '\Frisbii\lib\Model\RiskConfiguration';
         $request = $this->getConfigurationRequest();
 
         return $this->client
@@ -1457,7 +1457,7 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\ErrorCodeDto[]
+     * @return \Frisbii\lib\Model\ErrorCodeDto[]
      */
     public function getErrorCodes()
     {
@@ -1473,11 +1473,11 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\ErrorCodeDto[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\ErrorCodeDto[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getErrorCodesWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\ErrorCodeDto[]';
+        $returnType = '\Frisbii\lib\Model\ErrorCodeDto[]';
         $request = $this->getErrorCodesRequest();
 
         try {
@@ -1529,7 +1529,7 @@ class DefaultApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorCodeDto[]',
+                        '\Frisbii\lib\Model\ErrorCodeDto[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1569,7 +1569,7 @@ class DefaultApi
      */
     public function getErrorCodesAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\ErrorCodeDto[]';
+        $returnType = '\Frisbii\lib\Model\ErrorCodeDto[]';
         $request = $this->getErrorCodesRequest();
 
         return $this->client
@@ -1702,7 +1702,7 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CheckoutSessionDataDto
+     * @return \Frisbii\lib\Model\CheckoutSessionDataDto
      */
     public function getSessionData($customer = null, $charge = null, $subscription = null, $card_on_file = null)
     {
@@ -1720,11 +1720,11 @@ class DefaultApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CheckoutSessionDataDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CheckoutSessionDataDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSessionDataWithHttpInfo($customer = null, $charge = null, $subscription = null, $card_on_file = null)
     {
-        $returnType = '\Frisbii\lib/Model\CheckoutSessionDataDto';
+        $returnType = '\Frisbii\lib\Model\CheckoutSessionDataDto';
         $request = $this->getSessionDataRequest($customer, $charge, $subscription, $card_on_file);
 
         try {
@@ -1776,7 +1776,7 @@ class DefaultApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CheckoutSessionDataDto',
+                        '\Frisbii\lib\Model\CheckoutSessionDataDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1824,7 +1824,7 @@ class DefaultApi
      */
     public function getSessionDataAsyncWithHttpInfo($customer = null, $charge = null, $subscription = null, $card_on_file = null)
     {
-        $returnType = '\Frisbii\lib/Model\CheckoutSessionDataDto';
+        $returnType = '\Frisbii\lib\Model\CheckoutSessionDataDto';
         $request = $this->getSessionDataRequest($customer, $charge, $subscription, $card_on_file);
 
         return $this->client

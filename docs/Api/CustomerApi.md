@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**updateMetadata2**](CustomerApi.md#updatemetadata2) | **PUT** /v1/customer/{handle}/metadata | Create or update metadata
 
 # **createCustomerInvoice**
-> \Frisbii\lib/Model\Invoice createCustomerInvoice($body, $handle)
+> \Frisbii\lib\Model\Invoice createCustomerInvoice($body, $handle)
 
 Create invoice for customer
 
@@ -30,13 +30,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateCustomerInvoice(); // \Frisbii\lib/Model\CreateCustomerInvoice | 
+$body = new \Frisbii\lib\Model\CreateCustomerInvoice(); // \Frisbii\lib\Model\CreateCustomerInvoice | 
 $handle = "handle_example"; // string | Customer handle
 
 try {
@@ -52,12 +52,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateCustomerInvoice**](../Model/CreateCustomerInvoice.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateCustomerInvoice**](../Model/CreateCustomerInvoice.md)|  |
  **handle** | **string**| Customer handle |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCustomerJson**
-> \Frisbii\lib/Model\Customer createCustomerJson($body)
+> \Frisbii\lib\Model\Customer createCustomerJson($body)
 
 Create customer
 
@@ -85,13 +85,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateCustomer(); // \Frisbii\lib/Model\CreateCustomer | 
+$body = new \Frisbii\lib\Model\CreateCustomer(); // \Frisbii\lib\Model\CreateCustomer | 
 
 try {
     $result = $apiInstance->createCustomerJson($body);
@@ -106,11 +106,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateCustomer**](../Model/CreateCustomer.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateCustomer**](../Model/CreateCustomer.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib\Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCustomerNoteJson**
-> \Frisbii\lib/Model\CustomerNote createCustomerNoteJson($body, $handle)
+> \Frisbii\lib\Model\CustomerNote createCustomerNoteJson($body, $handle)
 
 Create customer note
 
@@ -138,13 +138,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateCustomerNote(); // \Frisbii\lib/Model\CreateCustomerNote | 
+$body = new \Frisbii\lib\Model\CreateCustomerNote(); // \Frisbii\lib\Model\CreateCustomerNote | 
 $handle = "handle_example"; // string | 
 
 try {
@@ -160,12 +160,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateCustomerNote**](../Model/CreateCustomerNote.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateCustomerNote**](../Model/CreateCustomerNote.md)|  |
  **handle** | **string**|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\CustomerNote**](../Model/CustomerNote.md)
+[**\Frisbii\lib\Model\CustomerNote**](../Model/CustomerNote.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCustomer**
-> \Frisbii\lib/Model\Customer deleteCustomer($handle)
+> \Frisbii\lib\Model\Customer deleteCustomer($handle)
 
 Delete customer
 
@@ -193,7 +193,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib\Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -284,7 +284,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomer**
-> \Frisbii\lib/Model\Customer getCustomer($handle)
+> \Frisbii\lib\Model\Customer getCustomer($handle)
 
 Get customer
 
@@ -298,7 +298,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib\Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerNotes**
-> \Frisbii\lib/Model\CustomerNote[] getCustomerNotes($handle)
+> \Frisbii\lib\Model\CustomerNote[] getCustomerNotes($handle)
 
 Get customer notes
 
@@ -351,7 +351,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\CustomerNote[]**](../Model/CustomerNote.md)
+[**\Frisbii\lib\Model\CustomerNote[]**](../Model/CustomerNote.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCustomerJson**
-> \Frisbii\lib/Model\Customer updateCustomerJson($body, $handle)
+> \Frisbii\lib\Model\Customer updateCustomerJson($body, $handle)
 
 Update customer
 
@@ -457,13 +457,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateCustomer(); // \Frisbii\lib/Model\UpdateCustomer | 
+$body = new \Frisbii\lib\Model\UpdateCustomer(); // \Frisbii\lib\Model\UpdateCustomer | 
 $handle = "handle_example"; // string | Customer handle
 
 try {
@@ -479,12 +479,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateCustomer**](../Model/UpdateCustomer.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateCustomer**](../Model/UpdateCustomer.md)|  |
  **handle** | **string**| Customer handle |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Customer**](../Model/Customer.md)
+[**\Frisbii\lib\Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -512,13 +512,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\CustomerApi(
+$apiInstance = new Frisbii\lib\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib\Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

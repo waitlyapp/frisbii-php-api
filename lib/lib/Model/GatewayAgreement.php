@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -63,24 +63,24 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
         'test' => 'bool',
         'created' => '\DateTime',
         'name' => 'string',
-        'card_gateway_agreement' => '\Frisbii\lib/Model\CardGatewayAgreement',
-        'offline_agreement' => '\Frisbii\lib/Model\OfflineAgreement',
-        'mpo_agreement' => '\Frisbii\lib/Model\MpoAgreement',
-        'vipps_agreement' => '\Frisbii\lib/Model\VippsAgreement',
-        'vipps_mobilepay_agreement' => '\Frisbii\lib/Model\VippsMobilepayAgreement',
-        'vipps_recurring_agreement' => '\Frisbii\lib/Model\VippsRecurringAgreement',
-        'sepa_ebics_agreement' => '\Frisbii\lib/Model\SepaEbicsAgreement',
-        'viabill_agreement' => '\Frisbii\lib/Model\ViabillAgreement',
-        'anyday_agreement' => '\Frisbii\lib/Model\AnydayAgreement',
-        'resurs_agreement' => '\Frisbii\lib/Model\ResursAgreement',
-        'klarna_agreement' => '\Frisbii\lib/Model\KlarnaAgreement',
-        'swish' => '\Frisbii\lib/Model\SwishAgreement',
-        'applepay_agreement' => '\Frisbii\lib/Model\ApplepayAgreement',
-        'googlepay_agreement' => '\Frisbii\lib/Model\GooglepayAgreement',
-        'paypal_agreement' => '\Frisbii\lib/Model\PaypalAgreement',
-        'mps_agreement' => '\Frisbii\lib/Model\MpsAgreement',
-        'ppro_agreement' => '\Frisbii\lib/Model\PproAgreement',
-        'payever_agreement' => '\Frisbii\lib/Model\PayeverAgreement'
+        'card_gateway_agreement' => '\Frisbii\lib\Model\CardGatewayAgreement',
+        'offline_agreement' => '\Frisbii\lib\Model\OfflineAgreement',
+        'mpo_agreement' => '\Frisbii\lib\Model\MpoAgreement',
+        'vipps_agreement' => '\Frisbii\lib\Model\VippsAgreement',
+        'vipps_mobilepay_agreement' => '\Frisbii\lib\Model\VippsMobilepayAgreement',
+        'vipps_recurring_agreement' => '\Frisbii\lib\Model\VippsRecurringAgreement',
+        'sepa_ebics_agreement' => '\Frisbii\lib\Model\SepaEbicsAgreement',
+        'viabill_agreement' => '\Frisbii\lib\Model\ViabillAgreement',
+        'anyday_agreement' => '\Frisbii\lib\Model\AnydayAgreement',
+        'resurs_agreement' => '\Frisbii\lib\Model\ResursAgreement',
+        'klarna_agreement' => '\Frisbii\lib\Model\KlarnaAgreement',
+        'swish' => '\Frisbii\lib\Model\SwishAgreement',
+        'applepay_agreement' => '\Frisbii\lib\Model\ApplepayAgreement',
+        'googlepay_agreement' => '\Frisbii\lib\Model\GooglepayAgreement',
+        'paypal_agreement' => '\Frisbii\lib\Model\PaypalAgreement',
+        'mps_agreement' => '\Frisbii\lib\Model\MpsAgreement',
+        'ppro_agreement' => '\Frisbii\lib\Model\PproAgreement',
+        'payever_agreement' => '\Frisbii\lib\Model\PayeverAgreement'
     ];
 
     /**
@@ -711,7 +711,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets card_gateway_agreement
      *
-     * @return \Frisbii\lib/Model\CardGatewayAgreement
+     * @return \Frisbii\lib\Model\CardGatewayAgreement
      */
     public function getCardGatewayAgreement()
     {
@@ -721,7 +721,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets card_gateway_agreement
      *
-     * @param \Frisbii\lib/Model\CardGatewayAgreement $card_gateway_agreement card_gateway_agreement
+     * @param \Frisbii\lib\Model\CardGatewayAgreement $card_gateway_agreement card_gateway_agreement
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets offline_agreement
      *
-     * @return \Frisbii\lib/Model\OfflineAgreement
+     * @return \Frisbii\lib\Model\OfflineAgreement
      */
     public function getOfflineAgreement()
     {
@@ -745,7 +745,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets offline_agreement
      *
-     * @param \Frisbii\lib/Model\OfflineAgreement $offline_agreement offline_agreement
+     * @param \Frisbii\lib\Model\OfflineAgreement $offline_agreement offline_agreement
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets mpo_agreement
      *
-     * @return \Frisbii\lib/Model\MpoAgreement
+     * @return \Frisbii\lib\Model\MpoAgreement
      */
     public function getMpoAgreement()
     {
@@ -769,7 +769,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets mpo_agreement
      *
-     * @param \Frisbii\lib/Model\MpoAgreement $mpo_agreement mpo_agreement
+     * @param \Frisbii\lib\Model\MpoAgreement $mpo_agreement mpo_agreement
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_agreement
      *
-     * @return \Frisbii\lib/Model\VippsAgreement
+     * @return \Frisbii\lib\Model\VippsAgreement
      */
     public function getVippsAgreement()
     {
@@ -793,7 +793,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_agreement
      *
-     * @param \Frisbii\lib/Model\VippsAgreement $vipps_agreement vipps_agreement
+     * @param \Frisbii\lib\Model\VippsAgreement $vipps_agreement vipps_agreement
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_mobilepay_agreement
      *
-     * @return \Frisbii\lib/Model\VippsMobilepayAgreement
+     * @return \Frisbii\lib\Model\VippsMobilepayAgreement
      */
     public function getVippsMobilepayAgreement()
     {
@@ -817,7 +817,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_mobilepay_agreement
      *
-     * @param \Frisbii\lib/Model\VippsMobilepayAgreement $vipps_mobilepay_agreement vipps_mobilepay_agreement
+     * @param \Frisbii\lib\Model\VippsMobilepayAgreement $vipps_mobilepay_agreement vipps_mobilepay_agreement
      *
      * @return $this
      */
@@ -831,7 +831,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_recurring_agreement
      *
-     * @return \Frisbii\lib/Model\VippsRecurringAgreement
+     * @return \Frisbii\lib\Model\VippsRecurringAgreement
      */
     public function getVippsRecurringAgreement()
     {
@@ -841,7 +841,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_recurring_agreement
      *
-     * @param \Frisbii\lib/Model\VippsRecurringAgreement $vipps_recurring_agreement vipps_recurring_agreement
+     * @param \Frisbii\lib\Model\VippsRecurringAgreement $vipps_recurring_agreement vipps_recurring_agreement
      *
      * @return $this
      */
@@ -855,7 +855,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets sepa_ebics_agreement
      *
-     * @return \Frisbii\lib/Model\SepaEbicsAgreement
+     * @return \Frisbii\lib\Model\SepaEbicsAgreement
      */
     public function getSepaEbicsAgreement()
     {
@@ -865,7 +865,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets sepa_ebics_agreement
      *
-     * @param \Frisbii\lib/Model\SepaEbicsAgreement $sepa_ebics_agreement sepa_ebics_agreement
+     * @param \Frisbii\lib\Model\SepaEbicsAgreement $sepa_ebics_agreement sepa_ebics_agreement
      *
      * @return $this
      */
@@ -879,7 +879,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets viabill_agreement
      *
-     * @return \Frisbii\lib/Model\ViabillAgreement
+     * @return \Frisbii\lib\Model\ViabillAgreement
      */
     public function getViabillAgreement()
     {
@@ -889,7 +889,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets viabill_agreement
      *
-     * @param \Frisbii\lib/Model\ViabillAgreement $viabill_agreement viabill_agreement
+     * @param \Frisbii\lib\Model\ViabillAgreement $viabill_agreement viabill_agreement
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets anyday_agreement
      *
-     * @return \Frisbii\lib/Model\AnydayAgreement
+     * @return \Frisbii\lib\Model\AnydayAgreement
      */
     public function getAnydayAgreement()
     {
@@ -913,7 +913,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets anyday_agreement
      *
-     * @param \Frisbii\lib/Model\AnydayAgreement $anyday_agreement anyday_agreement
+     * @param \Frisbii\lib\Model\AnydayAgreement $anyday_agreement anyday_agreement
      *
      * @return $this
      */
@@ -927,7 +927,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets resurs_agreement
      *
-     * @return \Frisbii\lib/Model\ResursAgreement
+     * @return \Frisbii\lib\Model\ResursAgreement
      */
     public function getResursAgreement()
     {
@@ -937,7 +937,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets resurs_agreement
      *
-     * @param \Frisbii\lib/Model\ResursAgreement $resurs_agreement resurs_agreement
+     * @param \Frisbii\lib\Model\ResursAgreement $resurs_agreement resurs_agreement
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets klarna_agreement
      *
-     * @return \Frisbii\lib/Model\KlarnaAgreement
+     * @return \Frisbii\lib\Model\KlarnaAgreement
      */
     public function getKlarnaAgreement()
     {
@@ -961,7 +961,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets klarna_agreement
      *
-     * @param \Frisbii\lib/Model\KlarnaAgreement $klarna_agreement klarna_agreement
+     * @param \Frisbii\lib\Model\KlarnaAgreement $klarna_agreement klarna_agreement
      *
      * @return $this
      */
@@ -975,7 +975,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets swish
      *
-     * @return \Frisbii\lib/Model\SwishAgreement
+     * @return \Frisbii\lib\Model\SwishAgreement
      */
     public function getSwish()
     {
@@ -985,7 +985,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets swish
      *
-     * @param \Frisbii\lib/Model\SwishAgreement $swish swish
+     * @param \Frisbii\lib\Model\SwishAgreement $swish swish
      *
      * @return $this
      */
@@ -999,7 +999,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets applepay_agreement
      *
-     * @return \Frisbii\lib/Model\ApplepayAgreement
+     * @return \Frisbii\lib\Model\ApplepayAgreement
      */
     public function getApplepayAgreement()
     {
@@ -1009,7 +1009,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets applepay_agreement
      *
-     * @param \Frisbii\lib/Model\ApplepayAgreement $applepay_agreement applepay_agreement
+     * @param \Frisbii\lib\Model\ApplepayAgreement $applepay_agreement applepay_agreement
      *
      * @return $this
      */
@@ -1023,7 +1023,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets googlepay_agreement
      *
-     * @return \Frisbii\lib/Model\GooglepayAgreement
+     * @return \Frisbii\lib\Model\GooglepayAgreement
      */
     public function getGooglepayAgreement()
     {
@@ -1033,7 +1033,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets googlepay_agreement
      *
-     * @param \Frisbii\lib/Model\GooglepayAgreement $googlepay_agreement googlepay_agreement
+     * @param \Frisbii\lib\Model\GooglepayAgreement $googlepay_agreement googlepay_agreement
      *
      * @return $this
      */
@@ -1047,7 +1047,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets paypal_agreement
      *
-     * @return \Frisbii\lib/Model\PaypalAgreement
+     * @return \Frisbii\lib\Model\PaypalAgreement
      */
     public function getPaypalAgreement()
     {
@@ -1057,7 +1057,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets paypal_agreement
      *
-     * @param \Frisbii\lib/Model\PaypalAgreement $paypal_agreement paypal_agreement
+     * @param \Frisbii\lib\Model\PaypalAgreement $paypal_agreement paypal_agreement
      *
      * @return $this
      */
@@ -1071,7 +1071,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets mps_agreement
      *
-     * @return \Frisbii\lib/Model\MpsAgreement
+     * @return \Frisbii\lib\Model\MpsAgreement
      */
     public function getMpsAgreement()
     {
@@ -1081,7 +1081,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets mps_agreement
      *
-     * @param \Frisbii\lib/Model\MpsAgreement $mps_agreement mps_agreement
+     * @param \Frisbii\lib\Model\MpsAgreement $mps_agreement mps_agreement
      *
      * @return $this
      */
@@ -1095,7 +1095,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets ppro_agreement
      *
-     * @return \Frisbii\lib/Model\PproAgreement
+     * @return \Frisbii\lib\Model\PproAgreement
      */
     public function getPproAgreement()
     {
@@ -1105,7 +1105,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets ppro_agreement
      *
-     * @param \Frisbii\lib/Model\PproAgreement $ppro_agreement ppro_agreement
+     * @param \Frisbii\lib\Model\PproAgreement $ppro_agreement ppro_agreement
      *
      * @return $this
      */
@@ -1119,7 +1119,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets payever_agreement
      *
-     * @return \Frisbii\lib/Model\PayeverAgreement
+     * @return \Frisbii\lib\Model\PayeverAgreement
      */
     public function getPayeverAgreement()
     {
@@ -1129,7 +1129,7 @@ class GatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets payever_agreement
      *
-     * @param \Frisbii\lib/Model\PayeverAgreement $payever_agreement payever_agreement
+     * @param \Frisbii\lib\Model\PayeverAgreement $payever_agreement payever_agreement
      *
      * @return $this
      */

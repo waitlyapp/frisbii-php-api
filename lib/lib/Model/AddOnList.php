@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class AddOnList implements ModelInterface, ArrayAccess
         'to' => 'string',
         'from' => 'string',
         'range' => 'string',
-        'content' => '\Frisbii\lib/Model\AddOn[]',
+        'content' => '\Frisbii\lib\Model\AddOn[]',
         'next_page_token' => 'string'
     ];
 
@@ -405,7 +405,7 @@ class AddOnList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\AddOn[]
+     * @return \Frisbii\lib\Model\AddOn[]
      */
     public function getContent()
     {
@@ -415,7 +415,7 @@ class AddOnList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\AddOn[] $content List of add-ons for current page
+     * @param \Frisbii\lib\Model\AddOn[] $content List of add-ons for current page
      *
      * @return $this
      */

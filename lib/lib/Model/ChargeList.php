@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -61,7 +61,7 @@ class ChargeList implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\Charge[]',
+        'content' => '\Frisbii\lib\Model\Charge[]',
         'range' => 'string',
         'next_page_token' => 'string'
     ];
@@ -377,7 +377,7 @@ class ChargeList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Charge[]
+     * @return \Frisbii\lib\Model\Charge[]
      */
     public function getContent()
     {
@@ -387,7 +387,7 @@ class ChargeList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Charge[] $content List of charges for current page
+     * @param \Frisbii\lib\Model\Charge[] $content List of charges for current page
      *
      * @return $this
      */

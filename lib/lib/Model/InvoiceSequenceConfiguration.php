@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -64,7 +64,7 @@ class InvoiceSequenceConfiguration implements ModelInterface, ArrayAccess
         'next_number' => 'int',
         'number_after_reset' => 'int',
         'reset_type' => 'string',
-        'credit_note_settings' => '\Frisbii\lib/Model\CreditNoteSettings'
+        'credit_note_settings' => '\Frisbii\lib\Model\CreditNoteSettings'
     ];
 
     /**
@@ -444,7 +444,7 @@ class InvoiceSequenceConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets credit_note_settings
      *
-     * @return \Frisbii\lib/Model\CreditNoteSettings
+     * @return \Frisbii\lib\Model\CreditNoteSettings
      */
     public function getCreditNoteSettings()
     {
@@ -454,7 +454,7 @@ class InvoiceSequenceConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets credit_note_settings
      *
-     * @param \Frisbii\lib/Model\CreditNoteSettings $credit_note_settings credit_note_settings
+     * @param \Frisbii\lib\Model\CreditNoteSettings $credit_note_settings credit_note_settings
      *
      * @return $this
      */

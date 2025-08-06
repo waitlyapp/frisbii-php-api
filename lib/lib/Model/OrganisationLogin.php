@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class OrganisationLogin implements ModelInterface, ArrayAccess
         'id' => 'string',
         'subdomain' => 'string',
         'name' => 'string',
-        'accounts' => '\Frisbii\lib/Model\Account[]'
+        'accounts' => '\Frisbii\lib\Model\Account[]'
     ];
 
     /**
@@ -307,7 +307,7 @@ class OrganisationLogin implements ModelInterface, ArrayAccess
     /**
      * Gets accounts
      *
-     * @return \Frisbii\lib/Model\Account[]
+     * @return \Frisbii\lib\Model\Account[]
      */
     public function getAccounts()
     {
@@ -317,7 +317,7 @@ class OrganisationLogin implements ModelInterface, ArrayAccess
     /**
      * Sets accounts
      *
-     * @param \Frisbii\lib/Model\Account[] $accounts Organisation accounts
+     * @param \Frisbii\lib\Model\Account[] $accounts Organisation accounts
      *
      * @return $this
      */

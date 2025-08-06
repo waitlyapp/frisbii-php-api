@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -73,7 +73,7 @@ class Invoice implements ModelInterface, ArrayAccess
         'settled' => '\DateTime',
         'cancelled' => '\DateTime',
         'authorized' => '\DateTime',
-        'credits' => '\Frisbii\lib/Model\CreditInvoice[]',
+        'credits' => '\Frisbii\lib\Model\CreditInvoice[]',
         'created' => '\DateTime',
         'plan_version' => 'int',
         'dunning_plan' => 'string',
@@ -87,9 +87,9 @@ class Invoice implements ModelInterface, ArrayAccess
         'credited_amount' => 'int',
         'period_number' => 'int',
         'recurring_payment_method' => 'string',
-        'order_lines' => '\Frisbii\lib/Model\OrderLine[]',
+        'order_lines' => '\Frisbii\lib\Model\OrderLine[]',
         'additional_costs' => 'string[]',
-        'transactions' => '\Frisbii\lib/Model\Transaction[]',
+        'transactions' => '\Frisbii\lib\Model\Transaction[]',
         'dunning_start' => '\DateTime',
         'dunning_count' => 'int',
         'dunning_expired' => '\DateTime',
@@ -97,14 +97,14 @@ class Invoice implements ModelInterface, ArrayAccess
         'period_to' => '\DateTime',
         'settle_later' => 'bool',
         'settle_later_payment_method' => 'string',
-        'billing_address' => '\Frisbii\lib/Model\InvoiceBillingAddress',
-        'shipping_address' => '\Frisbii\lib/Model\InvoiceShippingAddress',
+        'billing_address' => '\Frisbii\lib\Model\InvoiceBillingAddress',
+        'shipping_address' => '\Frisbii\lib\Model\InvoiceShippingAddress',
         'accounting_number' => 'string',
         'debtor_id' => 'int',
         'download_url' => 'string',
         'accounting_created_date' => '\DateTime',
         'invoice_file_type' => 'string',
-        'credit_notes' => '\Frisbii\lib/Model\InvoiceCreditNote[]'
+        'credit_notes' => '\Frisbii\lib\Model\InvoiceCreditNote[]'
     ];
 
     /**
@@ -1028,7 +1028,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets credits
      *
-     * @return \Frisbii\lib/Model\CreditInvoice[]
+     * @return \Frisbii\lib\Model\CreditInvoice[]
      */
     public function getCredits()
     {
@@ -1038,7 +1038,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets credits
      *
-     * @param \Frisbii\lib/Model\CreditInvoice[] $credits Credits applied to invoice
+     * @param \Frisbii\lib\Model\CreditInvoice[] $credits Credits applied to invoice
      *
      * @return $this
      */
@@ -1364,7 +1364,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Frisbii\lib/Model\OrderLine[]
+     * @return \Frisbii\lib\Model\OrderLine[]
      */
     public function getOrderLines()
     {
@@ -1374,7 +1374,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Frisbii\lib/Model\OrderLine[] $order_lines Order lines for invoice sorted by descending timestamp
+     * @param \Frisbii\lib\Model\OrderLine[] $order_lines Order lines for invoice sorted by descending timestamp
      *
      * @return $this
      */
@@ -1412,7 +1412,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets transactions
      *
-     * @return \Frisbii\lib/Model\Transaction[]
+     * @return \Frisbii\lib\Model\Transaction[]
      */
     public function getTransactions()
     {
@@ -1422,7 +1422,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets transactions
      *
-     * @param \Frisbii\lib/Model\Transaction[] $transactions Invoice transactions, ascending order and limited to 100 transactions
+     * @param \Frisbii\lib\Model\Transaction[] $transactions Invoice transactions, ascending order and limited to 100 transactions
      *
      * @return $this
      */
@@ -1604,7 +1604,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Frisbii\lib/Model\InvoiceBillingAddress
+     * @return \Frisbii\lib\Model\InvoiceBillingAddress
      */
     public function getBillingAddress()
     {
@@ -1614,7 +1614,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Frisbii\lib/Model\InvoiceBillingAddress $billing_address billing_address
+     * @param \Frisbii\lib\Model\InvoiceBillingAddress $billing_address billing_address
      *
      * @return $this
      */
@@ -1628,7 +1628,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Frisbii\lib/Model\InvoiceShippingAddress
+     * @return \Frisbii\lib\Model\InvoiceShippingAddress
      */
     public function getShippingAddress()
     {
@@ -1638,7 +1638,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Frisbii\lib/Model\InvoiceShippingAddress $shipping_address shipping_address
+     * @param \Frisbii\lib\Model\InvoiceShippingAddress $shipping_address shipping_address
      *
      * @return $this
      */
@@ -1781,7 +1781,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets credit_notes
      *
-     * @return \Frisbii\lib/Model\InvoiceCreditNote[]
+     * @return \Frisbii\lib\Model\InvoiceCreditNote[]
      */
     public function getCreditNotes()
     {
@@ -1791,7 +1791,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets credit_notes
      *
-     * @param \Frisbii\lib/Model\InvoiceCreditNote[] $credit_notes Invoice credit notes
+     * @param \Frisbii\lib\Model\InvoiceCreditNote[] $credit_notes Invoice credit notes
      *
      * @return $this
      */

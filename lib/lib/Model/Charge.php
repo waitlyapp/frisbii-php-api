@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -69,14 +69,14 @@ class Charge implements ModelInterface, ArrayAccess
         'transaction' => 'string',
         'error' => 'string',
         'processing' => 'bool',
-        'source' => '\Frisbii\lib/Model\ChargeSource',
-        'order_lines' => '\Frisbii\lib/Model\OrderLine[]',
+        'source' => '\Frisbii\lib\Model\ChargeSource',
+        'order_lines' => '\Frisbii\lib\Model\OrderLine[]',
         'refunded_amount' => 'int',
         'authorized_amount' => 'int',
         'error_state' => 'string',
         'recurring_payment_method' => 'string',
-        'billing_address' => '\Frisbii\lib/Model\InvoiceBillingAddress',
-        'shipping_address' => '\Frisbii\lib/Model\InvoiceShippingAddress',
+        'billing_address' => '\Frisbii\lib\Model\InvoiceBillingAddress',
+        'shipping_address' => '\Frisbii\lib\Model\InvoiceShippingAddress',
         'payment_context' => 'string'
     ];
 
@@ -703,7 +703,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Frisbii\lib/Model\ChargeSource
+     * @return \Frisbii\lib\Model\ChargeSource
      */
     public function getSource()
     {
@@ -713,7 +713,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Frisbii\lib/Model\ChargeSource $source source
+     * @param \Frisbii\lib\Model\ChargeSource $source source
      *
      * @return $this
      */
@@ -727,7 +727,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Frisbii\lib/Model\OrderLine[]
+     * @return \Frisbii\lib\Model\OrderLine[]
      */
     public function getOrderLines()
     {
@@ -737,7 +737,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Frisbii\lib/Model\OrderLine[] $order_lines Order lines for charge
+     * @param \Frisbii\lib\Model\OrderLine[] $order_lines Order lines for charge
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Frisbii\lib/Model\InvoiceBillingAddress
+     * @return \Frisbii\lib\Model\InvoiceBillingAddress
      */
     public function getBillingAddress()
     {
@@ -866,7 +866,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Frisbii\lib/Model\InvoiceBillingAddress $billing_address billing_address
+     * @param \Frisbii\lib\Model\InvoiceBillingAddress $billing_address billing_address
      *
      * @return $this
      */
@@ -880,7 +880,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Frisbii\lib/Model\InvoiceShippingAddress
+     * @return \Frisbii\lib\Model\InvoiceShippingAddress
      */
     public function getShippingAddress()
     {
@@ -890,7 +890,7 @@ class Charge implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Frisbii\lib/Model\InvoiceShippingAddress $shipping_address shipping_address
+     * @param \Frisbii\lib\Model\InvoiceShippingAddress $shipping_address shipping_address
      *
      * @return $this
      */

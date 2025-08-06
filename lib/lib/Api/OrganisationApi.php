@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -94,7 +94,7 @@ class OrganisationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Organisation
+     * @return \Frisbii\lib\Model\Organisation
      */
     public function getOrganisation()
     {
@@ -110,11 +110,11 @@ class OrganisationApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Organisation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Organisation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrganisationWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\Organisation';
+        $returnType = '\Frisbii\lib\Model\Organisation';
         $request = $this->getOrganisationRequest();
 
         try {
@@ -166,7 +166,7 @@ class OrganisationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Organisation',
+                        '\Frisbii\lib\Model\Organisation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +174,7 @@ class OrganisationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class OrganisationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class OrganisationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class OrganisationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class OrganisationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class OrganisationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class OrganisationApi
      */
     public function getOrganisationAsyncWithHttpInfo()
     {
-        $returnType = '\Frisbii\lib/Model\Organisation';
+        $returnType = '\Frisbii\lib\Model\Organisation';
         $request = $this->getOrganisationRequest();
 
         return $this->client
@@ -386,11 +386,11 @@ class OrganisationApi
      *
      * Update organisation
      *
-     * @param  \Frisbii\lib/Model\UpdateOrganisation $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateOrganisation $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Organisation
+     * @return \Frisbii\lib\Model\Organisation
      */
     public function update($body)
     {
@@ -403,15 +403,15 @@ class OrganisationApi
      *
      * Update organisation
      *
-     * @param  \Frisbii\lib/Model\UpdateOrganisation $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOrganisation $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Organisation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Organisation, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Organisation';
+        $returnType = '\Frisbii\lib\Model\Organisation';
         $request = $this->updateRequest($body);
 
         try {
@@ -463,7 +463,7 @@ class OrganisationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Organisation',
+                        '\Frisbii\lib\Model\Organisation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -471,7 +471,7 @@ class OrganisationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -479,7 +479,7 @@ class OrganisationApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -487,7 +487,7 @@ class OrganisationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,7 +495,7 @@ class OrganisationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -503,7 +503,7 @@ class OrganisationApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -511,7 +511,7 @@ class OrganisationApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -526,7 +526,7 @@ class OrganisationApi
      *
      * Update organisation
      *
-     * @param  \Frisbii\lib/Model\UpdateOrganisation $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOrganisation $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -546,14 +546,14 @@ class OrganisationApi
      *
      * Update organisation
      *
-     * @param  \Frisbii\lib/Model\UpdateOrganisation $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOrganisation $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Organisation';
+        $returnType = '\Frisbii\lib\Model\Organisation';
         $request = $this->updateRequest($body);
 
         return $this->client
@@ -596,7 +596,7 @@ class OrganisationApi
     /**
      * Create request for operation 'update'
      *
-     * @param  \Frisbii\lib/Model\UpdateOrganisation $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOrganisation $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -632,7 +632,7 @@ class OrganisationApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

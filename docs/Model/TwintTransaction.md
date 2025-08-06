@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **error_state** | **string** | Error state if failed: &#x60;pending&#x60;, &#x60;soft_declined&#x60;, &#x60;hard_declined&#x60; or &#x60;processing_error&#x60; | [optional] 
 **acquirer_message** | **string** | Acquirer message in case of error | [optional] 
 **twint_id** | **string** | Twint id | [optional] 
-**twint_mandate** | [**\Frisbii\lib/Model\TwintMandate**](TwintMandate.md) |  | [optional] 
+**twint_mandate** | [**\Frisbii\lib\Model\TwintMandate**](TwintMandate.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,10 +57,10 @@ class UserLogin implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'token' => 'string',
-        'user' => '\Frisbii\lib/Model\User',
-        'account' => '\Frisbii\lib/Model\Account',
-        'organisation' => '\Frisbii\lib/Model\Organisation',
-        'organisations' => '\Frisbii\lib/Model\OrganisationLogin[]',
+        'user' => '\Frisbii\lib\Model\User',
+        'account' => '\Frisbii\lib\Model\Account',
+        'organisation' => '\Frisbii\lib\Model\Organisation',
+        'organisations' => '\Frisbii\lib\Model\OrganisationLogin[]',
         'groups' => 'string[]',
         'permissions' => 'string[]',
         'entitlements' => 'string[]',
@@ -349,7 +349,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return \Frisbii\lib/Model\User
+     * @return \Frisbii\lib\Model\User
      */
     public function getUser()
     {
@@ -359,7 +359,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \Frisbii\lib/Model\User $user user
+     * @param \Frisbii\lib\Model\User $user user
      *
      * @return $this
      */
@@ -373,7 +373,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Frisbii\lib/Model\Account
+     * @return \Frisbii\lib\Model\Account
      */
     public function getAccount()
     {
@@ -383,7 +383,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Frisbii\lib/Model\Account $account account
+     * @param \Frisbii\lib\Model\Account $account account
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Gets organisation
      *
-     * @return \Frisbii\lib/Model\Organisation
+     * @return \Frisbii\lib\Model\Organisation
      */
     public function getOrganisation()
     {
@@ -407,7 +407,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Sets organisation
      *
-     * @param \Frisbii\lib/Model\Organisation $organisation organisation
+     * @param \Frisbii\lib\Model\Organisation $organisation organisation
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Gets organisations
      *
-     * @return \Frisbii\lib/Model\OrganisationLogin[]
+     * @return \Frisbii\lib\Model\OrganisationLogin[]
      */
     public function getOrganisations()
     {
@@ -431,7 +431,7 @@ class UserLogin implements ModelInterface, ArrayAccess
     /**
      * Sets organisations
      *
-     * @param \Frisbii\lib/Model\OrganisationLogin[] $organisations List of organisations for user
+     * @param \Frisbii\lib\Model\OrganisationLogin[] $organisations List of organisations for user
      *
      * @return $this
      */
