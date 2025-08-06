@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class ApplepayAgreement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'domains' => '\Frisbii\lib/Model\ApplepayDomainDto[]',
+        'domains' => '\Frisbii\lib\Model\ApplepayDomainDto[]',
         'registered' => 'bool',
         'display_name' => 'string',
         'merchant_management_url' => 'string',
@@ -238,7 +238,7 @@ class ApplepayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets domains
      *
-     * @return \Frisbii\lib/Model\ApplepayDomainDto[]
+     * @return \Frisbii\lib\Model\ApplepayDomainDto[]
      */
     public function getDomains()
     {
@@ -248,7 +248,7 @@ class ApplepayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets domains
      *
-     * @param \Frisbii\lib/Model\ApplepayDomainDto[] $domains domains
+     * @param \Frisbii\lib\Model\ApplepayDomainDto[] $domains domains
      *
      * @return $this
      */

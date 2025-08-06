@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**settleCharge**](ChargeApi.md#settlecharge) | **POST** /v1/charge/{handle}/settle | Settle charge
 
 # **cancelCharge**
-> \Frisbii\lib/Model\Charge cancelCharge($handle)
+> \Frisbii\lib\Model\Charge cancelCharge($handle)
 
 Cancel charge
 
@@ -27,7 +27,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Charge**](../Model/Charge.md)
+[**\Frisbii\lib\Model\Charge**](../Model/Charge.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCharge**
-> \Frisbii\lib/Model\Charge createCharge($body)
+> \Frisbii\lib\Model\Charge createCharge($body)
 
 Create charge
 
@@ -80,13 +80,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateCharge(); // \Frisbii\lib/Model\CreateCharge | 
+$body = new \Frisbii\lib\Model\CreateCharge(); // \Frisbii\lib\Model\CreateCharge | 
 
 try {
     $result = $apiInstance->createCharge($body);
@@ -101,11 +101,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateCharge**](../Model/CreateCharge.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateCharge**](../Model/CreateCharge.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Charge**](../Model/Charge.md)
+[**\Frisbii\lib\Model\Charge**](../Model/Charge.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -171,7 +171,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharge**
-> \Frisbii\lib/Model\Charge getCharge($handle)
+> \Frisbii\lib\Model\Charge getCharge($handle)
 
 Get charge
 
@@ -185,7 +185,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Charge**](../Model/Charge.md)
+[**\Frisbii\lib\Model\Charge**](../Model/Charge.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offlineSettle**
-> \Frisbii\lib/Model\Charge offlineSettle($id, $transaction)
+> \Frisbii\lib\Model\Charge offlineSettle($id, $transaction)
 
 Settle offline transaction
 
@@ -238,7 +238,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Charge**](../Model/Charge.md)
+[**\Frisbii\lib\Model\Charge**](../Model/Charge.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **prepareCharge**
-> \Frisbii\lib/Model\Charge prepareCharge($body)
+> \Frisbii\lib\Model\Charge prepareCharge($body)
 
 Prepare charge
 
@@ -293,13 +293,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\PrepareChargeDto(); // \Frisbii\lib/Model\PrepareChargeDto | 
+$body = new \Frisbii\lib\Model\PrepareChargeDto(); // \Frisbii\lib\Model\PrepareChargeDto | 
 
 try {
     $result = $apiInstance->prepareCharge($body);
@@ -314,11 +314,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\PrepareChargeDto**](../Model/PrepareChargeDto.md)|  |
+ **body** | [**\Frisbii\lib\Model\PrepareChargeDto**](../Model/PrepareChargeDto.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Charge**](../Model/Charge.md)
+[**\Frisbii\lib\Model\Charge**](../Model/Charge.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **settleCharge**
-> \Frisbii\lib/Model\Charge settleCharge($handle, $body)
+> \Frisbii\lib\Model\Charge settleCharge($handle, $body)
 
 Settle charge
 
@@ -346,14 +346,14 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\ChargeApi(
+$apiInstance = new Frisbii\lib\Api\ChargeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Charge handle
-$body = new \Frisbii\lib/Model\SettleCharge(); // \Frisbii\lib/Model\SettleCharge | 
+$body = new \Frisbii\lib\Model\SettleCharge(); // \Frisbii\lib\Model\SettleCharge | 
 
 try {
     $result = $apiInstance->settleCharge($handle, $body);
@@ -369,11 +369,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Charge handle |
- **body** | [**\Frisbii\lib/Model\SettleCharge**](../Model/SettleCharge.md)|  | [optional]
+ **body** | [**\Frisbii\lib\Model\SettleCharge**](../Model/SettleCharge.md)|  | [optional]
 
 ### Return type
 
-[**\Frisbii\lib/Model\Charge**](../Model/Charge.md)
+[**\Frisbii\lib\Model\Charge**](../Model/Charge.md)
 
 ### Authorization
 

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,16 +62,16 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
         'reference' => 'string',
         'failed' => '\DateTime',
         'created' => '\DateTime',
-        'card' => '\Frisbii\lib/Model\CardV2',
-        'applepay' => '\Frisbii\lib/Model\CardV2',
+        'card' => '\Frisbii\lib\Model\CardV2',
+        'applepay' => '\Frisbii\lib\Model\CardV2',
         'payment_type' => 'string',
-        'mps_subscription' => '\Frisbii\lib/Model\MpsSubscriptionV2',
-        'vipps_recurring_mandate' => '\Frisbii\lib/Model\VippsRecurringMandate',
-        'sepa_mandate' => '\Frisbii\lib/Model\SepaMandate',
-        'twint_mandate' => '\Frisbii\lib/Model\TwintMandate',
-        'offline_mandate' => '\Frisbii\lib/Model\OfflineMandate',
-        'paypal_mandate' => '\Frisbii\lib/Model\PaypalMandate',
-        'sepa_ebics_mandate' => '\Frisbii\lib/Model\SepaEbicsMandate'
+        'mps_subscription' => '\Frisbii\lib\Model\MpsSubscriptionV2',
+        'vipps_recurring_mandate' => '\Frisbii\lib\Model\VippsRecurringMandate',
+        'sepa_mandate' => '\Frisbii\lib\Model\SepaMandate',
+        'twint_mandate' => '\Frisbii\lib\Model\TwintMandate',
+        'offline_mandate' => '\Frisbii\lib\Model\OfflineMandate',
+        'paypal_mandate' => '\Frisbii\lib\Model\PaypalMandate',
+        'sepa_ebics_mandate' => '\Frisbii\lib\Model\SepaEbicsMandate'
     ];
 
     /**
@@ -526,7 +526,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \Frisbii\lib/Model\CardV2
+     * @return \Frisbii\lib\Model\CardV2
      */
     public function getCard()
     {
@@ -536,7 +536,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \Frisbii\lib/Model\CardV2 $card card
+     * @param \Frisbii\lib\Model\CardV2 $card card
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets applepay
      *
-     * @return \Frisbii\lib/Model\CardV2
+     * @return \Frisbii\lib\Model\CardV2
      */
     public function getApplepay()
     {
@@ -560,7 +560,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets applepay
      *
-     * @param \Frisbii\lib/Model\CardV2 $applepay applepay
+     * @param \Frisbii\lib\Model\CardV2 $applepay applepay
      *
      * @return $this
      */
@@ -607,7 +607,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets mps_subscription
      *
-     * @return \Frisbii\lib/Model\MpsSubscriptionV2
+     * @return \Frisbii\lib\Model\MpsSubscriptionV2
      */
     public function getMpsSubscription()
     {
@@ -617,7 +617,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets mps_subscription
      *
-     * @param \Frisbii\lib/Model\MpsSubscriptionV2 $mps_subscription mps_subscription
+     * @param \Frisbii\lib\Model\MpsSubscriptionV2 $mps_subscription mps_subscription
      *
      * @return $this
      */
@@ -631,7 +631,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_recurring_mandate
      *
-     * @return \Frisbii\lib/Model\VippsRecurringMandate
+     * @return \Frisbii\lib\Model\VippsRecurringMandate
      */
     public function getVippsRecurringMandate()
     {
@@ -641,7 +641,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_recurring_mandate
      *
-     * @param \Frisbii\lib/Model\VippsRecurringMandate $vipps_recurring_mandate vipps_recurring_mandate
+     * @param \Frisbii\lib\Model\VippsRecurringMandate $vipps_recurring_mandate vipps_recurring_mandate
      *
      * @return $this
      */
@@ -655,7 +655,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets sepa_mandate
      *
-     * @return \Frisbii\lib/Model\SepaMandate
+     * @return \Frisbii\lib\Model\SepaMandate
      */
     public function getSepaMandate()
     {
@@ -665,7 +665,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets sepa_mandate
      *
-     * @param \Frisbii\lib/Model\SepaMandate $sepa_mandate sepa_mandate
+     * @param \Frisbii\lib\Model\SepaMandate $sepa_mandate sepa_mandate
      *
      * @return $this
      */
@@ -679,7 +679,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets twint_mandate
      *
-     * @return \Frisbii\lib/Model\TwintMandate
+     * @return \Frisbii\lib\Model\TwintMandate
      */
     public function getTwintMandate()
     {
@@ -689,7 +689,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets twint_mandate
      *
-     * @param \Frisbii\lib/Model\TwintMandate $twint_mandate twint_mandate
+     * @param \Frisbii\lib\Model\TwintMandate $twint_mandate twint_mandate
      *
      * @return $this
      */
@@ -703,7 +703,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets offline_mandate
      *
-     * @return \Frisbii\lib/Model\OfflineMandate
+     * @return \Frisbii\lib\Model\OfflineMandate
      */
     public function getOfflineMandate()
     {
@@ -713,7 +713,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets offline_mandate
      *
-     * @param \Frisbii\lib/Model\OfflineMandate $offline_mandate offline_mandate
+     * @param \Frisbii\lib\Model\OfflineMandate $offline_mandate offline_mandate
      *
      * @return $this
      */
@@ -727,7 +727,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets paypal_mandate
      *
-     * @return \Frisbii\lib/Model\PaypalMandate
+     * @return \Frisbii\lib\Model\PaypalMandate
      */
     public function getPaypalMandate()
     {
@@ -737,7 +737,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets paypal_mandate
      *
-     * @param \Frisbii\lib/Model\PaypalMandate $paypal_mandate paypal_mandate
+     * @param \Frisbii\lib\Model\PaypalMandate $paypal_mandate paypal_mandate
      *
      * @return $this
      */
@@ -751,7 +751,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Gets sepa_ebics_mandate
      *
-     * @return \Frisbii\lib/Model\SepaEbicsMandate
+     * @return \Frisbii\lib\Model\SepaEbicsMandate
      */
     public function getSepaEbicsMandate()
     {
@@ -761,7 +761,7 @@ class PaymentMethodV2 implements ModelInterface, ArrayAccess
     /**
      * Sets sepa_ebics_mandate
      *
-     * @param \Frisbii\lib/Model\SepaEbicsMandate $sepa_ebics_mandate sepa_ebics_mandate
+     * @param \Frisbii\lib\Model\SepaEbicsMandate $sepa_ebics_mandate sepa_ebics_mandate
      *
      * @return $this
      */

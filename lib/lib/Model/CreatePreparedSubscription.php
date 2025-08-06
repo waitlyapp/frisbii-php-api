@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -63,7 +63,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
         'test' => 'bool',
         'handle' => 'string',
         'metadata' => 'map[string,object]',
-        'create_customer' => '\Frisbii\lib/Model\CreateCustomer',
+        'create_customer' => '\Frisbii\lib\Model\CreateCustomer',
         'plan_version' => 'int',
         'amount_incl_vat' => 'bool',
         'generate_handle' => 'bool',
@@ -73,13 +73,13 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
         'no_trial' => 'bool',
         'no_setup_fee' => 'bool',
         'trial_period' => 'string',
-        'subscription_discounts' => '\Frisbii\lib/Model\CreateSubscriptionDiscount[]',
+        'subscription_discounts' => '\Frisbii\lib\Model\CreateSubscriptionDiscount[]',
         'coupon_codes' => 'string[]',
-        'add_ons' => '\Frisbii\lib/Model\CreateSubscriptionAddOn[]',
-        'additional_costs' => '\Frisbii\lib/Model\CreateSubscriptionAdditionalCost[]',
+        'add_ons' => '\Frisbii\lib\Model\CreateSubscriptionAddOn[]',
+        'additional_costs' => '\Frisbii\lib\Model\CreateSubscriptionAdditionalCost[]',
         'additional_entitlements' => 'string[]',
         'excluded_entitlements' => 'string[]',
-        'metered_billing_products' => '\Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct[]'
+        'metered_billing_products' => '\Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct[]'
     ];
 
     /**
@@ -513,7 +513,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets create_customer
      *
-     * @return \Frisbii\lib/Model\CreateCustomer
+     * @return \Frisbii\lib\Model\CreateCustomer
      */
     public function getCreateCustomer()
     {
@@ -523,7 +523,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets create_customer
      *
-     * @param \Frisbii\lib/Model\CreateCustomer $create_customer create_customer
+     * @param \Frisbii\lib\Model\CreateCustomer $create_customer create_customer
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_discounts
      *
-     * @return \Frisbii\lib/Model\CreateSubscriptionDiscount[]
+     * @return \Frisbii\lib\Model\CreateSubscriptionDiscount[]
      */
     public function getSubscriptionDiscounts()
     {
@@ -763,7 +763,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_discounts
      *
-     * @param \Frisbii\lib/Model\CreateSubscriptionDiscount[] $subscription_discounts Discounts to attach to subscription. A maximum of 100 discounts is allowed.
+     * @param \Frisbii\lib\Model\CreateSubscriptionDiscount[] $subscription_discounts Discounts to attach to subscription. A maximum of 100 discounts is allowed.
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets add_ons
      *
-     * @return \Frisbii\lib/Model\CreateSubscriptionAddOn[]
+     * @return \Frisbii\lib\Model\CreateSubscriptionAddOn[]
      */
     public function getAddOns()
     {
@@ -811,7 +811,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets add_ons
      *
-     * @param \Frisbii\lib/Model\CreateSubscriptionAddOn[] $add_ons Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed.
+     * @param \Frisbii\lib\Model\CreateSubscriptionAddOn[] $add_ons Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed.
      *
      * @return $this
      */
@@ -825,7 +825,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets additional_costs
      *
-     * @return \Frisbii\lib/Model\CreateSubscriptionAdditionalCost[]
+     * @return \Frisbii\lib\Model\CreateSubscriptionAdditionalCost[]
      */
     public function getAdditionalCosts()
     {
@@ -835,7 +835,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets additional_costs
      *
-     * @param \Frisbii\lib/Model\CreateSubscriptionAdditionalCost[] $additional_costs Additional costs to add to subscription at creation time. A maximum of 100 additional costs is allowed.
+     * @param \Frisbii\lib\Model\CreateSubscriptionAdditionalCost[] $additional_costs Additional costs to add to subscription at creation time. A maximum of 100 additional costs is allowed.
      *
      * @return $this
      */
@@ -897,7 +897,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets metered_billing_products
      *
-     * @return \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct[]
+     * @return \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct[]
      */
     public function getMeteredBillingProducts()
     {
@@ -907,7 +907,7 @@ class CreatePreparedSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets metered_billing_products
      *
-     * @param \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct[] $metered_billing_products Metered billing products to attach to subscription.
+     * @param \Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct[] $metered_billing_products Metered billing products to attach to subscription.
      *
      * @return $this
      */

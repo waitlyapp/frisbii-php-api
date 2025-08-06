@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -95,7 +95,7 @@ class ChargeApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function cancelCharge($handle)
     {
@@ -112,11 +112,11 @@ class ChargeApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Charge, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Charge, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelChargeWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->cancelChargeRequest($handle);
 
         try {
@@ -168,7 +168,7 @@ class ChargeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Charge',
+                        '\Frisbii\lib\Model\Charge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -224,7 +224,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,7 +266,7 @@ class ChargeApi
      */
     public function cancelChargeAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->cancelChargeRequest($handle);
 
         return $this->client
@@ -413,11 +413,11 @@ class ChargeApi
      *
      * Create charge
      *
-     * @param  \Frisbii\lib/Model\CreateCharge $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCharge $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function createCharge($body)
     {
@@ -430,15 +430,15 @@ class ChargeApi
      *
      * Create charge
      *
-     * @param  \Frisbii\lib/Model\CreateCharge $body (required)
+     * @param  \Frisbii\lib\Model\CreateCharge $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Charge, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Charge, HTTP status code, HTTP response headers (array of strings)
      */
     public function createChargeWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->createChargeRequest($body);
 
         try {
@@ -490,7 +490,7 @@ class ChargeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Charge',
+                        '\Frisbii\lib\Model\Charge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +514,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -538,7 +538,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -546,7 +546,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -561,7 +561,7 @@ class ChargeApi
      *
      * Create charge
      *
-     * @param  \Frisbii\lib/Model\CreateCharge $body (required)
+     * @param  \Frisbii\lib\Model\CreateCharge $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -581,14 +581,14 @@ class ChargeApi
      *
      * Create charge
      *
-     * @param  \Frisbii\lib/Model\CreateCharge $body (required)
+     * @param  \Frisbii\lib\Model\CreateCharge $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createChargeAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->createChargeRequest($body);
 
         return $this->client
@@ -631,7 +631,7 @@ class ChargeApi
     /**
      * Create request for operation 'createCharge'
      *
-     * @param  \Frisbii\lib/Model\CreateCharge $body (required)
+     * @param  \Frisbii\lib\Model\CreateCharge $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -792,7 +792,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -800,7 +800,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -808,7 +808,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -816,7 +816,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -824,7 +824,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -832,7 +832,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -840,7 +840,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1019,7 +1019,7 @@ class ChargeApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function getCharge($handle)
     {
@@ -1036,11 +1036,11 @@ class ChargeApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Charge, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Charge, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChargeWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->getChargeRequest($handle);
 
         try {
@@ -1092,7 +1092,7 @@ class ChargeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Charge',
+                        '\Frisbii\lib\Model\Charge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1108,7 +1108,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1116,7 +1116,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1124,7 +1124,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1132,7 +1132,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1140,7 +1140,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1148,7 +1148,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1190,7 +1190,7 @@ class ChargeApi
      */
     public function getChargeAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->getChargeRequest($handle);
 
         return $this->client
@@ -1342,7 +1342,7 @@ class ChargeApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function offlineSettle($id, $transaction)
     {
@@ -1360,11 +1360,11 @@ class ChargeApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Charge, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Charge, HTTP status code, HTTP response headers (array of strings)
      */
     public function offlineSettleWithHttpInfo($id, $transaction)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->offlineSettleRequest($id, $transaction);
 
         try {
@@ -1416,7 +1416,7 @@ class ChargeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Charge',
+                        '\Frisbii\lib\Model\Charge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1424,7 +1424,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1432,7 +1432,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1440,7 +1440,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1448,7 +1448,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1456,7 +1456,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1464,7 +1464,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1472,7 +1472,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1516,7 +1516,7 @@ class ChargeApi
      */
     public function offlineSettleAsyncWithHttpInfo($id, $transaction)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->offlineSettleRequest($id, $transaction);
 
         return $this->client
@@ -1678,11 +1678,11 @@ class ChargeApi
      *
      * Prepare charge
      *
-     * @param  \Frisbii\lib/Model\PrepareChargeDto $body body (required)
+     * @param  \Frisbii\lib\Model\PrepareChargeDto $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function prepareCharge($body)
     {
@@ -1695,15 +1695,15 @@ class ChargeApi
      *
      * Prepare charge
      *
-     * @param  \Frisbii\lib/Model\PrepareChargeDto $body (required)
+     * @param  \Frisbii\lib\Model\PrepareChargeDto $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Charge, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Charge, HTTP status code, HTTP response headers (array of strings)
      */
     public function prepareChargeWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->prepareChargeRequest($body);
 
         try {
@@ -1755,7 +1755,7 @@ class ChargeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Charge',
+                        '\Frisbii\lib\Model\Charge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1763,7 +1763,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1771,7 +1771,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1779,7 +1779,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1787,7 +1787,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1795,7 +1795,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1803,7 +1803,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1811,7 +1811,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1826,7 +1826,7 @@ class ChargeApi
      *
      * Prepare charge
      *
-     * @param  \Frisbii\lib/Model\PrepareChargeDto $body (required)
+     * @param  \Frisbii\lib\Model\PrepareChargeDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1846,14 +1846,14 @@ class ChargeApi
      *
      * Prepare charge
      *
-     * @param  \Frisbii\lib/Model\PrepareChargeDto $body (required)
+     * @param  \Frisbii\lib\Model\PrepareChargeDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function prepareChargeAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->prepareChargeRequest($body);
 
         return $this->client
@@ -1896,7 +1896,7 @@ class ChargeApi
     /**
      * Create request for operation 'prepareCharge'
      *
-     * @param  \Frisbii\lib/Model\PrepareChargeDto $body (required)
+     * @param  \Frisbii\lib\Model\PrepareChargeDto $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1996,11 +1996,11 @@ class ChargeApi
      * Settle charge
      *
      * @param  string $handle Charge handle (required)
-     * @param  \Frisbii\lib/Model\SettleCharge $body body (optional)
+     * @param  \Frisbii\lib\Model\SettleCharge $body body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function settleCharge($handle, $body = null)
     {
@@ -2014,15 +2014,15 @@ class ChargeApi
      * Settle charge
      *
      * @param  string $handle Charge handle (required)
-     * @param  \Frisbii\lib/Model\SettleCharge $body (optional)
+     * @param  \Frisbii\lib\Model\SettleCharge $body (optional)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Charge, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Charge, HTTP status code, HTTP response headers (array of strings)
      */
     public function settleChargeWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->settleChargeRequest($handle, $body);
 
         try {
@@ -2074,7 +2074,7 @@ class ChargeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Charge',
+                        '\Frisbii\lib\Model\Charge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2082,7 +2082,7 @@ class ChargeApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2090,7 +2090,7 @@ class ChargeApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2098,7 +2098,7 @@ class ChargeApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2106,7 +2106,7 @@ class ChargeApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2114,7 +2114,7 @@ class ChargeApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2122,7 +2122,7 @@ class ChargeApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2130,7 +2130,7 @@ class ChargeApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2146,7 +2146,7 @@ class ChargeApi
      * Settle charge
      *
      * @param  string $handle Charge handle (required)
-     * @param  \Frisbii\lib/Model\SettleCharge $body (optional)
+     * @param  \Frisbii\lib\Model\SettleCharge $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2167,14 +2167,14 @@ class ChargeApi
      * Settle charge
      *
      * @param  string $handle Charge handle (required)
-     * @param  \Frisbii\lib/Model\SettleCharge $body (optional)
+     * @param  \Frisbii\lib\Model\SettleCharge $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function settleChargeAsyncWithHttpInfo($handle, $body = null)
     {
-        $returnType = '\Frisbii\lib/Model\Charge';
+        $returnType = '\Frisbii\lib\Model\Charge';
         $request = $this->settleChargeRequest($handle, $body);
 
         return $this->client
@@ -2218,7 +2218,7 @@ class ChargeApi
      * Create request for operation 'settleCharge'
      *
      * @param  string $handle Charge handle (required)
-     * @param  \Frisbii\lib/Model\SettleCharge $body (optional)
+     * @param  \Frisbii\lib\Model\SettleCharge $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -225,7 +225,7 @@ class Dispute implements ModelInterface, ArrayAccess
     const OUTCOME_PROVIDER_PAYOUT = 'provider_payout';
     const REASON_PRODUCT_NOT_RECEIVED = 'product_not_received';
     const REASON_PRODUCT_NOT_AS_DESCRIBED = 'product_not_as_described';
-    const REASON_UNAUTHORIZED = 'unauthorized';
+    const REASON_UNAUTHORISED = 'unauthorised';
     const REASON_CREDIT_NOT_PROCESSED = 'credit_not_processed';
     const REASON_DUPLICATE = 'duplicate';
     const REASON_INCORRECT_AMOUNT = 'incorrect_amount';
@@ -277,7 +277,7 @@ class Dispute implements ModelInterface, ArrayAccess
         return [
             self::REASON_PRODUCT_NOT_RECEIVED,
             self::REASON_PRODUCT_NOT_AS_DESCRIBED,
-            self::REASON_UNAUTHORIZED,
+            self::REASON_UNAUTHORISED,
             self::REASON_CREDIT_NOT_PROCESSED,
             self::REASON_DUPLICATE,
             self::REASON_INCORRECT_AMOUNT,
@@ -606,7 +606,7 @@ class Dispute implements ModelInterface, ArrayAccess
     /**
      * Sets reason
      *
-     * @param string $reason reason for the dispute, one of the following: `product_not_received`, `product_not_as_described`, `unauthorized`, `credit_not_processed`, `duplicate`, `incorrect_amount`, `payment_by_other_means`, `cancelled_recurring_billing`, `insufficient_funds`, `other`
+     * @param string $reason reason for the dispute, one of the following: `product_not_received`, `product_not_as_described`, `unauthorised`, `credit_not_processed`, `duplicate`, `incorrect_amount`, `payment_by_other_means`, `cancelled_recurring_billing`, `insufficient_funds`, `other`
      *
      * @return $this
      */

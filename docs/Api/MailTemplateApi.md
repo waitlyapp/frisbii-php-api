@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getSample**](MailTemplateApi.md#getsample) | **GET** /v1/mail_template/sample | Get sample data
 
 # **getSample**
-> \Frisbii\lib/Model\InlineResponse200 getSample()
+> \Frisbii\lib\Model\InlineResponse200 getSample()
 
 Get sample data
 
@@ -21,7 +21,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\MailTemplateApi(
+$apiInstance = new Frisbii\lib\Api\MailTemplateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib/Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Frisbii\lib\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,12 +91,12 @@ class CreditNoteApi
      *
      * Create credit note and credit from Invoice. Available only for subscription invoices
      *
-     * @param  \Frisbii\lib/Model\CreateCreditInvoice $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCreditInvoice $body body (required)
      * @param  string $id Invoice id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceCreditNoteV2
+     * @return \Frisbii\lib\Model\InvoiceCreditNoteV2
      */
     public function creditInvoice($body, $id)
     {
@@ -109,16 +109,16 @@ class CreditNoteApi
      *
      * Create credit note and credit from Invoice. Available only for subscription invoices
      *
-     * @param  \Frisbii\lib/Model\CreateCreditInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCreditInvoice $body (required)
      * @param  string $id Invoice id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceCreditNoteV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceCreditNoteV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function creditInvoiceWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceCreditNoteV2';
+        $returnType = '\Frisbii\lib\Model\InvoiceCreditNoteV2';
         $request = $this->creditInvoiceRequest($body, $id);
 
         try {
@@ -170,7 +170,7 @@ class CreditNoteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceCreditNoteV2',
+                        '\Frisbii\lib\Model\InvoiceCreditNoteV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class CreditNoteApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class CreditNoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class CreditNoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class CreditNoteApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CreditNoteApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class CreditNoteApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -233,7 +233,7 @@ class CreditNoteApi
      *
      * Create credit note and credit from Invoice. Available only for subscription invoices
      *
-     * @param  \Frisbii\lib/Model\CreateCreditInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCreditInvoice $body (required)
      * @param  string $id Invoice id (required)
      *
      * @throws \InvalidArgumentException
@@ -254,7 +254,7 @@ class CreditNoteApi
      *
      * Create credit note and credit from Invoice. Available only for subscription invoices
      *
-     * @param  \Frisbii\lib/Model\CreateCreditInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCreditInvoice $body (required)
      * @param  string $id Invoice id (required)
      *
      * @throws \InvalidArgumentException
@@ -262,7 +262,7 @@ class CreditNoteApi
      */
     public function creditInvoiceAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceCreditNoteV2';
+        $returnType = '\Frisbii\lib\Model\InvoiceCreditNoteV2';
         $request = $this->creditInvoiceRequest($body, $id);
 
         return $this->client
@@ -305,7 +305,7 @@ class CreditNoteApi
     /**
      * Create request for operation 'creditInvoice'
      *
-     * @param  \Frisbii\lib/Model\CreateCreditInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCreditInvoice $body (required)
      * @param  string $id Invoice id (required)
      *
      * @throws \InvalidArgumentException
@@ -356,7 +356,7 @@ class CreditNoteApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -423,7 +423,7 @@ class CreditNoteApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceCreditNoteV2
+     * @return \Frisbii\lib\Model\InvoiceCreditNoteV2
      */
     public function getCreditNote($id)
     {
@@ -440,11 +440,11 @@ class CreditNoteApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceCreditNoteV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceCreditNoteV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditNoteWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceCreditNoteV2';
+        $returnType = '\Frisbii\lib\Model\InvoiceCreditNoteV2';
         $request = $this->getCreditNoteRequest($id);
 
         try {
@@ -496,7 +496,7 @@ class CreditNoteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceCreditNoteV2',
+                        '\Frisbii\lib\Model\InvoiceCreditNoteV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class CreditNoteApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class CreditNoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +520,7 @@ class CreditNoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class CreditNoteApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -536,7 +536,7 @@ class CreditNoteApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -544,7 +544,7 @@ class CreditNoteApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class CreditNoteApi
      */
     public function getCreditNoteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceCreditNoteV2';
+        $returnType = '\Frisbii\lib\Model\InvoiceCreditNoteV2';
         $request = $this->getCreditNoteRequest($id);
 
         return $this->client

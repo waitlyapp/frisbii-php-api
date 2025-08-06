@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **subscription** | **string** | Subscription handle, will be null for a one-time customer invoice | [optional] 
 **amount_vat** | **int** | Credit note vat amount calculated as rounded summed fractional vats for each credit note lines | 
 **amount_ex_vat** | **int** | Credit note total amount excluding VAT calculated as summed amounts excl. vats for each credit note lines | [optional] 
-**credit_note_lines** | [**\Frisbii\lib/Model\CreditNoteLine[]**](CreditNoteLine.md) | Credit note lines | 
+**credit_note_lines** | [**\Frisbii\lib\Model\CreditNoteLine[]**](CreditNoteLine.md) | Credit note lines | 
 **accounting_number** | **string** | Credit note accounting number | [optional] 
 **debtor_id** | **int** | Customer debtor id | [optional] 
 **download_url** | **string** | Link to the credit note PDF, available if PDF generation and accounting features are enabled (only for subscription invoices, not charges). Access requires authentication. See https://docs.frisbii.com/reference/authentication. The response is a binary PDF file. | [optional] 

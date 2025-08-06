@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,12 +91,12 @@ class CustomerApi
      *
      * Create invoice for customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerInvoice $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerInvoice $body body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function createCustomerInvoice($body, $handle)
     {
@@ -109,16 +109,16 @@ class CustomerApi
      *
      * Create invoice for customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerInvoice $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerInvoiceWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->createCustomerInvoiceRequest($body, $handle);
 
         try {
@@ -170,7 +170,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Invoice',
+                        '\Frisbii\lib\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -226,7 +226,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -241,7 +241,7 @@ class CustomerApi
      *
      * Create invoice for customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerInvoice $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \InvalidArgumentException
@@ -262,7 +262,7 @@ class CustomerApi
      *
      * Create invoice for customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerInvoice $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class CustomerApi
      */
     public function createCustomerInvoiceAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Invoice';
+        $returnType = '\Frisbii\lib\Model\Invoice';
         $request = $this->createCustomerInvoiceRequest($body, $handle);
 
         return $this->client
@@ -313,7 +313,7 @@ class CustomerApi
     /**
      * Create request for operation 'createCustomerInvoice'
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerInvoice $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerInvoice $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \InvalidArgumentException
@@ -427,11 +427,11 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomer $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomer $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Customer
+     * @return \Frisbii\lib\Model\Customer
      */
     public function createCustomerJson($body)
     {
@@ -444,15 +444,15 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomer $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Customer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Customer, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->createCustomerJsonRequest($body);
 
         try {
@@ -504,7 +504,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Customer',
+                        '\Frisbii\lib\Model\Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +520,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -536,7 +536,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -544,7 +544,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -552,7 +552,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -575,7 +575,7 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomer $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -595,14 +595,14 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \Frisbii\lib/Model\CreateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomer $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCustomerJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->createCustomerJsonRequest($body);
 
         return $this->client
@@ -645,7 +645,7 @@ class CustomerApi
     /**
      * Create request for operation 'createCustomerJson'
      *
-     * @param  \Frisbii\lib/Model\CreateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomer $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -744,12 +744,12 @@ class CustomerApi
      *
      * Create customer note
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerNote $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerNote $body body (required)
      * @param  string $handle handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CustomerNote
+     * @return \Frisbii\lib\Model\CustomerNote
      */
     public function createCustomerNoteJson($body, $handle)
     {
@@ -762,16 +762,16 @@ class CustomerApi
      *
      * Create customer note
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerNote $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerNote $body (required)
      * @param  string $handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CustomerNote, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CustomerNote, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerNoteJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerNote';
+        $returnType = '\Frisbii\lib\Model\CustomerNote';
         $request = $this->createCustomerNoteJsonRequest($body, $handle);
 
         try {
@@ -823,7 +823,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CustomerNote',
+                        '\Frisbii\lib\Model\CustomerNote',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -847,7 +847,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -855,7 +855,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -863,7 +863,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -871,7 +871,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -879,7 +879,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -894,7 +894,7 @@ class CustomerApi
      *
      * Create customer note
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerNote $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerNote $body (required)
      * @param  string $handle (required)
      *
      * @throws \InvalidArgumentException
@@ -915,7 +915,7 @@ class CustomerApi
      *
      * Create customer note
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerNote $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerNote $body (required)
      * @param  string $handle (required)
      *
      * @throws \InvalidArgumentException
@@ -923,7 +923,7 @@ class CustomerApi
      */
     public function createCustomerNoteJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerNote';
+        $returnType = '\Frisbii\lib\Model\CustomerNote';
         $request = $this->createCustomerNoteJsonRequest($body, $handle);
 
         return $this->client
@@ -966,7 +966,7 @@ class CustomerApi
     /**
      * Create request for operation 'createCustomerNoteJson'
      *
-     * @param  \Frisbii\lib/Model\CreateCustomerNote $body (required)
+     * @param  \Frisbii\lib\Model\CreateCustomerNote $body (required)
      * @param  string $handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1084,7 +1084,7 @@ class CustomerApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Customer
+     * @return \Frisbii\lib\Model\Customer
      */
     public function deleteCustomer($handle)
     {
@@ -1101,11 +1101,11 @@ class CustomerApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Customer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Customer, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomerWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->deleteCustomerRequest($handle);
 
         try {
@@ -1157,7 +1157,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Customer',
+                        '\Frisbii\lib\Model\Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1165,7 +1165,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1173,7 +1173,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1181,7 +1181,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1189,7 +1189,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1197,7 +1197,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1205,7 +1205,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1213,7 +1213,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1255,7 +1255,7 @@ class CustomerApi
      */
     public function deleteCustomerAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->deleteCustomerRequest($handle);
 
         return $this->client
@@ -1464,7 +1464,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1472,7 +1472,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1480,7 +1480,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1488,7 +1488,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1496,7 +1496,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1504,7 +1504,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1512,7 +1512,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1691,7 +1691,7 @@ class CustomerApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Customer
+     * @return \Frisbii\lib\Model\Customer
      */
     public function getCustomer($handle)
     {
@@ -1708,11 +1708,11 @@ class CustomerApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Customer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Customer, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->getCustomerRequest($handle);
 
         try {
@@ -1764,7 +1764,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Customer',
+                        '\Frisbii\lib\Model\Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1772,7 +1772,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1780,7 +1780,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1796,7 +1796,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1804,7 +1804,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1812,7 +1812,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1820,7 +1820,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1862,7 +1862,7 @@ class CustomerApi
      */
     public function getCustomerAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->getCustomerRequest($handle);
 
         return $this->client
@@ -2013,7 +2013,7 @@ class CustomerApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CustomerNote[]
+     * @return \Frisbii\lib\Model\CustomerNote[]
      */
     public function getCustomerNotes($handle)
     {
@@ -2030,11 +2030,11 @@ class CustomerApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CustomerNote[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CustomerNote[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerNotesWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerNote[]';
+        $returnType = '\Frisbii\lib\Model\CustomerNote[]';
         $request = $this->getCustomerNotesRequest($handle);
 
         try {
@@ -2086,7 +2086,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CustomerNote[]',
+                        '\Frisbii\lib\Model\CustomerNote[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2094,7 +2094,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2102,7 +2102,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2110,7 +2110,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2118,7 +2118,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2126,7 +2126,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2134,7 +2134,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2142,7 +2142,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2184,7 +2184,7 @@ class CustomerApi
      */
     public function getCustomerNotesAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerNote[]';
+        $returnType = '\Frisbii\lib\Model\CustomerNote[]';
         $request = $this->getCustomerNotesRequest($handle);
 
         return $this->client
@@ -2416,7 +2416,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2424,7 +2424,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2432,7 +2432,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2440,7 +2440,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2448,7 +2448,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2456,7 +2456,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2464,7 +2464,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2653,12 +2653,12 @@ class CustomerApi
      *
      * Update customer
      *
-     * @param  \Frisbii\lib/Model\UpdateCustomer $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateCustomer $body body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Customer
+     * @return \Frisbii\lib\Model\Customer
      */
     public function updateCustomerJson($body, $handle)
     {
@@ -2671,16 +2671,16 @@ class CustomerApi
      *
      * Update customer
      *
-     * @param  \Frisbii\lib/Model\UpdateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCustomer $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Customer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Customer, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerJsonWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->updateCustomerJsonRequest($body, $handle);
 
         try {
@@ -2732,7 +2732,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Customer',
+                        '\Frisbii\lib\Model\Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2740,7 +2740,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2748,7 +2748,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2756,7 +2756,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2764,7 +2764,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2772,7 +2772,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2780,7 +2780,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2788,7 +2788,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2803,7 +2803,7 @@ class CustomerApi
      *
      * Update customer
      *
-     * @param  \Frisbii\lib/Model\UpdateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCustomer $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2824,7 +2824,7 @@ class CustomerApi
      *
      * Update customer
      *
-     * @param  \Frisbii\lib/Model\UpdateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCustomer $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2832,7 +2832,7 @@ class CustomerApi
      */
     public function updateCustomerJsonAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Customer';
+        $returnType = '\Frisbii\lib\Model\Customer';
         $request = $this->updateCustomerJsonRequest($body, $handle);
 
         return $this->client
@@ -2875,7 +2875,7 @@ class CustomerApi
     /**
      * Create request for operation 'updateCustomerJson'
      *
-     * @param  \Frisbii\lib/Model\UpdateCustomer $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCustomer $body (required)
      * @param  string $handle Customer handle (required)
      *
      * @throws \InvalidArgumentException
@@ -3076,7 +3076,7 @@ class CustomerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3084,7 +3084,7 @@ class CustomerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3092,7 +3092,7 @@ class CustomerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3100,7 +3100,7 @@ class CustomerApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3108,7 +3108,7 @@ class CustomerApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3116,7 +3116,7 @@ class CustomerApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3124,7 +3124,7 @@ class CustomerApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3262,7 +3262,7 @@ class CustomerApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

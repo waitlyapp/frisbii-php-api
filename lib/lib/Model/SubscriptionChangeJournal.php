@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,11 +57,11 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'change' => '\Frisbii\lib/Model\SubscriptionChange',
-        'invoice' => '\Frisbii\lib/Model\Invoice',
-        'new_plan' => '\Frisbii\lib/Model\Plan',
+        'change' => '\Frisbii\lib\Model\SubscriptionChange',
+        'invoice' => '\Frisbii\lib\Model\Invoice',
+        'new_plan' => '\Frisbii\lib\Model\Plan',
         'compensation_amount' => 'int',
-        'compensation_invoice' => '\Frisbii\lib/Model\Invoice',
+        'compensation_invoice' => '\Frisbii\lib\Model\Invoice',
         'changed_period_start_date' => '\DateTime'
     ];
 
@@ -235,7 +235,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Gets change
      *
-     * @return \Frisbii\lib/Model\SubscriptionChange
+     * @return \Frisbii\lib\Model\SubscriptionChange
      */
     public function getChange()
     {
@@ -245,7 +245,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Sets change
      *
-     * @param \Frisbii\lib/Model\SubscriptionChange $change change
+     * @param \Frisbii\lib\Model\SubscriptionChange $change change
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Gets invoice
      *
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function getInvoice()
     {
@@ -269,7 +269,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Sets invoice
      *
-     * @param \Frisbii\lib/Model\Invoice $invoice invoice
+     * @param \Frisbii\lib\Model\Invoice $invoice invoice
      *
      * @return $this
      */
@@ -283,7 +283,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Gets new_plan
      *
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function getNewPlan()
     {
@@ -293,7 +293,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Sets new_plan
      *
-     * @param \Frisbii\lib/Model\Plan $new_plan new_plan
+     * @param \Frisbii\lib\Model\Plan $new_plan new_plan
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Gets compensation_invoice
      *
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function getCompensationInvoice()
     {
@@ -341,7 +341,7 @@ class SubscriptionChangeJournal implements ModelInterface, ArrayAccess
     /**
      * Sets compensation_invoice
      *
-     * @param \Frisbii\lib/Model\Invoice $compensation_invoice compensation_invoice
+     * @param \Frisbii\lib\Model\Invoice $compensation_invoice compensation_invoice
      *
      * @return $this
      */

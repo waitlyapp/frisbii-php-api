@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**updateInvoiceConfiguration**](InvoiceConfigurationApi.md#updateinvoiceconfiguration) | **POST** /v1/invoice_configuration | Create or update invoice configuration
 
 # **createInvoiceSequenceConfiguration**
-> \Frisbii\lib/Model\InvoiceSequenceConfiguration createInvoiceSequenceConfiguration($body)
+> \Frisbii\lib\Model\InvoiceSequenceConfiguration createInvoiceSequenceConfiguration($body)
 
 Set invoice sequence configuration
 
@@ -26,13 +26,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\InvoiceConfigurationApi(
+$apiInstance = new Frisbii\lib\Api\InvoiceConfigurationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\InvoiceSequenceConfiguration(); // \Frisbii\lib/Model\InvoiceSequenceConfiguration | 
+$body = new \Frisbii\lib\Model\InvoiceSequenceConfiguration(); // \Frisbii\lib\Model\InvoiceSequenceConfiguration | 
 
 try {
     $result = $apiInstance->createInvoiceSequenceConfiguration($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\InvoiceSequenceConfiguration**](../Model/InvoiceSequenceConfiguration.md)|  |
+ **body** | [**\Frisbii\lib\Model\InvoiceSequenceConfiguration**](../Model/InvoiceSequenceConfiguration.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\InvoiceSequenceConfiguration**](../Model/InvoiceSequenceConfiguration.md)
+[**\Frisbii\lib\Model\InvoiceSequenceConfiguration**](../Model/InvoiceSequenceConfiguration.md)
 
 ### Authorization
 
@@ -59,13 +59,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDebtorSettings**
-> \Frisbii\lib/Model\CustomerDebtorSettings getDebtorSettings()
+> \Frisbii\lib\Model\CustomerDebtorSettings getDebtorSettings()
 
 Get customer debtor settings
 
@@ -79,7 +79,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\InvoiceConfigurationApi(
+$apiInstance = new Frisbii\lib\Api\InvoiceConfigurationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,7 +100,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib/Model\CustomerDebtorSettings**](../Model/CustomerDebtorSettings.md)
+[**\Frisbii\lib\Model\CustomerDebtorSettings**](../Model/CustomerDebtorSettings.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoiceConfiguration**
-> \Frisbii\lib/Model\InvoiceConfiguration getInvoiceConfiguration()
+> \Frisbii\lib\Model\InvoiceConfiguration getInvoiceConfiguration()
 
 Get invoice configuration
 
@@ -128,7 +128,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\InvoiceConfigurationApi(
+$apiInstance = new Frisbii\lib\Api\InvoiceConfigurationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -149,7 +149,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib/Model\InvoiceConfiguration**](../Model/InvoiceConfiguration.md)
+[**\Frisbii\lib\Model\InvoiceConfiguration**](../Model/InvoiceConfiguration.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoiceSequenceConfiguration**
-> \Frisbii\lib/Model\InvoiceSequenceConfiguration getInvoiceSequenceConfiguration()
+> \Frisbii\lib\Model\InvoiceSequenceConfiguration getInvoiceSequenceConfiguration()
 
 Get invoice sequence configuration
 
@@ -177,7 +177,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\InvoiceConfigurationApi(
+$apiInstance = new Frisbii\lib\Api\InvoiceConfigurationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -198,7 +198,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib/Model\InvoiceSequenceConfiguration**](../Model/InvoiceSequenceConfiguration.md)
+[**\Frisbii\lib\Model\InvoiceSequenceConfiguration**](../Model/InvoiceSequenceConfiguration.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDebtorSettings**
-> \Frisbii\lib/Model\CustomerDebtorSettings updateDebtorSettings($body)
+> \Frisbii\lib\Model\CustomerDebtorSettings updateDebtorSettings($body)
 
 Create or update customer debtor settings
 
@@ -226,13 +226,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\InvoiceConfigurationApi(
+$apiInstance = new Frisbii\lib\Api\InvoiceConfigurationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CustomerDebtorSettings(); // \Frisbii\lib/Model\CustomerDebtorSettings | 
+$body = new \Frisbii\lib\Model\CustomerDebtorSettings(); // \Frisbii\lib\Model\CustomerDebtorSettings | 
 
 try {
     $result = $apiInstance->updateDebtorSettings($body);
@@ -247,11 +247,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CustomerDebtorSettings**](../Model/CustomerDebtorSettings.md)|  |
+ **body** | [**\Frisbii\lib\Model\CustomerDebtorSettings**](../Model/CustomerDebtorSettings.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\CustomerDebtorSettings**](../Model/CustomerDebtorSettings.md)
+[**\Frisbii\lib\Model\CustomerDebtorSettings**](../Model/CustomerDebtorSettings.md)
 
 ### Authorization
 
@@ -259,13 +259,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateInvoiceConfiguration**
-> \Frisbii\lib/Model\InvoiceConfiguration updateInvoiceConfiguration($body)
+> \Frisbii\lib\Model\InvoiceConfiguration updateInvoiceConfiguration($body)
 
 Create or update invoice configuration
 
@@ -279,13 +279,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\InvoiceConfigurationApi(
+$apiInstance = new Frisbii\lib\Api\InvoiceConfigurationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\InvoiceConfiguration(); // \Frisbii\lib/Model\InvoiceConfiguration | 
+$body = new \Frisbii\lib\Model\InvoiceConfiguration(); // \Frisbii\lib\Model\InvoiceConfiguration | 
 
 try {
     $result = $apiInstance->updateInvoiceConfiguration($body);
@@ -300,11 +300,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\InvoiceConfiguration**](../Model/InvoiceConfiguration.md)|  |
+ **body** | [**\Frisbii\lib\Model\InvoiceConfiguration**](../Model/InvoiceConfiguration.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\InvoiceConfiguration**](../Model/InvoiceConfiguration.md)
+[**\Frisbii\lib\Model\InvoiceConfiguration**](../Model/InvoiceConfiguration.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

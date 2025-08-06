@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,7 +56,7 @@ class MeteredUsages implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metered_usages' => '\Frisbii\lib/Model\MeteredUsage[]'
+        'metered_usages' => '\Frisbii\lib\Model\MeteredUsage[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class MeteredUsages implements ModelInterface, ArrayAccess
     /**
      * Gets metered_usages
      *
-     * @return \Frisbii\lib/Model\MeteredUsage[]
+     * @return \Frisbii\lib\Model\MeteredUsage[]
      */
     public function getMeteredUsages()
     {
@@ -217,7 +217,7 @@ class MeteredUsages implements ModelInterface, ArrayAccess
     /**
      * Sets metered_usages
      *
-     * @param \Frisbii\lib/Model\MeteredUsage[] $metered_usages List of metered usages.
+     * @param \Frisbii\lib\Model\MeteredUsage[] $metered_usages List of metered usages.
      *
      * @return $this
      */

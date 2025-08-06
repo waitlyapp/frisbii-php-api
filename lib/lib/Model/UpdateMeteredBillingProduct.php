@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -59,7 +59,7 @@ class UpdateMeteredBillingProduct implements ModelInterface, ArrayAccess
         'name' => 'string',
         'description' => 'string',
         'entitlements' => 'string[]',
-        'pricing' => '\Frisbii\lib/Model\UpdatePricingDto',
+        'pricing' => '\Frisbii\lib\Model\UpdatePricingDto',
         'all_plans' => 'bool',
         'usage_capture_method' => 'string',
         'auto_add_to_sub_on_usage' => 'bool'
@@ -321,7 +321,7 @@ class UpdateMeteredBillingProduct implements ModelInterface, ArrayAccess
     /**
      * Gets pricing
      *
-     * @return \Frisbii\lib/Model\UpdatePricingDto
+     * @return \Frisbii\lib\Model\UpdatePricingDto
      */
     public function getPricing()
     {
@@ -331,7 +331,7 @@ class UpdateMeteredBillingProduct implements ModelInterface, ArrayAccess
     /**
      * Sets pricing
      *
-     * @param \Frisbii\lib/Model\UpdatePricingDto $pricing pricing
+     * @param \Frisbii\lib\Model\UpdatePricingDto $pricing pricing
      *
      * @return $this
      */

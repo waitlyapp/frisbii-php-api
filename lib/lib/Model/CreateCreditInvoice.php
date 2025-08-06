@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,7 +56,7 @@ class CreateCreditInvoice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'note_lines' => '\Frisbii\lib/Model\CreateCreditNoteLine[]'
+        'note_lines' => '\Frisbii\lib\Model\CreateCreditNoteLine[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class CreateCreditInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets note_lines
      *
-     * @return \Frisbii\lib/Model\CreateCreditNoteLine[]
+     * @return \Frisbii\lib\Model\CreateCreditNoteLine[]
      */
     public function getNoteLines()
     {
@@ -217,7 +217,7 @@ class CreateCreditInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets note_lines
      *
-     * @param \Frisbii\lib/Model\CreateCreditNoteLine[] $note_lines Refund credit note lines
+     * @param \Frisbii\lib\Model\CreateCreditNoteLine[] $note_lines Refund credit note lines
      *
      * @return $this
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,14 +56,14 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer' => '\Frisbii\lib/Model\Customer',
-        'charge' => '\Frisbii\lib/Model\Charge',
-        'subscription' => '\Frisbii\lib/Model\Subscription',
-        'plan' => '\Frisbii\lib/Model\Plan',
-        'add_ons' => '\Frisbii\lib/Model\SubscriptionAddOn[]',
-        'discounts' => '\Frisbii\lib/Model\SubscriptionDiscount[]',
-        'subscription_invoice' => '\Frisbii\lib/Model\Invoice',
-        'cit_card_on_file' => '\Frisbii\lib/Model\PaymentMethodV2'
+        'customer' => '\Frisbii\lib\Model\Customer',
+        'charge' => '\Frisbii\lib\Model\Charge',
+        'subscription' => '\Frisbii\lib\Model\Subscription',
+        'plan' => '\Frisbii\lib\Model\Plan',
+        'add_ons' => '\Frisbii\lib\Model\SubscriptionAddOn[]',
+        'discounts' => '\Frisbii\lib\Model\SubscriptionDiscount[]',
+        'subscription_invoice' => '\Frisbii\lib\Model\Invoice',
+        'cit_card_on_file' => '\Frisbii\lib\Model\PaymentMethodV2'
     ];
 
     /**
@@ -246,7 +246,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Frisbii\lib/Model\Customer
+     * @return \Frisbii\lib\Model\Customer
      */
     public function getCustomer()
     {
@@ -256,7 +256,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Frisbii\lib/Model\Customer $customer customer
+     * @param \Frisbii\lib\Model\Customer $customer customer
      *
      * @return $this
      */
@@ -270,7 +270,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets charge
      *
-     * @return \Frisbii\lib/Model\Charge
+     * @return \Frisbii\lib\Model\Charge
      */
     public function getCharge()
     {
@@ -280,7 +280,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets charge
      *
-     * @param \Frisbii\lib/Model\Charge $charge charge
+     * @param \Frisbii\lib\Model\Charge $charge charge
      *
      * @return $this
      */
@@ -294,7 +294,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \Frisbii\lib/Model\Subscription
+     * @return \Frisbii\lib\Model\Subscription
      */
     public function getSubscription()
     {
@@ -304,7 +304,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \Frisbii\lib/Model\Subscription $subscription subscription
+     * @param \Frisbii\lib\Model\Subscription $subscription subscription
      *
      * @return $this
      */
@@ -318,7 +318,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets plan
      *
-     * @return \Frisbii\lib/Model\Plan
+     * @return \Frisbii\lib\Model\Plan
      */
     public function getPlan()
     {
@@ -328,7 +328,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets plan
      *
-     * @param \Frisbii\lib/Model\Plan $plan plan
+     * @param \Frisbii\lib\Model\Plan $plan plan
      *
      * @return $this
      */
@@ -342,7 +342,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets add_ons
      *
-     * @return \Frisbii\lib/Model\SubscriptionAddOn[]
+     * @return \Frisbii\lib\Model\SubscriptionAddOn[]
      */
     public function getAddOns()
     {
@@ -352,7 +352,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets add_ons
      *
-     * @param \Frisbii\lib/Model\SubscriptionAddOn[] $add_ons add_ons
+     * @param \Frisbii\lib\Model\SubscriptionAddOn[] $add_ons add_ons
      *
      * @return $this
      */
@@ -366,7 +366,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets discounts
      *
-     * @return \Frisbii\lib/Model\SubscriptionDiscount[]
+     * @return \Frisbii\lib\Model\SubscriptionDiscount[]
      */
     public function getDiscounts()
     {
@@ -376,7 +376,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets discounts
      *
-     * @param \Frisbii\lib/Model\SubscriptionDiscount[] $discounts discounts
+     * @param \Frisbii\lib\Model\SubscriptionDiscount[] $discounts discounts
      *
      * @return $this
      */
@@ -390,7 +390,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_invoice
      *
-     * @return \Frisbii\lib/Model\Invoice
+     * @return \Frisbii\lib\Model\Invoice
      */
     public function getSubscriptionInvoice()
     {
@@ -400,7 +400,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_invoice
      *
-     * @param \Frisbii\lib/Model\Invoice $subscription_invoice subscription_invoice
+     * @param \Frisbii\lib\Model\Invoice $subscription_invoice subscription_invoice
      *
      * @return $this
      */
@@ -414,7 +414,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets cit_card_on_file
      *
-     * @return \Frisbii\lib/Model\PaymentMethodV2
+     * @return \Frisbii\lib\Model\PaymentMethodV2
      */
     public function getCitCardOnFile()
     {
@@ -424,7 +424,7 @@ class CheckoutSessionDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets cit_card_on_file
      *
-     * @param \Frisbii\lib/Model\PaymentMethodV2 $cit_card_on_file cit_card_on_file
+     * @param \Frisbii\lib\Model\PaymentMethodV2 $cit_card_on_file cit_card_on_file
      *
      * @return $this
      */

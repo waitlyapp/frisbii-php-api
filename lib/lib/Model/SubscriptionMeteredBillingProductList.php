@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,7 +56,7 @@ class SubscriptionMeteredBillingProductList implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metered_billing_products' => '\Frisbii\lib/Model\SubscriptionMeteredBillingProduct[]'
+        'metered_billing_products' => '\Frisbii\lib\Model\SubscriptionMeteredBillingProduct[]'
     ];
 
     /**
@@ -204,7 +204,7 @@ class SubscriptionMeteredBillingProductList implements ModelInterface, ArrayAcce
     /**
      * Gets metered_billing_products
      *
-     * @return \Frisbii\lib/Model\SubscriptionMeteredBillingProduct[]
+     * @return \Frisbii\lib\Model\SubscriptionMeteredBillingProduct[]
      */
     public function getMeteredBillingProducts()
     {
@@ -214,7 +214,7 @@ class SubscriptionMeteredBillingProductList implements ModelInterface, ArrayAcce
     /**
      * Sets metered_billing_products
      *
-     * @param \Frisbii\lib/Model\SubscriptionMeteredBillingProduct[] $metered_billing_products metered_billing_products
+     * @param \Frisbii\lib\Model\SubscriptionMeteredBillingProduct[] $metered_billing_products metered_billing_products
      *
      * @return $this
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class CustomerList implements ModelInterface, ArrayAccess
         'to' => 'string',
         'from' => 'string',
         'range' => 'string',
-        'content' => '\Frisbii\lib/Model\Customer[]',
+        'content' => '\Frisbii\lib\Model\Customer[]',
         'next_page_token' => 'string'
     ];
 
@@ -405,7 +405,7 @@ class CustomerList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Customer[]
+     * @return \Frisbii\lib\Model\Customer[]
      */
     public function getContent()
     {
@@ -415,7 +415,7 @@ class CustomerList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Customer[] $content List of customers for current page
+     * @param \Frisbii\lib\Model\Customer[] $content List of customers for current page
      *
      * @return $this
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class SubscriptionMeteredUsageRecordList implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\MeteredUsageRecordListResponseDto[]',
+        'content' => '\Frisbii\lib\Model\MeteredUsageRecordListResponseDto[]',
         'next_page_token' => 'string'
     ];
 
@@ -342,7 +342,7 @@ class SubscriptionMeteredUsageRecordList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\MeteredUsageRecordListResponseDto[]
+     * @return \Frisbii\lib\Model\MeteredUsageRecordListResponseDto[]
      */
     public function getContent()
     {
@@ -352,7 +352,7 @@ class SubscriptionMeteredUsageRecordList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\MeteredUsageRecordListResponseDto[] $content content
+     * @param \Frisbii\lib\Model\MeteredUsageRecordListResponseDto[] $content content
      *
      * @return $this
      */

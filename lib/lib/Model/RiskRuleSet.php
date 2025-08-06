@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -61,7 +61,7 @@ class RiskRuleSet implements ModelInterface, ArrayAccess
         'description' => 'string',
         'operator' => 'string',
         'action' => 'string',
-        'rules' => '\Frisbii\lib/Model\RiskRule[]'
+        'rules' => '\Frisbii\lib\Model\RiskRule[]'
     ];
 
     /**
@@ -405,7 +405,7 @@ class RiskRuleSet implements ModelInterface, ArrayAccess
     /**
      * Gets rules
      *
-     * @return \Frisbii\lib/Model\RiskRule[]
+     * @return \Frisbii\lib\Model\RiskRule[]
      */
     public function getRules()
     {
@@ -415,7 +415,7 @@ class RiskRuleSet implements ModelInterface, ArrayAccess
     /**
      * Sets rules
      *
-     * @param \Frisbii\lib/Model\RiskRule[] $rules rules
+     * @param \Frisbii\lib\Model\RiskRule[] $rules rules
      *
      * @return $this
      */

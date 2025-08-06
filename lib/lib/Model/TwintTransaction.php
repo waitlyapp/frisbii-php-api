@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class TwintTransaction implements ModelInterface, ArrayAccess
         'error_state' => 'string',
         'acquirer_message' => 'string',
         'twint_id' => 'string',
-        'twint_mandate' => '\Frisbii\lib/Model\TwintMandate'
+        'twint_mandate' => '\Frisbii\lib\Model\TwintMandate'
     ];
 
     /**
@@ -390,7 +390,7 @@ class TwintTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets twint_mandate
      *
-     * @return \Frisbii\lib/Model\TwintMandate
+     * @return \Frisbii\lib\Model\TwintMandate
      */
     public function getTwintMandate()
     {
@@ -400,7 +400,7 @@ class TwintTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets twint_mandate
      *
-     * @param \Frisbii\lib/Model\TwintMandate $twint_mandate twint_mandate
+     * @param \Frisbii\lib\Model\TwintMandate $twint_mandate twint_mandate
      *
      * @return $this
      */

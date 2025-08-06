@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class EventList implements ModelInterface, ArrayAccess
         'page' => 'int',
         'size' => 'int',
         'count' => 'int',
-        'content' => '\Frisbii\lib/Model\Event[]'
+        'content' => '\Frisbii\lib\Model\Event[]'
     ];
 
     /**
@@ -307,7 +307,7 @@ class EventList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Event[]
+     * @return \Frisbii\lib\Model\Event[]
      */
     public function getContent()
     {
@@ -317,7 +317,7 @@ class EventList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Event[] $content List of events for current slice
+     * @param \Frisbii\lib\Model\Event[] $content List of events for current slice
      *
      * @return $this
      */

@@ -1,7 +1,7 @@
 {
 	"name": "Frisbii API",
-	"modelPackage" : "lib/Model",
-	"apiPackage" : "lib/Api",
+	"modelPackage": "lib\\Model",
+	"apiPackage": "lib\\Api",
 	"gitUserId" : "Frisbii",
 	"composerProjectName" : "frisbii-php-api",
 	"composerVendorName": "waitlyapp",

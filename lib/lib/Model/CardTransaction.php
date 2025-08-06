@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -57,7 +57,7 @@ class CardTransaction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'card' => '\Frisbii\lib/Model\Card',
+        'card' => '\Frisbii\lib\Model\Card',
         'error' => 'string',
         'fingerprint' => 'string',
         'provider' => 'string',
@@ -544,7 +544,7 @@ class CardTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \Frisbii\lib/Model\Card
+     * @return \Frisbii\lib\Model\Card
      */
     public function getCard()
     {
@@ -554,7 +554,7 @@ class CardTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \Frisbii\lib/Model\Card $card card
+     * @param \Frisbii\lib\Model\Card $card card
      *
      * @return $this
      */

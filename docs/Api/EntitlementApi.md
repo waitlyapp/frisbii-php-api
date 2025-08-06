@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**updateEntitlement**](EntitlementApi.md#updateentitlement) | **PUT** /v1/entitlement/{handle} | Update entitlement
 
 # **createEntitlement**
-> \Frisbii\lib/Model\Entitlement createEntitlement($body)
+> \Frisbii\lib\Model\Entitlement createEntitlement($body)
 
 Create entitlement
 
@@ -24,13 +24,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\EntitlementApi(
+$apiInstance = new Frisbii\lib\Api\EntitlementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateEntitlement(); // \Frisbii\lib/Model\CreateEntitlement | 
+$body = new \Frisbii\lib\Model\CreateEntitlement(); // \Frisbii\lib\Model\CreateEntitlement | 
 
 try {
     $result = $apiInstance->createEntitlement($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateEntitlement**](../Model/CreateEntitlement.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateEntitlement**](../Model/CreateEntitlement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Entitlement**](../Model/Entitlement.md)
+[**\Frisbii\lib\Model\Entitlement**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -77,7 +77,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\EntitlementApi(
+$apiInstance = new Frisbii\lib\Api\EntitlementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntitlement**
-> \Frisbii\lib/Model\Entitlement getEntitlement($handle)
+> \Frisbii\lib\Model\Entitlement getEntitlement($handle)
 
 Get entitlement
 
@@ -129,7 +129,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\EntitlementApi(
+$apiInstance = new Frisbii\lib\Api\EntitlementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\Entitlement**](../Model/Entitlement.md)
+[**\Frisbii\lib\Model\Entitlement**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEntitlement**
-> \Frisbii\lib/Model\Entitlement updateEntitlement($body, $handle)
+> \Frisbii\lib\Model\Entitlement updateEntitlement($body, $handle)
 
 Update entitlement
 
@@ -182,13 +182,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\EntitlementApi(
+$apiInstance = new Frisbii\lib\Api\EntitlementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateEntitlementDto(); // \Frisbii\lib/Model\UpdateEntitlementDto | 
+$body = new \Frisbii\lib\Model\UpdateEntitlementDto(); // \Frisbii\lib\Model\UpdateEntitlementDto | 
 $handle = "handle_example"; // string | 
 
 try {
@@ -204,12 +204,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateEntitlementDto**](../Model/UpdateEntitlementDto.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateEntitlementDto**](../Model/UpdateEntitlementDto.md)|  |
  **handle** | **string**|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\Entitlement**](../Model/Entitlement.md)
+[**\Frisbii\lib\Model\Entitlement**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

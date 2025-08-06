@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,12 +91,12 @@ class AgreementApi
      *
      * Activate mps agreement by selecting provider
      *
-     * @param  \Frisbii\lib/Model\ActivateMpsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\ActivateMpsAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function activateMpsAgreement($body, $id)
     {
@@ -109,16 +109,16 @@ class AgreementApi
      *
      * Activate mps agreement by selecting provider
      *
-     * @param  \Frisbii\lib/Model\ActivateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ActivateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function activateMpsAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->activateMpsAgreementRequest($body, $id);
 
         try {
@@ -170,7 +170,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -233,7 +233,7 @@ class AgreementApi
      *
      * Activate mps agreement by selecting provider
      *
-     * @param  \Frisbii\lib/Model\ActivateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ActivateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -254,7 +254,7 @@ class AgreementApi
      *
      * Activate mps agreement by selecting provider
      *
-     * @param  \Frisbii\lib/Model\ActivateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ActivateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -262,7 +262,7 @@ class AgreementApi
      */
     public function activateMpsAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->activateMpsAgreementRequest($body, $id);
 
         return $this->client
@@ -305,7 +305,7 @@ class AgreementApi
     /**
      * Create request for operation 'activateMpsAgreement'
      *
-     * @param  \Frisbii\lib/Model\ActivateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ActivateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -356,7 +356,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -423,7 +423,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function activateSepaEbicsAgreement($id)
     {
@@ -440,11 +440,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function activateSepaEbicsAgreementWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->activateSepaEbicsAgreementRequest($id);
 
         try {
@@ -496,7 +496,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +520,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -536,7 +536,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -544,7 +544,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class AgreementApi
      */
     public function activateSepaEbicsAgreementAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->activateSepaEbicsAgreementRequest($id);
 
         return $this->client
@@ -733,11 +733,11 @@ class AgreementApi
      *
      * Create Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\AnydayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\AnydayAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createAnydayAgreement($body)
     {
@@ -750,15 +750,15 @@ class AgreementApi
      *
      * Create Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\AnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\AnydayAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAnydayAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createAnydayAgreementRequest($body);
 
         try {
@@ -810,7 +810,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -826,7 +826,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -834,7 +834,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -842,7 +842,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -850,7 +850,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -873,7 +873,7 @@ class AgreementApi
      *
      * Create Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\AnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\AnydayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -893,14 +893,14 @@ class AgreementApi
      *
      * Create Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\AnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\AnydayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAnydayAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createAnydayAgreementRequest($body);
 
         return $this->client
@@ -943,7 +943,7 @@ class AgreementApi
     /**
      * Create request for operation 'createAnydayAgreement'
      *
-     * @param  \Frisbii\lib/Model\AnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\AnydayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -979,7 +979,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1042,11 +1042,11 @@ class AgreementApi
      *
      * Create ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createApplepayAgreement($body)
     {
@@ -1059,15 +1059,15 @@ class AgreementApi
      *
      * Create ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createApplepayAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createApplepayAgreementRequest($body);
 
         try {
@@ -1119,7 +1119,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1127,7 +1127,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1135,7 +1135,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1143,7 +1143,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1151,7 +1151,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1159,7 +1159,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1167,7 +1167,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1182,7 +1182,7 @@ class AgreementApi
      *
      * Create ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1202,14 +1202,14 @@ class AgreementApi
      *
      * Create ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createApplepayAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createApplepayAgreementRequest($body);
 
         return $this->client
@@ -1252,7 +1252,7 @@ class AgreementApi
     /**
      * Create request for operation 'createApplepayAgreement'
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1288,7 +1288,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1351,11 +1351,11 @@ class AgreementApi
      *
      * Create card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\CreateCardGatewayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCardGatewayAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createCardGatewayAgreement($body)
     {
@@ -1368,15 +1368,15 @@ class AgreementApi
      *
      * Create card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\CreateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateCardGatewayAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCardGatewayAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createCardGatewayAgreementRequest($body);
 
         try {
@@ -1428,7 +1428,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1436,7 +1436,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1444,7 +1444,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1452,7 +1452,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1460,7 +1460,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1468,7 +1468,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1476,7 +1476,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1491,7 +1491,7 @@ class AgreementApi
      *
      * Create card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\CreateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateCardGatewayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1511,14 +1511,14 @@ class AgreementApi
      *
      * Create card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\CreateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateCardGatewayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCardGatewayAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createCardGatewayAgreementRequest($body);
 
         return $this->client
@@ -1561,7 +1561,7 @@ class AgreementApi
     /**
      * Create request for operation 'createCardGatewayAgreement'
      *
-     * @param  \Frisbii\lib/Model\CreateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateCardGatewayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1597,7 +1597,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1660,11 +1660,11 @@ class AgreementApi
      *
      * Create GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\GooglepayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\GooglepayAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createGooglepayAgreement($body)
     {
@@ -1677,15 +1677,15 @@ class AgreementApi
      *
      * Create GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\GooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\GooglepayAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createGooglepayAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createGooglepayAgreementRequest($body);
 
         try {
@@ -1737,7 +1737,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1745,7 +1745,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1753,7 +1753,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1761,7 +1761,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1769,7 +1769,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1777,7 +1777,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1785,7 +1785,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1800,7 +1800,7 @@ class AgreementApi
      *
      * Create GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\GooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\GooglepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1820,14 +1820,14 @@ class AgreementApi
      *
      * Create GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\GooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\GooglepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createGooglepayAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createGooglepayAgreementRequest($body);
 
         return $this->client
@@ -1870,7 +1870,7 @@ class AgreementApi
     /**
      * Create request for operation 'createGooglepayAgreement'
      *
-     * @param  \Frisbii\lib/Model\GooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\GooglepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1906,7 +1906,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -1969,11 +1969,11 @@ class AgreementApi
      *
      * Create Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\KlarnaAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\KlarnaAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createKlarnaAgreement($body)
     {
@@ -1986,15 +1986,15 @@ class AgreementApi
      *
      * Create Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\KlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\KlarnaAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createKlarnaAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createKlarnaAgreementRequest($body);
 
         try {
@@ -2046,7 +2046,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2054,7 +2054,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2062,7 +2062,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2070,7 +2070,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2078,7 +2078,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2086,7 +2086,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2094,7 +2094,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2109,7 +2109,7 @@ class AgreementApi
      *
      * Create Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\KlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\KlarnaAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2129,14 +2129,14 @@ class AgreementApi
      *
      * Create Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\KlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\KlarnaAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createKlarnaAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createKlarnaAgreementRequest($body);
 
         return $this->client
@@ -2179,7 +2179,7 @@ class AgreementApi
     /**
      * Create request for operation 'createKlarnaAgreement'
      *
-     * @param  \Frisbii\lib/Model\KlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\KlarnaAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2215,7 +2215,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -2278,11 +2278,11 @@ class AgreementApi
      *
      * Create MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\MpoAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\MpoAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createMpoAgreement($body)
     {
@@ -2295,15 +2295,15 @@ class AgreementApi
      *
      * Create MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\MpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\MpoAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMpoAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createMpoAgreementRequest($body);
 
         try {
@@ -2355,7 +2355,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2363,7 +2363,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2371,7 +2371,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2379,7 +2379,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2387,7 +2387,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2395,7 +2395,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2403,7 +2403,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2418,7 +2418,7 @@ class AgreementApi
      *
      * Create MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\MpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\MpoAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2438,14 +2438,14 @@ class AgreementApi
      *
      * Create MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\MpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\MpoAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createMpoAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createMpoAgreementRequest($body);
 
         return $this->client
@@ -2488,7 +2488,7 @@ class AgreementApi
     /**
      * Create request for operation 'createMpoAgreement'
      *
-     * @param  \Frisbii\lib/Model\MpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\MpoAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2524,7 +2524,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -2587,11 +2587,11 @@ class AgreementApi
      *
      * Create pending MobilePay Subscriptions agreement
      *
-     * @param  \Frisbii\lib/Model\CreateMpsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\CreateMpsAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createMpsAgreement($body)
     {
@@ -2604,15 +2604,15 @@ class AgreementApi
      *
      * Create pending MobilePay Subscriptions agreement
      *
-     * @param  \Frisbii\lib/Model\CreateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateMpsAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMpsAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createMpsAgreementRequest($body);
 
         try {
@@ -2664,7 +2664,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2672,7 +2672,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2680,7 +2680,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2688,7 +2688,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2696,7 +2696,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2704,7 +2704,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2712,7 +2712,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2727,7 +2727,7 @@ class AgreementApi
      *
      * Create pending MobilePay Subscriptions agreement
      *
-     * @param  \Frisbii\lib/Model\CreateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateMpsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2747,14 +2747,14 @@ class AgreementApi
      *
      * Create pending MobilePay Subscriptions agreement
      *
-     * @param  \Frisbii\lib/Model\CreateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateMpsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createMpsAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createMpsAgreementRequest($body);
 
         return $this->client
@@ -2797,7 +2797,7 @@ class AgreementApi
     /**
      * Create request for operation 'createMpsAgreement'
      *
-     * @param  \Frisbii\lib/Model\CreateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateMpsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2833,7 +2833,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -2896,11 +2896,11 @@ class AgreementApi
      *
      * Create offline agreement
      *
-     * @param  \Frisbii\lib/Model\OfflineAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\OfflineAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createOfflineAgreement($body)
     {
@@ -2913,15 +2913,15 @@ class AgreementApi
      *
      * Create offline agreement
      *
-     * @param  \Frisbii\lib/Model\OfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\OfflineAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOfflineAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createOfflineAgreementRequest($body);
 
         try {
@@ -2973,7 +2973,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2981,7 +2981,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2989,7 +2989,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2997,7 +2997,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3005,7 +3005,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3013,7 +3013,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3021,7 +3021,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3036,7 +3036,7 @@ class AgreementApi
      *
      * Create offline agreement
      *
-     * @param  \Frisbii\lib/Model\OfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\OfflineAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3056,14 +3056,14 @@ class AgreementApi
      *
      * Create offline agreement
      *
-     * @param  \Frisbii\lib/Model\OfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\OfflineAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOfflineAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createOfflineAgreementRequest($body);
 
         return $this->client
@@ -3106,7 +3106,7 @@ class AgreementApi
     /**
      * Create request for operation 'createOfflineAgreement'
      *
-     * @param  \Frisbii\lib/Model\OfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\OfflineAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3142,7 +3142,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -3205,11 +3205,11 @@ class AgreementApi
      *
      * Create Payever agreement
      *
-     * @param  \Frisbii\lib/Model\PayeverAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\PayeverAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createPayeverAgreement($body)
     {
@@ -3222,15 +3222,15 @@ class AgreementApi
      *
      * Create Payever agreement
      *
-     * @param  \Frisbii\lib/Model\PayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PayeverAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPayeverAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPayeverAgreementRequest($body);
 
         try {
@@ -3282,7 +3282,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3290,7 +3290,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3298,7 +3298,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3306,7 +3306,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3314,7 +3314,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3322,7 +3322,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3330,7 +3330,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3345,7 +3345,7 @@ class AgreementApi
      *
      * Create Payever agreement
      *
-     * @param  \Frisbii\lib/Model\PayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PayeverAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3365,14 +3365,14 @@ class AgreementApi
      *
      * Create Payever agreement
      *
-     * @param  \Frisbii\lib/Model\PayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PayeverAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPayeverAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPayeverAgreementRequest($body);
 
         return $this->client
@@ -3415,7 +3415,7 @@ class AgreementApi
     /**
      * Create request for operation 'createPayeverAgreement'
      *
-     * @param  \Frisbii\lib/Model\PayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PayeverAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3451,7 +3451,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -3514,11 +3514,11 @@ class AgreementApi
      *
      * Create PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\PaypalAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\PaypalAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createPaypalAgreement($body)
     {
@@ -3531,15 +3531,15 @@ class AgreementApi
      *
      * Create PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\PaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PaypalAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPaypalAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPaypalAgreementRequest($body);
 
         try {
@@ -3591,7 +3591,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3599,7 +3599,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3607,7 +3607,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3615,7 +3615,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3623,7 +3623,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3631,7 +3631,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3639,7 +3639,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3654,7 +3654,7 @@ class AgreementApi
      *
      * Create PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\PaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PaypalAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3674,14 +3674,14 @@ class AgreementApi
      *
      * Create PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\PaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PaypalAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPaypalAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPaypalAgreementRequest($body);
 
         return $this->client
@@ -3724,7 +3724,7 @@ class AgreementApi
     /**
      * Create request for operation 'createPaypalAgreement'
      *
-     * @param  \Frisbii\lib/Model\PaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PaypalAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3760,7 +3760,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -3823,11 +3823,11 @@ class AgreementApi
      *
      * Create PayPal agreement V2
      *
-     * @param  \Frisbii\lib/Model\CreatePaypalAgreementV2 $body body (required)
+     * @param  \Frisbii\lib\Model\CreatePaypalAgreementV2 $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createPaypalAgreementV2($body)
     {
@@ -3840,15 +3840,15 @@ class AgreementApi
      *
      * Create PayPal agreement V2
      *
-     * @param  \Frisbii\lib/Model\CreatePaypalAgreementV2 $body (required)
+     * @param  \Frisbii\lib\Model\CreatePaypalAgreementV2 $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPaypalAgreementV2WithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPaypalAgreementV2Request($body);
 
         try {
@@ -3900,7 +3900,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3908,7 +3908,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3916,7 +3916,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3924,7 +3924,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3932,7 +3932,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3940,7 +3940,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3948,7 +3948,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3963,7 +3963,7 @@ class AgreementApi
      *
      * Create PayPal agreement V2
      *
-     * @param  \Frisbii\lib/Model\CreatePaypalAgreementV2 $body (required)
+     * @param  \Frisbii\lib\Model\CreatePaypalAgreementV2 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3983,14 +3983,14 @@ class AgreementApi
      *
      * Create PayPal agreement V2
      *
-     * @param  \Frisbii\lib/Model\CreatePaypalAgreementV2 $body (required)
+     * @param  \Frisbii\lib\Model\CreatePaypalAgreementV2 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPaypalAgreementV2AsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPaypalAgreementV2Request($body);
 
         return $this->client
@@ -4033,7 +4033,7 @@ class AgreementApi
     /**
      * Create request for operation 'createPaypalAgreementV2'
      *
-     * @param  \Frisbii\lib/Model\CreatePaypalAgreementV2 $body (required)
+     * @param  \Frisbii\lib\Model\CreatePaypalAgreementV2 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4069,7 +4069,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -4132,11 +4132,11 @@ class AgreementApi
      *
      * Create ppro agreement
      *
-     * @param  \Frisbii\lib/Model\PproAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\PproAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createPproAgreement($body)
     {
@@ -4149,15 +4149,15 @@ class AgreementApi
      *
      * Create ppro agreement
      *
-     * @param  \Frisbii\lib/Model\PproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PproAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPproAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPproAgreementRequest($body);
 
         try {
@@ -4209,7 +4209,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4217,7 +4217,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4225,7 +4225,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4233,7 +4233,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4241,7 +4241,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4249,7 +4249,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4257,7 +4257,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4272,7 +4272,7 @@ class AgreementApi
      *
      * Create ppro agreement
      *
-     * @param  \Frisbii\lib/Model\PproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PproAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4292,14 +4292,14 @@ class AgreementApi
      *
      * Create ppro agreement
      *
-     * @param  \Frisbii\lib/Model\PproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PproAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPproAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createPproAgreementRequest($body);
 
         return $this->client
@@ -4342,7 +4342,7 @@ class AgreementApi
     /**
      * Create request for operation 'createPproAgreement'
      *
-     * @param  \Frisbii\lib/Model\PproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\PproAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4378,7 +4378,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -4441,11 +4441,11 @@ class AgreementApi
      *
      * Create Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\ResursAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\ResursAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createResursAgreement($body)
     {
@@ -4458,15 +4458,15 @@ class AgreementApi
      *
      * Create Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\ResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ResursAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createResursAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createResursAgreementRequest($body);
 
         try {
@@ -4518,7 +4518,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4526,7 +4526,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4534,7 +4534,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4542,7 +4542,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4550,7 +4550,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4558,7 +4558,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4566,7 +4566,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4581,7 +4581,7 @@ class AgreementApi
      *
      * Create Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\ResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ResursAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4601,14 +4601,14 @@ class AgreementApi
      *
      * Create Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\ResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ResursAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createResursAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createResursAgreementRequest($body);
 
         return $this->client
@@ -4651,7 +4651,7 @@ class AgreementApi
     /**
      * Create request for operation 'createResursAgreement'
      *
-     * @param  \Frisbii\lib/Model\ResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ResursAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4687,7 +4687,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -4750,11 +4750,11 @@ class AgreementApi
      *
      * Create Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\CreateSepaEbicsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\CreateSepaEbicsAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createSepaEbicsAgreement($body)
     {
@@ -4767,15 +4767,15 @@ class AgreementApi
      *
      * Create Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\CreateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateSepaEbicsAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSepaEbicsAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createSepaEbicsAgreementRequest($body);
 
         try {
@@ -4827,7 +4827,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4835,7 +4835,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4843,7 +4843,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4851,7 +4851,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4859,7 +4859,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4867,7 +4867,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4875,7 +4875,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4890,7 +4890,7 @@ class AgreementApi
      *
      * Create Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\CreateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateSepaEbicsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4910,14 +4910,14 @@ class AgreementApi
      *
      * Create Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\CreateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateSepaEbicsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createSepaEbicsAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createSepaEbicsAgreementRequest($body);
 
         return $this->client
@@ -4960,7 +4960,7 @@ class AgreementApi
     /**
      * Create request for operation 'createSepaEbicsAgreement'
      *
-     * @param  \Frisbii\lib/Model\CreateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateSepaEbicsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4996,7 +4996,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -5059,11 +5059,11 @@ class AgreementApi
      *
      * Create Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createSwishAgreement($body)
     {
@@ -5076,15 +5076,15 @@ class AgreementApi
      *
      * Create Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSwishAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createSwishAgreementRequest($body);
 
         try {
@@ -5136,7 +5136,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5144,7 +5144,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5152,7 +5152,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5160,7 +5160,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5168,7 +5168,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5176,7 +5176,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5184,7 +5184,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5199,7 +5199,7 @@ class AgreementApi
      *
      * Create Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5219,14 +5219,14 @@ class AgreementApi
      *
      * Create Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createSwishAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createSwishAgreementRequest($body);
 
         return $this->client
@@ -5269,7 +5269,7 @@ class AgreementApi
     /**
      * Create request for operation 'createSwishAgreement'
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5305,7 +5305,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -5368,11 +5368,11 @@ class AgreementApi
      *
      * Create ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\ViabillAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\ViabillAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createViabillAgreement($body)
     {
@@ -5385,15 +5385,15 @@ class AgreementApi
      *
      * Create ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\ViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ViabillAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createViabillAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createViabillAgreementRequest($body);
 
         try {
@@ -5445,7 +5445,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5453,7 +5453,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5461,7 +5461,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5469,7 +5469,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5477,7 +5477,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5485,7 +5485,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5493,7 +5493,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5508,7 +5508,7 @@ class AgreementApi
      *
      * Create ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\ViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ViabillAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5528,14 +5528,14 @@ class AgreementApi
      *
      * Create ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\ViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ViabillAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createViabillAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createViabillAgreementRequest($body);
 
         return $this->client
@@ -5578,7 +5578,7 @@ class AgreementApi
     /**
      * Create request for operation 'createViabillAgreement'
      *
-     * @param  \Frisbii\lib/Model\ViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ViabillAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5614,7 +5614,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -5677,11 +5677,11 @@ class AgreementApi
      *
      * Create Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\CreateVippsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\CreateVippsAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createVippsAgreement($body)
     {
@@ -5694,15 +5694,15 @@ class AgreementApi
      *
      * Create Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\CreateVippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateVippsAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createVippsAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createVippsAgreementRequest($body);
 
         try {
@@ -5754,7 +5754,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5762,7 +5762,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5770,7 +5770,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5778,7 +5778,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5786,7 +5786,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5794,7 +5794,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5802,7 +5802,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5817,7 +5817,7 @@ class AgreementApi
      *
      * Create Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\CreateVippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateVippsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5837,14 +5837,14 @@ class AgreementApi
      *
      * Create Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\CreateVippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateVippsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createVippsAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createVippsAgreementRequest($body);
 
         return $this->client
@@ -5887,7 +5887,7 @@ class AgreementApi
     /**
      * Create request for operation 'createVippsAgreement'
      *
-     * @param  \Frisbii\lib/Model\CreateVippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\CreateVippsAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5923,7 +5923,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -5986,11 +5986,11 @@ class AgreementApi
      *
      * Create Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createVippsMobilepayAgreement($body)
     {
@@ -6003,15 +6003,15 @@ class AgreementApi
      *
      * Create Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createVippsMobilepayAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createVippsMobilepayAgreementRequest($body);
 
         try {
@@ -6063,7 +6063,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6071,7 +6071,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6079,7 +6079,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6087,7 +6087,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6095,7 +6095,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6103,7 +6103,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6111,7 +6111,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6126,7 +6126,7 @@ class AgreementApi
      *
      * Create Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6146,14 +6146,14 @@ class AgreementApi
      *
      * Create Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createVippsMobilepayAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createVippsMobilepayAgreementRequest($body);
 
         return $this->client
@@ -6196,7 +6196,7 @@ class AgreementApi
     /**
      * Create request for operation 'createVippsMobilepayAgreement'
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6232,7 +6232,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -6295,11 +6295,11 @@ class AgreementApi
      *
      * Create Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function createVippsRecurringAgreement($body)
     {
@@ -6312,15 +6312,15 @@ class AgreementApi
      *
      * Create Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createVippsRecurringAgreementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createVippsRecurringAgreementRequest($body);
 
         try {
@@ -6372,7 +6372,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6380,7 +6380,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6388,7 +6388,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6396,7 +6396,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6404,7 +6404,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6412,7 +6412,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6420,7 +6420,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6435,7 +6435,7 @@ class AgreementApi
      *
      * Create Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6455,14 +6455,14 @@ class AgreementApi
      *
      * Create Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createVippsRecurringAgreementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->createVippsRecurringAgreementRequest($body);
 
         return $this->client
@@ -6505,7 +6505,7 @@ class AgreementApi
     /**
      * Create request for operation 'createVippsRecurringAgreement'
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6541,7 +6541,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -6608,7 +6608,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function deleteGatewayAgreement($id)
     {
@@ -6625,11 +6625,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteGatewayAgreementWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->deleteGatewayAgreementRequest($id);
 
         try {
@@ -6681,7 +6681,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6689,7 +6689,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6697,7 +6697,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6705,7 +6705,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6713,7 +6713,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6721,7 +6721,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6729,7 +6729,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6771,7 +6771,7 @@ class AgreementApi
      */
     public function deleteGatewayAgreementAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->deleteGatewayAgreementRequest($id);
 
         return $this->client
@@ -6922,7 +6922,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function disableGatewayAgreement($id)
     {
@@ -6939,11 +6939,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function disableGatewayAgreementWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->disableGatewayAgreementRequest($id);
 
         try {
@@ -6995,7 +6995,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7003,7 +7003,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7011,7 +7011,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7019,7 +7019,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7027,7 +7027,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7035,7 +7035,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7043,7 +7043,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7085,7 +7085,7 @@ class AgreementApi
      */
     public function disableGatewayAgreementAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->disableGatewayAgreementRequest($id);
 
         return $this->client
@@ -7236,7 +7236,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function enableGatewayAgreement($id)
     {
@@ -7253,11 +7253,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function enableGatewayAgreementWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->enableGatewayAgreementRequest($id);
 
         try {
@@ -7309,7 +7309,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7317,7 +7317,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7325,7 +7325,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7333,7 +7333,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7341,7 +7341,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7349,7 +7349,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7357,7 +7357,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7399,7 +7399,7 @@ class AgreementApi
      */
     public function enableGatewayAgreementAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->enableGatewayAgreementRequest($id);
 
         return $this->client
@@ -7551,7 +7551,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement[]
+     * @return \Frisbii\lib\Model\GatewayAgreement[]
      */
     public function getCardGatewayAgreements($only_active = 'false', $non_deleted = 'false')
     {
@@ -7569,11 +7569,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardGatewayAgreementsWithHttpInfo($only_active = 'false', $non_deleted = 'false')
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement[]';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement[]';
         $request = $this->getCardGatewayAgreementsRequest($only_active, $non_deleted);
 
         try {
@@ -7625,7 +7625,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement[]',
+                        '\Frisbii\lib\Model\GatewayAgreement[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7633,7 +7633,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7641,7 +7641,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7649,7 +7649,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7657,7 +7657,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7665,7 +7665,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7673,7 +7673,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7717,7 +7717,7 @@ class AgreementApi
      */
     public function getCardGatewayAgreementsAsyncWithHttpInfo($only_active = 'false', $non_deleted = 'false')
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement[]';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement[]';
         $request = $this->getCardGatewayAgreementsRequest($only_active, $non_deleted);
 
         return $this->client
@@ -7863,7 +7863,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function getGatewayAgreement($id)
     {
@@ -7880,11 +7880,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGatewayAgreementWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->getGatewayAgreementRequest($id);
 
         try {
@@ -7936,7 +7936,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7944,7 +7944,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7952,7 +7952,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7960,7 +7960,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7968,7 +7968,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7976,7 +7976,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7984,7 +7984,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8026,7 +8026,7 @@ class AgreementApi
      */
     public function getGatewayAgreementAsyncWithHttpInfo($id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->getGatewayAgreementRequest($id);
 
         return $this->client
@@ -8178,7 +8178,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement[]
+     * @return \Frisbii\lib\Model\GatewayAgreement[]
      */
     public function getGatewayAgreements($only_active = 'false', $non_deleted = 'false')
     {
@@ -8196,11 +8196,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getGatewayAgreementsWithHttpInfo($only_active = 'false', $non_deleted = 'false')
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement[]';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement[]';
         $request = $this->getGatewayAgreementsRequest($only_active, $non_deleted);
 
         try {
@@ -8252,7 +8252,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement[]',
+                        '\Frisbii\lib\Model\GatewayAgreement[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8260,7 +8260,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8268,7 +8268,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8276,7 +8276,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8284,7 +8284,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8292,7 +8292,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8300,7 +8300,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8344,7 +8344,7 @@ class AgreementApi
      */
     public function getGatewayAgreementsAsyncWithHttpInfo($only_active = 'false', $non_deleted = 'false')
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement[]';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement[]';
         $request = $this->getGatewayAgreementsRequest($only_active, $non_deleted);
 
         return $this->client
@@ -8486,11 +8486,11 @@ class AgreementApi
      *
      * Onboard Merchant
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringMerchantOnboarding $body body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringMerchantOnboarding $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse
+     * @return \Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse
      */
     public function onboardMerchant($body)
     {
@@ -8503,15 +8503,15 @@ class AgreementApi
      *
      * Onboard Merchant
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringMerchantOnboarding $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringMerchantOnboarding $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function onboardMerchantWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse';
+        $returnType = '\Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse';
         $request = $this->onboardMerchantRequest($body);
 
         try {
@@ -8563,7 +8563,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse',
+                        '\Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8571,7 +8571,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8579,7 +8579,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8587,7 +8587,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8595,7 +8595,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8603,7 +8603,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8611,7 +8611,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8626,7 +8626,7 @@ class AgreementApi
      *
      * Onboard Merchant
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringMerchantOnboarding $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringMerchantOnboarding $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8646,14 +8646,14 @@ class AgreementApi
      *
      * Onboard Merchant
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringMerchantOnboarding $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringMerchantOnboarding $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function onboardMerchantAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse';
+        $returnType = '\Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse';
         $request = $this->onboardMerchantRequest($body);
 
         return $this->client
@@ -8696,7 +8696,7 @@ class AgreementApi
     /**
      * Create request for operation 'onboardMerchant'
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringMerchantOnboarding $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringMerchantOnboarding $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8732,7 +8732,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -8800,7 +8800,7 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function registerApplepayMerchant($id, $only_pending = 'true')
     {
@@ -8818,11 +8818,11 @@ class AgreementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function registerApplepayMerchantWithHttpInfo($id, $only_pending = 'true')
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->registerApplepayMerchantRequest($id, $only_pending);
 
         try {
@@ -8874,7 +8874,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8882,7 +8882,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8890,7 +8890,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8898,7 +8898,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8906,7 +8906,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8914,7 +8914,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8922,7 +8922,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8966,7 +8966,7 @@ class AgreementApi
      */
     public function registerApplepayMerchantAsyncWithHttpInfo($id, $only_pending = 'true')
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->registerApplepayMerchantRequest($id, $only_pending);
 
         return $this->client
@@ -9118,12 +9118,12 @@ class AgreementApi
      *
      * Update Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateAnydayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateAnydayAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateAnydayAgreement($body, $id)
     {
@@ -9136,16 +9136,16 @@ class AgreementApi
      *
      * Update Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateAnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAnydayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAnydayAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateAnydayAgreementRequest($body, $id);
 
         try {
@@ -9197,7 +9197,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9205,7 +9205,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9213,7 +9213,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9221,7 +9221,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9229,7 +9229,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9237,7 +9237,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9245,7 +9245,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9260,7 +9260,7 @@ class AgreementApi
      *
      * Update Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateAnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAnydayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9281,7 +9281,7 @@ class AgreementApi
      *
      * Update Anyday agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateAnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAnydayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9289,7 +9289,7 @@ class AgreementApi
      */
     public function updateAnydayAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateAnydayAgreementRequest($body, $id);
 
         return $this->client
@@ -9332,7 +9332,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateAnydayAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateAnydayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAnydayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9383,7 +9383,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -9446,12 +9446,12 @@ class AgreementApi
      *
      * Update ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateApplepayAgreement($body, $id)
     {
@@ -9464,16 +9464,16 @@ class AgreementApi
      *
      * Update ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateApplepayAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateApplepayAgreementRequest($body, $id);
 
         try {
@@ -9525,7 +9525,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9533,7 +9533,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9541,7 +9541,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9549,7 +9549,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9557,7 +9557,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9565,7 +9565,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9573,7 +9573,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9588,7 +9588,7 @@ class AgreementApi
      *
      * Update ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9609,7 +9609,7 @@ class AgreementApi
      *
      * Update ApplePay agreement
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9617,7 +9617,7 @@ class AgreementApi
      */
     public function updateApplepayAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateApplepayAgreementRequest($body, $id);
 
         return $this->client
@@ -9660,7 +9660,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateApplepayAgreement'
      *
-     * @param  \Frisbii\lib/Model\ApplepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\ApplepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9711,7 +9711,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -9774,12 +9774,12 @@ class AgreementApi
      *
      * Update card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateCardGatewayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateCardGatewayAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateCardGatewayAgreement($body, $id)
     {
@@ -9792,16 +9792,16 @@ class AgreementApi
      *
      * Update card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCardGatewayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCardGatewayAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateCardGatewayAgreementRequest($body, $id);
 
         try {
@@ -9853,7 +9853,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9861,7 +9861,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9869,7 +9869,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9877,7 +9877,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9885,7 +9885,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9893,7 +9893,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9901,7 +9901,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9916,7 +9916,7 @@ class AgreementApi
      *
      * Update card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCardGatewayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9937,7 +9937,7 @@ class AgreementApi
      *
      * Update card gateway agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCardGatewayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -9945,7 +9945,7 @@ class AgreementApi
      */
     public function updateCardGatewayAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateCardGatewayAgreementRequest($body, $id);
 
         return $this->client
@@ -9988,7 +9988,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateCardGatewayAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateCardGatewayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCardGatewayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10039,7 +10039,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -10102,12 +10102,12 @@ class AgreementApi
      *
      * Update card gateway EMV Configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateEmvConfiguration $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateEmvConfiguration $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateEmvConfiguration($body, $id)
     {
@@ -10120,16 +10120,16 @@ class AgreementApi
      *
      * Update card gateway EMV Configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateEmvConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEmvConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEmvConfigurationWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateEmvConfigurationRequest($body, $id);
 
         try {
@@ -10181,7 +10181,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10189,7 +10189,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10197,7 +10197,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10205,7 +10205,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10213,7 +10213,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10221,7 +10221,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10229,7 +10229,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10244,7 +10244,7 @@ class AgreementApi
      *
      * Update card gateway EMV Configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateEmvConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEmvConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10265,7 +10265,7 @@ class AgreementApi
      *
      * Update card gateway EMV Configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateEmvConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEmvConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10273,7 +10273,7 @@ class AgreementApi
      */
     public function updateEmvConfigurationAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateEmvConfigurationRequest($body, $id);
 
         return $this->client
@@ -10316,7 +10316,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateEmvConfiguration'
      *
-     * @param  \Frisbii\lib/Model\UpdateEmvConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEmvConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10367,7 +10367,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -10430,12 +10430,12 @@ class AgreementApi
      *
      * Update card gateway fee configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateFeeConfiguration $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateFeeConfiguration $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateFeeConfiguration($body, $id)
     {
@@ -10448,16 +10448,16 @@ class AgreementApi
      *
      * Update card gateway fee configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateFeeConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateFeeConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateFeeConfigurationWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateFeeConfigurationRequest($body, $id);
 
         try {
@@ -10509,7 +10509,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10517,7 +10517,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10525,7 +10525,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10533,7 +10533,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10541,7 +10541,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10549,7 +10549,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10557,7 +10557,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10572,7 +10572,7 @@ class AgreementApi
      *
      * Update card gateway fee configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateFeeConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateFeeConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10593,7 +10593,7 @@ class AgreementApi
      *
      * Update card gateway fee configuration
      *
-     * @param  \Frisbii\lib/Model\UpdateFeeConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateFeeConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10601,7 +10601,7 @@ class AgreementApi
      */
     public function updateFeeConfigurationAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateFeeConfigurationRequest($body, $id);
 
         return $this->client
@@ -10644,7 +10644,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateFeeConfiguration'
      *
-     * @param  \Frisbii\lib/Model\UpdateFeeConfiguration $body (required)
+     * @param  \Frisbii\lib\Model\UpdateFeeConfiguration $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10695,7 +10695,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -10758,12 +10758,12 @@ class AgreementApi
      *
      * Update GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateGooglepayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateGooglepayAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateGooglepayAgreement($body, $id)
     {
@@ -10776,16 +10776,16 @@ class AgreementApi
      *
      * Update GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateGooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateGooglepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateGooglepayAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateGooglepayAgreementRequest($body, $id);
 
         try {
@@ -10837,7 +10837,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10845,7 +10845,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10853,7 +10853,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10861,7 +10861,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10869,7 +10869,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10877,7 +10877,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10885,7 +10885,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10900,7 +10900,7 @@ class AgreementApi
      *
      * Update GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateGooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateGooglepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10921,7 +10921,7 @@ class AgreementApi
      *
      * Update GooglePay agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateGooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateGooglepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -10929,7 +10929,7 @@ class AgreementApi
      */
     public function updateGooglepayAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateGooglepayAgreementRequest($body, $id);
 
         return $this->client
@@ -10972,7 +10972,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateGooglepayAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateGooglepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateGooglepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11023,7 +11023,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -11086,12 +11086,12 @@ class AgreementApi
      *
      * Update Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateKlarnaAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateKlarnaAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateKlarnaAgreement($body, $id)
     {
@@ -11104,16 +11104,16 @@ class AgreementApi
      *
      * Update Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateKlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateKlarnaAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateKlarnaAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateKlarnaAgreementRequest($body, $id);
 
         try {
@@ -11165,7 +11165,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11173,7 +11173,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11181,7 +11181,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11189,7 +11189,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11197,7 +11197,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11205,7 +11205,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11213,7 +11213,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11228,7 +11228,7 @@ class AgreementApi
      *
      * Update Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateKlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateKlarnaAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11249,7 +11249,7 @@ class AgreementApi
      *
      * Update Klarna agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateKlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateKlarnaAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11257,7 +11257,7 @@ class AgreementApi
      */
     public function updateKlarnaAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateKlarnaAgreementRequest($body, $id);
 
         return $this->client
@@ -11300,7 +11300,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateKlarnaAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateKlarnaAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateKlarnaAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11351,7 +11351,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -11414,12 +11414,12 @@ class AgreementApi
      *
      * Update MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpoAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpoAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateMpoAgreement($body, $id)
     {
@@ -11432,16 +11432,16 @@ class AgreementApi
      *
      * Update MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpoAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMpoAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateMpoAgreementRequest($body, $id);
 
         try {
@@ -11493,7 +11493,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11501,7 +11501,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11509,7 +11509,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11517,7 +11517,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11525,7 +11525,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11533,7 +11533,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11541,7 +11541,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11556,7 +11556,7 @@ class AgreementApi
      *
      * Update MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpoAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11577,7 +11577,7 @@ class AgreementApi
      *
      * Update MobilePay Online agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpoAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11585,7 +11585,7 @@ class AgreementApi
      */
     public function updateMpoAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateMpoAgreementRequest($body, $id);
 
         return $this->client
@@ -11628,7 +11628,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateMpoAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateMpoAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpoAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11679,7 +11679,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -11742,12 +11742,12 @@ class AgreementApi
      *
      * Update mps agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpsAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateMpsAgreement($body, $id)
     {
@@ -11760,16 +11760,16 @@ class AgreementApi
      *
      * Update mps agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMpsAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateMpsAgreementRequest($body, $id);
 
         try {
@@ -11821,7 +11821,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11829,7 +11829,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11837,7 +11837,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11845,7 +11845,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11853,7 +11853,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11861,7 +11861,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11869,7 +11869,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11884,7 +11884,7 @@ class AgreementApi
      *
      * Update mps agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11905,7 +11905,7 @@ class AgreementApi
      *
      * Update mps agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -11913,7 +11913,7 @@ class AgreementApi
      */
     public function updateMpsAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateMpsAgreementRequest($body, $id);
 
         return $this->client
@@ -11956,7 +11956,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateMpsAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateMpsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateMpsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12007,7 +12007,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -12070,12 +12070,12 @@ class AgreementApi
      *
      * Update offline agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateOfflineAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateOfflineAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateOfflineAgreement($body, $id)
     {
@@ -12088,16 +12088,16 @@ class AgreementApi
      *
      * Update offline agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateOfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOfflineAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateOfflineAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateOfflineAgreementRequest($body, $id);
 
         try {
@@ -12149,7 +12149,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12157,7 +12157,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12165,7 +12165,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12173,7 +12173,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12181,7 +12181,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12189,7 +12189,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12197,7 +12197,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12212,7 +12212,7 @@ class AgreementApi
      *
      * Update offline agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateOfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOfflineAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12233,7 +12233,7 @@ class AgreementApi
      *
      * Update offline agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateOfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOfflineAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12241,7 +12241,7 @@ class AgreementApi
      */
     public function updateOfflineAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateOfflineAgreementRequest($body, $id);
 
         return $this->client
@@ -12284,7 +12284,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateOfflineAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateOfflineAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateOfflineAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12335,7 +12335,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -12398,12 +12398,12 @@ class AgreementApi
      *
      * Update Payever agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePayeverAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdatePayeverAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updatePayeverAgreement($body, $id)
     {
@@ -12416,16 +12416,16 @@ class AgreementApi
      *
      * Update Payever agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePayeverAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePayeverAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updatePayeverAgreementRequest($body, $id);
 
         try {
@@ -12477,7 +12477,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12485,7 +12485,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12493,7 +12493,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12501,7 +12501,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12509,7 +12509,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12517,7 +12517,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12525,7 +12525,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12540,7 +12540,7 @@ class AgreementApi
      *
      * Update Payever agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePayeverAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12561,7 +12561,7 @@ class AgreementApi
      *
      * Update Payever agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePayeverAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12569,7 +12569,7 @@ class AgreementApi
      */
     public function updatePayeverAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updatePayeverAgreementRequest($body, $id);
 
         return $this->client
@@ -12612,7 +12612,7 @@ class AgreementApi
     /**
      * Create request for operation 'updatePayeverAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdatePayeverAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePayeverAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12663,7 +12663,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -12726,12 +12726,12 @@ class AgreementApi
      *
      * Update PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePaypalAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdatePaypalAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updatePaypalAgreement($body, $id)
     {
@@ -12744,16 +12744,16 @@ class AgreementApi
      *
      * Update PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePaypalAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePaypalAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updatePaypalAgreementRequest($body, $id);
 
         try {
@@ -12805,7 +12805,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12813,7 +12813,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12821,7 +12821,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12829,7 +12829,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12837,7 +12837,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12845,7 +12845,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12853,7 +12853,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12868,7 +12868,7 @@ class AgreementApi
      *
      * Update PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePaypalAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12889,7 +12889,7 @@ class AgreementApi
      *
      * Update PayPal agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePaypalAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12897,7 +12897,7 @@ class AgreementApi
      */
     public function updatePaypalAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updatePaypalAgreementRequest($body, $id);
 
         return $this->client
@@ -12940,7 +12940,7 @@ class AgreementApi
     /**
      * Create request for operation 'updatePaypalAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdatePaypalAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePaypalAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -12991,7 +12991,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -13054,12 +13054,12 @@ class AgreementApi
      *
      * Update ppro agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePproAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdatePproAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updatePproAgreement($body, $id)
     {
@@ -13072,16 +13072,16 @@ class AgreementApi
      *
      * Update ppro agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePproAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePproAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updatePproAgreementRequest($body, $id);
 
         try {
@@ -13133,7 +13133,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13141,7 +13141,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13149,7 +13149,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13157,7 +13157,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13165,7 +13165,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13173,7 +13173,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13181,7 +13181,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13196,7 +13196,7 @@ class AgreementApi
      *
      * Update ppro agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePproAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13217,7 +13217,7 @@ class AgreementApi
      *
      * Update ppro agreement
      *
-     * @param  \Frisbii\lib/Model\UpdatePproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePproAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13225,7 +13225,7 @@ class AgreementApi
      */
     public function updatePproAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updatePproAgreementRequest($body, $id);
 
         return $this->client
@@ -13268,7 +13268,7 @@ class AgreementApi
     /**
      * Create request for operation 'updatePproAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdatePproAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdatePproAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13319,7 +13319,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -13382,12 +13382,12 @@ class AgreementApi
      *
      * Update Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateResursAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateResursAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateResursAgreement($body, $id)
     {
@@ -13400,16 +13400,16 @@ class AgreementApi
      *
      * Update Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateResursAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateResursAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateResursAgreementRequest($body, $id);
 
         try {
@@ -13461,7 +13461,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13469,7 +13469,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13477,7 +13477,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13485,7 +13485,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13493,7 +13493,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13501,7 +13501,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13509,7 +13509,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13524,7 +13524,7 @@ class AgreementApi
      *
      * Update Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateResursAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13545,7 +13545,7 @@ class AgreementApi
      *
      * Update Resurs agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateResursAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13553,7 +13553,7 @@ class AgreementApi
      */
     public function updateResursAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateResursAgreementRequest($body, $id);
 
         return $this->client
@@ -13596,7 +13596,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateResursAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateResursAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateResursAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13647,7 +13647,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -13710,12 +13710,12 @@ class AgreementApi
      *
      * Update Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateSepaEbicsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateSepaEbicsAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateSepaEbicsAgreement($body, $id)
     {
@@ -13728,16 +13728,16 @@ class AgreementApi
      *
      * Update Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSepaEbicsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSepaEbicsAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateSepaEbicsAgreementRequest($body, $id);
 
         try {
@@ -13789,7 +13789,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13797,7 +13797,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13805,7 +13805,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13813,7 +13813,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13821,7 +13821,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13829,7 +13829,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13837,7 +13837,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13852,7 +13852,7 @@ class AgreementApi
      *
      * Update Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSepaEbicsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13873,7 +13873,7 @@ class AgreementApi
      *
      * Update Sepa Ebics agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSepaEbicsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13881,7 +13881,7 @@ class AgreementApi
      */
     public function updateSepaEbicsAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateSepaEbicsAgreementRequest($body, $id);
 
         return $this->client
@@ -13924,7 +13924,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateSepaEbicsAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateSepaEbicsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSepaEbicsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -13975,7 +13975,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -14038,12 +14038,12 @@ class AgreementApi
      *
      * Update card gateway surcharge
      *
-     * @param  \Frisbii\lib/Model\UpdateSurcharge $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateSurcharge $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateSurcharge($body, $id)
     {
@@ -14056,16 +14056,16 @@ class AgreementApi
      *
      * Update card gateway surcharge
      *
-     * @param  \Frisbii\lib/Model\UpdateSurcharge $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSurcharge $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSurchargeWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateSurchargeRequest($body, $id);
 
         try {
@@ -14117,7 +14117,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14125,7 +14125,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14133,7 +14133,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14141,7 +14141,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14149,7 +14149,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14157,7 +14157,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14165,7 +14165,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14180,7 +14180,7 @@ class AgreementApi
      *
      * Update card gateway surcharge
      *
-     * @param  \Frisbii\lib/Model\UpdateSurcharge $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSurcharge $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14201,7 +14201,7 @@ class AgreementApi
      *
      * Update card gateway surcharge
      *
-     * @param  \Frisbii\lib/Model\UpdateSurcharge $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSurcharge $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14209,7 +14209,7 @@ class AgreementApi
      */
     public function updateSurchargeAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateSurchargeRequest($body, $id);
 
         return $this->client
@@ -14252,7 +14252,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateSurcharge'
      *
-     * @param  \Frisbii\lib/Model\UpdateSurcharge $body (required)
+     * @param  \Frisbii\lib\Model\UpdateSurcharge $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14303,7 +14303,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -14366,12 +14366,12 @@ class AgreementApi
      *
      * Update Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateSwishAgreement($body, $id)
     {
@@ -14384,16 +14384,16 @@ class AgreementApi
      *
      * Update Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSwishAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateSwishAgreementRequest($body, $id);
 
         try {
@@ -14445,7 +14445,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14453,7 +14453,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14461,7 +14461,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14469,7 +14469,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14477,7 +14477,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14485,7 +14485,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14493,7 +14493,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14508,7 +14508,7 @@ class AgreementApi
      *
      * Update Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14529,7 +14529,7 @@ class AgreementApi
      *
      * Update Swish agreement
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14537,7 +14537,7 @@ class AgreementApi
      */
     public function updateSwishAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateSwishAgreementRequest($body, $id);
 
         return $this->client
@@ -14580,7 +14580,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateSwishAgreement'
      *
-     * @param  \Frisbii\lib/Model\SwishAgreement $body (required)
+     * @param  \Frisbii\lib\Model\SwishAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14631,7 +14631,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -14694,12 +14694,12 @@ class AgreementApi
      *
      * Update ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateViabillAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateViabillAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateViabillAgreement($body, $id)
     {
@@ -14712,16 +14712,16 @@ class AgreementApi
      *
      * Update ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateViabillAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateViabillAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateViabillAgreementRequest($body, $id);
 
         try {
@@ -14773,7 +14773,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14781,7 +14781,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14789,7 +14789,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14797,7 +14797,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14805,7 +14805,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14813,7 +14813,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14821,7 +14821,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14836,7 +14836,7 @@ class AgreementApi
      *
      * Update ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateViabillAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14857,7 +14857,7 @@ class AgreementApi
      *
      * Update ViaBill agreement
      *
-     * @param  \Frisbii\lib/Model\UpdateViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateViabillAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14865,7 +14865,7 @@ class AgreementApi
      */
     public function updateViabillAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateViabillAgreementRequest($body, $id);
 
         return $this->client
@@ -14908,7 +14908,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateViabillAgreement'
      *
-     * @param  \Frisbii\lib/Model\UpdateViabillAgreement $body (required)
+     * @param  \Frisbii\lib\Model\UpdateViabillAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -14959,7 +14959,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -15022,12 +15022,12 @@ class AgreementApi
      *
      * Update Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\VippsAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\VippsAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateVippsAgreement($body, $id)
     {
@@ -15040,16 +15040,16 @@ class AgreementApi
      *
      * Update Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\VippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateVippsAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateVippsAgreementRequest($body, $id);
 
         try {
@@ -15101,7 +15101,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15109,7 +15109,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15117,7 +15117,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15125,7 +15125,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15133,7 +15133,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15141,7 +15141,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15149,7 +15149,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15164,7 +15164,7 @@ class AgreementApi
      *
      * Update Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\VippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15185,7 +15185,7 @@ class AgreementApi
      *
      * Update Vipps agreement
      *
-     * @param  \Frisbii\lib/Model\VippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15193,7 +15193,7 @@ class AgreementApi
      */
     public function updateVippsAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateVippsAgreementRequest($body, $id);
 
         return $this->client
@@ -15236,7 +15236,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateVippsAgreement'
      *
-     * @param  \Frisbii\lib/Model\VippsAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15287,7 +15287,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -15350,12 +15350,12 @@ class AgreementApi
      *
      * Update Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateVippsMobilepayAgreement($body, $id)
     {
@@ -15368,16 +15368,16 @@ class AgreementApi
      *
      * Update Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateVippsMobilepayAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateVippsMobilepayAgreementRequest($body, $id);
 
         try {
@@ -15429,7 +15429,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15437,7 +15437,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15445,7 +15445,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15453,7 +15453,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15461,7 +15461,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15469,7 +15469,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15477,7 +15477,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15492,7 +15492,7 @@ class AgreementApi
      *
      * Update Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15513,7 +15513,7 @@ class AgreementApi
      *
      * Update Vipps ePayments agreement
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15521,7 +15521,7 @@ class AgreementApi
      */
     public function updateVippsMobilepayAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateVippsMobilepayAgreementRequest($body, $id);
 
         return $this->client
@@ -15564,7 +15564,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateVippsMobilepayAgreement'
      *
-     * @param  \Frisbii\lib/Model\VippsMobilepayAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsMobilepayAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15615,7 +15615,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -15678,12 +15678,12 @@ class AgreementApi
      *
      * Update Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\GatewayAgreement
+     * @return \Frisbii\lib\Model\GatewayAgreement
      */
     public function updateVippsRecurringAgreement($body, $id)
     {
@@ -15696,16 +15696,16 @@ class AgreementApi
      *
      * Update Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\GatewayAgreement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateVippsRecurringAgreementWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateVippsRecurringAgreementRequest($body, $id);
 
         try {
@@ -15757,7 +15757,7 @@ class AgreementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\GatewayAgreement',
+                        '\Frisbii\lib\Model\GatewayAgreement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15765,7 +15765,7 @@ class AgreementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15773,7 +15773,7 @@ class AgreementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15781,7 +15781,7 @@ class AgreementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15789,7 +15789,7 @@ class AgreementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15797,7 +15797,7 @@ class AgreementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15805,7 +15805,7 @@ class AgreementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15820,7 +15820,7 @@ class AgreementApi
      *
      * Update Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15841,7 +15841,7 @@ class AgreementApi
      *
      * Update Vipps Recurring agreement
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15849,7 +15849,7 @@ class AgreementApi
      */
     public function updateVippsRecurringAgreementAsyncWithHttpInfo($body, $id)
     {
-        $returnType = '\Frisbii\lib/Model\GatewayAgreement';
+        $returnType = '\Frisbii\lib\Model\GatewayAgreement';
         $request = $this->updateVippsRecurringAgreementRequest($body, $id);
 
         return $this->client
@@ -15892,7 +15892,7 @@ class AgreementApi
     /**
      * Create request for operation 'updateVippsRecurringAgreement'
      *
-     * @param  \Frisbii\lib/Model\VippsRecurringAgreement $body (required)
+     * @param  \Frisbii\lib\Model\VippsRecurringAgreement $body (required)
      * @param  string $id Agreement id (required)
      *
      * @throws \InvalidArgumentException
@@ -15943,7 +15943,7 @@ class AgreementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -64,7 +64,7 @@ class PayoutTransaction implements ModelInterface, ArrayAccess
         'paid' => '\DateTime',
         'failed' => '\DateTime',
         'created' => '\DateTime',
-        'card' => '\Frisbii\lib/Model\Card',
+        'card' => '\Frisbii\lib\Model\Card',
         'error' => 'string',
         'fingerprint' => 'string',
         'provider' => 'string',
@@ -666,7 +666,7 @@ class PayoutTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \Frisbii\lib/Model\Card
+     * @return \Frisbii\lib\Model\Card
      */
     public function getCard()
     {
@@ -676,7 +676,7 @@ class PayoutTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \Frisbii\lib/Model\Card $card card
+     * @param \Frisbii\lib\Model\Card $card card
      *
      * @return $this
      */

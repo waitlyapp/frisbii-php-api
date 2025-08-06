@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class AddOnApi
      *
      * Create add-on
      *
-     * @param  \Frisbii\lib/Model\CreateAddOn $body body (required)
+     * @param  \Frisbii\lib\Model\CreateAddOn $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AddOn
+     * @return \Frisbii\lib\Model\AddOn
      */
     public function createAddOn($body)
     {
@@ -108,15 +108,15 @@ class AddOnApi
      *
      * Create add-on
      *
-     * @param  \Frisbii\lib/Model\CreateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\CreateAddOn $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AddOn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AddOn, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAddOnWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->createAddOnRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class AddOnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AddOn',
+                        '\Frisbii\lib\Model\AddOn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class AddOnApi
      *
      * Create add-on
      *
-     * @param  \Frisbii\lib/Model\CreateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\CreateAddOn $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class AddOnApi
      *
      * Create add-on
      *
-     * @param  \Frisbii\lib/Model\CreateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\CreateAddOn $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAddOnAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->createAddOnRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class AddOnApi
     /**
      * Create request for operation 'createAddOn'
      *
-     * @param  \Frisbii\lib/Model\CreateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\CreateAddOn $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -404,7 +404,7 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AddOn
+     * @return \Frisbii\lib\Model\AddOn
      */
     public function deleteAddOn($handle)
     {
@@ -421,11 +421,11 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AddOn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AddOn, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAddOnWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->deleteAddOnRequest($handle);
 
         try {
@@ -477,7 +477,7 @@ class AddOnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AddOn',
+                        '\Frisbii\lib\Model\AddOn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -493,7 +493,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -509,7 +509,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -517,7 +517,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -525,7 +525,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -567,7 +567,7 @@ class AddOnApi
      */
     public function deleteAddOnAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->deleteAddOnRequest($handle);
 
         return $this->client
@@ -776,7 +776,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -784,7 +784,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -792,7 +792,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -800,7 +800,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -808,7 +808,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -816,7 +816,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AddOn
+     * @return \Frisbii\lib\Model\AddOn
      */
     public function getAddOn($handle, $tax_rate_for_country = null)
     {
@@ -1014,11 +1014,11 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AddOn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AddOn, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAddOnWithHttpInfo($handle, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->getAddOnRequest($handle, $tax_rate_for_country);
 
         try {
@@ -1070,7 +1070,7 @@ class AddOnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AddOn',
+                        '\Frisbii\lib\Model\AddOn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1078,7 +1078,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1086,7 +1086,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1094,7 +1094,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1102,7 +1102,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1110,7 +1110,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1118,7 +1118,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1162,7 +1162,7 @@ class AddOnApi
      */
     public function getAddOnAsyncWithHttpInfo($handle, $tax_rate_for_country = null)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->getAddOnRequest($handle, $tax_rate_for_country);
 
         return $this->client
@@ -1318,7 +1318,7 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Entitlement[]
+     * @return \Frisbii\lib\Model\Entitlement[]
      */
     public function getAddOnEntitlements($handle)
     {
@@ -1335,11 +1335,11 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Entitlement[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Entitlement[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAddOnEntitlementsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement[]';
+        $returnType = '\Frisbii\lib\Model\Entitlement[]';
         $request = $this->getAddOnEntitlementsRequest($handle);
 
         try {
@@ -1391,7 +1391,7 @@ class AddOnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Entitlement[]',
+                        '\Frisbii\lib\Model\Entitlement[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1399,7 +1399,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1407,7 +1407,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1415,7 +1415,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1423,7 +1423,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1431,7 +1431,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1439,7 +1439,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1481,7 +1481,7 @@ class AddOnApi
      */
     public function getAddOnEntitlementsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement[]';
+        $returnType = '\Frisbii\lib\Model\Entitlement[]';
         $request = $this->getAddOnEntitlementsRequest($handle);
 
         return $this->client
@@ -1713,7 +1713,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1721,7 +1721,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1729,7 +1729,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1737,7 +1737,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1745,7 +1745,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1753,7 +1753,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1946,7 +1946,7 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AddOn
+     * @return \Frisbii\lib\Model\AddOn
      */
     public function undeleteAddOn($handle)
     {
@@ -1963,11 +1963,11 @@ class AddOnApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AddOn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AddOn, HTTP status code, HTTP response headers (array of strings)
      */
     public function undeleteAddOnWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->undeleteAddOnRequest($handle);
 
         try {
@@ -2019,7 +2019,7 @@ class AddOnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AddOn',
+                        '\Frisbii\lib\Model\AddOn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2027,7 +2027,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2035,7 +2035,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2043,7 +2043,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2051,7 +2051,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2059,7 +2059,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2067,7 +2067,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2109,7 +2109,7 @@ class AddOnApi
      */
     public function undeleteAddOnAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->undeleteAddOnRequest($handle);
 
         return $this->client
@@ -2256,12 +2256,12 @@ class AddOnApi
      *
      * Update add-on
      *
-     * @param  \Frisbii\lib/Model\UpdateAddOn $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateAddOn $body body (required)
      * @param  string $handle Add-on handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AddOn
+     * @return \Frisbii\lib\Model\AddOn
      */
     public function updateAddOn($body, $handle)
     {
@@ -2274,16 +2274,16 @@ class AddOnApi
      *
      * Update add-on
      *
-     * @param  \Frisbii\lib/Model\UpdateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAddOn $body (required)
      * @param  string $handle Add-on handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AddOn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AddOn, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAddOnWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->updateAddOnRequest($body, $handle);
 
         try {
@@ -2335,7 +2335,7 @@ class AddOnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AddOn',
+                        '\Frisbii\lib\Model\AddOn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2343,7 +2343,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2351,7 +2351,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2359,7 +2359,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2367,7 +2367,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2375,7 +2375,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2383,7 +2383,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2398,7 +2398,7 @@ class AddOnApi
      *
      * Update add-on
      *
-     * @param  \Frisbii\lib/Model\UpdateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAddOn $body (required)
      * @param  string $handle Add-on handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2419,7 +2419,7 @@ class AddOnApi
      *
      * Update add-on
      *
-     * @param  \Frisbii\lib/Model\UpdateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAddOn $body (required)
      * @param  string $handle Add-on handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2427,7 +2427,7 @@ class AddOnApi
      */
     public function updateAddOnAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\AddOn';
+        $returnType = '\Frisbii\lib\Model\AddOn';
         $request = $this->updateAddOnRequest($body, $handle);
 
         return $this->client
@@ -2470,7 +2470,7 @@ class AddOnApi
     /**
      * Create request for operation 'updateAddOn'
      *
-     * @param  \Frisbii\lib/Model\UpdateAddOn $body (required)
+     * @param  \Frisbii\lib\Model\UpdateAddOn $body (required)
      * @param  string $handle Add-on handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2671,7 +2671,7 @@ class AddOnApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2679,7 +2679,7 @@ class AddOnApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2687,7 +2687,7 @@ class AddOnApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2695,7 +2695,7 @@ class AddOnApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2703,7 +2703,7 @@ class AddOnApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2711,7 +2711,7 @@ class AddOnApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2849,7 +2849,7 @@ class AddOnApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class VippsRecurringTransaction implements ModelInterface, ArrayAccess
         'error_state' => 'string',
         'acquirer_message' => 'string',
         'vipps_recurring_id' => 'string',
-        'vipps_recurring_mandate' => '\Frisbii\lib/Model\VippsRecurringMandate'
+        'vipps_recurring_mandate' => '\Frisbii\lib\Model\VippsRecurringMandate'
     ];
 
     /**
@@ -396,7 +396,7 @@ class VippsRecurringTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets vipps_recurring_mandate
      *
-     * @return \Frisbii\lib/Model\VippsRecurringMandate
+     * @return \Frisbii\lib\Model\VippsRecurringMandate
      */
     public function getVippsRecurringMandate()
     {
@@ -406,7 +406,7 @@ class VippsRecurringTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets vipps_recurring_mandate
      *
-     * @param \Frisbii\lib/Model\VippsRecurringMandate $vipps_recurring_mandate vipps_recurring_mandate
+     * @param \Frisbii\lib\Model\VippsRecurringMandate $vipps_recurring_mandate vipps_recurring_mandate
      *
      * @return $this
      */

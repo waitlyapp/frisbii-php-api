@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domains** | [**\Frisbii\lib/Model\ApplepayDomainDto[]**](ApplepayDomainDto.md) |  | [optional] 
+**domains** | [**\Frisbii\lib\Model\ApplepayDomainDto[]**](ApplepayDomainDto.md) |  | [optional] 
 **registered** | **bool** |  | [optional] 
 **display_name** | **string** |  | 
 **merchant_management_url** | **string** |  | [optional] 

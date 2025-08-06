@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -61,8 +61,8 @@ class TaxPolicy implements ModelInterface, ArrayAccess
         'updated' => '\DateTime',
         'name' => 'string',
         'handle' => 'string',
-        'rates' => '\Frisbii\lib/Model\TaxRate[]',
-        'fallbacks' => '\Frisbii\lib/Model\TaxPolicyFallbacks',
+        'rates' => '\Frisbii\lib\Model\TaxRate[]',
+        'fallbacks' => '\Frisbii\lib\Model\TaxPolicyFallbacks',
         'is_default' => 'bool',
         'is_deletable' => 'bool'
     ];
@@ -390,7 +390,7 @@ class TaxPolicy implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Frisbii\lib/Model\TaxRate[]
+     * @return \Frisbii\lib\Model\TaxRate[]
      */
     public function getRates()
     {
@@ -400,7 +400,7 @@ class TaxPolicy implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Frisbii\lib/Model\TaxRate[] $rates Tax rates to apply to the tax policy
+     * @param \Frisbii\lib\Model\TaxRate[] $rates Tax rates to apply to the tax policy
      *
      * @return $this
      */
@@ -414,7 +414,7 @@ class TaxPolicy implements ModelInterface, ArrayAccess
     /**
      * Gets fallbacks
      *
-     * @return \Frisbii\lib/Model\TaxPolicyFallbacks
+     * @return \Frisbii\lib\Model\TaxPolicyFallbacks
      */
     public function getFallbacks()
     {
@@ -424,7 +424,7 @@ class TaxPolicy implements ModelInterface, ArrayAccess
     /**
      * Sets fallbacks
      *
-     * @param \Frisbii\lib/Model\TaxPolicyFallbacks $fallbacks fallbacks
+     * @param \Frisbii\lib\Model\TaxPolicyFallbacks $fallbacks fallbacks
      *
      * @return $this
      */

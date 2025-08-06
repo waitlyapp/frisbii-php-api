@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class SepaEbicsTransaction implements ModelInterface, ArrayAccess
         'error_state' => 'string',
         'acquirer_message' => 'string',
         'sepa_ebics_id' => 'string',
-        'sepa_ebics_mandate' => '\Frisbii\lib/Model\SepaEbicsMandate'
+        'sepa_ebics_mandate' => '\Frisbii\lib\Model\SepaEbicsMandate'
     ];
 
     /**
@@ -396,7 +396,7 @@ class SepaEbicsTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets sepa_ebics_mandate
      *
-     * @return \Frisbii\lib/Model\SepaEbicsMandate
+     * @return \Frisbii\lib\Model\SepaEbicsMandate
      */
     public function getSepaEbicsMandate()
     {
@@ -406,7 +406,7 @@ class SepaEbicsTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets sepa_ebics_mandate
      *
-     * @param \Frisbii\lib/Model\SepaEbicsMandate $sepa_ebics_mandate sepa_ebics_mandate
+     * @param \Frisbii\lib\Model\SepaEbicsMandate $sepa_ebics_mandate sepa_ebics_mandate
      *
      * @return $this
      */

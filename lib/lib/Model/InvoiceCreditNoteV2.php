@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -66,16 +66,16 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'customer' => 'string',
         'subscription' => 'string',
-        'credits' => '\Frisbii\lib/Model\CreditInvoice[]',
+        'credits' => '\Frisbii\lib\Model\CreditInvoice[]',
         'amount_vat' => 'int',
         'amount_ex_vat' => 'int',
-        'credit_note_lines' => '\Frisbii\lib/Model\CreditNoteLine[]',
+        'credit_note_lines' => '\Frisbii\lib\Model\CreditNoteLine[]',
         'accounting_number' => 'string',
         'debtor_id' => 'int',
         'download_url' => 'string',
         'accounting_created_date' => '\DateTime',
         'payable_amount' => 'int',
-        'amount_vat_lines' => '\Frisbii\lib/Model\AmountVatLine[]'
+        'amount_vat_lines' => '\Frisbii\lib\Model\AmountVatLine[]'
     ];
 
     /**
@@ -556,7 +556,7 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
     /**
      * Gets credits
      *
-     * @return \Frisbii\lib/Model\CreditInvoice[]
+     * @return \Frisbii\lib\Model\CreditInvoice[]
      */
     public function getCredits()
     {
@@ -566,7 +566,7 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
     /**
      * Sets credits
      *
-     * @param \Frisbii\lib/Model\CreditInvoice[] $credits Credits applied to credit note
+     * @param \Frisbii\lib\Model\CreditInvoice[] $credits Credits applied to credit note
      *
      * @return $this
      */
@@ -628,7 +628,7 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
     /**
      * Gets credit_note_lines
      *
-     * @return \Frisbii\lib/Model\CreditNoteLine[]
+     * @return \Frisbii\lib\Model\CreditNoteLine[]
      */
     public function getCreditNoteLines()
     {
@@ -638,7 +638,7 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
     /**
      * Sets credit_note_lines
      *
-     * @param \Frisbii\lib/Model\CreditNoteLine[] $credit_note_lines Credit note lines
+     * @param \Frisbii\lib\Model\CreditNoteLine[] $credit_note_lines Credit note lines
      *
      * @return $this
      */
@@ -772,7 +772,7 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
     /**
      * Gets amount_vat_lines
      *
-     * @return \Frisbii\lib/Model\AmountVatLine[]
+     * @return \Frisbii\lib\Model\AmountVatLine[]
      */
     public function getAmountVatLines()
     {
@@ -782,7 +782,7 @@ class InvoiceCreditNoteV2 implements ModelInterface, ArrayAccess
     /**
      * Sets amount_vat_lines
      *
-     * @param \Frisbii\lib/Model\AmountVatLine[] $amount_vat_lines The list of VAT amounts grouped by VAT percentage
+     * @param \Frisbii\lib\Model\AmountVatLine[] $amount_vat_lines The list of VAT amounts grouped by VAT percentage
      *
      * @return $this
      */

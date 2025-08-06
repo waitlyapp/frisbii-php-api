@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class AuditLogEventListDto implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\AuditLogEventDto[]',
+        'content' => '\Frisbii\lib\Model\AuditLogEventDto[]',
         'range' => 'string',
         'next_page_token' => 'string'
     ];
@@ -371,7 +371,7 @@ class AuditLogEventListDto implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\AuditLogEventDto[]
+     * @return \Frisbii\lib\Model\AuditLogEventDto[]
      */
     public function getContent()
     {
@@ -381,7 +381,7 @@ class AuditLogEventListDto implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\AuditLogEventDto[] $content List of audit log events for current page
+     * @param \Frisbii\lib\Model\AuditLogEventDto[] $content List of audit log events for current page
      *
      * @return $this
      */

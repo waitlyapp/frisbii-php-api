@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -67,7 +67,7 @@ class ChangeSubscription implements ModelInterface, ArrayAccess
         'start_date' => 'string',
         'force_new_period' => 'bool',
         'cancel_change' => 'bool',
-        'add_ons' => '\Frisbii\lib/Model\CreateSubscriptionAddOn[]',
+        'add_ons' => '\Frisbii\lib\Model\CreateSubscriptionAddOn[]',
         'remove_add_ons' => 'string[]'
     ];
 
@@ -681,7 +681,7 @@ class ChangeSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets add_ons
      *
-     * @return \Frisbii\lib/Model\CreateSubscriptionAddOn[]
+     * @return \Frisbii\lib\Model\CreateSubscriptionAddOn[]
      */
     public function getAddOns()
     {
@@ -691,7 +691,7 @@ class ChangeSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets add_ons
      *
-     * @param \Frisbii\lib/Model\CreateSubscriptionAddOn[] $add_ons Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed.
+     * @param \Frisbii\lib\Model\CreateSubscriptionAddOn[] $add_ons Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed.
      *
      * @return $this
      */

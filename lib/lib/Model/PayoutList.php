@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class PayoutList implements ModelInterface, ArrayAccess
         'to' => 'string',
         'from' => 'string',
         'range' => 'string',
-        'content' => '\Frisbii\lib/Model\Payout[]',
+        'content' => '\Frisbii\lib\Model\Payout[]',
         'next_page_token' => 'string'
     ];
 
@@ -405,7 +405,7 @@ class PayoutList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\Payout[]
+     * @return \Frisbii\lib\Model\Payout[]
      */
     public function getContent()
     {
@@ -415,7 +415,7 @@ class PayoutList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\Payout[] $content List of payouts for current page
+     * @param \Frisbii\lib\Model\Payout[] $content List of payouts for current page
      *
      * @return $this
      */

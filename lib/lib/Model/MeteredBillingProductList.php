@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -60,7 +60,7 @@ class MeteredBillingProductList implements ModelInterface, ArrayAccess
         'count' => 'int',
         'to' => 'string',
         'from' => 'string',
-        'content' => '\Frisbii\lib/Model\MeteredBillingProduct[]',
+        'content' => '\Frisbii\lib\Model\MeteredBillingProduct[]',
         'next_page_token' => 'string'
     ];
 
@@ -345,7 +345,7 @@ class MeteredBillingProductList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\MeteredBillingProduct[]
+     * @return \Frisbii\lib\Model\MeteredBillingProduct[]
      */
     public function getContent()
     {
@@ -355,7 +355,7 @@ class MeteredBillingProductList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\MeteredBillingProduct[] $content List of metered billing products for current page
+     * @param \Frisbii\lib\Model\MeteredBillingProduct[] $content List of metered billing products for current page
      *
      * @return $this
      */

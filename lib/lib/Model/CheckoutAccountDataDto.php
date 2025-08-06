@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -56,10 +56,10 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Frisbii\lib/Model\Account',
-        'organisation' => '\Frisbii\lib/Model\Organisation',
+        'account' => '\Frisbii\lib\Model\Account',
+        'organisation' => '\Frisbii\lib\Model\Organisation',
         'public_key' => 'string',
-        'agreements' => '\Frisbii\lib/Model\GatewayAgreement[]'
+        'agreements' => '\Frisbii\lib\Model\GatewayAgreement[]'
     ];
 
     /**
@@ -222,7 +222,7 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Frisbii\lib/Model\Account
+     * @return \Frisbii\lib\Model\Account
      */
     public function getAccount()
     {
@@ -232,7 +232,7 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Frisbii\lib/Model\Account $account account
+     * @param \Frisbii\lib\Model\Account $account account
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets organisation
      *
-     * @return \Frisbii\lib/Model\Organisation
+     * @return \Frisbii\lib\Model\Organisation
      */
     public function getOrganisation()
     {
@@ -256,7 +256,7 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets organisation
      *
-     * @param \Frisbii\lib/Model\Organisation $organisation organisation
+     * @param \Frisbii\lib\Model\Organisation $organisation organisation
      *
      * @return $this
      */
@@ -294,7 +294,7 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
     /**
      * Gets agreements
      *
-     * @return \Frisbii\lib/Model\GatewayAgreement[]
+     * @return \Frisbii\lib\Model\GatewayAgreement[]
      */
     public function getAgreements()
     {
@@ -304,7 +304,7 @@ class CheckoutAccountDataDto implements ModelInterface, ArrayAccess
     /**
      * Sets agreements
      *
-     * @param \Frisbii\lib/Model\GatewayAgreement[] $agreements agreements
+     * @param \Frisbii\lib\Model\GatewayAgreement[] $agreements agreements
      *
      * @return $this
      */

@@ -78,16 +78,16 @@ class InlineResponse200Test extends TestCase
     }
 
     /**
-     * Test attribute "plan_changed"
+     * Test attribute "subscription_changed"
      */
-    public function testPropertyPlanChanged()
+    public function testPropertySubscriptionChanged()
     {
     }
 
     /**
-     * Test attribute "subscription_changed"
+     * Test attribute "plan_changed"
      */
-    public function testPropertySubscriptionChanged()
+    public function testPropertyPlanChanged()
     {
     }
 
@@ -113,27 +113,6 @@ class InlineResponse200Test extends TestCase
     }
 
     /**
-     * Test attribute "test"
-     */
-    public function testPropertyTest()
-    {
-    }
-
-    /**
-     * Test attribute "dunning"
-     */
-    public function testPropertyDunning()
-    {
-    }
-
-    /**
-     * Test attribute "compensation"
-     */
-    public function testPropertyCompensation()
-    {
-    }
-
-    /**
      * Test attribute "user_account"
      */
     public function testPropertyUserAccount()
@@ -141,9 +120,9 @@ class InlineResponse200Test extends TestCase
     }
 
     /**
-     * Test attribute "card"
+     * Test attribute "compensation"
      */
-    public function testPropertyCard()
+    public function testPropertyCompensation()
     {
     }
 
@@ -169,9 +148,30 @@ class InlineResponse200Test extends TestCase
     }
 
     /**
+     * Test attribute "test"
+     */
+    public function testPropertyTest()
+    {
+    }
+
+    /**
+     * Test attribute "dunning"
+     */
+    public function testPropertyDunning()
+    {
+    }
+
+    /**
      * Test attribute "user"
      */
     public function testPropertyUser()
+    {
+    }
+
+    /**
+     * Test attribute "card"
+     */
+    public function testPropertyCard()
     {
     }
 

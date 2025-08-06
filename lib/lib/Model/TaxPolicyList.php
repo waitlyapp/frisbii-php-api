@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -62,7 +62,7 @@ class TaxPolicyList implements ModelInterface, ArrayAccess
         'to' => 'string',
         'from' => 'string',
         'range' => 'string',
-        'content' => '\Frisbii\lib/Model\TaxPolicy[]',
+        'content' => '\Frisbii\lib\Model\TaxPolicy[]',
         'next_page_token' => 'string'
     ];
 
@@ -405,7 +405,7 @@ class TaxPolicyList implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return \Frisbii\lib/Model\TaxPolicy[]
+     * @return \Frisbii\lib\Model\TaxPolicy[]
      */
     public function getContent()
     {
@@ -415,7 +415,7 @@ class TaxPolicyList implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param \Frisbii\lib/Model\TaxPolicy[] $content List of tax policies for current page
+     * @param \Frisbii\lib\Model\TaxPolicy[] $content List of tax policies for current page
      *
      * @return $this
      */

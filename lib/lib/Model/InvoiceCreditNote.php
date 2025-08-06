@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -68,7 +68,7 @@ class InvoiceCreditNote implements ModelInterface, ArrayAccess
         'subscription' => 'string',
         'amount_vat' => 'int',
         'amount_ex_vat' => 'int',
-        'credit_note_lines' => '\Frisbii\lib/Model\CreditNoteLine[]',
+        'credit_note_lines' => '\Frisbii\lib\Model\CreditNoteLine[]',
         'accounting_number' => 'string',
         'debtor_id' => 'int',
         'download_url' => 'string',
@@ -583,7 +583,7 @@ class InvoiceCreditNote implements ModelInterface, ArrayAccess
     /**
      * Gets credit_note_lines
      *
-     * @return \Frisbii\lib/Model\CreditNoteLine[]
+     * @return \Frisbii\lib\Model\CreditNoteLine[]
      */
     public function getCreditNoteLines()
     {
@@ -593,7 +593,7 @@ class InvoiceCreditNote implements ModelInterface, ArrayAccess
     /**
      * Sets credit_note_lines
      *
-     * @param \Frisbii\lib/Model\CreditNoteLine[] $credit_note_lines Credit note lines
+     * @param \Frisbii\lib\Model\CreditNoteLine[] $credit_note_lines Credit note lines
      *
      * @return $this
      */

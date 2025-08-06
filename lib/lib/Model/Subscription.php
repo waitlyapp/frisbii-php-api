@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -113,10 +113,10 @@ class Subscription implements ModelInterface, ArrayAccess
         'pending_credit_amount' => 'int',
         'transferred_credits' => 'int',
         'transferred_credit_amount' => 'int',
-        'hosted_page_links' => '\Frisbii\lib/Model\SubscriptionLinks',
+        'hosted_page_links' => '\Frisbii\lib\Model\SubscriptionLinks',
         'subscription_discounts' => 'string[]',
-        'pending_change' => '\Frisbii\lib/Model\SubscriptionChange',
-        'subscription_changes' => '\Frisbii\lib/Model\SubscriptionChange[]',
+        'pending_change' => '\Frisbii\lib\Model\SubscriptionChange',
+        'subscription_changes' => '\Frisbii\lib\Model\SubscriptionChange[]',
         'subscription_add_ons' => 'string[]',
         'active_payment_methods' => 'string[]',
         'metered_billing_products' => 'string[]'
@@ -2162,7 +2162,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets hosted_page_links
      *
-     * @return \Frisbii\lib/Model\SubscriptionLinks
+     * @return \Frisbii\lib\Model\SubscriptionLinks
      */
     public function getHostedPageLinks()
     {
@@ -2172,7 +2172,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets hosted_page_links
      *
-     * @param \Frisbii\lib/Model\SubscriptionLinks $hosted_page_links hosted_page_links
+     * @param \Frisbii\lib\Model\SubscriptionLinks $hosted_page_links hosted_page_links
      *
      * @return $this
      */
@@ -2210,7 +2210,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets pending_change
      *
-     * @return \Frisbii\lib/Model\SubscriptionChange
+     * @return \Frisbii\lib\Model\SubscriptionChange
      */
     public function getPendingChange()
     {
@@ -2220,7 +2220,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets pending_change
      *
-     * @param \Frisbii\lib/Model\SubscriptionChange $pending_change pending_change
+     * @param \Frisbii\lib\Model\SubscriptionChange $pending_change pending_change
      *
      * @return $this
      */
@@ -2234,7 +2234,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_changes
      *
-     * @return \Frisbii\lib/Model\SubscriptionChange[]
+     * @return \Frisbii\lib\Model\SubscriptionChange[]
      */
     public function getSubscriptionChanges()
     {
@@ -2244,7 +2244,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_changes
      *
-     * @param \Frisbii\lib/Model\SubscriptionChange[] $subscription_changes List of subscription changes both at most one pending and previously applied
+     * @param \Frisbii\lib\Model\SubscriptionChange[] $subscription_changes List of subscription changes both at most one pending and previously applied
      *
      * @return $this
      */

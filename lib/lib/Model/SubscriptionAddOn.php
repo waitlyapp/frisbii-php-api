@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -63,7 +63,7 @@ class SubscriptionAddOn implements ModelInterface, ArrayAccess
         'name' => 'string',
         'description' => 'string',
         'created' => '\DateTime',
-        'add_on' => '\Frisbii\lib/Model\AddOn',
+        'add_on' => '\Frisbii\lib\Model\AddOn',
         'amount_incl_vat' => 'bool'
     ];
 
@@ -400,7 +400,7 @@ class SubscriptionAddOn implements ModelInterface, ArrayAccess
     /**
      * Gets add_on
      *
-     * @return \Frisbii\lib/Model\AddOn
+     * @return \Frisbii\lib\Model\AddOn
      */
     public function getAddOn()
     {
@@ -410,7 +410,7 @@ class SubscriptionAddOn implements ModelInterface, ArrayAccess
     /**
      * Sets add_on
      *
-     * @param \Frisbii\lib/Model\AddOn $add_on add_on
+     * @param \Frisbii\lib\Model\AddOn $add_on add_on
      *
      * @return $this
      */

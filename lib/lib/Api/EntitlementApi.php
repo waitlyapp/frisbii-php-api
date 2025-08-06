@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class EntitlementApi
      *
      * Create entitlement
      *
-     * @param  \Frisbii\lib/Model\CreateEntitlement $body body (required)
+     * @param  \Frisbii\lib\Model\CreateEntitlement $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Entitlement
+     * @return \Frisbii\lib\Model\Entitlement
      */
     public function createEntitlement($body)
     {
@@ -108,15 +108,15 @@ class EntitlementApi
      *
      * Create entitlement
      *
-     * @param  \Frisbii\lib/Model\CreateEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\CreateEntitlement $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Entitlement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Entitlement, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEntitlementWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement';
+        $returnType = '\Frisbii\lib\Model\Entitlement';
         $request = $this->createEntitlementRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class EntitlementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Entitlement',
+                        '\Frisbii\lib\Model\Entitlement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class EntitlementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class EntitlementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class EntitlementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class EntitlementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class EntitlementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class EntitlementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class EntitlementApi
      *
      * Create entitlement
      *
-     * @param  \Frisbii\lib/Model\CreateEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\CreateEntitlement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class EntitlementApi
      *
      * Create entitlement
      *
-     * @param  \Frisbii\lib/Model\CreateEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\CreateEntitlement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createEntitlementAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement';
+        $returnType = '\Frisbii\lib\Model\Entitlement';
         $request = $this->createEntitlementRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class EntitlementApi
     /**
      * Create request for operation 'createEntitlement'
      *
-     * @param  \Frisbii\lib/Model\CreateEntitlement $body (required)
+     * @param  \Frisbii\lib\Model\CreateEntitlement $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -337,7 +337,7 @@ class EntitlementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -462,7 +462,7 @@ class EntitlementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -470,7 +470,7 @@ class EntitlementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -478,7 +478,7 @@ class EntitlementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class EntitlementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -494,7 +494,7 @@ class EntitlementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -502,7 +502,7 @@ class EntitlementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -681,7 +681,7 @@ class EntitlementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Entitlement
+     * @return \Frisbii\lib\Model\Entitlement
      */
     public function getEntitlement($handle)
     {
@@ -698,11 +698,11 @@ class EntitlementApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Entitlement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Entitlement, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntitlementWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement';
+        $returnType = '\Frisbii\lib\Model\Entitlement';
         $request = $this->getEntitlementRequest($handle);
 
         try {
@@ -754,7 +754,7 @@ class EntitlementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Entitlement',
+                        '\Frisbii\lib\Model\Entitlement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -762,7 +762,7 @@ class EntitlementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class EntitlementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class EntitlementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class EntitlementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -794,7 +794,7 @@ class EntitlementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -802,7 +802,7 @@ class EntitlementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -844,7 +844,7 @@ class EntitlementApi
      */
     public function getEntitlementAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement';
+        $returnType = '\Frisbii\lib\Model\Entitlement';
         $request = $this->getEntitlementRequest($handle);
 
         return $this->client
@@ -991,12 +991,12 @@ class EntitlementApi
      *
      * Update entitlement
      *
-     * @param  \Frisbii\lib/Model\UpdateEntitlementDto $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateEntitlementDto $body body (required)
      * @param  string $handle handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Entitlement
+     * @return \Frisbii\lib\Model\Entitlement
      */
     public function updateEntitlement($body, $handle)
     {
@@ -1009,16 +1009,16 @@ class EntitlementApi
      *
      * Update entitlement
      *
-     * @param  \Frisbii\lib/Model\UpdateEntitlementDto $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEntitlementDto $body (required)
      * @param  string $handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Entitlement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Entitlement, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEntitlementWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement';
+        $returnType = '\Frisbii\lib\Model\Entitlement';
         $request = $this->updateEntitlementRequest($body, $handle);
 
         try {
@@ -1070,7 +1070,7 @@ class EntitlementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Entitlement',
+                        '\Frisbii\lib\Model\Entitlement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1078,7 +1078,7 @@ class EntitlementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1086,7 +1086,7 @@ class EntitlementApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1094,7 +1094,7 @@ class EntitlementApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1102,7 +1102,7 @@ class EntitlementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1110,7 +1110,7 @@ class EntitlementApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1118,7 +1118,7 @@ class EntitlementApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1133,7 +1133,7 @@ class EntitlementApi
      *
      * Update entitlement
      *
-     * @param  \Frisbii\lib/Model\UpdateEntitlementDto $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEntitlementDto $body (required)
      * @param  string $handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1154,7 +1154,7 @@ class EntitlementApi
      *
      * Update entitlement
      *
-     * @param  \Frisbii\lib/Model\UpdateEntitlementDto $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEntitlementDto $body (required)
      * @param  string $handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1162,7 +1162,7 @@ class EntitlementApi
      */
     public function updateEntitlementAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Entitlement';
+        $returnType = '\Frisbii\lib\Model\Entitlement';
         $request = $this->updateEntitlementRequest($body, $handle);
 
         return $this->client
@@ -1205,7 +1205,7 @@ class EntitlementApi
     /**
      * Create request for operation 'updateEntitlement'
      *
-     * @param  \Frisbii\lib/Model\UpdateEntitlementDto $body (required)
+     * @param  \Frisbii\lib\Model\UpdateEntitlementDto $body (required)
      * @param  string $handle (required)
      *
      * @throws \InvalidArgumentException
@@ -1256,7 +1256,7 @@ class EntitlementApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 

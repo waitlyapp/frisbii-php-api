@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **renewing** | **bool** | If the subscription renews at current period end. Also true for subscriptions with manual scheduling. | 
 **coupons** | **string[]** | List of coupon handles redeemed for the subscription | [optional] 
 **currency** | **string** | Currency for the subscription in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) three letter alpha code | 
-**invoices** | [**\Frisbii\lib/Model\Invoice[]**](Invoice.md) | List of created (prepared) invoices for prepared subscription | [optional] 
+**invoices** | [**\Frisbii\lib\Model\Invoice[]**](Invoice.md) | List of created (prepared) invoices for prepared subscription | [optional] 
 **plan_version** | **int** | Subscription plan version | 
 **amount_incl_vat** | **bool** | If optional custom plan price this parameter tells whether the amount is including VAT | [optional] 
 **start_date** | [**\DateTime**](\DateTime.md) | Date and time from which the subscription is eligible to schedule invoices. Either from create or from the latest reactivate or subscription change. In [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | 
@@ -61,14 +61,14 @@ Name | Type | Description | Notes
 **pending_credit_amount** | **int** | Summed credit amount not yet applied to invoices | 
 **transferred_credits** | **int** | Number of credits that have fully been applied to invoices | 
 **transferred_credit_amount** | **int** | Summed credit amount that have been applied to invoices | 
-**hosted_page_links** | [**\Frisbii\lib/Model\SubscriptionLinks**](SubscriptionLinks.md) |  | 
+**hosted_page_links** | [**\Frisbii\lib\Model\SubscriptionLinks**](SubscriptionLinks.md) |  | 
 **subscription_discounts** | **string[]** | List of subscription discounts handles attached to subscription | [optional] 
-**pending_change** | [**\Frisbii\lib/Model\SubscriptionChange**](SubscriptionChange.md) |  | [optional] 
-**subscription_changes** | [**\Frisbii\lib/Model\SubscriptionChange[]**](SubscriptionChange.md) | List of subscription changes both at most one pending and previously applied | [optional] 
+**pending_change** | [**\Frisbii\lib\Model\SubscriptionChange**](SubscriptionChange.md) |  | [optional] 
+**subscription_changes** | [**\Frisbii\lib\Model\SubscriptionChange[]**](SubscriptionChange.md) | List of subscription changes both at most one pending and previously applied | [optional] 
 **subscription_add_ons** | **string[]** | List of subscription add-on handles attached to subscription | [optional] 
 **active_payment_methods** | **string[]** | A list of active payment method ids. This list will at most contain 1 item. | [optional] 
 **metered_billing_products** | **string[]** | List of metered billing products attached to the subscription | [optional] 
-**next_invoice** | [**\Frisbii\lib/Model\Invoice**](Invoice.md) |  | [optional] 
+**next_invoice** | [**\Frisbii\lib\Model\Invoice**](Invoice.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

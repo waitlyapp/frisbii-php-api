@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -95,7 +95,7 @@ class AdditionalCostApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AdditionalCost
+     * @return \Frisbii\lib\Model\AdditionalCost
      */
     public function cancelAdditionalCost($handle)
     {
@@ -112,11 +112,11 @@ class AdditionalCostApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AdditionalCost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AdditionalCost, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelAdditionalCostWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost';
         $request = $this->cancelAdditionalCostRequest($handle);
 
         try {
@@ -168,7 +168,7 @@ class AdditionalCostApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AdditionalCost',
+                        '\Frisbii\lib\Model\AdditionalCost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class AdditionalCostApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class AdditionalCostApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class AdditionalCostApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class AdditionalCostApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class AdditionalCostApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class AdditionalCostApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -258,7 +258,7 @@ class AdditionalCostApi
      */
     public function cancelAdditionalCostAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost';
         $request = $this->cancelAdditionalCostRequest($handle);
 
         return $this->client
@@ -405,11 +405,11 @@ class AdditionalCostApi
      *
      * Create additional cost
      *
-     * @param  \Frisbii\lib/Model\CreateAdditionalCost $body body (required)
+     * @param  \Frisbii\lib\Model\CreateAdditionalCost $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AdditionalCost
+     * @return \Frisbii\lib\Model\AdditionalCost
      */
     public function createAdditionalCostJson($body)
     {
@@ -422,15 +422,15 @@ class AdditionalCostApi
      *
      * Create additional cost
      *
-     * @param  \Frisbii\lib/Model\CreateAdditionalCost $body (required)
+     * @param  \Frisbii\lib\Model\CreateAdditionalCost $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AdditionalCost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AdditionalCost, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAdditionalCostJsonWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost';
         $request = $this->createAdditionalCostJsonRequest($body);
 
         try {
@@ -482,7 +482,7 @@ class AdditionalCostApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AdditionalCost',
+                        '\Frisbii\lib\Model\AdditionalCost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class AdditionalCostApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class AdditionalCostApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class AdditionalCostApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +514,7 @@ class AdditionalCostApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class AdditionalCostApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class AdditionalCostApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class AdditionalCostApi
      *
      * Create additional cost
      *
-     * @param  \Frisbii\lib/Model\CreateAdditionalCost $body (required)
+     * @param  \Frisbii\lib\Model\CreateAdditionalCost $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -565,14 +565,14 @@ class AdditionalCostApi
      *
      * Create additional cost
      *
-     * @param  \Frisbii\lib/Model\CreateAdditionalCost $body (required)
+     * @param  \Frisbii\lib\Model\CreateAdditionalCost $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAdditionalCostJsonAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost';
         $request = $this->createAdditionalCostJsonRequest($body);
 
         return $this->client
@@ -615,7 +615,7 @@ class AdditionalCostApi
     /**
      * Create request for operation 'createAdditionalCostJson'
      *
-     * @param  \Frisbii\lib/Model\CreateAdditionalCost $body (required)
+     * @param  \Frisbii\lib\Model\CreateAdditionalCost $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -718,7 +718,7 @@ class AdditionalCostApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AdditionalCost
+     * @return \Frisbii\lib\Model\AdditionalCost
      */
     public function getAdditionalCost($handle)
     {
@@ -735,11 +735,11 @@ class AdditionalCostApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AdditionalCost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AdditionalCost, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalCostWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost';
         $request = $this->getAdditionalCostRequest($handle);
 
         try {
@@ -791,7 +791,7 @@ class AdditionalCostApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AdditionalCost',
+                        '\Frisbii\lib\Model\AdditionalCost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class AdditionalCostApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class AdditionalCostApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -815,7 +815,7 @@ class AdditionalCostApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class AdditionalCostApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class AdditionalCostApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class AdditionalCostApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class AdditionalCostApi
      */
     public function getAdditionalCostAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost';
         $request = $this->getAdditionalCostRequest($handle);
 
         return $this->client
@@ -1032,7 +1032,7 @@ class AdditionalCostApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AdditionalCost[]
+     * @return \Frisbii\lib\Model\AdditionalCost[]
      */
     public function getAdditionalCosts($handle)
     {
@@ -1049,11 +1049,11 @@ class AdditionalCostApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AdditionalCost[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AdditionalCost[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalCostsWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost[]';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost[]';
         $request = $this->getAdditionalCostsRequest($handle);
 
         try {
@@ -1105,7 +1105,7 @@ class AdditionalCostApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AdditionalCost[]',
+                        '\Frisbii\lib\Model\AdditionalCost[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1113,7 +1113,7 @@ class AdditionalCostApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1121,7 +1121,7 @@ class AdditionalCostApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1129,7 +1129,7 @@ class AdditionalCostApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1137,7 +1137,7 @@ class AdditionalCostApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1145,7 +1145,7 @@ class AdditionalCostApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,7 +1153,7 @@ class AdditionalCostApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class AdditionalCostApi
      */
     public function getAdditionalCostsAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\AdditionalCost[]';
+        $returnType = '\Frisbii\lib\Model\AdditionalCost[]';
         $request = $this->getAdditionalCostsRequest($handle);
 
         return $this->client

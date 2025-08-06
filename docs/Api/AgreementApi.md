@@ -56,7 +56,7 @@ Method | HTTP request | Description
 [**updateVippsRecurringAgreement**](AgreementApi.md#updatevippsrecurringagreement) | **PUT** /v1/agreement/vipps_recurring/{id} | Update Vipps Recurring agreement
 
 # **activateMpsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement activateMpsAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement activateMpsAgreement($body, $id)
 
 Activate mps agreement by selecting provider
 
@@ -70,13 +70,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\ActivateMpsAgreement(); // \Frisbii\lib/Model\ActivateMpsAgreement | 
+$body = new \Frisbii\lib\Model\ActivateMpsAgreement(); // \Frisbii\lib\Model\ActivateMpsAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -92,12 +92,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\ActivateMpsAgreement**](../Model/ActivateMpsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\ActivateMpsAgreement**](../Model/ActivateMpsAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -105,13 +105,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **activateSepaEbicsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement activateSepaEbicsAgreement($id)
+> \Frisbii\lib\Model\GatewayAgreement activateSepaEbicsAgreement($id)
 
 Activate Sepa Ebics agreement
 
@@ -125,7 +125,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAnydayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createAnydayAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createAnydayAgreement($body)
 
 Create Anyday agreement
 
@@ -178,13 +178,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\AnydayAgreement(); // \Frisbii\lib/Model\AnydayAgreement | 
+$body = new \Frisbii\lib\Model\AnydayAgreement(); // \Frisbii\lib\Model\AnydayAgreement | 
 
 try {
     $result = $apiInstance->createAnydayAgreement($body);
@@ -199,11 +199,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\AnydayAgreement**](../Model/AnydayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\AnydayAgreement**](../Model/AnydayAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -211,13 +211,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createApplepayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createApplepayAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createApplepayAgreement($body)
 
 Create ApplePay agreement
 
@@ -231,13 +231,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\ApplepayAgreement(); // \Frisbii\lib/Model\ApplepayAgreement | 
+$body = new \Frisbii\lib\Model\ApplepayAgreement(); // \Frisbii\lib\Model\ApplepayAgreement | 
 
 try {
     $result = $apiInstance->createApplepayAgreement($body);
@@ -252,11 +252,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\ApplepayAgreement**](../Model/ApplepayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\ApplepayAgreement**](../Model/ApplepayAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -264,13 +264,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCardGatewayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createCardGatewayAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createCardGatewayAgreement($body)
 
 Create card gateway agreement
 
@@ -284,13 +284,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateCardGatewayAgreement(); // \Frisbii\lib/Model\CreateCardGatewayAgreement | 
+$body = new \Frisbii\lib\Model\CreateCardGatewayAgreement(); // \Frisbii\lib\Model\CreateCardGatewayAgreement | 
 
 try {
     $result = $apiInstance->createCardGatewayAgreement($body);
@@ -305,11 +305,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateCardGatewayAgreement**](../Model/CreateCardGatewayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateCardGatewayAgreement**](../Model/CreateCardGatewayAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -317,13 +317,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createGooglepayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createGooglepayAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createGooglepayAgreement($body)
 
 Create GooglePay agreement
 
@@ -337,13 +337,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\GooglepayAgreement(); // \Frisbii\lib/Model\GooglepayAgreement | 
+$body = new \Frisbii\lib\Model\GooglepayAgreement(); // \Frisbii\lib\Model\GooglepayAgreement | 
 
 try {
     $result = $apiInstance->createGooglepayAgreement($body);
@@ -358,11 +358,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\GooglepayAgreement**](../Model/GooglepayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\GooglepayAgreement**](../Model/GooglepayAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -370,13 +370,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createKlarnaAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createKlarnaAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createKlarnaAgreement($body)
 
 Create Klarna agreement
 
@@ -390,13 +390,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\KlarnaAgreement(); // \Frisbii\lib/Model\KlarnaAgreement | 
+$body = new \Frisbii\lib\Model\KlarnaAgreement(); // \Frisbii\lib\Model\KlarnaAgreement | 
 
 try {
     $result = $apiInstance->createKlarnaAgreement($body);
@@ -411,11 +411,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\KlarnaAgreement**](../Model/KlarnaAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\KlarnaAgreement**](../Model/KlarnaAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -423,13 +423,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createMpoAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createMpoAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createMpoAgreement($body)
 
 Create MobilePay Online agreement
 
@@ -443,13 +443,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\MpoAgreement(); // \Frisbii\lib/Model\MpoAgreement | 
+$body = new \Frisbii\lib\Model\MpoAgreement(); // \Frisbii\lib\Model\MpoAgreement | 
 
 try {
     $result = $apiInstance->createMpoAgreement($body);
@@ -464,11 +464,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\MpoAgreement**](../Model/MpoAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\MpoAgreement**](../Model/MpoAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -476,13 +476,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createMpsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createMpsAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createMpsAgreement($body)
 
 Create pending MobilePay Subscriptions agreement
 
@@ -496,13 +496,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateMpsAgreement(); // \Frisbii\lib/Model\CreateMpsAgreement | 
+$body = new \Frisbii\lib\Model\CreateMpsAgreement(); // \Frisbii\lib\Model\CreateMpsAgreement | 
 
 try {
     $result = $apiInstance->createMpsAgreement($body);
@@ -517,11 +517,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateMpsAgreement**](../Model/CreateMpsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateMpsAgreement**](../Model/CreateMpsAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -529,13 +529,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createOfflineAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createOfflineAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createOfflineAgreement($body)
 
 Create offline agreement
 
@@ -549,13 +549,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\OfflineAgreement(); // \Frisbii\lib/Model\OfflineAgreement | 
+$body = new \Frisbii\lib\Model\OfflineAgreement(); // \Frisbii\lib\Model\OfflineAgreement | 
 
 try {
     $result = $apiInstance->createOfflineAgreement($body);
@@ -570,11 +570,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\OfflineAgreement**](../Model/OfflineAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\OfflineAgreement**](../Model/OfflineAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -582,13 +582,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createPayeverAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createPayeverAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createPayeverAgreement($body)
 
 Create Payever agreement
 
@@ -602,13 +602,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\PayeverAgreement(); // \Frisbii\lib/Model\PayeverAgreement | 
+$body = new \Frisbii\lib\Model\PayeverAgreement(); // \Frisbii\lib\Model\PayeverAgreement | 
 
 try {
     $result = $apiInstance->createPayeverAgreement($body);
@@ -623,11 +623,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\PayeverAgreement**](../Model/PayeverAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\PayeverAgreement**](../Model/PayeverAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -635,13 +635,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createPaypalAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createPaypalAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createPaypalAgreement($body)
 
 Create PayPal agreement
 
@@ -655,13 +655,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\PaypalAgreement(); // \Frisbii\lib/Model\PaypalAgreement | 
+$body = new \Frisbii\lib\Model\PaypalAgreement(); // \Frisbii\lib\Model\PaypalAgreement | 
 
 try {
     $result = $apiInstance->createPaypalAgreement($body);
@@ -676,11 +676,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\PaypalAgreement**](../Model/PaypalAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\PaypalAgreement**](../Model/PaypalAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -688,13 +688,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createPaypalAgreementV2**
-> \Frisbii\lib/Model\GatewayAgreement createPaypalAgreementV2($body)
+> \Frisbii\lib\Model\GatewayAgreement createPaypalAgreementV2($body)
 
 Create PayPal agreement V2
 
@@ -708,13 +708,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreatePaypalAgreementV2(); // \Frisbii\lib/Model\CreatePaypalAgreementV2 | 
+$body = new \Frisbii\lib\Model\CreatePaypalAgreementV2(); // \Frisbii\lib\Model\CreatePaypalAgreementV2 | 
 
 try {
     $result = $apiInstance->createPaypalAgreementV2($body);
@@ -729,11 +729,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreatePaypalAgreementV2**](../Model/CreatePaypalAgreementV2.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreatePaypalAgreementV2**](../Model/CreatePaypalAgreementV2.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -741,13 +741,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createPproAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createPproAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createPproAgreement($body)
 
 Create ppro agreement
 
@@ -761,13 +761,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\PproAgreement(); // \Frisbii\lib/Model\PproAgreement | 
+$body = new \Frisbii\lib\Model\PproAgreement(); // \Frisbii\lib\Model\PproAgreement | 
 
 try {
     $result = $apiInstance->createPproAgreement($body);
@@ -782,11 +782,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\PproAgreement**](../Model/PproAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\PproAgreement**](../Model/PproAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -794,13 +794,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createResursAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createResursAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createResursAgreement($body)
 
 Create Resurs agreement
 
@@ -814,13 +814,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\ResursAgreement(); // \Frisbii\lib/Model\ResursAgreement | 
+$body = new \Frisbii\lib\Model\ResursAgreement(); // \Frisbii\lib\Model\ResursAgreement | 
 
 try {
     $result = $apiInstance->createResursAgreement($body);
@@ -835,11 +835,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\ResursAgreement**](../Model/ResursAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\ResursAgreement**](../Model/ResursAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -847,13 +847,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSepaEbicsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createSepaEbicsAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createSepaEbicsAgreement($body)
 
 Create Sepa Ebics agreement
 
@@ -867,13 +867,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateSepaEbicsAgreement(); // \Frisbii\lib/Model\CreateSepaEbicsAgreement | 
+$body = new \Frisbii\lib\Model\CreateSepaEbicsAgreement(); // \Frisbii\lib\Model\CreateSepaEbicsAgreement | 
 
 try {
     $result = $apiInstance->createSepaEbicsAgreement($body);
@@ -888,11 +888,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateSepaEbicsAgreement**](../Model/CreateSepaEbicsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateSepaEbicsAgreement**](../Model/CreateSepaEbicsAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -900,13 +900,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSwishAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createSwishAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createSwishAgreement($body)
 
 Create Swish agreement
 
@@ -920,13 +920,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\SwishAgreement(); // \Frisbii\lib/Model\SwishAgreement | 
+$body = new \Frisbii\lib\Model\SwishAgreement(); // \Frisbii\lib\Model\SwishAgreement | 
 
 try {
     $result = $apiInstance->createSwishAgreement($body);
@@ -941,11 +941,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\SwishAgreement**](../Model/SwishAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\SwishAgreement**](../Model/SwishAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -953,13 +953,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createViabillAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createViabillAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createViabillAgreement($body)
 
 Create ViaBill agreement
 
@@ -973,13 +973,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\ViabillAgreement(); // \Frisbii\lib/Model\ViabillAgreement | 
+$body = new \Frisbii\lib\Model\ViabillAgreement(); // \Frisbii\lib\Model\ViabillAgreement | 
 
 try {
     $result = $apiInstance->createViabillAgreement($body);
@@ -994,11 +994,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\ViabillAgreement**](../Model/ViabillAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\ViabillAgreement**](../Model/ViabillAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1006,13 +1006,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createVippsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createVippsAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createVippsAgreement($body)
 
 Create Vipps agreement
 
@@ -1026,13 +1026,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\CreateVippsAgreement(); // \Frisbii\lib/Model\CreateVippsAgreement | 
+$body = new \Frisbii\lib\Model\CreateVippsAgreement(); // \Frisbii\lib\Model\CreateVippsAgreement | 
 
 try {
     $result = $apiInstance->createVippsAgreement($body);
@@ -1047,11 +1047,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\CreateVippsAgreement**](../Model/CreateVippsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\CreateVippsAgreement**](../Model/CreateVippsAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1059,13 +1059,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createVippsMobilepayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createVippsMobilepayAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createVippsMobilepayAgreement($body)
 
 Create Vipps ePayments agreement
 
@@ -1079,13 +1079,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\VippsMobilepayAgreement(); // \Frisbii\lib/Model\VippsMobilepayAgreement | 
+$body = new \Frisbii\lib\Model\VippsMobilepayAgreement(); // \Frisbii\lib\Model\VippsMobilepayAgreement | 
 
 try {
     $result = $apiInstance->createVippsMobilepayAgreement($body);
@@ -1100,11 +1100,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\VippsMobilepayAgreement**](../Model/VippsMobilepayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\VippsMobilepayAgreement**](../Model/VippsMobilepayAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1112,13 +1112,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createVippsRecurringAgreement**
-> \Frisbii\lib/Model\GatewayAgreement createVippsRecurringAgreement($body)
+> \Frisbii\lib\Model\GatewayAgreement createVippsRecurringAgreement($body)
 
 Create Vipps Recurring agreement
 
@@ -1132,13 +1132,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\VippsRecurringAgreement(); // \Frisbii\lib/Model\VippsRecurringAgreement | 
+$body = new \Frisbii\lib\Model\VippsRecurringAgreement(); // \Frisbii\lib\Model\VippsRecurringAgreement | 
 
 try {
     $result = $apiInstance->createVippsRecurringAgreement($body);
@@ -1153,11 +1153,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\VippsRecurringAgreement**](../Model/VippsRecurringAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\VippsRecurringAgreement**](../Model/VippsRecurringAgreement.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1165,13 +1165,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteGatewayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement deleteGatewayAgreement($id)
+> \Frisbii\lib\Model\GatewayAgreement deleteGatewayAgreement($id)
 
 Delete gateway agreement
 
@@ -1185,7 +1185,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1210,7 +1210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1224,7 +1224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **disableGatewayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement disableGatewayAgreement($id)
+> \Frisbii\lib\Model\GatewayAgreement disableGatewayAgreement($id)
 
 Disable gateway agreement
 
@@ -1238,7 +1238,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1263,7 +1263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1277,7 +1277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **enableGatewayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement enableGatewayAgreement($id)
+> \Frisbii\lib\Model\GatewayAgreement enableGatewayAgreement($id)
 
 Enable gateway agreement
 
@@ -1291,7 +1291,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1316,7 +1316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1330,7 +1330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCardGatewayAgreements**
-> \Frisbii\lib/Model\GatewayAgreement[] getCardGatewayAgreements($only_active, $non_deleted)
+> \Frisbii\lib\Model\GatewayAgreement[] getCardGatewayAgreements($only_active, $non_deleted)
 
 Get all card gateway agreements
 
@@ -1344,7 +1344,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1371,7 +1371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement[]**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement[]**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1385,7 +1385,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGatewayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement getGatewayAgreement($id)
+> \Frisbii\lib\Model\GatewayAgreement getGatewayAgreement($id)
 
 Get gateway agreement
 
@@ -1399,7 +1399,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1424,7 +1424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1438,7 +1438,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGatewayAgreements**
-> \Frisbii\lib/Model\GatewayAgreement[] getGatewayAgreements($only_active, $non_deleted)
+> \Frisbii\lib\Model\GatewayAgreement[] getGatewayAgreements($only_active, $non_deleted)
 
 Get all agreements
 
@@ -1452,7 +1452,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1479,7 +1479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement[]**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement[]**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1493,7 +1493,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **onboardMerchant**
-> \Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse onboardMerchant($body)
+> \Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse onboardMerchant($body)
 
 Onboard Merchant
 
@@ -1507,13 +1507,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\VippsRecurringMerchantOnboarding(); // \Frisbii\lib/Model\VippsRecurringMerchantOnboarding | 
+$body = new \Frisbii\lib\Model\VippsRecurringMerchantOnboarding(); // \Frisbii\lib\Model\VippsRecurringMerchantOnboarding | 
 
 try {
     $result = $apiInstance->onboardMerchant($body);
@@ -1528,11 +1528,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\VippsRecurringMerchantOnboarding**](../Model/VippsRecurringMerchantOnboarding.md)|  |
+ **body** | [**\Frisbii\lib\Model\VippsRecurringMerchantOnboarding**](../Model/VippsRecurringMerchantOnboarding.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib/Model\VippsRecurringMerchantOnboardingResponse**](../Model/VippsRecurringMerchantOnboardingResponse.md)
+[**\Frisbii\lib\Model\VippsRecurringMerchantOnboardingResponse**](../Model/VippsRecurringMerchantOnboardingResponse.md)
 
 ### Authorization
 
@@ -1540,13 +1540,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **registerApplepayMerchant**
-> \Frisbii\lib/Model\GatewayAgreement registerApplepayMerchant($id, $only_pending)
+> \Frisbii\lib\Model\GatewayAgreement registerApplepayMerchant($id, $only_pending)
 
 Register ApplePay merchant
 
@@ -1560,7 +1560,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1587,7 +1587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1601,7 +1601,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAnydayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateAnydayAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateAnydayAgreement($body, $id)
 
 Update Anyday agreement
 
@@ -1615,13 +1615,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateAnydayAgreement(); // \Frisbii\lib/Model\UpdateAnydayAgreement | 
+$body = new \Frisbii\lib\Model\UpdateAnydayAgreement(); // \Frisbii\lib\Model\UpdateAnydayAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1637,12 +1637,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateAnydayAgreement**](../Model/UpdateAnydayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateAnydayAgreement**](../Model/UpdateAnydayAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1650,13 +1650,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateApplepayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateApplepayAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateApplepayAgreement($body, $id)
 
 Update ApplePay agreement
 
@@ -1670,13 +1670,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\ApplepayAgreement(); // \Frisbii\lib/Model\ApplepayAgreement | 
+$body = new \Frisbii\lib\Model\ApplepayAgreement(); // \Frisbii\lib\Model\ApplepayAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1692,12 +1692,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\ApplepayAgreement**](../Model/ApplepayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\ApplepayAgreement**](../Model/ApplepayAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1705,13 +1705,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCardGatewayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateCardGatewayAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateCardGatewayAgreement($body, $id)
 
 Update card gateway agreement
 
@@ -1725,13 +1725,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateCardGatewayAgreement(); // \Frisbii\lib/Model\UpdateCardGatewayAgreement | 
+$body = new \Frisbii\lib\Model\UpdateCardGatewayAgreement(); // \Frisbii\lib\Model\UpdateCardGatewayAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1747,12 +1747,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateCardGatewayAgreement**](../Model/UpdateCardGatewayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateCardGatewayAgreement**](../Model/UpdateCardGatewayAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1760,13 +1760,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEmvConfiguration**
-> \Frisbii\lib/Model\GatewayAgreement updateEmvConfiguration($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateEmvConfiguration($body, $id)
 
 Update card gateway EMV Configuration
 
@@ -1780,13 +1780,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateEmvConfiguration(); // \Frisbii\lib/Model\UpdateEmvConfiguration | 
+$body = new \Frisbii\lib\Model\UpdateEmvConfiguration(); // \Frisbii\lib\Model\UpdateEmvConfiguration | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1802,12 +1802,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateEmvConfiguration**](../Model/UpdateEmvConfiguration.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateEmvConfiguration**](../Model/UpdateEmvConfiguration.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1815,13 +1815,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateFeeConfiguration**
-> \Frisbii\lib/Model\GatewayAgreement updateFeeConfiguration($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateFeeConfiguration($body, $id)
 
 Update card gateway fee configuration
 
@@ -1835,13 +1835,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateFeeConfiguration(); // \Frisbii\lib/Model\UpdateFeeConfiguration | 
+$body = new \Frisbii\lib\Model\UpdateFeeConfiguration(); // \Frisbii\lib\Model\UpdateFeeConfiguration | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1857,12 +1857,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateFeeConfiguration**](../Model/UpdateFeeConfiguration.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateFeeConfiguration**](../Model/UpdateFeeConfiguration.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1870,13 +1870,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateGooglepayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateGooglepayAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateGooglepayAgreement($body, $id)
 
 Update GooglePay agreement
 
@@ -1890,13 +1890,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateGooglepayAgreement(); // \Frisbii\lib/Model\UpdateGooglepayAgreement | 
+$body = new \Frisbii\lib\Model\UpdateGooglepayAgreement(); // \Frisbii\lib\Model\UpdateGooglepayAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1912,12 +1912,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateGooglepayAgreement**](../Model/UpdateGooglepayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateGooglepayAgreement**](../Model/UpdateGooglepayAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1925,13 +1925,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateKlarnaAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateKlarnaAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateKlarnaAgreement($body, $id)
 
 Update Klarna agreement
 
@@ -1945,13 +1945,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateKlarnaAgreement(); // \Frisbii\lib/Model\UpdateKlarnaAgreement | 
+$body = new \Frisbii\lib\Model\UpdateKlarnaAgreement(); // \Frisbii\lib\Model\UpdateKlarnaAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -1967,12 +1967,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateKlarnaAgreement**](../Model/UpdateKlarnaAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateKlarnaAgreement**](../Model/UpdateKlarnaAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -1980,13 +1980,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMpoAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateMpoAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateMpoAgreement($body, $id)
 
 Update MobilePay Online agreement
 
@@ -2000,13 +2000,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateMpoAgreement(); // \Frisbii\lib/Model\UpdateMpoAgreement | 
+$body = new \Frisbii\lib\Model\UpdateMpoAgreement(); // \Frisbii\lib\Model\UpdateMpoAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2022,12 +2022,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateMpoAgreement**](../Model/UpdateMpoAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateMpoAgreement**](../Model/UpdateMpoAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2035,13 +2035,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMpsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateMpsAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateMpsAgreement($body, $id)
 
 Update mps agreement
 
@@ -2055,13 +2055,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateMpsAgreement(); // \Frisbii\lib/Model\UpdateMpsAgreement | 
+$body = new \Frisbii\lib\Model\UpdateMpsAgreement(); // \Frisbii\lib\Model\UpdateMpsAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2077,12 +2077,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateMpsAgreement**](../Model/UpdateMpsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateMpsAgreement**](../Model/UpdateMpsAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2090,13 +2090,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateOfflineAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateOfflineAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateOfflineAgreement($body, $id)
 
 Update offline agreement
 
@@ -2110,13 +2110,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateOfflineAgreement(); // \Frisbii\lib/Model\UpdateOfflineAgreement | 
+$body = new \Frisbii\lib\Model\UpdateOfflineAgreement(); // \Frisbii\lib\Model\UpdateOfflineAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2132,12 +2132,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateOfflineAgreement**](../Model/UpdateOfflineAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateOfflineAgreement**](../Model/UpdateOfflineAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2145,13 +2145,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePayeverAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updatePayeverAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updatePayeverAgreement($body, $id)
 
 Update Payever agreement
 
@@ -2165,13 +2165,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdatePayeverAgreement(); // \Frisbii\lib/Model\UpdatePayeverAgreement | 
+$body = new \Frisbii\lib\Model\UpdatePayeverAgreement(); // \Frisbii\lib\Model\UpdatePayeverAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2187,12 +2187,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdatePayeverAgreement**](../Model/UpdatePayeverAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdatePayeverAgreement**](../Model/UpdatePayeverAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2200,13 +2200,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePaypalAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updatePaypalAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updatePaypalAgreement($body, $id)
 
 Update PayPal agreement
 
@@ -2220,13 +2220,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdatePaypalAgreement(); // \Frisbii\lib/Model\UpdatePaypalAgreement | 
+$body = new \Frisbii\lib\Model\UpdatePaypalAgreement(); // \Frisbii\lib\Model\UpdatePaypalAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2242,12 +2242,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdatePaypalAgreement**](../Model/UpdatePaypalAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdatePaypalAgreement**](../Model/UpdatePaypalAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2255,13 +2255,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePproAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updatePproAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updatePproAgreement($body, $id)
 
 Update ppro agreement
 
@@ -2275,13 +2275,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdatePproAgreement(); // \Frisbii\lib/Model\UpdatePproAgreement | 
+$body = new \Frisbii\lib\Model\UpdatePproAgreement(); // \Frisbii\lib\Model\UpdatePproAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2297,12 +2297,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdatePproAgreement**](../Model/UpdatePproAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdatePproAgreement**](../Model/UpdatePproAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2310,13 +2310,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateResursAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateResursAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateResursAgreement($body, $id)
 
 Update Resurs agreement
 
@@ -2330,13 +2330,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateResursAgreement(); // \Frisbii\lib/Model\UpdateResursAgreement | 
+$body = new \Frisbii\lib\Model\UpdateResursAgreement(); // \Frisbii\lib\Model\UpdateResursAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2352,12 +2352,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateResursAgreement**](../Model/UpdateResursAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateResursAgreement**](../Model/UpdateResursAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2365,13 +2365,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSepaEbicsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateSepaEbicsAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateSepaEbicsAgreement($body, $id)
 
 Update Sepa Ebics agreement
 
@@ -2385,13 +2385,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateSepaEbicsAgreement(); // \Frisbii\lib/Model\UpdateSepaEbicsAgreement | 
+$body = new \Frisbii\lib\Model\UpdateSepaEbicsAgreement(); // \Frisbii\lib\Model\UpdateSepaEbicsAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2407,12 +2407,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateSepaEbicsAgreement**](../Model/UpdateSepaEbicsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateSepaEbicsAgreement**](../Model/UpdateSepaEbicsAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2420,13 +2420,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSurcharge**
-> \Frisbii\lib/Model\GatewayAgreement updateSurcharge($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateSurcharge($body, $id)
 
 Update card gateway surcharge
 
@@ -2440,13 +2440,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateSurcharge(); // \Frisbii\lib/Model\UpdateSurcharge | 
+$body = new \Frisbii\lib\Model\UpdateSurcharge(); // \Frisbii\lib\Model\UpdateSurcharge | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2462,12 +2462,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateSurcharge**](../Model/UpdateSurcharge.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateSurcharge**](../Model/UpdateSurcharge.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2475,13 +2475,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSwishAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateSwishAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateSwishAgreement($body, $id)
 
 Update Swish agreement
 
@@ -2495,13 +2495,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\SwishAgreement(); // \Frisbii\lib/Model\SwishAgreement | 
+$body = new \Frisbii\lib\Model\SwishAgreement(); // \Frisbii\lib\Model\SwishAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2517,12 +2517,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\SwishAgreement**](../Model/SwishAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\SwishAgreement**](../Model/SwishAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2530,13 +2530,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateViabillAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateViabillAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateViabillAgreement($body, $id)
 
 Update ViaBill agreement
 
@@ -2550,13 +2550,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\UpdateViabillAgreement(); // \Frisbii\lib/Model\UpdateViabillAgreement | 
+$body = new \Frisbii\lib\Model\UpdateViabillAgreement(); // \Frisbii\lib\Model\UpdateViabillAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2572,12 +2572,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\UpdateViabillAgreement**](../Model/UpdateViabillAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\UpdateViabillAgreement**](../Model/UpdateViabillAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2585,13 +2585,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVippsAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateVippsAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateVippsAgreement($body, $id)
 
 Update Vipps agreement
 
@@ -2605,13 +2605,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\VippsAgreement(); // \Frisbii\lib/Model\VippsAgreement | 
+$body = new \Frisbii\lib\Model\VippsAgreement(); // \Frisbii\lib\Model\VippsAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2627,12 +2627,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\VippsAgreement**](../Model/VippsAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\VippsAgreement**](../Model/VippsAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2640,13 +2640,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVippsMobilepayAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateVippsMobilepayAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateVippsMobilepayAgreement($body, $id)
 
 Update Vipps ePayments agreement
 
@@ -2660,13 +2660,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\VippsMobilepayAgreement(); // \Frisbii\lib/Model\VippsMobilepayAgreement | 
+$body = new \Frisbii\lib\Model\VippsMobilepayAgreement(); // \Frisbii\lib\Model\VippsMobilepayAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2682,12 +2682,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\VippsMobilepayAgreement**](../Model/VippsMobilepayAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\VippsMobilepayAgreement**](../Model/VippsMobilepayAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2695,13 +2695,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVippsRecurringAgreement**
-> \Frisbii\lib/Model\GatewayAgreement updateVippsRecurringAgreement($body, $id)
+> \Frisbii\lib\Model\GatewayAgreement updateVippsRecurringAgreement($body, $id)
 
 Update Vipps Recurring agreement
 
@@ -2715,13 +2715,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib/Api\AgreementApi(
+$apiInstance = new Frisbii\lib\Api\AgreementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib/Model\VippsRecurringAgreement(); // \Frisbii\lib/Model\VippsRecurringAgreement | 
+$body = new \Frisbii\lib\Model\VippsRecurringAgreement(); // \Frisbii\lib\Model\VippsRecurringAgreement | 
 $id = "id_example"; // string | Agreement id
 
 try {
@@ -2737,12 +2737,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib/Model\VippsRecurringAgreement**](../Model/VippsRecurringAgreement.md)|  |
+ **body** | [**\Frisbii\lib\Model\VippsRecurringAgreement**](../Model/VippsRecurringAgreement.md)|  |
  **id** | **string**| Agreement id |
 
 ### Return type
 
-[**\Frisbii\lib/Model\GatewayAgreement**](../Model/GatewayAgreement.md)
+[**\Frisbii\lib\Model\GatewayAgreement**](../Model/GatewayAgreement.md)
 
 ### Authorization
 
@@ -2750,7 +2750,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: */*
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

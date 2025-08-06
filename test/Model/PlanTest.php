@@ -316,6 +316,13 @@ class PlanTest extends TestCase
     }
 
     /**
+     * Test attribute "schedule_fixed_hour"
+     */
+    public function testPropertyScheduleFixedHour()
+    {
+    }
+
+    /**
      * Test attribute "base_month"
      */
     public function testPropertyBaseMonth()

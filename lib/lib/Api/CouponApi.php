@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,11 +91,11 @@ class CouponApi
      *
      * Create coupon
      *
-     * @param  \Frisbii\lib/Model\CreateCoupon $body body (required)
+     * @param  \Frisbii\lib\Model\CreateCoupon $body body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function createCoupon($body)
     {
@@ -108,15 +108,15 @@ class CouponApi
      *
      * Create coupon
      *
-     * @param  \Frisbii\lib/Model\CreateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\CreateCoupon $body (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Coupon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Coupon, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCouponWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->createCouponRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class CouponApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Coupon',
+                        '\Frisbii\lib\Model\Coupon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,7 +208,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class CouponApi
      *
      * Create coupon
      *
-     * @param  \Frisbii\lib/Model\CreateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\CreateCoupon $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,14 +251,14 @@ class CouponApi
      *
      * Create coupon
      *
-     * @param  \Frisbii\lib/Model\CreateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\CreateCoupon $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCouponAsyncWithHttpInfo($body)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->createCouponRequest($body);
 
         return $this->client
@@ -301,7 +301,7 @@ class CouponApi
     /**
      * Create request for operation 'createCoupon'
      *
-     * @param  \Frisbii\lib/Model\CreateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\CreateCoupon $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -404,7 +404,7 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function deleteCoupon($handle)
     {
@@ -421,11 +421,11 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Coupon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Coupon, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCouponWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->deleteCouponRequest($handle);
 
         try {
@@ -477,7 +477,7 @@ class CouponApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Coupon',
+                        '\Frisbii\lib\Model\Coupon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -493,7 +493,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -509,7 +509,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -517,7 +517,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -525,7 +525,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -567,7 +567,7 @@ class CouponApi
      */
     public function deleteCouponAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->deleteCouponRequest($handle);
 
         return $this->client
@@ -776,7 +776,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -784,7 +784,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -792,7 +792,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -800,7 +800,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -808,7 +808,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -816,7 +816,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -995,7 +995,7 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function expireCoupon($handle)
     {
@@ -1012,11 +1012,11 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Coupon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Coupon, HTTP status code, HTTP response headers (array of strings)
      */
     public function expireCouponWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->expireCouponRequest($handle);
 
         try {
@@ -1068,7 +1068,7 @@ class CouponApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Coupon',
+                        '\Frisbii\lib\Model\Coupon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1076,7 +1076,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1084,7 +1084,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1092,7 +1092,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1108,7 +1108,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1116,7 +1116,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1158,7 +1158,7 @@ class CouponApi
      */
     public function expireCouponAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->expireCouponRequest($handle);
 
         return $this->client
@@ -1309,7 +1309,7 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function getCoupon($handle)
     {
@@ -1326,11 +1326,11 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Coupon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Coupon, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCouponWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->getCouponRequest($handle);
 
         try {
@@ -1382,7 +1382,7 @@ class CouponApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Coupon',
+                        '\Frisbii\lib\Model\Coupon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1390,7 +1390,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1398,7 +1398,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1406,7 +1406,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1414,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1422,7 +1422,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1430,7 +1430,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1472,7 +1472,7 @@ class CouponApi
      */
     public function getCouponAsyncWithHttpInfo($handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->getCouponRequest($handle);
 
         return $this->client
@@ -1704,7 +1704,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1712,7 +1712,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1720,7 +1720,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1736,7 +1736,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1744,7 +1744,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1933,12 +1933,12 @@ class CouponApi
      *
      * Update coupon
      *
-     * @param  \Frisbii\lib/Model\UpdateCoupon $body body (required)
+     * @param  \Frisbii\lib\Model\UpdateCoupon $body body (required)
      * @param  string $handle Coupon handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function updateCoupon($body, $handle)
     {
@@ -1951,16 +1951,16 @@ class CouponApi
      *
      * Update coupon
      *
-     * @param  \Frisbii\lib/Model\UpdateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCoupon $body (required)
      * @param  string $handle Coupon handle (required)
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Coupon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Coupon, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCouponWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->updateCouponRequest($body, $handle);
 
         try {
@@ -2012,7 +2012,7 @@ class CouponApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Coupon',
+                        '\Frisbii\lib\Model\Coupon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2020,7 +2020,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2028,7 +2028,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2036,7 +2036,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2044,7 +2044,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2052,7 +2052,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2060,7 +2060,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2075,7 +2075,7 @@ class CouponApi
      *
      * Update coupon
      *
-     * @param  \Frisbii\lib/Model\UpdateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCoupon $body (required)
      * @param  string $handle Coupon handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2096,7 +2096,7 @@ class CouponApi
      *
      * Update coupon
      *
-     * @param  \Frisbii\lib/Model\UpdateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCoupon $body (required)
      * @param  string $handle Coupon handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2104,7 +2104,7 @@ class CouponApi
      */
     public function updateCouponAsyncWithHttpInfo($body, $handle)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->updateCouponRequest($body, $handle);
 
         return $this->client
@@ -2147,7 +2147,7 @@ class CouponApi
     /**
      * Create request for operation 'updateCoupon'
      *
-     * @param  \Frisbii\lib/Model\UpdateCoupon $body (required)
+     * @param  \Frisbii\lib\Model\UpdateCoupon $body (required)
      * @param  string $handle Coupon handle (required)
      *
      * @throws \InvalidArgumentException
@@ -2348,7 +2348,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2356,7 +2356,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2364,7 +2364,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2372,7 +2372,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2380,7 +2380,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2388,7 +2388,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2526,7 +2526,7 @@ class CouponApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['*/*']
+                ['application/json']
             );
         }
 
@@ -2596,7 +2596,7 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\Coupon
+     * @return \Frisbii\lib\Model\Coupon
      */
     public function validateCode($code, $plan = null, $customer = null, $subscription = null)
     {
@@ -2616,11 +2616,11 @@ class CouponApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\Coupon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\Coupon, HTTP status code, HTTP response headers (array of strings)
      */
     public function validateCodeWithHttpInfo($code, $plan = null, $customer = null, $subscription = null)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->validateCodeRequest($code, $plan, $customer, $subscription);
 
         try {
@@ -2672,7 +2672,7 @@ class CouponApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\Coupon',
+                        '\Frisbii\lib\Model\Coupon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2680,7 +2680,7 @@ class CouponApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2688,7 +2688,7 @@ class CouponApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2696,7 +2696,7 @@ class CouponApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2704,7 +2704,7 @@ class CouponApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2712,7 +2712,7 @@ class CouponApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2720,7 +2720,7 @@ class CouponApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2768,7 +2768,7 @@ class CouponApi
      */
     public function validateCodeAsyncWithHttpInfo($code, $plan = null, $customer = null, $subscription = null)
     {
-        $returnType = '\Frisbii\lib/Model\Coupon';
+        $returnType = '\Frisbii\lib\Model\Coupon';
         $request = $this->validateCodeRequest($code, $plan, $customer, $subscription);
 
         return $this->client

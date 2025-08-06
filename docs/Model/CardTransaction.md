@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**card** | [**\Frisbii\lib/Model\Card**](Card.md) |  | [optional] 
+**card** | [**\Frisbii\lib\Model\Card**](Card.md) |  | [optional] 
 **error** | **string** | Error code if failed. See [transaction errors](https://docs.frisbii.com/reference/transaction_errors). | [optional] 
 **fingerprint** | **string** | Uniquely identifies this particular card number | [optional] 
 **provider** | **string** | Card acquirer or card payment gateway used if card source: &#x60;reepay&#x60;, &#x60;aibms&#x60;, &#x60;bambora&#x60;, &#x60;barclays&#x60;, &#x60;clearhaus&#x60;, &#x60;cmcic&#x60;, &#x60;credibanco&#x60;, &#x60;cs&#x60;,  &#x60;elavon&#x60;, &#x60;evry&#x60;, &#x60;first_data&#x60;, &#x60;handelsbanken&#x60;, &#x60;hsbc&#x60;, &#x60;nets&#x60;, &#x60;shift4&#x60;, &#x60;spreedly&#x60;, &#x60;swedbank&#x60;, &#x60;thailand_kbank&#x60;, &#x60;valitor&#x60;, &#x60;worldline&#x60;, &#x60;worldpay&#x60;, &#x60;test&#x60; | [optional] 

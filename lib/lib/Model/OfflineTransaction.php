@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -61,7 +61,7 @@ class OfflineTransaction implements ModelInterface, ArrayAccess
         'ref_transaction' => 'string',
         'error_state' => 'string',
         'acquirer_message' => 'string',
-        'offline_mandate' => '\Frisbii\lib/Model\OfflineMandate',
+        'offline_mandate' => '\Frisbii\lib\Model\OfflineMandate',
         'offline_agreement_handle' => 'string',
         'offline_payment_instructions' => 'string',
         'payment_due_date' => '\DateTime'
@@ -381,7 +381,7 @@ class OfflineTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets offline_mandate
      *
-     * @return \Frisbii\lib/Model\OfflineMandate
+     * @return \Frisbii\lib\Model\OfflineMandate
      */
     public function getOfflineMandate()
     {
@@ -391,7 +391,7 @@ class OfflineTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets offline_mandate
      *
-     * @param \Frisbii\lib/Model\OfflineMandate $offline_mandate offline_mandate
+     * @param \Frisbii\lib\Model\OfflineMandate $offline_mandate offline_mandate
      *
      * @return $this
      */

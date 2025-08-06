@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Model;
+namespace Frisbii\lib\Model;
 
 use \ArrayAccess;
 use \Frisbii\ObjectSerializer;
@@ -72,8 +72,8 @@ class CardGatewayAgreement implements ModelInterface, ArrayAccess
         'default_require_sca' => 'bool',
         'disallow_threed_secure_attempted' => 'bool',
         'payout' => 'bool',
-        'vts_configuration' => '\Frisbii\lib/Model\EmvConfiguration',
-        'scof_configuration' => '\Frisbii\lib/Model\EmvConfiguration',
+        'vts_configuration' => '\Frisbii\lib\Model\EmvConfiguration',
+        'scof_configuration' => '\Frisbii\lib\Model\EmvConfiguration',
         'gw_ref' => 'string'
     ];
 
@@ -738,7 +738,7 @@ class CardGatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets vts_configuration
      *
-     * @return \Frisbii\lib/Model\EmvConfiguration
+     * @return \Frisbii\lib\Model\EmvConfiguration
      */
     public function getVtsConfiguration()
     {
@@ -748,7 +748,7 @@ class CardGatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets vts_configuration
      *
-     * @param \Frisbii\lib/Model\EmvConfiguration $vts_configuration vts_configuration
+     * @param \Frisbii\lib\Model\EmvConfiguration $vts_configuration vts_configuration
      *
      * @return $this
      */
@@ -762,7 +762,7 @@ class CardGatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Gets scof_configuration
      *
-     * @return \Frisbii\lib/Model\EmvConfiguration
+     * @return \Frisbii\lib\Model\EmvConfiguration
      */
     public function getScofConfiguration()
     {
@@ -772,7 +772,7 @@ class CardGatewayAgreement implements ModelInterface, ArrayAccess
     /**
      * Sets scof_configuration
      *
-     * @param \Frisbii\lib/Model\EmvConfiguration $scof_configuration scof_configuration
+     * @param \Frisbii\lib\Model\EmvConfiguration $scof_configuration scof_configuration
      *
      * @return $this
      */

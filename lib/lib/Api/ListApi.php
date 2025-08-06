@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Frisbii\lib/Api;
+namespace Frisbii\lib\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -110,7 +110,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AddOnList
+     * @return \Frisbii\lib\Model\AddOnList
      */
     public function getAddOnList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = 'active', $type = null, $name = null, $description = null, $amount = null, $amount_incl_vat = null, $all_plans = null, $currency = null)
     {
@@ -142,11 +142,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AddOnList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AddOnList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAddOnListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = 'active', $type = null, $name = null, $description = null, $amount = null, $amount_incl_vat = null, $all_plans = null, $currency = null)
     {
-        $returnType = '\Frisbii\lib/Model\AddOnList';
+        $returnType = '\Frisbii\lib\Model\AddOnList';
         $request = $this->getAddOnListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $name, $description, $amount, $amount_incl_vat, $all_plans, $currency);
 
         try {
@@ -198,7 +198,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AddOnList',
+                        '\Frisbii\lib\Model\AddOnList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -230,7 +230,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -238,7 +238,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -246,7 +246,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -318,7 +318,7 @@ class ListApi
      */
     public function getAddOnListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = 'active', $type = null, $name = null, $description = null, $amount = null, $amount_incl_vat = null, $all_plans = null, $currency = null)
     {
-        $returnType = '\Frisbii\lib/Model\AddOnList';
+        $returnType = '\Frisbii\lib\Model\AddOnList';
         $request = $this->getAddOnListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $name, $description, $amount, $amount_incl_vat, $all_plans, $currency);
 
         return $this->client
@@ -545,7 +545,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\AuditLogEventListDto
+     * @return \Frisbii\lib\Model\AuditLogEventListDto
      */
     public function getAuditLogEvents($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $user_id = null, $endpoint_name = null, $operation = null)
     {
@@ -570,11 +570,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\AuditLogEventListDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\AuditLogEventListDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditLogEventsWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $user_id = null, $endpoint_name = null, $operation = null)
     {
-        $returnType = '\Frisbii\lib/Model\AuditLogEventListDto';
+        $returnType = '\Frisbii\lib\Model\AuditLogEventListDto';
         $request = $this->getAuditLogEventsRequest($from, $to, $interval, $size, $next_page_token, $range, $user_id, $endpoint_name, $operation);
 
         try {
@@ -626,7 +626,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\AuditLogEventListDto',
+                        '\Frisbii\lib\Model\AuditLogEventListDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -634,7 +634,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -650,7 +650,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -658,7 +658,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -666,7 +666,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -674,7 +674,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -732,7 +732,7 @@ class ListApi
      */
     public function getAuditLogEventsAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $user_id = null, $endpoint_name = null, $operation = null)
     {
-        $returnType = '\Frisbii\lib/Model\AuditLogEventListDto';
+        $returnType = '\Frisbii\lib\Model\AuditLogEventListDto';
         $request = $this->getAuditLogEventsRequest($from, $to, $interval, $size, $next_page_token, $range, $user_id, $endpoint_name, $operation);
 
         return $this->client
@@ -934,7 +934,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\ChargeList
+     * @return \Frisbii\lib\Model\ChargeList
      */
     public function getChargeList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $state = null, $exclude_state = null, $customer = null, $amount = null, $refunded_amount = null, $authorized_amount = null, $currency = null, $partial_settled = null, $settled_amount = null, $debtor_id = null)
     {
@@ -972,11 +972,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\ChargeList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\ChargeList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChargeListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $state = null, $exclude_state = null, $customer = null, $amount = null, $refunded_amount = null, $authorized_amount = null, $currency = null, $partial_settled = null, $settled_amount = null, $debtor_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\ChargeList';
+        $returnType = '\Frisbii\lib\Model\ChargeList';
         $request = $this->getChargeListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id);
 
         try {
@@ -1028,7 +1028,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ChargeList',
+                        '\Frisbii\lib\Model\ChargeList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1036,7 +1036,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1044,7 +1044,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1052,7 +1052,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1060,7 +1060,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1068,7 +1068,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1076,7 +1076,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1160,7 +1160,7 @@ class ListApi
      */
     public function getChargeListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $state = null, $exclude_state = null, $customer = null, $amount = null, $refunded_amount = null, $authorized_amount = null, $currency = null, $partial_settled = null, $settled_amount = null, $debtor_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\ChargeList';
+        $returnType = '\Frisbii\lib\Model\ChargeList';
         $request = $this->getChargeListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id);
 
         return $this->client
@@ -1435,7 +1435,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CouponList
+     * @return \Frisbii\lib\Model\CouponList
      */
     public function getCouponList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = null, $type = null, $expire_reason = null, $discount_handle = null, $discount_currency = null, $discount_percentage = null, $eligible_currency = null, $code = null, $name = null, $all_plans = null, $max_redemptions = null, $redemptions = null, $valid_until = null)
     {
@@ -1472,11 +1472,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CouponList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CouponList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCouponListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = null, $type = null, $expire_reason = null, $discount_handle = null, $discount_currency = null, $discount_percentage = null, $eligible_currency = null, $code = null, $name = null, $all_plans = null, $max_redemptions = null, $redemptions = null, $valid_until = null)
     {
-        $returnType = '\Frisbii\lib/Model\CouponList';
+        $returnType = '\Frisbii\lib\Model\CouponList';
         $request = $this->getCouponListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $expire_reason, $discount_handle, $discount_currency, $discount_percentage, $eligible_currency, $code, $name, $all_plans, $max_redemptions, $redemptions, $valid_until);
 
         try {
@@ -1528,7 +1528,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CouponList',
+                        '\Frisbii\lib\Model\CouponList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1536,7 +1536,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1544,7 +1544,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1552,7 +1552,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1560,7 +1560,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1568,7 +1568,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1576,7 +1576,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1658,7 +1658,7 @@ class ListApi
      */
     public function getCouponListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = null, $type = null, $expire_reason = null, $discount_handle = null, $discount_currency = null, $discount_percentage = null, $eligible_currency = null, $code = null, $name = null, $all_plans = null, $max_redemptions = null, $redemptions = null, $valid_until = null)
     {
-        $returnType = '\Frisbii\lib/Model\CouponList';
+        $returnType = '\Frisbii\lib\Model\CouponList';
         $request = $this->getCouponListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $expire_reason, $discount_handle, $discount_currency, $discount_percentage, $eligible_currency, $code, $name, $all_plans, $max_redemptions, $redemptions, $valid_until);
 
         return $this->client
@@ -1930,7 +1930,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\CustomerList
+     * @return \Frisbii\lib\Model\CustomerList
      */
     public function getCustomerList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $name = null, $email = null, $email_prefix = null, $first_name = null, $last_name = null, $address = null, $address2 = null, $postal_code = null, $city = null, $country = null, $phone = null, $company = null, $vat = null, $debtor_id = null)
     {
@@ -1969,11 +1969,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\CustomerList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\CustomerList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $name = null, $email = null, $email_prefix = null, $first_name = null, $last_name = null, $address = null, $address2 = null, $postal_code = null, $city = null, $country = null, $phone = null, $company = null, $vat = null, $debtor_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerList';
+        $returnType = '\Frisbii\lib\Model\CustomerList';
         $request = $this->getCustomerListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $name, $email, $email_prefix, $first_name, $last_name, $address, $address2, $postal_code, $city, $country, $phone, $company, $vat, $debtor_id);
 
         try {
@@ -2025,7 +2025,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\CustomerList',
+                        '\Frisbii\lib\Model\CustomerList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2033,7 +2033,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2041,7 +2041,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2049,7 +2049,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2057,7 +2057,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2065,7 +2065,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2073,7 +2073,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2159,7 +2159,7 @@ class ListApi
      */
     public function getCustomerListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $name = null, $email = null, $email_prefix = null, $first_name = null, $last_name = null, $address = null, $address2 = null, $postal_code = null, $city = null, $country = null, $phone = null, $company = null, $vat = null, $debtor_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\CustomerList';
+        $returnType = '\Frisbii\lib\Model\CustomerList';
         $request = $this->getCustomerListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $name, $email, $email_prefix, $first_name, $last_name, $address, $address2, $postal_code, $city, $country, $phone, $company, $vat, $debtor_id);
 
         return $this->client
@@ -2425,7 +2425,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DiscountList
+     * @return \Frisbii\lib\Model\DiscountList
      */
     public function getDiscountList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = null, $apply_to = null, $name = null, $description = null, $amount = null, $percentage = null, $fixed_count = null, $currency = null)
     {
@@ -2457,11 +2457,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DiscountList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DiscountList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDiscountListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = null, $apply_to = null, $name = null, $description = null, $amount = null, $percentage = null, $fixed_count = null, $currency = null)
     {
-        $returnType = '\Frisbii\lib/Model\DiscountList';
+        $returnType = '\Frisbii\lib\Model\DiscountList';
         $request = $this->getDiscountListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $apply_to, $name, $description, $amount, $percentage, $fixed_count, $currency);
 
         try {
@@ -2513,7 +2513,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DiscountList',
+                        '\Frisbii\lib\Model\DiscountList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2521,7 +2521,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2529,7 +2529,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2537,7 +2537,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2545,7 +2545,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2553,7 +2553,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2561,7 +2561,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2633,7 +2633,7 @@ class ListApi
      */
     public function getDiscountListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $state = null, $apply_to = null, $name = null, $description = null, $amount = null, $percentage = null, $fixed_count = null, $currency = null)
     {
-        $returnType = '\Frisbii\lib/Model\DiscountList';
+        $returnType = '\Frisbii\lib\Model\DiscountList';
         $request = $this->getDiscountListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $apply_to, $name, $description, $amount, $percentage, $fixed_count, $currency);
 
         return $this->client
@@ -2868,7 +2868,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\DisputeList
+     * @return \Frisbii\lib\Model\DisputeList
      */
     public function getDisputeList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $id = null, $invoice = null, $state = null, $outcome = null, $reason = null, $waiting_for = null, $amount = null, $outcome_amount = null)
     {
@@ -2898,11 +2898,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\DisputeList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\DisputeList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDisputeListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $id = null, $invoice = null, $state = null, $outcome = null, $reason = null, $waiting_for = null, $amount = null, $outcome_amount = null)
     {
-        $returnType = '\Frisbii\lib/Model\DisputeList';
+        $returnType = '\Frisbii\lib\Model\DisputeList';
         $request = $this->getDisputeListRequest($from, $to, $interval, $size, $next_page_token, $range, $id, $invoice, $state, $outcome, $reason, $waiting_for, $amount, $outcome_amount);
 
         try {
@@ -2954,7 +2954,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\DisputeList',
+                        '\Frisbii\lib\Model\DisputeList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2962,7 +2962,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2970,7 +2970,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2978,7 +2978,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2986,7 +2986,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2994,7 +2994,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3002,7 +3002,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3070,7 +3070,7 @@ class ListApi
      */
     public function getDisputeListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $id = null, $invoice = null, $state = null, $outcome = null, $reason = null, $waiting_for = null, $amount = null, $outcome_amount = null)
     {
-        $returnType = '\Frisbii\lib/Model\DisputeList';
+        $returnType = '\Frisbii\lib\Model\DisputeList';
         $request = $this->getDisputeListRequest($from, $to, $interval, $size, $next_page_token, $range, $id, $invoice, $state, $outcome, $reason, $waiting_for, $amount, $outcome_amount);
 
         return $this->client
@@ -3293,7 +3293,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\EntitlementListDto
+     * @return \Frisbii\lib\Model\EntitlementListDto
      */
     public function getEntitlementList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $name = null, $description = null)
     {
@@ -3318,11 +3318,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\EntitlementListDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\EntitlementListDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntitlementListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $name = null, $description = null)
     {
-        $returnType = '\Frisbii\lib/Model\EntitlementListDto';
+        $returnType = '\Frisbii\lib\Model\EntitlementListDto';
         $request = $this->getEntitlementListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $name, $description);
 
         try {
@@ -3374,7 +3374,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\EntitlementListDto',
+                        '\Frisbii\lib\Model\EntitlementListDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3382,7 +3382,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3390,7 +3390,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3398,7 +3398,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3406,7 +3406,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3414,7 +3414,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3422,7 +3422,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3480,7 +3480,7 @@ class ListApi
      */
     public function getEntitlementListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $name = null, $description = null)
     {
-        $returnType = '\Frisbii\lib/Model\EntitlementListDto';
+        $returnType = '\Frisbii\lib\Model\EntitlementListDto';
         $request = $this->getEntitlementListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $name, $description);
 
         return $this->client
@@ -3672,7 +3672,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceCreditNoteListDto
+     * @return \Frisbii\lib\Model\InvoiceCreditNoteListDto
      */
     public function getInvoiceCreditNoteList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $amount = null, $customer = null, $currency = null, $subscription = null, $invoice = null, $debtor_id = null)
     {
@@ -3700,11 +3700,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceCreditNoteListDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceCreditNoteListDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceCreditNoteListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $amount = null, $customer = null, $currency = null, $subscription = null, $invoice = null, $debtor_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceCreditNoteListDto';
+        $returnType = '\Frisbii\lib\Model\InvoiceCreditNoteListDto';
         $request = $this->getInvoiceCreditNoteListRequest($from, $to, $interval, $size, $next_page_token, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $amount, $customer, $currency, $subscription, $invoice, $debtor_id);
 
         try {
@@ -3756,7 +3756,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceCreditNoteListDto',
+                        '\Frisbii\lib\Model\InvoiceCreditNoteListDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3764,7 +3764,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3772,7 +3772,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3780,7 +3780,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3788,7 +3788,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3796,7 +3796,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3804,7 +3804,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3872,7 +3872,7 @@ class ListApi
      */
     public function getInvoiceCreditNoteListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $amount = null, $customer = null, $currency = null, $subscription = null, $invoice = null, $debtor_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceCreditNoteListDto';
+        $returnType = '\Frisbii\lib\Model\InvoiceCreditNoteListDto';
         $request = $this->getInvoiceCreditNoteListRequest($from, $to, $interval, $size, $next_page_token, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $amount, $customer, $currency, $subscription, $invoice, $debtor_id);
 
         return $this->client
@@ -4109,7 +4109,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\InvoiceList
+     * @return \Frisbii\lib\Model\InvoiceList
      */
     public function getInvoiceList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $state = null, $exclude_state = null, $customer = null, $amount = null, $refunded_amount = null, $authorized_amount = null, $currency = null, $partial_settled = null, $settled_amount = null, $debtor_id = null, $type = null, $subscription = null, $plan = null, $dunning_start = null, $dunning_success = null, $number = null, $due = null)
     {
@@ -4154,11 +4154,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\InvoiceList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\InvoiceList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $state = null, $exclude_state = null, $customer = null, $amount = null, $refunded_amount = null, $authorized_amount = null, $currency = null, $partial_settled = null, $settled_amount = null, $debtor_id = null, $type = null, $subscription = null, $plan = null, $dunning_start = null, $dunning_success = null, $number = null, $due = null)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceList';
+        $returnType = '\Frisbii\lib\Model\InvoiceList';
         $request = $this->getInvoiceListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id, $type, $subscription, $plan, $dunning_start, $dunning_success, $number, $due);
 
         try {
@@ -4210,7 +4210,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\InvoiceList',
+                        '\Frisbii\lib\Model\InvoiceList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4218,7 +4218,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4226,7 +4226,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4234,7 +4234,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4242,7 +4242,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4250,7 +4250,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4258,7 +4258,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4356,7 +4356,7 @@ class ListApi
      */
     public function getInvoiceListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $accounting_number = null, $accounting_number_prefix = null, $accounting_number_contains = null, $state = null, $exclude_state = null, $customer = null, $amount = null, $refunded_amount = null, $authorized_amount = null, $currency = null, $partial_settled = null, $settled_amount = null, $debtor_id = null, $type = null, $subscription = null, $plan = null, $dunning_start = null, $dunning_success = null, $number = null, $due = null)
     {
-        $returnType = '\Frisbii\lib/Model\InvoiceList';
+        $returnType = '\Frisbii\lib\Model\InvoiceList';
         $request = $this->getInvoiceListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id, $type, $subscription, $plan, $dunning_start, $dunning_success, $number, $due);
 
         return $this->client
@@ -4659,7 +4659,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\MeteredBillingProductList
+     * @return \Frisbii\lib\Model\MeteredBillingProductList
      */
     public function getMeteredBillingProductList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $handle = null, $handle_prefix = null, $name = null, $state = null, $currency = null, $pricing_model = null)
     {
@@ -4686,11 +4686,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\MeteredBillingProductList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\MeteredBillingProductList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMeteredBillingProductListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $handle = null, $handle_prefix = null, $name = null, $state = null, $currency = null, $pricing_model = null)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProductList';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProductList';
         $request = $this->getMeteredBillingProductListRequest($from, $to, $interval, $size, $next_page_token, $handle, $handle_prefix, $name, $state, $currency, $pricing_model);
 
         try {
@@ -4742,7 +4742,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\MeteredBillingProductList',
+                        '\Frisbii\lib\Model\MeteredBillingProductList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4750,7 +4750,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4758,7 +4758,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4766,7 +4766,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4774,7 +4774,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4782,7 +4782,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4790,7 +4790,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4852,7 +4852,7 @@ class ListApi
      */
     public function getMeteredBillingProductListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $handle = null, $handle_prefix = null, $name = null, $state = null, $currency = null, $pricing_model = null)
     {
-        $returnType = '\Frisbii\lib/Model\MeteredBillingProductList';
+        $returnType = '\Frisbii\lib\Model\MeteredBillingProductList';
         $request = $this->getMeteredBillingProductListRequest($from, $to, $interval, $size, $next_page_token, $handle, $handle_prefix, $name, $state, $currency, $pricing_model);
 
         return $this->client
@@ -5048,7 +5048,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionMeteredUsageRecordList
+     * @return \Frisbii\lib\Model\SubscriptionMeteredUsageRecordList
      */
     public function getMeteredUsageRecordList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $subscription_handle = null)
     {
@@ -5070,11 +5070,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionMeteredUsageRecordList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionMeteredUsageRecordList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMeteredUsageRecordListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $subscription_handle = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredUsageRecordList';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredUsageRecordList';
         $request = $this->getMeteredUsageRecordListRequest($from, $to, $interval, $size, $next_page_token, $subscription_handle);
 
         try {
@@ -5126,7 +5126,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionMeteredUsageRecordList',
+                        '\Frisbii\lib\Model\SubscriptionMeteredUsageRecordList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5134,7 +5134,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5142,7 +5142,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5150,7 +5150,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5158,7 +5158,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5166,7 +5166,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5174,7 +5174,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5226,7 +5226,7 @@ class ListApi
      */
     public function getMeteredUsageRecordListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $subscription_handle = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionMeteredUsageRecordList';
+        $returnType = '\Frisbii\lib\Model\SubscriptionMeteredUsageRecordList';
         $request = $this->getMeteredUsageRecordListRequest($from, $to, $interval, $size, $next_page_token, $subscription_handle);
 
         return $this->client
@@ -5414,7 +5414,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PaymentMethodList
+     * @return \Frisbii\lib\Model\PaymentMethodList
      */
     public function getPaymentMethodList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $id = null, $state = null, $payment_type = null, $customer = null, $subscription = null, $reference = null, $failed = null, $card_type = null, $transaction_card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null, $card_country = null, $card_gateway = null, $card_agreement = null, $offline_agreement_handle = null, $mps_external_id = null)
     {
@@ -5453,11 +5453,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PaymentMethodList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PaymentMethodList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPaymentMethodListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $id = null, $state = null, $payment_type = null, $customer = null, $subscription = null, $reference = null, $failed = null, $card_type = null, $transaction_card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null, $card_country = null, $card_gateway = null, $card_agreement = null, $offline_agreement_handle = null, $mps_external_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodList';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodList';
         $request = $this->getPaymentMethodListRequest($from, $to, $interval, $size, $next_page_token, $range, $id, $state, $payment_type, $customer, $subscription, $reference, $failed, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $card_agreement, $offline_agreement_handle, $mps_external_id);
 
         try {
@@ -5509,7 +5509,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PaymentMethodList',
+                        '\Frisbii\lib\Model\PaymentMethodList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5517,7 +5517,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5525,7 +5525,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5533,7 +5533,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5541,7 +5541,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5549,7 +5549,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5557,7 +5557,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5643,7 +5643,7 @@ class ListApi
      */
     public function getPaymentMethodListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $id = null, $state = null, $payment_type = null, $customer = null, $subscription = null, $reference = null, $failed = null, $card_type = null, $transaction_card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null, $card_country = null, $card_gateway = null, $card_agreement = null, $offline_agreement_handle = null, $mps_external_id = null)
     {
-        $returnType = '\Frisbii\lib/Model\PaymentMethodList';
+        $returnType = '\Frisbii\lib\Model\PaymentMethodList';
         $request = $this->getPaymentMethodListRequest($from, $to, $interval, $size, $next_page_token, $range, $id, $state, $payment_type, $customer, $subscription, $reference, $failed, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $card_agreement, $offline_agreement_handle, $mps_external_id);
 
         return $this->client
@@ -5926,7 +5926,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PayoutList
+     * @return \Frisbii\lib\Model\PayoutList
      */
     public function getPayoutList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $customer = null, $state = null, $amount = null, $currency = null, $card = null, $card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null)
     {
@@ -5960,11 +5960,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PayoutList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PayoutList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPayoutListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $customer = null, $state = null, $amount = null, $currency = null, $card = null, $card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null)
     {
-        $returnType = '\Frisbii\lib/Model\PayoutList';
+        $returnType = '\Frisbii\lib\Model\PayoutList';
         $request = $this->getPayoutListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $state, $amount, $currency, $card, $card_type, $card_prefix, $card_postfix, $card_fingerprint);
 
         try {
@@ -6016,7 +6016,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PayoutList',
+                        '\Frisbii\lib\Model\PayoutList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6024,7 +6024,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6032,7 +6032,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6040,7 +6040,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6048,7 +6048,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6056,7 +6056,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6064,7 +6064,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6140,7 +6140,7 @@ class ListApi
      */
     public function getPayoutListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $customer = null, $state = null, $amount = null, $currency = null, $card = null, $card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null)
     {
-        $returnType = '\Frisbii\lib/Model\PayoutList';
+        $returnType = '\Frisbii\lib\Model\PayoutList';
         $request = $this->getPayoutListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $state, $amount, $currency, $card, $card_type, $card_prefix, $card_postfix, $card_fingerprint);
 
         return $this->client
@@ -6411,7 +6411,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\PlanList
+     * @return \Frisbii\lib\Model\PlanList
      */
     public function getPlanList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handles = null, $state = null, $schedule_type = null, $partial_period_handling = null, $setup_fee_handling = null, $fixed_life_time_unit = null, $trial_interval_unit = null, $dunning_plan_handle = null, $name = null, $description = null, $setup_fee_text = null, $amount = null, $quantity = null, $fixed_count = null, $fixed_life_time_length = null, $trial_interval_length = null, $interval_length = null, $schedule_fixed_day = null, $renewal_reminder_email_days = null, $trial_reminder_email_days = null, $base_month = null, $notice_periods = null, $minimum_prorated_amount = null, $fixation_periods = null, $setup_fee = null, $amount_incl_vat = null, $notice_periods_after_current = null, $fixation_periods_full = null, $include_zero_amount = null, $partial_proration_days = null, $fixed_trial_days = null, $currency = null)
     {
@@ -6467,11 +6467,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\PlanList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\PlanList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlanListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handles = null, $state = null, $schedule_type = null, $partial_period_handling = null, $setup_fee_handling = null, $fixed_life_time_unit = null, $trial_interval_unit = null, $dunning_plan_handle = null, $name = null, $description = null, $setup_fee_text = null, $amount = null, $quantity = null, $fixed_count = null, $fixed_life_time_length = null, $trial_interval_length = null, $interval_length = null, $schedule_fixed_day = null, $renewal_reminder_email_days = null, $trial_reminder_email_days = null, $base_month = null, $notice_periods = null, $minimum_prorated_amount = null, $fixation_periods = null, $setup_fee = null, $amount_incl_vat = null, $notice_periods_after_current = null, $fixation_periods_full = null, $include_zero_amount = null, $partial_proration_days = null, $fixed_trial_days = null, $currency = null)
     {
-        $returnType = '\Frisbii\lib/Model\PlanList';
+        $returnType = '\Frisbii\lib\Model\PlanList';
         $request = $this->getPlanListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handles, $state, $schedule_type, $partial_period_handling, $setup_fee_handling, $fixed_life_time_unit, $trial_interval_unit, $dunning_plan_handle, $name, $description, $setup_fee_text, $amount, $quantity, $fixed_count, $fixed_life_time_length, $trial_interval_length, $interval_length, $schedule_fixed_day, $renewal_reminder_email_days, $trial_reminder_email_days, $base_month, $notice_periods, $minimum_prorated_amount, $fixation_periods, $setup_fee, $amount_incl_vat, $notice_periods_after_current, $fixation_periods_full, $include_zero_amount, $partial_proration_days, $fixed_trial_days, $currency);
 
         try {
@@ -6523,7 +6523,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\PlanList',
+                        '\Frisbii\lib\Model\PlanList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6531,7 +6531,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6539,7 +6539,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6547,7 +6547,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6555,7 +6555,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6563,7 +6563,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6571,7 +6571,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6691,7 +6691,7 @@ class ListApi
      */
     public function getPlanListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handles = null, $state = null, $schedule_type = null, $partial_period_handling = null, $setup_fee_handling = null, $fixed_life_time_unit = null, $trial_interval_unit = null, $dunning_plan_handle = null, $name = null, $description = null, $setup_fee_text = null, $amount = null, $quantity = null, $fixed_count = null, $fixed_life_time_length = null, $trial_interval_length = null, $interval_length = null, $schedule_fixed_day = null, $renewal_reminder_email_days = null, $trial_reminder_email_days = null, $base_month = null, $notice_periods = null, $minimum_prorated_amount = null, $fixation_periods = null, $setup_fee = null, $amount_incl_vat = null, $notice_periods_after_current = null, $fixation_periods_full = null, $include_zero_amount = null, $partial_proration_days = null, $fixed_trial_days = null, $currency = null)
     {
-        $returnType = '\Frisbii\lib/Model\PlanList';
+        $returnType = '\Frisbii\lib\Model\PlanList';
         $request = $this->getPlanListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handles, $state, $schedule_type, $partial_period_handling, $setup_fee_handling, $fixed_life_time_unit, $trial_interval_unit, $dunning_plan_handle, $name, $description, $setup_fee_text, $amount, $quantity, $fixed_count, $fixed_life_time_length, $trial_interval_length, $interval_length, $schedule_fixed_day, $renewal_reminder_email_days, $trial_reminder_email_days, $base_month, $notice_periods, $minimum_prorated_amount, $fixation_periods, $setup_fee, $amount_incl_vat, $notice_periods_after_current, $fixation_periods_full, $include_zero_amount, $partial_proration_days, $fixed_trial_days, $currency);
 
         return $this->client
@@ -7114,7 +7114,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\SubscriptionList
+     * @return \Frisbii\lib\Model\SubscriptionList
      */
     public function getSubscriptionList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $customer = null, $plan = null, $state = null, $amount = null, $quantity = null, $activated = null, $cancelled_date = null, $reactivated = null, $created = null, $renewing = null, $plan_version = null, $amount_incl_vat = null, $start_date = null, $end_date = null, $grace_duration = null, $current_period_start = null, $next_period_start = null, $first_period_start = null, $last_period_start = null, $trial_start = null, $trial_end = null, $in_trial = null, $has_started = null, $renewal_count = null, $expired_date = null, $expire_reason = null, $on_hold_date = null, $on_hold_reason = null, $payment_method_added = null, $reminder_email_sent = null, $failed_invoices = null, $failed_amount = null, $cancelled_invoices = null, $cancelled_amount = null, $pending_invoices = null, $pending_amount = null, $dunning_invoices = null, $dunning_amount = null, $settled_invoices = null, $settled_amount = null, $refunded_amount = null, $pending_additional_costs = null, $pending_additional_cost_amount = null, $transferred_additional_costs = null, $transferred_additional_cost_amount = null, $pending_credits = null, $pending_credit_amount = null, $transferred_credits = null, $transferred_credit_amount = null, $subscription_add_on_handle = null, $add_on_handle = null, $subscription_discount_handle = null, $discount_handle = null, $coupon_handle = null, $payment_method = null)
     {
@@ -7194,11 +7194,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\SubscriptionList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\SubscriptionList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $customer = null, $plan = null, $state = null, $amount = null, $quantity = null, $activated = null, $cancelled_date = null, $reactivated = null, $created = null, $renewing = null, $plan_version = null, $amount_incl_vat = null, $start_date = null, $end_date = null, $grace_duration = null, $current_period_start = null, $next_period_start = null, $first_period_start = null, $last_period_start = null, $trial_start = null, $trial_end = null, $in_trial = null, $has_started = null, $renewal_count = null, $expired_date = null, $expire_reason = null, $on_hold_date = null, $on_hold_reason = null, $payment_method_added = null, $reminder_email_sent = null, $failed_invoices = null, $failed_amount = null, $cancelled_invoices = null, $cancelled_amount = null, $pending_invoices = null, $pending_amount = null, $dunning_invoices = null, $dunning_amount = null, $settled_invoices = null, $settled_amount = null, $refunded_amount = null, $pending_additional_costs = null, $pending_additional_cost_amount = null, $transferred_additional_costs = null, $transferred_additional_cost_amount = null, $pending_credits = null, $pending_credit_amount = null, $transferred_credits = null, $transferred_credit_amount = null, $subscription_add_on_handle = null, $add_on_handle = null, $subscription_discount_handle = null, $discount_handle = null, $coupon_handle = null, $payment_method = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionList';
+        $returnType = '\Frisbii\lib\Model\SubscriptionList';
         $request = $this->getSubscriptionListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $plan, $state, $amount, $quantity, $activated, $cancelled_date, $reactivated, $created, $renewing, $plan_version, $amount_incl_vat, $start_date, $end_date, $grace_duration, $current_period_start, $next_period_start, $first_period_start, $last_period_start, $trial_start, $trial_end, $in_trial, $has_started, $renewal_count, $expired_date, $expire_reason, $on_hold_date, $on_hold_reason, $payment_method_added, $reminder_email_sent, $failed_invoices, $failed_amount, $cancelled_invoices, $cancelled_amount, $pending_invoices, $pending_amount, $dunning_invoices, $dunning_amount, $settled_invoices, $settled_amount, $refunded_amount, $pending_additional_costs, $pending_additional_cost_amount, $transferred_additional_costs, $transferred_additional_cost_amount, $pending_credits, $pending_credit_amount, $transferred_credits, $transferred_credit_amount, $subscription_add_on_handle, $add_on_handle, $subscription_discount_handle, $discount_handle, $coupon_handle, $payment_method);
 
         try {
@@ -7250,7 +7250,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\SubscriptionList',
+                        '\Frisbii\lib\Model\SubscriptionList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7258,7 +7258,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7266,7 +7266,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7274,7 +7274,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7282,7 +7282,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7290,7 +7290,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7298,7 +7298,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7466,7 +7466,7 @@ class ListApi
      */
     public function getSubscriptionListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $handle = null, $handle_prefix = null, $handle_contains = null, $customer = null, $plan = null, $state = null, $amount = null, $quantity = null, $activated = null, $cancelled_date = null, $reactivated = null, $created = null, $renewing = null, $plan_version = null, $amount_incl_vat = null, $start_date = null, $end_date = null, $grace_duration = null, $current_period_start = null, $next_period_start = null, $first_period_start = null, $last_period_start = null, $trial_start = null, $trial_end = null, $in_trial = null, $has_started = null, $renewal_count = null, $expired_date = null, $expire_reason = null, $on_hold_date = null, $on_hold_reason = null, $payment_method_added = null, $reminder_email_sent = null, $failed_invoices = null, $failed_amount = null, $cancelled_invoices = null, $cancelled_amount = null, $pending_invoices = null, $pending_amount = null, $dunning_invoices = null, $dunning_amount = null, $settled_invoices = null, $settled_amount = null, $refunded_amount = null, $pending_additional_costs = null, $pending_additional_cost_amount = null, $transferred_additional_costs = null, $transferred_additional_cost_amount = null, $pending_credits = null, $pending_credit_amount = null, $transferred_credits = null, $transferred_credit_amount = null, $subscription_add_on_handle = null, $add_on_handle = null, $subscription_discount_handle = null, $discount_handle = null, $coupon_handle = null, $payment_method = null)
     {
-        $returnType = '\Frisbii\lib/Model\SubscriptionList';
+        $returnType = '\Frisbii\lib\Model\SubscriptionList';
         $request = $this->getSubscriptionListRequest($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $plan, $state, $amount, $quantity, $activated, $cancelled_date, $reactivated, $created, $renewing, $plan_version, $amount_incl_vat, $start_date, $end_date, $grace_duration, $current_period_start, $next_period_start, $first_period_start, $last_period_start, $trial_start, $trial_end, $in_trial, $has_started, $renewal_count, $expired_date, $expire_reason, $on_hold_date, $on_hold_reason, $payment_method_added, $reminder_email_sent, $failed_invoices, $failed_amount, $cancelled_invoices, $cancelled_amount, $pending_invoices, $pending_amount, $dunning_invoices, $dunning_amount, $settled_invoices, $settled_amount, $refunded_amount, $pending_additional_costs, $pending_additional_cost_amount, $transferred_additional_costs, $transferred_additional_cost_amount, $pending_credits, $pending_credit_amount, $transferred_credits, $transferred_credit_amount, $subscription_add_on_handle, $add_on_handle, $subscription_discount_handle, $discount_handle, $coupon_handle, $payment_method);
 
         return $this->client
@@ -7935,7 +7935,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\TaxPolicyList
+     * @return \Frisbii\lib\Model\TaxPolicyList
      */
     public function getTaxPolicyList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null)
     {
@@ -7956,11 +7956,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\TaxPolicyList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\TaxPolicyList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaxPolicyListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicyList';
+        $returnType = '\Frisbii\lib\Model\TaxPolicyList';
         $request = $this->getTaxPolicyListRequest($from, $to, $interval, $size, $next_page_token);
 
         try {
@@ -8012,7 +8012,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\TaxPolicyList',
+                        '\Frisbii\lib\Model\TaxPolicyList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8020,7 +8020,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8028,7 +8028,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8036,7 +8036,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8044,7 +8044,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8052,7 +8052,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8060,7 +8060,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8110,7 +8110,7 @@ class ListApi
      */
     public function getTaxPolicyListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null)
     {
-        $returnType = '\Frisbii\lib/Model\TaxPolicyList';
+        $returnType = '\Frisbii\lib\Model\TaxPolicyList';
         $request = $this->getTaxPolicyListRequest($from, $to, $interval, $size, $next_page_token);
 
         return $this->client
@@ -8297,7 +8297,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\TransactionList
+     * @return \Frisbii\lib\Model\TransactionList
      */
     public function getTransactionList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $type = null, $state = null, $payment_type = null, $invoice = null, $currency = null, $amount = null, $card_type = null, $transaction_card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null, $card_country = null, $card_gateway = null, $payment_method = null, $card_acquirer_code = null, $card_error_state = null, $card_error = null, $payment_context = null, $card_acquirer_reference = null, $frictionless = null, $accounting_invoice = null)
     {
@@ -8340,11 +8340,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\TransactionList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\TransactionList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $type = null, $state = null, $payment_type = null, $invoice = null, $currency = null, $amount = null, $card_type = null, $transaction_card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null, $card_country = null, $card_gateway = null, $payment_method = null, $card_acquirer_code = null, $card_error_state = null, $card_error = null, $payment_context = null, $card_acquirer_reference = null, $frictionless = null, $accounting_invoice = null)
     {
-        $returnType = '\Frisbii\lib/Model\TransactionList';
+        $returnType = '\Frisbii\lib\Model\TransactionList';
         $request = $this->getTransactionListRequest($from, $to, $interval, $size, $next_page_token, $range, $type, $state, $payment_type, $invoice, $currency, $amount, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $payment_method, $card_acquirer_code, $card_error_state, $card_error, $payment_context, $card_acquirer_reference, $frictionless, $accounting_invoice);
 
         try {
@@ -8396,7 +8396,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\TransactionList',
+                        '\Frisbii\lib\Model\TransactionList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8404,7 +8404,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8412,7 +8412,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8420,7 +8420,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8428,7 +8428,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8436,7 +8436,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8444,7 +8444,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8538,7 +8538,7 @@ class ListApi
      */
     public function getTransactionListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $type = null, $state = null, $payment_type = null, $invoice = null, $currency = null, $amount = null, $card_type = null, $transaction_card_type = null, $card_prefix = null, $card_postfix = null, $card_fingerprint = null, $card_country = null, $card_gateway = null, $payment_method = null, $card_acquirer_code = null, $card_error_state = null, $card_error = null, $payment_context = null, $card_acquirer_reference = null, $frictionless = null, $accounting_invoice = null)
     {
-        $returnType = '\Frisbii\lib/Model\TransactionList';
+        $returnType = '\Frisbii\lib\Model\TransactionList';
         $request = $this->getTransactionListRequest($from, $to, $interval, $size, $next_page_token, $range, $type, $state, $payment_type, $invoice, $currency, $amount, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $payment_method, $card_acquirer_code, $card_error_state, $card_error, $payment_context, $card_acquirer_reference, $frictionless, $accounting_invoice);
 
         return $this->client
@@ -8837,7 +8837,7 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Frisbii\lib/Model\WebhookList
+     * @return \Frisbii\lib\Model\WebhookList
      */
     public function getWebhookList($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $state = null, $event = null)
     {
@@ -8861,11 +8861,11 @@ class ListApi
      *
      * @throws \Frisbii\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Frisbii\lib/Model\WebhookList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Frisbii\lib\Model\WebhookList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhookListWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $state = null, $event = null)
     {
-        $returnType = '\Frisbii\lib/Model\WebhookList';
+        $returnType = '\Frisbii\lib\Model\WebhookList';
         $request = $this->getWebhookListRequest($from, $to, $interval, $size, $next_page_token, $range, $state, $event);
 
         try {
@@ -8917,7 +8917,7 @@ class ListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\WebhookList',
+                        '\Frisbii\lib\Model\WebhookList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8925,7 +8925,7 @@ class ListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8933,7 +8933,7 @@ class ListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8941,7 +8941,7 @@ class ListApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8949,7 +8949,7 @@ class ListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8957,7 +8957,7 @@ class ListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8965,7 +8965,7 @@ class ListApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Frisbii\lib/Model\ErrorResponse',
+                        '\Frisbii\lib\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9021,7 +9021,7 @@ class ListApi
      */
     public function getWebhookListAsyncWithHttpInfo($from = null, $to = null, $interval = null, $size = '20', $next_page_token = null, $range = 'created', $state = null, $event = null)
     {
-        $returnType = '\Frisbii\lib/Model\WebhookList';
+        $returnType = '\Frisbii\lib\Model\WebhookList';
         $request = $this->getWebhookListRequest($from, $to, $interval, $size, $next_page_token, $range, $state, $event);
 
         return $this->client
