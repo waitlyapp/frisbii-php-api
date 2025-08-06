@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **string** | User email | [optional] 
 **password** | **string** | User password | [optional] 
+**new_password** | **string** | New user password | [optional] 
 **organisation** | **string** | Organisation subdomain to login to | [optional] 
 **account** | **string** | Account handle or id to login to | [optional] 
 **mfa_code** | **string** | MFA verification code | [optional] 

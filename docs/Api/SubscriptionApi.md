@@ -1,6 +1,6 @@
-# Billwerk\SubscriptionApi
+# Frisbii\SubscriptionApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,26 +9,33 @@ Method | HTTP request | Description
 [**cancelSubscription**](SubscriptionApi.md#cancelsubscription) | **POST** /v1/subscription/{handle}/cancel | Cancel subscription
 [**changeNextPeriodStartJson**](SubscriptionApi.md#changenextperiodstartjson) | **POST** /v1/subscription/{handle}/change_next_period_start | Change next renewal date
 [**changeSubscription**](SubscriptionApi.md#changesubscription) | **PUT** /v1/subscription/{handle} | Change subscription
+[**createMeteredUsageRecord**](SubscriptionApi.md#createmeteredusagerecord) | **POST** /v1/subscription/{handle}/metered_billing_product/{metered_billing_handle}/metered_usage_record | Create metered usage record
 [**createSubscriptionDiscount**](SubscriptionApi.md#createsubscriptiondiscount) | **POST** /v1/subscription/{handle}/discount | Add subscription discount
 [**createSubscriptionInvoice**](SubscriptionApi.md#createsubscriptioninvoice) | **POST** /v1/subscription/{handle}/invoice | Create invoice ondemand for subscription
 [**createSubscriptionJson**](SubscriptionApi.md#createsubscriptionjson) | **POST** /v1/subscription | Create subscription
-[**deleteMetadata4**](SubscriptionApi.md#deletemetadata4) | **DELETE** /v1/subscription/{handle}/metadata | Delete metadata
+[**createSubscriptionMeteredBillingProduct**](SubscriptionApi.md#createsubscriptionmeteredbillingproduct) | **POST** /v1/subscription/{handle}/metered_billing_product | Create subscription metered billing product
+[**deleteMetadata7**](SubscriptionApi.md#deletemetadata7) | **DELETE** /v1/subscription/{handle}/metadata | Delete metadata
 [**deletePending**](SubscriptionApi.md#deletepending) | **DELETE** /v1/subscription/{handle} | Delete pending subscription. A pending subscription can only be deleted if no transactions has been made for the potential initial invoice.
 [**deleteSubscriptionDiscount**](SubscriptionApi.md#deletesubscriptiondiscount) | **DELETE** /v1/subscription/{handle}/discount/{sdHandle} | Delete subscription discount
+[**deleteSubscriptionMeteredBillingProduct**](SubscriptionApi.md#deletesubscriptionmeteredbillingproduct) | **DELETE** /v1/subscription/{handle}/metered_billing_product/{metered_billing_handle} | Delete subscription metered billing product
 [**expire**](SubscriptionApi.md#expire) | **POST** /v1/subscription/{handle}/expire | Expire subscription
-[**getMetadata4**](SubscriptionApi.md#getmetadata4) | **GET** /v1/subscription/{handle}/metadata | Get metadata
+[**getLatestMeteredUsages**](SubscriptionApi.md#getlatestmeteredusages) | **GET** /v1/subscription/{handle}/metered_billing_product/{metered_billing_handle}/metered_usage | Get latest metered usages
+[**getMetadata7**](SubscriptionApi.md#getmetadata7) | **GET** /v1/subscription/{handle}/metadata | Get metadata
 [**getPayableInvoice**](SubscriptionApi.md#getpayableinvoice) | **GET** /v1/subscription/{handle}/invoice | Get most relevant payable invoice for subscription
 [**getSubscription**](SubscriptionApi.md#getsubscription) | **GET** /v1/subscription/{handle} | Get subscription
 [**getSubscriptionAddOn**](SubscriptionApi.md#getsubscriptionaddon) | **GET** /v1/subscription/{handle}/add_on/{saHandle} | Get subscription add-on
 [**getSubscriptionAddOns**](SubscriptionApi.md#getsubscriptionaddons) | **GET** /v1/subscription/{handle}/add_on | Get subscription add-ons
 [**getSubscriptionDiscount**](SubscriptionApi.md#getsubscriptiondiscount) | **GET** /v1/subscription/{handle}/discount/{sdHandle} | Get subscription discount
 [**getSubscriptionDiscounts**](SubscriptionApi.md#getsubscriptiondiscounts) | **GET** /v1/subscription/{handle}/discount | Get subscription discounts
+[**getSubscriptionEntitlements**](SubscriptionApi.md#getsubscriptionentitlements) | **GET** /v1/subscription/{handle}/entitlement | Get subscription entitlements
+[**getSubscriptionMeteredBillingProducts**](SubscriptionApi.md#getsubscriptionmeteredbillingproducts) | **GET** /v1/subscription/{handle}/metered_billing_product | Get subscription metered billing products
 [**getSubscriptionPaymentMethod**](SubscriptionApi.md#getsubscriptionpaymentmethod) | **GET** /v1/subscription/{handle}/pm | Get payment method
 [**getSubscriptionPeriodBalance**](SubscriptionApi.md#getsubscriptionperiodbalance) | **GET** /v1/subscription/{handle}/period_balance | Get the period balance for subscription
 [**intervalAmount**](SubscriptionApi.md#intervalamount) | **GET** /v1/subscription/{handle}/interval_amount | Calculate interval amount
 [**onHold**](SubscriptionApi.md#onhold) | **POST** /v1/subscription/{handle}/on_hold | Subscription on hold
 [**prepareSubscription**](SubscriptionApi.md#preparesubscription) | **POST** /v1/subscription/prepare | Prepare pending subscription
 [**previewChangeSubscription**](SubscriptionApi.md#previewchangesubscription) | **PUT** /v1/subscription/{handle}/preview | Preview change subscription
+[**previewNextSubscriptionInvoice**](SubscriptionApi.md#previewnextsubscriptioninvoice) | **GET** /v1/subscription/{handle}/next_invoice_preview | Get next invoice preview for subscription
 [**previewSubscription**](SubscriptionApi.md#previewsubscription) | **POST** /v1/subscription/preview | Preview subscription
 [**reactivateSubscription**](SubscriptionApi.md#reactivatesubscription) | **POST** /v1/subscription/{handle}/reactivate | Reactivate subscription on hold
 [**redeemCouponCode**](SubscriptionApi.md#redeemcouponcode) | **POST** /v1/subscription/{handle}/coupon | Redeem coupon code for subscription
@@ -36,10 +43,13 @@ Method | HTTP request | Description
 [**removeSubscriptionPaymentMethod**](SubscriptionApi.md#removesubscriptionpaymentmethod) | **DELETE** /v1/subscription/{handle}/pm/{method_id} | Remove payment method
 [**setSubscriptionPaymentMethod**](SubscriptionApi.md#setsubscriptionpaymentmethod) | **POST** /v1/subscription/{handle}/pm | Set payment method
 [**uncancel**](SubscriptionApi.md#uncancel) | **POST** /v1/subscription/{handle}/uncancel | Uncancel subscription
-[**updateMetadata4**](SubscriptionApi.md#updatemetadata4) | **PUT** /v1/subscription/{handle}/metadata | Create or update metadata
+[**updateEndDate**](SubscriptionApi.md#updateenddate) | **PUT** /v1/subscription/{handle}/end_date | Update end date on subscription
+[**updateEntitlements**](SubscriptionApi.md#updateentitlements) | **PUT** /v1/subscription/{handle}/entitlement | Update entitlements on subscription
+[**updateMetadata7**](SubscriptionApi.md#updatemetadata7) | **PUT** /v1/subscription/{handle}/metadata | Create or update metadata
+[**updateMeteredUsageRecord**](SubscriptionApi.md#updatemeteredusagerecord) | **PUT** /v1/subscription/{handle}/metered_billing_product/{metered_billing_handle}/metered_usage_record/{metered_usage_record_uuid} | Update metered usage record
 
 # **activate**
-> \Billwerk\Model\Subscription activate($body, $handle)
+> \Frisbii\lib/Model\Subscription activate($body, $handle)
 
 Activate pending subscription
 
@@ -48,18 +58,18 @@ Activate pending subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ActivateSubscription(); // \Billwerk\Model\ActivateSubscription | 
+$body = new \Frisbii\lib/Model\ActivateSubscription(); // \Frisbii\lib/Model\ActivateSubscription | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -75,12 +85,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ActivateSubscription**](../Model/ActivateSubscription.md)|  |
+ **body** | [**\Frisbii\lib/Model\ActivateSubscription**](../Model/ActivateSubscription.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -94,7 +104,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cancelPreviewSubscription**
-> \Billwerk\Model\SubscriptionCancelPreview cancelPreviewSubscription($handle, $body)
+> \Frisbii\lib/Model\SubscriptionCancelPreview cancelPreviewSubscription($handle, $body)
 
 Preview subscription cancel
 
@@ -103,19 +113,19 @@ Preview subscription cancel
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Subscription handle
-$body = new \Billwerk\Model\CancelSubscription(); // \Billwerk\Model\CancelSubscription | 
+$body = new \Frisbii\lib/Model\CancelSubscription(); // \Frisbii\lib/Model\CancelSubscription | 
 
 try {
     $result = $apiInstance->cancelPreviewSubscription($handle, $body);
@@ -131,11 +141,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Subscription handle |
- **body** | [**\Billwerk\Model\CancelSubscription**](../Model/CancelSubscription.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\CancelSubscription**](../Model/CancelSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionCancelPreview**](../Model/SubscriptionCancelPreview.md)
+[**\Frisbii\lib/Model\SubscriptionCancelPreview**](../Model/SubscriptionCancelPreview.md)
 
 ### Authorization
 
@@ -149,7 +159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cancelSubscription**
-> \Billwerk\Model\Subscription cancelSubscription($handle, $body)
+> \Frisbii\lib/Model\Subscription cancelSubscription($handle, $body)
 
 Cancel subscription
 
@@ -158,19 +168,19 @@ Cancel subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Subscription handle
-$body = new \Billwerk\Model\CancelSubscription(); // \Billwerk\Model\CancelSubscription | 
+$body = new \Frisbii\lib/Model\CancelSubscription(); // \Frisbii\lib/Model\CancelSubscription | 
 
 try {
     $result = $apiInstance->cancelSubscription($handle, $body);
@@ -186,11 +196,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Subscription handle |
- **body** | [**\Billwerk\Model\CancelSubscription**](../Model/CancelSubscription.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\CancelSubscription**](../Model/CancelSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -204,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **changeNextPeriodStartJson**
-> \Billwerk\Model\Subscription changeNextPeriodStartJson($body, $handle)
+> \Frisbii\lib/Model\Subscription changeNextPeriodStartJson($body, $handle)
 
 Change next renewal date
 
@@ -213,18 +223,18 @@ Change next renewal date
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ChangeNextPeriodStart(); // \Billwerk\Model\ChangeNextPeriodStart | 
+$body = new \Frisbii\lib/Model\ChangeNextPeriodStart(); // \Frisbii\lib/Model\ChangeNextPeriodStart | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -240,12 +250,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ChangeNextPeriodStart**](../Model/ChangeNextPeriodStart.md)|  |
+ **body** | [**\Frisbii\lib/Model\ChangeNextPeriodStart**](../Model/ChangeNextPeriodStart.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -259,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **changeSubscription**
-> \Billwerk\Model\Subscription changeSubscription($body, $handle)
+> \Frisbii\lib/Model\Subscription changeSubscription($body, $handle)
 
 Change subscription
 
@@ -268,18 +278,18 @@ Change subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ChangeSubscription(); // \Billwerk\Model\ChangeSubscription | 
+$body = new \Frisbii\lib/Model\ChangeSubscription(); // \Frisbii\lib/Model\ChangeSubscription | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -295,12 +305,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ChangeSubscription**](../Model/ChangeSubscription.md)|  |
+ **body** | [**\Frisbii\lib/Model\ChangeSubscription**](../Model/ChangeSubscription.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -313,8 +323,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **createMeteredUsageRecord**
+> \Frisbii\lib/Model\MeteredUsageRecord createMeteredUsageRecord($body, $handle, $metered_billing_handle)
+
+Create metered usage record
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\CreateMeteredUsageRecord(); // \Frisbii\lib/Model\CreateMeteredUsageRecord | 
+$handle = "handle_example"; // string | Subscription handle
+$metered_billing_handle = "metered_billing_handle_example"; // string | Metered billing product handle
+
+try {
+    $result = $apiInstance->createMeteredUsageRecord($body, $handle, $metered_billing_handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->createMeteredUsageRecord: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\CreateMeteredUsageRecord**](../Model/CreateMeteredUsageRecord.md)|  |
+ **handle** | **string**| Subscription handle |
+ **metered_billing_handle** | **string**| Metered billing product handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\MeteredUsageRecord**](../Model/MeteredUsageRecord.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **createSubscriptionDiscount**
-> \Billwerk\Model\SubscriptionDiscount createSubscriptionDiscount($body, $handle)
+> \Frisbii\lib/Model\SubscriptionDiscount createSubscriptionDiscount($body, $handle)
 
 Add subscription discount
 
@@ -323,18 +390,18 @@ Add subscription discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateSubscriptionDiscount(); // \Billwerk\Model\CreateSubscriptionDiscount | 
+$body = new \Frisbii\lib/Model\CreateSubscriptionDiscount(); // \Frisbii\lib/Model\CreateSubscriptionDiscount | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -350,12 +417,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateSubscriptionDiscount**](../Model/CreateSubscriptionDiscount.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateSubscriptionDiscount**](../Model/CreateSubscriptionDiscount.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionDiscount**](../Model/SubscriptionDiscount.md)
+[**\Frisbii\lib/Model\SubscriptionDiscount**](../Model/SubscriptionDiscount.md)
 
 ### Authorization
 
@@ -369,7 +436,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSubscriptionInvoice**
-> \Billwerk\Model\Invoice createSubscriptionInvoice($body, $handle)
+> \Frisbii\lib/Model\Invoice createSubscriptionInvoice($body, $handle)
 
 Create invoice ondemand for subscription
 
@@ -378,18 +445,18 @@ Create invoice ondemand for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateSubscriptionInvoice(); // \Billwerk\Model\CreateSubscriptionInvoice | 
+$body = new \Frisbii\lib/Model\CreateSubscriptionInvoice(); // \Frisbii\lib/Model\CreateSubscriptionInvoice | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -405,12 +472,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateSubscriptionInvoice**](../Model/CreateSubscriptionInvoice.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateSubscriptionInvoice**](../Model/CreateSubscriptionInvoice.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -424,7 +491,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSubscriptionJson**
-> \Billwerk\Model\Subscription createSubscriptionJson($body)
+> \Frisbii\lib/Model\Subscription createSubscriptionJson($body)
 
 Create subscription
 
@@ -433,18 +500,18 @@ Create subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateSubscription(); // \Billwerk\Model\CreateSubscription | 
+$body = new \Frisbii\lib/Model\CreateSubscription(); // \Frisbii\lib/Model\CreateSubscription | 
 
 try {
     $result = $apiInstance->createSubscriptionJson($body);
@@ -459,11 +526,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateSubscription**](../Model/CreateSubscription.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateSubscription**](../Model/CreateSubscription.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -476,8 +543,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteMetadata4**
-> deleteMetadata4($handle)
+# **createSubscriptionMeteredBillingProduct**
+> \Frisbii\lib/Model\SubscriptionMeteredBillingProduct createSubscriptionMeteredBillingProduct($body, $handle)
+
+Create subscription metered billing product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct(); // \Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct | 
+$handle = "handle_example"; // string | Subscription handle
+
+try {
+    $result = $apiInstance->createSubscriptionMeteredBillingProduct($body, $handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->createSubscriptionMeteredBillingProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct**](../Model/CreateSubscriptionMeteredBillingProduct.md)|  |
+ **handle** | **string**| Subscription handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\SubscriptionMeteredBillingProduct**](../Model/SubscriptionMeteredBillingProduct.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteMetadata7**
+> deleteMetadata7($handle)
 
 Delete metadata
 
@@ -486,12 +608,12 @@ Delete metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -500,9 +622,9 @@ $apiInstance = new Billwerk\API\SubscriptionApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $apiInstance->deleteMetadata4($handle);
+    $apiInstance->deleteMetadata7($handle);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionApi->deleteMetadata4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionApi->deleteMetadata7: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -538,12 +660,12 @@ Delete pending subscription. A pending subscription can only be deleted if no tr
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -581,7 +703,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteSubscriptionDiscount**
-> \Billwerk\Model\SubscriptionDiscount deleteSubscriptionDiscount($handle, $sd_handle)
+> \Frisbii\lib/Model\SubscriptionDiscount deleteSubscriptionDiscount($handle, $sd_handle)
 
 Delete subscription discount
 
@@ -590,12 +712,12 @@ Delete subscription discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -622,7 +744,64 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionDiscount**](../Model/SubscriptionDiscount.md)
+[**\Frisbii\lib/Model\SubscriptionDiscount**](../Model/SubscriptionDiscount.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteSubscriptionMeteredBillingProduct**
+> \Frisbii\lib/Model\SubscriptionMeteredBillingProduct deleteSubscriptionMeteredBillingProduct($handle, $metered_billing_handle, $unbilled_usage_strategy)
+
+Delete subscription metered billing product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Subscription handle
+$metered_billing_handle = "metered_billing_handle_example"; // string | Metered billing product handle
+$unbilled_usage_strategy = "unbilled_usage_strategy_example"; // string | Unbilled usage strategy
+
+try {
+    $result = $apiInstance->deleteSubscriptionMeteredBillingProduct($handle, $metered_billing_handle, $unbilled_usage_strategy);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->deleteSubscriptionMeteredBillingProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Subscription handle |
+ **metered_billing_handle** | **string**| Metered billing product handle |
+ **unbilled_usage_strategy** | **string**| Unbilled usage strategy | [optional]
+
+### Return type
+
+[**\Frisbii\lib/Model\SubscriptionMeteredBillingProduct**](../Model/SubscriptionMeteredBillingProduct.md)
 
 ### Authorization
 
@@ -636,7 +815,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **expire**
-> \Billwerk\Model\Subscription expire($handle, $body)
+> \Frisbii\lib/Model\Subscription expire($handle, $body)
 
 Expire subscription
 
@@ -645,19 +824,19 @@ Expire subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Subscription handle
-$body = new \Billwerk\Model\ExpireSubscription(); // \Billwerk\Model\ExpireSubscription | 
+$body = new \Frisbii\lib/Model\ExpireSubscription(); // \Frisbii\lib/Model\ExpireSubscription | 
 
 try {
     $result = $apiInstance->expire($handle, $body);
@@ -673,11 +852,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Subscription handle |
- **body** | [**\Billwerk\Model\ExpireSubscription**](../Model/ExpireSubscription.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\ExpireSubscription**](../Model/ExpireSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -690,8 +869,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getMetadata4**
-> map[string,object] getMetadata4($handle)
+# **getLatestMeteredUsages**
+> \Frisbii\lib/Model\MeteredUsages getLatestMeteredUsages($handle, $metered_billing_handle, $size)
+
+Get latest metered usages
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Subscription handle
+$metered_billing_handle = "metered_billing_handle_example"; // string | Metered billing product handle
+$size = 10; // int | Number of metered usages to fetch
+
+try {
+    $result = $apiInstance->getLatestMeteredUsages($handle, $metered_billing_handle, $size);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->getLatestMeteredUsages: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Subscription handle |
+ **metered_billing_handle** | **string**| Metered billing product handle |
+ **size** | **int**| Number of metered usages to fetch | [optional] [default to 10]
+
+### Return type
+
+[**\Frisbii\lib/Model\MeteredUsages**](../Model/MeteredUsages.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMetadata7**
+> map[string,object] getMetadata7($handle)
 
 Get metadata
 
@@ -700,12 +936,12 @@ Get metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -714,10 +950,10 @@ $apiInstance = new Billwerk\API\SubscriptionApi(
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->getMetadata4($handle);
+    $result = $apiInstance->getMetadata7($handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionApi->getMetadata4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionApi->getMetadata7: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -744,7 +980,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayableInvoice**
-> \Billwerk\Model\Invoice getPayableInvoice($handle)
+> \Frisbii\lib/Model\Invoice getPayableInvoice($handle)
 
 Get most relevant payable invoice for subscription
 
@@ -753,12 +989,12 @@ Get most relevant payable invoice for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -783,7 +1019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Invoice**](../Model/Invoice.md)
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -797,7 +1033,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscription**
-> \Billwerk\Model\Subscription getSubscription($handle)
+> \Frisbii\lib/Model\Subscription getSubscription($handle)
 
 Get subscription
 
@@ -806,12 +1042,12 @@ Get subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -836,7 +1072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -850,7 +1086,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionAddOn**
-> \Billwerk\Model\SubscriptionAddOn getSubscriptionAddOn($handle, $sa_handle)
+> \Frisbii\lib/Model\SubscriptionAddOn getSubscriptionAddOn($handle, $sa_handle)
 
 Get subscription add-on
 
@@ -859,12 +1095,12 @@ Get subscription add-on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -891,7 +1127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionAddOn**](../Model/SubscriptionAddOn.md)
+[**\Frisbii\lib/Model\SubscriptionAddOn**](../Model/SubscriptionAddOn.md)
 
 ### Authorization
 
@@ -905,7 +1141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionAddOns**
-> \Billwerk\Model\SubscriptionAddOn[] getSubscriptionAddOns($handle)
+> \Frisbii\lib/Model\SubscriptionAddOn[] getSubscriptionAddOns($handle)
 
 Get subscription add-ons
 
@@ -914,12 +1150,12 @@ Get subscription add-ons
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -944,7 +1180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionAddOn[]**](../Model/SubscriptionAddOn.md)
+[**\Frisbii\lib/Model\SubscriptionAddOn[]**](../Model/SubscriptionAddOn.md)
 
 ### Authorization
 
@@ -958,7 +1194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionDiscount**
-> \Billwerk\Model\SubscriptionDiscount getSubscriptionDiscount($handle, $sd_handle)
+> \Frisbii\lib/Model\SubscriptionDiscount getSubscriptionDiscount($handle, $sd_handle)
 
 Get subscription discount
 
@@ -967,12 +1203,12 @@ Get subscription discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -999,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionDiscount**](../Model/SubscriptionDiscount.md)
+[**\Frisbii\lib/Model\SubscriptionDiscount**](../Model/SubscriptionDiscount.md)
 
 ### Authorization
 
@@ -1013,7 +1249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionDiscounts**
-> \Billwerk\Model\SubscriptionDiscount[] getSubscriptionDiscounts($handle)
+> \Frisbii\lib/Model\SubscriptionDiscount[] getSubscriptionDiscounts($handle)
 
 Get subscription discounts
 
@@ -1022,12 +1258,12 @@ Get subscription discounts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1052,7 +1288,113 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionDiscount[]**](../Model/SubscriptionDiscount.md)
+[**\Frisbii\lib/Model\SubscriptionDiscount[]**](../Model/SubscriptionDiscount.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getSubscriptionEntitlements**
+> \Frisbii\lib/Model\SubscriptionEntitlementsDto getSubscriptionEntitlements($handle)
+
+Get subscription entitlements
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Subscription handle
+
+try {
+    $result = $apiInstance->getSubscriptionEntitlements($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->getSubscriptionEntitlements: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Subscription handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\SubscriptionEntitlementsDto**](../Model/SubscriptionEntitlementsDto.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getSubscriptionMeteredBillingProducts**
+> \Frisbii\lib/Model\SubscriptionMeteredBillingProductList getSubscriptionMeteredBillingProducts($handle)
+
+Get subscription metered billing products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Subscription handle
+
+try {
+    $result = $apiInstance->getSubscriptionMeteredBillingProducts($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->getSubscriptionMeteredBillingProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Subscription handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\SubscriptionMeteredBillingProductList**](../Model/SubscriptionMeteredBillingProductList.md)
 
 ### Authorization
 
@@ -1066,7 +1408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionPaymentMethod**
-> \Billwerk\Model\PaymentMethodV2[] getSubscriptionPaymentMethod($handle)
+> \Frisbii\lib/Model\PaymentMethodV2[] getSubscriptionPaymentMethod($handle)
 
 Get payment method
 
@@ -1075,12 +1417,12 @@ Get payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1105,7 +1447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -1119,7 +1461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionPeriodBalance**
-> \Billwerk\Model\SubscriptionPeriodBalance getSubscriptionPeriodBalance($handle, $date)
+> \Frisbii\lib/Model\SubscriptionPeriodBalance getSubscriptionPeriodBalance($handle, $date)
 
 Get the period balance for subscription
 
@@ -1128,12 +1470,12 @@ Get the period balance for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1160,7 +1502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionPeriodBalance**](../Model/SubscriptionPeriodBalance.md)
+[**\Frisbii\lib/Model\SubscriptionPeriodBalance**](../Model/SubscriptionPeriodBalance.md)
 
 ### Authorization
 
@@ -1174,7 +1516,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **intervalAmount**
-> \Billwerk\Model\IntervalAmount intervalAmount($handle, $from, $to)
+> \Frisbii\lib/Model\IntervalAmount intervalAmount($handle, $from, $to)
 
 Calculate interval amount
 
@@ -1183,12 +1525,12 @@ Calculate interval amount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1217,7 +1559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\IntervalAmount**](../Model/IntervalAmount.md)
+[**\Frisbii\lib/Model\IntervalAmount**](../Model/IntervalAmount.md)
 
 ### Authorization
 
@@ -1231,7 +1573,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **onHold**
-> \Billwerk\Model\Subscription onHold($handle, $body)
+> \Frisbii\lib/Model\Subscription onHold($handle, $body)
 
 Subscription on hold
 
@@ -1240,19 +1582,19 @@ Subscription on hold
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Subscription handle
-$body = new \Billwerk\Model\OnHoldSubscription(); // \Billwerk\Model\OnHoldSubscription | 
+$body = new \Frisbii\lib/Model\OnHoldSubscription(); // \Frisbii\lib/Model\OnHoldSubscription | 
 
 try {
     $result = $apiInstance->onHold($handle, $body);
@@ -1268,11 +1610,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Subscription handle |
- **body** | [**\Billwerk\Model\OnHoldSubscription**](../Model/OnHoldSubscription.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\OnHoldSubscription**](../Model/OnHoldSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -1286,7 +1628,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **prepareSubscription**
-> \Billwerk\Model\PreparedSubscription prepareSubscription($body)
+> \Frisbii\lib/Model\PreparedSubscription prepareSubscription($body)
 
 Prepare pending subscription
 
@@ -1295,18 +1637,18 @@ Prepare pending subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreatePreparedSubscription(); // \Billwerk\Model\CreatePreparedSubscription | 
+$body = new \Frisbii\lib/Model\CreatePreparedSubscription(); // \Frisbii\lib/Model\CreatePreparedSubscription | 
 
 try {
     $result = $apiInstance->prepareSubscription($body);
@@ -1321,11 +1663,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreatePreparedSubscription**](../Model/CreatePreparedSubscription.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreatePreparedSubscription**](../Model/CreatePreparedSubscription.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\PreparedSubscription**](../Model/PreparedSubscription.md)
+[**\Frisbii\lib/Model\PreparedSubscription**](../Model/PreparedSubscription.md)
 
 ### Authorization
 
@@ -1339,7 +1681,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **previewChangeSubscription**
-> \Billwerk\Model\ChangedSubscription previewChangeSubscription($body, $handle)
+> \Frisbii\lib/Model\ChangedSubscription previewChangeSubscription($body, $handle)
 
 Preview change subscription
 
@@ -1348,18 +1690,18 @@ Preview change subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\ChangeSubscription(); // \Billwerk\Model\ChangeSubscription | 
+$body = new \Frisbii\lib/Model\ChangeSubscription(); // \Frisbii\lib/Model\ChangeSubscription | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -1375,12 +1717,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ChangeSubscription**](../Model/ChangeSubscription.md)|  |
+ **body** | [**\Frisbii\lib/Model\ChangeSubscription**](../Model/ChangeSubscription.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\ChangedSubscription**](../Model/ChangedSubscription.md)
+[**\Frisbii\lib/Model\ChangedSubscription**](../Model/ChangedSubscription.md)
 
 ### Authorization
 
@@ -1393,8 +1735,61 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **previewNextSubscriptionInvoice**
+> \Frisbii\lib/Model\Invoice previewNextSubscriptionInvoice($handle)
+
+Get next invoice preview for subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Subscription id or handle
+
+try {
+    $result = $apiInstance->previewNextSubscriptionInvoice($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->previewNextSubscriptionInvoice: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Subscription id or handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\Invoice**](../Model/Invoice.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **previewSubscription**
-> \Billwerk\Model\PreparedSubscription previewSubscription($body)
+> \Frisbii\lib/Model\PreparedSubscription previewSubscription($body)
 
 Preview subscription
 
@@ -1403,18 +1798,18 @@ Preview subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreatePreparedSubscription(); // \Billwerk\Model\CreatePreparedSubscription | 
+$body = new \Frisbii\lib/Model\CreatePreparedSubscription(); // \Frisbii\lib/Model\CreatePreparedSubscription | 
 
 try {
     $result = $apiInstance->previewSubscription($body);
@@ -1429,11 +1824,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreatePreparedSubscription**](../Model/CreatePreparedSubscription.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreatePreparedSubscription**](../Model/CreatePreparedSubscription.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\PreparedSubscription**](../Model/PreparedSubscription.md)
+[**\Frisbii\lib/Model\PreparedSubscription**](../Model/PreparedSubscription.md)
 
 ### Authorization
 
@@ -1447,7 +1842,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reactivateSubscription**
-> \Billwerk\Model\Subscription reactivateSubscription($handle, $body)
+> \Frisbii\lib/Model\Subscription reactivateSubscription($handle, $body)
 
 Reactivate subscription on hold
 
@@ -1456,19 +1851,19 @@ Reactivate subscription on hold
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Subscription handle
-$body = new \Billwerk\Model\ReactivateSubscription(); // \Billwerk\Model\ReactivateSubscription | 
+$body = new \Frisbii\lib/Model\ReactivateSubscription(); // \Frisbii\lib/Model\ReactivateSubscription | 
 
 try {
     $result = $apiInstance->reactivateSubscription($handle, $body);
@@ -1484,11 +1879,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Subscription handle |
- **body** | [**\Billwerk\Model\ReactivateSubscription**](../Model/ReactivateSubscription.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\ReactivateSubscription**](../Model/ReactivateSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -1502,7 +1897,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **redeemCouponCode**
-> \Billwerk\Model\CouponRedemption redeemCouponCode($body, $handle)
+> \Frisbii\lib/Model\CouponRedemption redeemCouponCode($body, $handle)
 
 Redeem coupon code for subscription
 
@@ -1511,18 +1906,18 @@ Redeem coupon code for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\RedeemCouponCode(); // \Billwerk\Model\RedeemCouponCode | 
+$body = new \Frisbii\lib/Model\RedeemCouponCode(); // \Frisbii\lib/Model\RedeemCouponCode | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -1538,12 +1933,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\RedeemCouponCode**](../Model/RedeemCouponCode.md)|  |
+ **body** | [**\Frisbii\lib/Model\RedeemCouponCode**](../Model/RedeemCouponCode.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\CouponRedemption**](../Model/CouponRedemption.md)
+[**\Frisbii\lib/Model\CouponRedemption**](../Model/CouponRedemption.md)
 
 ### Authorization
 
@@ -1557,7 +1952,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeAllSubscriptionPaymentMethods**
-> \Billwerk\Model\PaymentMethodV2[] removeAllSubscriptionPaymentMethods($handle)
+> \Frisbii\lib/Model\PaymentMethodV2[] removeAllSubscriptionPaymentMethods($handle)
 
 Remove all payment methods
 
@@ -1566,12 +1961,12 @@ Remove all payment methods
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1596,7 +1991,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -1610,7 +2005,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeSubscriptionPaymentMethod**
-> \Billwerk\Model\PaymentMethodV2[] removeSubscriptionPaymentMethod($handle, $method_id)
+> \Frisbii\lib/Model\PaymentMethodV2[] removeSubscriptionPaymentMethod($handle, $method_id)
 
 Remove payment method
 
@@ -1619,12 +2014,12 @@ Remove payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1651,7 +2046,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -1665,7 +2060,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setSubscriptionPaymentMethod**
-> \Billwerk\Model\PaymentMethodV2[] setSubscriptionPaymentMethod($body, $handle)
+> \Frisbii\lib/Model\PaymentMethodV2[] setSubscriptionPaymentMethod($body, $handle)
 
 Set payment method
 
@@ -1674,18 +2069,18 @@ Set payment method
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\SetPaymentMethod(); // \Billwerk\Model\SetPaymentMethod | 
+$body = new \Frisbii\lib/Model\SetPaymentMethod(); // \Frisbii\lib/Model\SetPaymentMethod | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -1701,12 +2096,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\SetPaymentMethod**](../Model/SetPaymentMethod.md)|  |
+ **body** | [**\Frisbii\lib/Model\SetPaymentMethod**](../Model/SetPaymentMethod.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
+[**\Frisbii\lib/Model\PaymentMethodV2[]**](../Model/PaymentMethodV2.md)
 
 ### Authorization
 
@@ -1720,7 +2115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uncancel**
-> \Billwerk\Model\Subscription uncancel($handle)
+> \Frisbii\lib/Model\Subscription uncancel($handle)
 
 Uncancel subscription
 
@@ -1729,12 +2124,12 @@ Uncancel subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1759,7 +2154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Subscription**](../Model/Subscription.md)
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -1772,8 +2167,118 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateMetadata4**
-> map[string,object] updateMetadata4($body, $handle)
+# **updateEndDate**
+> \Frisbii\lib/Model\Subscription updateEndDate($body, $handle)
+
+Update end date on subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\UpdateSubscriptionEndDate(); // \Frisbii\lib/Model\UpdateSubscriptionEndDate | 
+$handle = "handle_example"; // string | Subscription handle
+
+try {
+    $result = $apiInstance->updateEndDate($body, $handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->updateEndDate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\UpdateSubscriptionEndDate**](../Model/UpdateSubscriptionEndDate.md)|  |
+ **handle** | **string**| Subscription handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateEntitlements**
+> \Frisbii\lib/Model\Subscription updateEntitlements($body, $handle)
+
+Update entitlements on subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\UpdateSubscriptionEntitlement(); // \Frisbii\lib/Model\UpdateSubscriptionEntitlement | 
+$handle = "handle_example"; // string | Subscription handle
+
+try {
+    $result = $apiInstance->updateEntitlements($body, $handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->updateEntitlements: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\UpdateSubscriptionEntitlement**](../Model/UpdateSubscriptionEntitlement.md)|  |
+ **handle** | **string**| Subscription handle |
+
+### Return type
+
+[**\Frisbii\lib/Model\Subscription**](../Model/Subscription.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateMetadata7**
+> map[string,object] updateMetadata7($body, $handle)
 
 Create or update metadata
 
@@ -1782,25 +2287,25 @@ Create or update metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\SubscriptionApi(
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\map(); // map[string,object] | 
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
-    $result = $apiInstance->updateMetadata4($body, $handle);
+    $result = $apiInstance->updateMetadata7($body, $handle);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionApi->updateMetadata4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionApi->updateMetadata7: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1815,6 +2320,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 **map[string,object]**
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateMeteredUsageRecord**
+> \Frisbii\lib/Model\MeteredUsageRecord updateMeteredUsageRecord($body, $handle, $metered_billing_handle, $metered_usage_record_uuid)
+
+Update metered usage record
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\SubscriptionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\UpdateMeteredUsageRecord(); // \Frisbii\lib/Model\UpdateMeteredUsageRecord | 
+$handle = "handle_example"; // string | Subscription handle
+$metered_billing_handle = "metered_billing_handle_example"; // string | Metered billing product handle
+$metered_usage_record_uuid = "metered_usage_record_uuid_example"; // string | Metered usage record id
+
+try {
+    $result = $apiInstance->updateMeteredUsageRecord($body, $handle, $metered_billing_handle, $metered_usage_record_uuid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionApi->updateMeteredUsageRecord: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Frisbii\lib/Model\UpdateMeteredUsageRecord**](../Model/UpdateMeteredUsageRecord.md)|  |
+ **handle** | **string**| Subscription handle |
+ **metered_billing_handle** | **string**| Metered billing product handle |
+ **metered_usage_record_uuid** | **string**| Metered usage record id |
+
+### Return type
+
+[**\Frisbii\lib/Model\MeteredUsageRecord**](../Model/MeteredUsageRecord.md)
 
 ### Authorization
 

@@ -1,9 +1,9 @@
 {
-	"name": "hello",
-    "modelPackage" : "Model",
-    "apiPackage" : "API",
-	"gitUserId" : "Billwerk",
-	"composerProjectName" : "billwerk-php-api",
+	"name": "Frisbii API",
+	"modelPackage" : "lib/Model",
+	"apiPackage" : "lib/Api",
+	"gitUserId" : "Frisbii",
+	"composerProjectName" : "frisbii-php-api",
 	"composerVendorName": "waitlyapp",
-	"invokerPackage" : "Billwerk"
+	"invokerPackage" : "Frisbii"
 }

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique id for the user assigned by Reepay | 
+**id** | **string** | Unique id for the user assigned by Frisbii | 
 **email** | **string** | User email | 
 **name** | **string** | User name | [optional] 
 **state** | **string** | State of user for account: &#x60;active&#x60;, &#x60;invited&#x60; | 

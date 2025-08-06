@@ -1,6 +1,6 @@
-# Billwerk\EventApi
+# Frisbii\EventApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getEvents**](EventApi.md#getevents) | **GET** /v1/event | Get list of events
 
 # **getEvent**
-> \Billwerk\Model\Event getEvent($id)
+> \Frisbii\lib/Model\Event getEvent($id)
 
 Get event
 
@@ -17,12 +17,12 @@ Get event
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\EventApi(
+$apiInstance = new Frisbii\lib/Api\EventApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Event**](../Model/Event.md)
+[**\Frisbii\lib/Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \Billwerk\Model\EventList getEvents($page, $size, $customer, $subscription, $invoice)
+> \Frisbii\lib/Model\EventList getEvents($page, $size, $customer, $subscription, $invoice)
 
 Get list of events
 
@@ -70,12 +70,12 @@ Get list of events
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\EventApi(
+$apiInstance = new Frisbii\lib/Api\EventApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\EventList**](../Model/EventList.md)
+[**\Frisbii\lib/Model\EventList**](../Model/EventList.md)
 
 ### Authorization
 

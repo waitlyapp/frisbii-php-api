@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **handle** | **string** | Per account unique handle for the subscription. Max length 255 with allowable characters [a-zA-Z0-9_.-@]. Must be provided if generate_handle not defined. | [optional] 
 **metadata** | **map[string,object]** | Custom metadata. | [optional] 
 **source** | **string** | The payment method source if signup method &#x60;source&#x60;. Either an existing payment method for the customer, e.g. existing card id &#x60;ca_...&#x60; or a card token &#x60;ct_...&#x60;. | [optional] 
-**create_customer** | [**\Billwerk\Model\CreateCustomer**](CreateCustomer.md) |  | [optional] 
+**create_customer** | [**\Frisbii\lib/Model\CreateCustomer**](CreateCustomer.md) |  | [optional] 
 **plan_version** | **int** | Optional plan version, default is to use newest version of plan | [optional] 
 **amount_incl_vat** | **bool** | Whether the optional amount is including VAT. Defaults to true. | [optional] 
 **generate_handle** | **bool** | Auto generate handle on the form sub-[sequence_number] | [optional] 
@@ -21,10 +21,13 @@ Name | Type | Description | Notes
 **no_trial** | **bool** | Override plan trial settings and disable trial | [optional] 
 **no_setup_fee** | **bool** | Override plan setup fee settings and disable fee | [optional] 
 **trial_period** | **string** | Optional custom trial period overriding the setting on the subscription plan. Defined in ISO 8601 duration. See https://en.wikipedia.org/wiki/ISO_8601#Durations. E.g. &#x60;P7D&#x60; for seven days or &#x60;P1M&#x60; for one month. | [optional] 
-**subscription_discounts** | [**\Billwerk\Model\CreateSubscriptionDiscount[]**](CreateSubscriptionDiscount.md) | Discounts to attach to subscription. A maximum of 100 discounts is allowed. | [optional] 
+**subscription_discounts** | [**\Frisbii\lib/Model\CreateSubscriptionDiscount[]**](CreateSubscriptionDiscount.md) | Discounts to attach to subscription. A maximum of 100 discounts is allowed. | [optional] 
 **coupon_codes** | **string[]** | Coupon codes to redeem for subscription | [optional] 
-**add_ons** | [**\Billwerk\Model\CreateSubscriptionAddOn[]**](CreateSubscriptionAddOn.md) | Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed. | [optional] 
-**additional_costs** | [**\Billwerk\Model\CreateSubscriptionAdditionalCost[]**](CreateSubscriptionAdditionalCost.md) | Additional costs to add to subscription at creation time. A maximum of 100 additional costs is allowed. | [optional] 
+**add_ons** | [**\Frisbii\lib/Model\CreateSubscriptionAddOn[]**](CreateSubscriptionAddOn.md) | Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed. | [optional] 
+**additional_costs** | [**\Frisbii\lib/Model\CreateSubscriptionAdditionalCost[]**](CreateSubscriptionAdditionalCost.md) | Additional costs to add to subscription at creation time. A maximum of 100 additional costs is allowed. | [optional] 
+**additional_entitlements** | **string[]** | Additional entitlements to add to subscription at creation time. | [optional] 
+**excluded_entitlements** | **string[]** | Entitlements to exclude from subscription at creation time. | [optional] 
+**metered_billing_products** | [**\Frisbii\lib/Model\CreateSubscriptionMeteredBillingProduct[]**](CreateSubscriptionMeteredBillingProduct.md) | Metered billing products to attach to subscription. | [optional] 
 **signup_method** | **string** | The signup method, how to get payment information from customer, one of the following: &#x60;source&#x60;, &#x60;email&#x60;, &#x60;link&#x60;. The &#x60;source&#x60; method takes a reference to an existing customer payment method (e.g. card &#x60;ca_..&#x60;) or a card token for &#x60;ct_...&#x60;. The method &#x60;email&#x60; will send an email to customer requesting payment information with a link to a hosted page. The method &#x60;link&#x60; does not do anything but the hosted page link in the subscription object can be provided to the customer as a link to enter payment information. | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

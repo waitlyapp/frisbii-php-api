@@ -1,16 +1,21 @@
-# Billwerk\ListApi
+# Frisbii\ListApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAddOnList**](ListApi.md#getaddonlist) | **GET** /v1/list/add_on | Get list of add-ons
+[**getAuditLogEvents**](ListApi.md#getauditlogevents) | **GET** /v1/list/audit_log | Get list of audit log events
 [**getChargeList**](ListApi.md#getchargelist) | **GET** /v1/list/charge | Get list of charges
 [**getCouponList**](ListApi.md#getcouponlist) | **GET** /v1/list/coupon | Get list of coupons
 [**getCustomerList**](ListApi.md#getcustomerlist) | **GET** /v1/list/customer | Get list of customers
 [**getDiscountList**](ListApi.md#getdiscountlist) | **GET** /v1/list/discount | Get list of discounts
+[**getDisputeList**](ListApi.md#getdisputelist) | **GET** /v1/list/dispute | Get list of disputes
+[**getEntitlementList**](ListApi.md#getentitlementlist) | **GET** /v1/list/entitlement | Get list of entitlements
 [**getInvoiceCreditNoteList**](ListApi.md#getinvoicecreditnotelist) | **GET** /v1/list/credit_note | 
 [**getInvoiceList**](ListApi.md#getinvoicelist) | **GET** /v1/list/invoice | Get list of invoices
+[**getMeteredBillingProductList**](ListApi.md#getmeteredbillingproductlist) | **GET** /v1/list/metered_billing_product | Get list of metered billing products
+[**getMeteredUsageRecordList**](ListApi.md#getmeteredusagerecordlist) | **GET** /v1/list/metered_usage_record | Get list of metered usage records
 [**getPaymentMethodList**](ListApi.md#getpaymentmethodlist) | **GET** /v1/list/payment_method | Get list of payment methods
 [**getPayoutList**](ListApi.md#getpayoutlist) | **GET** /v1/list/payout | Get list of payouts
 [**getPlanList**](ListApi.md#getplanlist) | **GET** /v1/list/plan | Get list of plans
@@ -20,7 +25,7 @@ Method | HTTP request | Description
 [**getWebhookList**](ListApi.md#getwebhooklist) | **GET** /v1/list/webhook | Get list of webhooks
 
 # **getAddOnList**
-> \Billwerk\Model\AddOnList getAddOnList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $name, $description, $amount, $amount_incl_vat, $all_plans, $currency)
+> \Frisbii\lib/Model\AddOnList getAddOnList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $name, $description, $amount, $amount_incl_vat, $all_plans, $currency)
 
 Get list of add-ons
 
@@ -29,12 +34,12 @@ Get list of add-ons
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -89,7 +94,76 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\AddOnList**](../Model/AddOnList.md)
+[**\Frisbii\lib/Model\AddOnList**](../Model/AddOnList.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getAuditLogEvents**
+> \Frisbii\lib/Model\AuditLogEventListDto getAuditLogEvents($from, $to, $interval, $size, $next_page_token, $range, $user_id, $endpoint_name, $operation)
+
+Get list of audit log events
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\ListApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$from = "from_example"; // string | 
+$to = "to_example"; // string | 
+$interval = "interval_example"; // string | 
+$size = 20; // int | 
+$next_page_token = "next_page_token_example"; // string | 
+$range = "created"; // string | 
+$user_id = "user_id_example"; // string | 
+$endpoint_name = "endpoint_name_example"; // string | 
+$operation = "operation_example"; // string | 
+
+try {
+    $result = $apiInstance->getAuditLogEvents($from, $to, $interval, $size, $next_page_token, $range, $user_id, $endpoint_name, $operation);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ListApi->getAuditLogEvents: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **string**|  | [optional]
+ **to** | **string**|  | [optional]
+ **interval** | **string**|  | [optional]
+ **size** | **int**|  | [optional] [default to 20]
+ **next_page_token** | **string**|  | [optional]
+ **range** | **string**|  | [optional] [default to created]
+ **user_id** | **string**|  | [optional]
+ **endpoint_name** | **string**|  | [optional]
+ **operation** | **string**|  | [optional]
+
+### Return type
+
+[**\Frisbii\lib/Model\AuditLogEventListDto**](../Model/AuditLogEventListDto.md)
 
 ### Authorization
 
@@ -103,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChargeList**
-> \Billwerk\Model\ChargeList getChargeList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id)
+> \Frisbii\lib/Model\ChargeList getChargeList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id)
 
 Get list of charges
 
@@ -112,12 +186,12 @@ Get list of charges
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -184,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\ChargeList**](../Model/ChargeList.md)
+[**\Frisbii\lib/Model\ChargeList**](../Model/ChargeList.md)
 
 ### Authorization
 
@@ -198,7 +272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCouponList**
-> \Billwerk\Model\CouponList getCouponList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $expire_reason, $discount_handle, $discount_currency, $discount_percentage, $eligible_currency, $code, $name, $all_plans, $max_redemptions, $redemptions, $valid_until)
+> \Frisbii\lib/Model\CouponList getCouponList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $type, $expire_reason, $discount_handle, $discount_currency, $discount_percentage, $eligible_currency, $code, $name, $all_plans, $max_redemptions, $redemptions, $valid_until)
 
 Get list of coupons
 
@@ -207,12 +281,12 @@ Get list of coupons
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -277,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\CouponList**](../Model/CouponList.md)
+[**\Frisbii\lib/Model\CouponList**](../Model/CouponList.md)
 
 ### Authorization
 
@@ -291,7 +365,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerList**
-> \Billwerk\Model\CustomerList getCustomerList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $name, $email, $email_prefix, $first_name, $last_name, $address, $address2, $postal_code, $city, $country, $phone, $company, $vat, $debtor_id)
+> \Frisbii\lib/Model\CustomerList getCustomerList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $name, $email, $email_prefix, $first_name, $last_name, $address, $address2, $postal_code, $city, $country, $phone, $company, $vat, $debtor_id)
 
 Get list of customers
 
@@ -300,12 +374,12 @@ Get list of customers
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -374,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\CustomerList**](../Model/CustomerList.md)
+[**\Frisbii\lib/Model\CustomerList**](../Model/CustomerList.md)
 
 ### Authorization
 
@@ -388,7 +462,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDiscountList**
-> \Billwerk\Model\DiscountList getDiscountList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $apply_to, $name, $description, $amount, $percentage, $fixed_count, $currency)
+> \Frisbii\lib/Model\DiscountList getDiscountList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $state, $apply_to, $name, $description, $amount, $percentage, $fixed_count, $currency)
 
 Get list of discounts
 
@@ -397,12 +471,12 @@ Get list of discounts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -457,7 +531,155 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\DiscountList**](../Model/DiscountList.md)
+[**\Frisbii\lib/Model\DiscountList**](../Model/DiscountList.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getDisputeList**
+> \Frisbii\lib/Model\DisputeList getDisputeList($from, $to, $interval, $size, $next_page_token, $range, $id, $invoice, $state, $outcome, $reason, $waiting_for, $amount, $outcome_amount)
+
+Get list of disputes
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\ListApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$from = "from_example"; // string | 
+$to = "to_example"; // string | 
+$interval = "interval_example"; // string | 
+$size = 20; // int | 
+$next_page_token = "next_page_token_example"; // string | 
+$range = "created"; // string | 
+$id = "id_example"; // string | Disputes id
+$invoice = "invoice_example"; // string | Disputes for invoices by invoice handle
+$state = array("state_example"); // string[] | 
+$outcome = array("outcome_example"); // string[] | 
+$reason = array("reason_example"); // string[] | 
+$waiting_for = "waiting_for_example"; // string | 
+$amount = "amount_example"; // string | 
+$outcome_amount = "outcome_amount_example"; // string | 
+
+try {
+    $result = $apiInstance->getDisputeList($from, $to, $interval, $size, $next_page_token, $range, $id, $invoice, $state, $outcome, $reason, $waiting_for, $amount, $outcome_amount);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ListApi->getDisputeList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **string**|  | [optional]
+ **to** | **string**|  | [optional]
+ **interval** | **string**|  | [optional]
+ **size** | **int**|  | [optional] [default to 20]
+ **next_page_token** | **string**|  | [optional]
+ **range** | **string**|  | [optional] [default to created]
+ **id** | **string**| Disputes id | [optional]
+ **invoice** | **string**| Disputes for invoices by invoice handle | [optional]
+ **state** | [**string[]**](../Model/string.md)|  | [optional]
+ **outcome** | [**string[]**](../Model/string.md)|  | [optional]
+ **reason** | [**string[]**](../Model/string.md)|  | [optional]
+ **waiting_for** | **string**|  | [optional]
+ **amount** | **string**|  | [optional]
+ **outcome_amount** | **string**|  | [optional]
+
+### Return type
+
+[**\Frisbii\lib/Model\DisputeList**](../Model/DisputeList.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getEntitlementList**
+> \Frisbii\lib/Model\EntitlementListDto getEntitlementList($from, $to, $interval, $size, $next_page_token, $range, $handle, $name, $description)
+
+Get list of entitlements
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\ListApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$from = "from_example"; // string | 
+$to = "to_example"; // string | 
+$interval = "interval_example"; // string | 
+$size = 20; // int | 
+$next_page_token = "next_page_token_example"; // string | 
+$range = "created"; // string | 
+$handle = "handle_example"; // string | 
+$name = "name_example"; // string | 
+$description = "description_example"; // string | 
+
+try {
+    $result = $apiInstance->getEntitlementList($from, $to, $interval, $size, $next_page_token, $range, $handle, $name, $description);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ListApi->getEntitlementList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **string**|  | [optional]
+ **to** | **string**|  | [optional]
+ **interval** | **string**|  | [optional]
+ **size** | **int**|  | [optional] [default to 20]
+ **next_page_token** | **string**|  | [optional]
+ **range** | **string**|  | [optional] [default to created]
+ **handle** | **string**|  | [optional]
+ **name** | **string**|  | [optional]
+ **description** | **string**|  | [optional]
+
+### Return type
+
+[**\Frisbii\lib/Model\EntitlementListDto**](../Model/EntitlementListDto.md)
 
 ### Authorization
 
@@ -471,7 +693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoiceCreditNoteList**
-> \Billwerk\Model\InvoiceCreditNoteListDto getInvoiceCreditNoteList($from, $to, $interval, $size, $next_page_token, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $amount, $customer, $currency, $subscription, $invoice, $debtor_id)
+> \Frisbii\lib/Model\InvoiceCreditNoteListDto getInvoiceCreditNoteList($from, $to, $interval, $size, $next_page_token, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $amount, $customer, $currency, $subscription, $invoice, $debtor_id)
 
 
 
@@ -482,12 +704,12 @@ Get list of credit notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -538,7 +760,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\InvoiceCreditNoteListDto**](../Model/InvoiceCreditNoteListDto.md)
+[**\Frisbii\lib/Model\InvoiceCreditNoteListDto**](../Model/InvoiceCreditNoteListDto.md)
 
 ### Authorization
 
@@ -552,7 +774,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoiceList**
-> \Billwerk\Model\InvoiceList getInvoiceList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id, $type, $subscription, $plan, $dunning_start, $dunning_success, $number, $due)
+> \Frisbii\lib/Model\InvoiceList getInvoiceList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $accounting_number, $accounting_number_prefix, $accounting_number_contains, $state, $exclude_state, $customer, $amount, $refunded_amount, $authorized_amount, $currency, $partial_settled, $settled_amount, $debtor_id, $type, $subscription, $plan, $dunning_start, $dunning_success, $number, $due)
 
 Get list of invoices
 
@@ -561,12 +783,12 @@ Get list of invoices
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -647,7 +869,143 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\InvoiceList**](../Model/InvoiceList.md)
+[**\Frisbii\lib/Model\InvoiceList**](../Model/InvoiceList.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMeteredBillingProductList**
+> \Frisbii\lib/Model\MeteredBillingProductList getMeteredBillingProductList($from, $to, $interval, $size, $next_page_token, $handle, $handle_prefix, $name, $state, $currency, $pricing_model)
+
+Get list of metered billing products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\ListApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$from = "from_example"; // string | 
+$to = "to_example"; // string | 
+$interval = "interval_example"; // string | 
+$size = 20; // int | 
+$next_page_token = "next_page_token_example"; // string | 
+$handle = "handle_example"; // string | 
+$handle_prefix = "handle_prefix_example"; // string | 
+$name = "name_example"; // string | 
+$state = "state_example"; // string | 
+$currency = "currency_example"; // string | 
+$pricing_model = "pricing_model_example"; // string | 
+
+try {
+    $result = $apiInstance->getMeteredBillingProductList($from, $to, $interval, $size, $next_page_token, $handle, $handle_prefix, $name, $state, $currency, $pricing_model);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ListApi->getMeteredBillingProductList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **string**|  | [optional]
+ **to** | **string**|  | [optional]
+ **interval** | **string**|  | [optional]
+ **size** | **int**|  | [optional] [default to 20]
+ **next_page_token** | **string**|  | [optional]
+ **handle** | **string**|  | [optional]
+ **handle_prefix** | **string**|  | [optional]
+ **name** | **string**|  | [optional]
+ **state** | **string**|  | [optional]
+ **currency** | **string**|  | [optional]
+ **pricing_model** | **string**|  | [optional]
+
+### Return type
+
+[**\Frisbii\lib/Model\MeteredBillingProductList**](../Model/MeteredBillingProductList.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMeteredUsageRecordList**
+> \Frisbii\lib/Model\SubscriptionMeteredUsageRecordList getMeteredUsageRecordList($from, $to, $interval, $size, $next_page_token, $subscription_handle)
+
+Get list of metered usage records
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\ListApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$from = "from_example"; // string | 
+$to = "to_example"; // string | 
+$interval = "interval_example"; // string | 
+$size = 20; // int | 
+$next_page_token = "next_page_token_example"; // string | 
+$subscription_handle = "subscription_handle_example"; // string | 
+
+try {
+    $result = $apiInstance->getMeteredUsageRecordList($from, $to, $interval, $size, $next_page_token, $subscription_handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ListApi->getMeteredUsageRecordList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **string**|  | [optional]
+ **to** | **string**|  | [optional]
+ **interval** | **string**|  | [optional]
+ **size** | **int**|  | [optional] [default to 20]
+ **next_page_token** | **string**|  | [optional]
+ **subscription_handle** | **string**|  | [optional]
+
+### Return type
+
+[**\Frisbii\lib/Model\SubscriptionMeteredUsageRecordList**](../Model/SubscriptionMeteredUsageRecordList.md)
 
 ### Authorization
 
@@ -661,7 +1019,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPaymentMethodList**
-> \Billwerk\Model\PaymentMethodList getPaymentMethodList($from, $to, $interval, $size, $next_page_token, $range, $id, $state, $payment_type, $customer, $subscription, $reference, $failed, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $card_agreement, $mps_external_id)
+> \Frisbii\lib/Model\PaymentMethodList getPaymentMethodList($from, $to, $interval, $size, $next_page_token, $range, $id, $state, $payment_type, $customer, $subscription, $reference, $failed, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $card_agreement, $offline_agreement_handle, $mps_external_id)
 
 Get list of payment methods
 
@@ -670,12 +1028,12 @@ Get list of payment methods
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -702,10 +1060,11 @@ $card_fingerprint = "card_fingerprint_example"; // string |
 $card_country = array("card_country_example"); // string[] | 
 $card_gateway = "card_gateway_example"; // string | 
 $card_agreement = "card_agreement_example"; // string | 
+$offline_agreement_handle = "offline_agreement_handle_example"; // string | 
 $mps_external_id = "mps_external_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getPaymentMethodList($from, $to, $interval, $size, $next_page_token, $range, $id, $state, $payment_type, $customer, $subscription, $reference, $failed, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $card_agreement, $mps_external_id);
+    $result = $apiInstance->getPaymentMethodList($from, $to, $interval, $size, $next_page_token, $range, $id, $state, $payment_type, $customer, $subscription, $reference, $failed, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $card_agreement, $offline_agreement_handle, $mps_external_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListApi->getPaymentMethodList: ', $e->getMessage(), PHP_EOL;
@@ -738,11 +1097,12 @@ Name | Type | Description  | Notes
  **card_country** | [**string[]**](../Model/string.md)|  | [optional]
  **card_gateway** | **string**|  | [optional]
  **card_agreement** | **string**|  | [optional]
+ **offline_agreement_handle** | **string**|  | [optional]
  **mps_external_id** | **string**|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\PaymentMethodList**](../Model/PaymentMethodList.md)
+[**\Frisbii\lib/Model\PaymentMethodList**](../Model/PaymentMethodList.md)
 
 ### Authorization
 
@@ -756,7 +1116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayoutList**
-> \Billwerk\Model\PayoutList getPayoutList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $state, $amount, $currency, $card, $card_type, $card_prefix, $card_postfix, $card_fingerprint)
+> \Frisbii\lib/Model\PayoutList getPayoutList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $state, $amount, $currency, $card, $card_type, $card_prefix, $card_postfix, $card_fingerprint)
 
 Get list of payouts
 
@@ -765,12 +1125,12 @@ Get list of payouts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -829,7 +1189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PayoutList**](../Model/PayoutList.md)
+[**\Frisbii\lib/Model\PayoutList**](../Model/PayoutList.md)
 
 ### Authorization
 
@@ -843,7 +1203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlanList**
-> \Billwerk\Model\PlanList getPlanList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handles, $state, $schedule_type, $partial_period_handling, $setup_fee_handling, $fixed_life_time_unit, $trial_interval_unit, $dunning_plan_handle, $name, $description, $setup_fee_text, $amount, $quantity, $fixed_count, $fixed_life_time_length, $trial_interval_length, $interval_length, $schedule_fixed_day, $renewal_reminder_email_days, $trial_reminder_email_days, $base_month, $notice_periods, $minimum_prorated_amount, $fixation_periods, $setup_fee, $amount_incl_vat, $notice_periods_after_current, $fixation_periods_full, $include_zero_amount, $partial_proration_days, $fixed_trial_days, $currency)
+> \Frisbii\lib/Model\PlanList getPlanList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handles, $state, $schedule_type, $partial_period_handling, $setup_fee_handling, $fixed_life_time_unit, $trial_interval_unit, $dunning_plan_handle, $name, $description, $setup_fee_text, $amount, $quantity, $fixed_count, $fixed_life_time_length, $trial_interval_length, $interval_length, $schedule_fixed_day, $renewal_reminder_email_days, $trial_reminder_email_days, $base_month, $notice_periods, $minimum_prorated_amount, $fixation_periods, $setup_fee, $amount_incl_vat, $notice_periods_after_current, $fixation_periods_full, $include_zero_amount, $partial_proration_days, $fixed_trial_days, $currency)
 
 Get list of plans
 
@@ -852,12 +1212,12 @@ Get list of plans
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -960,7 +1320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\PlanList**](../Model/PlanList.md)
+[**\Frisbii\lib/Model\PlanList**](../Model/PlanList.md)
 
 ### Authorization
 
@@ -974,7 +1334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionList**
-> \Billwerk\Model\SubscriptionList getSubscriptionList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $plan, $state, $amount, $quantity, $activated, $cancelled_date, $reactivated, $created, $renewing, $plan_version, $amount_incl_vat, $start_date, $end_date, $grace_duration, $current_period_start, $next_period_start, $first_period_start, $last_period_start, $trial_start, $trial_end, $in_trial, $has_started, $renewal_count, $expired_date, $expire_reason, $on_hold_date, $on_hold_reason, $payment_method_added, $reminder_email_sent, $failed_invoices, $failed_amount, $cancelled_invoices, $cancelled_amount, $pending_invoices, $pending_amount, $dunning_invoices, $dunning_amount, $settled_invoices, $settled_amount, $refunded_amount, $pending_additional_costs, $pending_additional_cost_amount, $transferred_additional_costs, $transferred_additional_cost_amount, $pending_credits, $pending_credit_amount, $transferred_credits, $transferred_credit_amount, $subscription_add_on_handle, $add_on_handle, $subscription_discount_handle, $discount_handle, $coupon_handle, $payment_method)
+> \Frisbii\lib/Model\SubscriptionList getSubscriptionList($from, $to, $interval, $size, $next_page_token, $range, $handle, $handle_prefix, $handle_contains, $customer, $plan, $state, $amount, $quantity, $activated, $cancelled_date, $reactivated, $created, $renewing, $plan_version, $amount_incl_vat, $start_date, $end_date, $grace_duration, $current_period_start, $next_period_start, $first_period_start, $last_period_start, $trial_start, $trial_end, $in_trial, $has_started, $renewal_count, $expired_date, $expire_reason, $on_hold_date, $on_hold_reason, $payment_method_added, $reminder_email_sent, $failed_invoices, $failed_amount, $cancelled_invoices, $cancelled_amount, $pending_invoices, $pending_amount, $dunning_invoices, $dunning_amount, $settled_invoices, $settled_amount, $refunded_amount, $pending_additional_costs, $pending_additional_cost_amount, $transferred_additional_costs, $transferred_additional_cost_amount, $pending_credits, $pending_credit_amount, $transferred_credits, $transferred_credit_amount, $subscription_add_on_handle, $add_on_handle, $subscription_discount_handle, $discount_handle, $coupon_handle, $payment_method)
 
 Get list of subscriptions
 
@@ -983,12 +1343,12 @@ Get list of subscriptions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1139,7 +1499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\SubscriptionList**](../Model/SubscriptionList.md)
+[**\Frisbii\lib/Model\SubscriptionList**](../Model/SubscriptionList.md)
 
 ### Authorization
 
@@ -1153,7 +1513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaxPolicyList**
-> \Billwerk\Model\TaxPolicyList getTaxPolicyList($from, $to, $interval, $size, $next_page_token)
+> \Frisbii\lib/Model\TaxPolicyList getTaxPolicyList($from, $to, $interval, $size, $next_page_token)
 
 Get list of tax policies
 
@@ -1162,12 +1522,12 @@ Get list of tax policies
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1200,7 +1560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\TaxPolicyList**](../Model/TaxPolicyList.md)
+[**\Frisbii\lib/Model\TaxPolicyList**](../Model/TaxPolicyList.md)
 
 ### Authorization
 
@@ -1214,7 +1574,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTransactionList**
-> \Billwerk\Model\TransactionList getTransactionList($from, $to, $interval, $size, $next_page_token, $range, $type, $state, $payment_type, $invoice, $currency, $amount, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $payment_method, $card_acquirer_code, $card_error_state, $card_error, $payment_context, $card_acquirer_reference, $frictionless)
+> \Frisbii\lib/Model\TransactionList getTransactionList($from, $to, $interval, $size, $next_page_token, $range, $type, $state, $payment_type, $invoice, $currency, $amount, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $payment_method, $card_acquirer_code, $card_error_state, $card_error, $payment_context, $card_acquirer_reference, $frictionless, $accounting_invoice)
 
 Get list of transactions
 
@@ -1223,12 +1583,12 @@ Get list of transactions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1260,9 +1620,10 @@ $card_error = "card_error_example"; // string |
 $payment_context = "payment_context_example"; // string | 
 $card_acquirer_reference = "card_acquirer_reference_example"; // string | 
 $frictionless = "frictionless_example"; // string | 
+$accounting_invoice = "accounting_invoice_example"; // string | 
 
 try {
-    $result = $apiInstance->getTransactionList($from, $to, $interval, $size, $next_page_token, $range, $type, $state, $payment_type, $invoice, $currency, $amount, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $payment_method, $card_acquirer_code, $card_error_state, $card_error, $payment_context, $card_acquirer_reference, $frictionless);
+    $result = $apiInstance->getTransactionList($from, $to, $interval, $size, $next_page_token, $range, $type, $state, $payment_type, $invoice, $currency, $amount, $card_type, $transaction_card_type, $card_prefix, $card_postfix, $card_fingerprint, $card_country, $card_gateway, $payment_method, $card_acquirer_code, $card_error_state, $card_error, $payment_context, $card_acquirer_reference, $frictionless, $accounting_invoice);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListApi->getTransactionList: ', $e->getMessage(), PHP_EOL;
@@ -1300,10 +1661,11 @@ Name | Type | Description  | Notes
  **payment_context** | **string**|  | [optional]
  **card_acquirer_reference** | **string**|  | [optional]
  **frictionless** | **string**|  | [optional]
+ **accounting_invoice** | **string**|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\TransactionList**](../Model/TransactionList.md)
+[**\Frisbii\lib/Model\TransactionList**](../Model/TransactionList.md)
 
 ### Authorization
 
@@ -1317,7 +1679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookList**
-> \Billwerk\Model\WebhookList getWebhookList($from, $to, $interval, $size, $next_page_token, $range, $state, $event)
+> \Frisbii\lib/Model\WebhookList getWebhookList($from, $to, $interval, $size, $next_page_token, $range, $state, $event)
 
 Get list of webhooks
 
@@ -1326,12 +1688,12 @@ Get list of webhooks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\ListApi(
+$apiInstance = new Frisbii\lib/Api\ListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1370,7 +1732,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\WebhookList**](../Model/WebhookList.md)
+[**\Frisbii\lib/Model\WebhookList**](../Model/WebhookList.md)
 
 ### Authorization
 

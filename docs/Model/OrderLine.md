@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **amount** | **int** | Order line total amount including vat | 
 **vat** | **float** | Order line vat percent | 
 **quantity** | **int** | Order line quantity | 
-**origin** | **string** | Order line origin, one of the following: &#x60;plan&#x60;, &#x60;add_on&#x60;, &#x60;ondemand&#x60;, &#x60;additional_cost&#x60;, &#x60;credit&#x60;, &#x60;discount&#x60;, &#x60;setup_fee&#x60;, &#x60;surcharge_fee&#x60; | 
+**origin** | **string** | Order line origin, one of the following: &#x60;plan&#x60;, &#x60;add_on&#x60;, &#x60;ondemand&#x60;, &#x60;additional_cost&#x60;, &#x60;credit&#x60;, &#x60;discount&#x60;, &#x60;setup_fee&#x60;, &#x60;surcharge_fee&#x60;, &#x60;metered_billing_product&#x60; | 
 **timestamp** | [**\DateTime**](\DateTime.md) | Timestamp from order line origin, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | 
 **discounted_amount** | **int** | Order line amount after potential discount has been deducted | [optional] 
 **amount_vat** | **int** | Order line total vat amount | 
@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **unit_amount_vat** | **int** | Order line unit vat amount | 
 **unit_amount_ex_vat** | **int** | Order line unit amount without vat | 
 **amount_defined_incl_vat** | **bool** | Whether the amount was defined including VAT. E.g. plan amount defined including VAT. | 
+**applied_tax_rule** | **string** | Tax rule applied for order line indicates who is liable to account for the VAT. | [optional] 
 **origin_handle** | **string** | Handle for additional cost, credit, plan or subscription discount in the case one of those are the origin | [optional] 
 **period_from** | [**\DateTime**](\DateTime.md) | The start of billing period if the order line is a plan order line for a specific billing period, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **period_to** | [**\DateTime**](\DateTime.md) | The end of billing period if the order line is a plan order line for a specific billing period, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 

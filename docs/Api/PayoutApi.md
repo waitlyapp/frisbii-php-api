@@ -1,6 +1,6 @@
-# Billwerk\PayoutApi
+# Frisbii\PayoutApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**transactionDetails1**](PayoutApi.md#transactiondetails1) | **GET** /v1/payout/{id}/transaction/{transaction}/details | Get transaction details
 
 # **createPayout**
-> \Billwerk\Model\Payout createPayout($body)
+> \Frisbii\lib/Model\Payout createPayout($body)
 
 Create payout
 
@@ -18,18 +18,18 @@ Create payout
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PayoutApi(
+$apiInstance = new Frisbii\lib/Api\PayoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreatePayout(); // \Billwerk\Model\CreatePayout | 
+$body = new \Frisbii\lib/Model\CreatePayout(); // \Frisbii\lib/Model\CreatePayout | 
 
 try {
     $result = $apiInstance->createPayout($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreatePayout**](../Model/CreatePayout.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreatePayout**](../Model/CreatePayout.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Payout**](../Model/Payout.md)
+[**\Frisbii\lib/Model\Payout**](../Model/Payout.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayout**
-> \Billwerk\Model\Payout getPayout($handle)
+> \Frisbii\lib/Model\Payout getPayout($handle)
 
 Get payout
 
@@ -71,12 +71,12 @@ Get payout
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PayoutApi(
+$apiInstance = new Frisbii\lib/Api\PayoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Payout**](../Model/Payout.md)
+[**\Frisbii\lib/Model\Payout**](../Model/Payout.md)
 
 ### Authorization
 
@@ -124,12 +124,12 @@ Get transaction details
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\PayoutApi(
+$apiInstance = new Frisbii\lib/Api\PayoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

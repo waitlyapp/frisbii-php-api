@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **vat** | **string** | Account vat number | [optional] 
 **website** | **string** | Account website | [optional] 
 **logo** | **string** | Account logo url | [optional] 
-**id** | **string** | Account id assigned by Reepay | 
+**id** | **string** | Account id assigned by Frisbii | 
 **organisation** | **string** | Organisation by subdomain | 
 **created** | [**\DateTime**](\DateTime.md) | Date when the account was created. In [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | 
 **state** | **string** | Status of the account one of the following &#x60;test&#x60;, &#x60;live&#x60;, &#x60;closed&#x60;. | 

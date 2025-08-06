@@ -1,6 +1,6 @@
-# Billwerk\UserApi
+# Frisbii\UserApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,7 +32,7 @@ Cancel invitation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -78,12 +78,12 @@ Delete user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -121,7 +121,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUser**
-> \Billwerk\Model\UserAccount getUser($id)
+> \Frisbii\lib/Model\UserAccount getUser($id)
 
 Get user
 
@@ -130,12 +130,12 @@ Get user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserInfo**
-> \Billwerk\Model\UserInfo getUserInfo($id)
+> \Frisbii\lib/Model\UserInfo getUserInfo($id)
 
 Get user info
 
@@ -183,7 +183,7 @@ Get user info
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\UserInfo**](../Model/UserInfo.md)
+[**\Frisbii\lib/Model\UserInfo**](../Model/UserInfo.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserMfa**
-> \Billwerk\Model\UserAccountMfa getUserMfa($id)
+> \Frisbii\lib/Model\UserAccountMfa getUserMfa($id)
 
 Get MFA setup details
 
@@ -230,12 +230,12 @@ Get MFA setup details
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\UserAccountMfa**](../Model/UserAccountMfa.md)
+[**\Frisbii\lib/Model\UserAccountMfa**](../Model/UserAccountMfa.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \Billwerk\Model\UserAccount[] getUsers()
+> \Frisbii\lib/Model\UserAccount[] getUsers()
 
 Get users
 
@@ -283,12 +283,12 @@ Get users
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -309,7 +309,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount[]**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount[]**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteUser**
-> \Billwerk\Model\UserAccount inviteUser($body)
+> \Frisbii\lib/Model\UserAccount inviteUser($body)
 
 Invite user
 
@@ -332,18 +332,18 @@ Invite user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\InviteUser(); // \Billwerk\Model\InviteUser | 
+$body = new \Frisbii\lib/Model\InviteUser(); // \Frisbii\lib/Model\InviteUser | 
 
 try {
     $result = $apiInstance->inviteUser($body);
@@ -358,11 +358,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\InviteUser**](../Model/InviteUser.md)|  |
+ **body** | [**\Frisbii\lib/Model\InviteUser**](../Model/InviteUser.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteUserAccept**
-> \Billwerk\Model\UserAccount inviteUserAccept($body, $token)
+> \Frisbii\lib/Model\UserAccount inviteUserAccept($body, $token)
 
 Accept invite
 
@@ -385,12 +385,12 @@ Accept invite
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Billwerk\Model\InviteUserAccept(); // \Billwerk\Model\InviteUserAccept | 
+$body = new \Frisbii\lib/Model\InviteUserAccept(); // \Frisbii\lib/Model\InviteUserAccept | 
 $token = "token_example"; // string | Invite token
 
 try {
@@ -406,12 +406,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\InviteUserAccept**](../Model/InviteUserAccept.md)|  |
+ **body** | [**\Frisbii\lib/Model\InviteUserAccept**](../Model/InviteUserAccept.md)|  |
  **token** | **string**| Invite token |
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteUserGet**
-> \Billwerk\Model\UserAccountMfa inviteUserGet($token)
+> \Frisbii\lib/Model\UserAccountMfa inviteUserGet($token)
 
 Get invite
 
@@ -434,7 +434,7 @@ Get invite
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\UserAccountMfa**](../Model/UserAccountMfa.md)
+[**\Frisbii\lib/Model\UserAccountMfa**](../Model/UserAccountMfa.md)
 
 ### Authorization
 
@@ -481,12 +481,12 @@ Reset password request
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Billwerk\Model\UserResetRequestPassword(); // \Billwerk\Model\UserResetRequestPassword | 
+$body = new \Frisbii\lib/Model\UserResetRequestPassword(); // \Frisbii\lib/Model\UserResetRequestPassword | 
 $version = 56; // int | 
 
 try {
@@ -501,7 +501,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UserResetRequestPassword**](../Model/UserResetRequestPassword.md)|  |
+ **body** | [**\Frisbii\lib/Model\UserResetRequestPassword**](../Model/UserResetRequestPassword.md)|  |
  **version** | **int**|  | [optional]
 
 ### Return type
@@ -520,7 +520,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resetPasswordWithToken**
-> \Billwerk\Model\User resetPasswordWithToken($body, $token)
+> \Frisbii\lib/Model\User resetPasswordWithToken($body, $token)
 
 Reset password
 
@@ -529,12 +529,12 @@ Reset password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Billwerk\Model\ResetUserPassword(); // \Billwerk\Model\ResetUserPassword | 
+$body = new \Frisbii\lib/Model\ResetUserPassword(); // \Frisbii\lib/Model\ResetUserPassword | 
 $token = "token_example"; // string | Reset password token
 
 try {
@@ -550,12 +550,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\ResetUserPassword**](../Model/ResetUserPassword.md)|  |
+ **body** | [**\Frisbii\lib/Model\ResetUserPassword**](../Model/ResetUserPassword.md)|  |
  **token** | **string**| Reset password token |
 
 ### Return type
 
-[**\Billwerk\Model\User**](../Model/User.md)
+[**\Frisbii\lib/Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -569,7 +569,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setMfa**
-> \Billwerk\Model\UserAccount setMfa($body, $id)
+> \Frisbii\lib/Model\UserAccount setMfa($body, $id)
 
 Set user MFA
 
@@ -578,18 +578,18 @@ Set user MFA
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UserSetMfa(); // \Billwerk\Model\UserSetMfa | 
+$body = new \Frisbii\lib/Model\UserSetMfa(); // \Frisbii\lib/Model\UserSetMfa | 
 $id = "id_example"; // string | User id
 
 try {
@@ -605,12 +605,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UserSetMfa**](../Model/UserSetMfa.md)|  |
+ **body** | [**\Frisbii\lib/Model\UserSetMfa**](../Model/UserSetMfa.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAuth**
-> \Billwerk\Model\UserAccount updateAuth($body, $id)
+> \Frisbii\lib/Model\UserAccount updateAuth($body, $id)
 
 Update user groups
 
@@ -633,18 +633,18 @@ Update user groups
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateUserGroups(); // \Billwerk\Model\UpdateUserGroups | 
+$body = new \Frisbii\lib/Model\UpdateUserGroups(); // \Frisbii\lib/Model\UpdateUserGroups | 
 $id = "id_example"; // string | User id
 
 try {
@@ -660,12 +660,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateUserGroups**](../Model/UpdateUserGroups.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateUserGroups**](../Model/UpdateUserGroups.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePassword**
-> \Billwerk\Model\UserAccount updatePassword($body, $id)
+> \Frisbii\lib/Model\UserAccount updatePassword($body, $id)
 
 Change password
 
@@ -688,18 +688,18 @@ Change password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateUserPassword(); // \Billwerk\Model\UpdateUserPassword | 
+$body = new \Frisbii\lib/Model\UpdateUserPassword(); // \Frisbii\lib/Model\UpdateUserPassword | 
 $id = "id_example"; // string | User id
 
 try {
@@ -715,12 +715,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateUserPassword**](../Model/UpdateUserPassword.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateUserPassword**](../Model/UpdateUserPassword.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUser**
-> \Billwerk\Model\UserAccount updateUser($body, $id)
+> \Frisbii\lib/Model\UserAccount updateUser($body, $id)
 
 Update user
 
@@ -743,18 +743,18 @@ Update user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateUser(); // \Billwerk\Model\UpdateUser | 
+$body = new \Frisbii\lib/Model\UpdateUser(); // \Frisbii\lib/Model\UpdateUser | 
 $id = "id_example"; // string | User id
 
 try {
@@ -770,12 +770,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateUser**](../Model/UpdateUser.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateUser**](../Model/UpdateUser.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Billwerk\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\lib/Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -789,7 +789,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **verifyEmail**
-> \Billwerk\Model\User verifyEmail($token)
+> \Frisbii\lib/Model\User verifyEmail($token)
 
 Verify email
 
@@ -798,7 +798,7 @@ Verify email
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -822,7 +822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\User**](../Model/User.md)
+[**\Frisbii\lib/Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -845,12 +845,12 @@ Send verification email
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\UserApi(
+$apiInstance = new Frisbii\lib/Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

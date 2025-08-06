@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **phone** | **string** | Customer phone number | [optional] 
 **company** | **string** | Customer company | [optional] 
 **vat** | **string** | Customer vat number | [optional] 
+**language** | **string** | Customer language | [optional] 
 **first_name** | **string** | Customer first name | [optional] 
 **last_name** | **string** | Customer last name | [optional] 
 **postal_code** | **string** | Customer postal code | [optional] 

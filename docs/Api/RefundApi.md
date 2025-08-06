@@ -1,6 +1,6 @@
-# Billwerk\RefundApi
+# Frisbii\RefundApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRefund**](RefundApi.md#getrefund) | **GET** /v1/refund/{id} | Get refund
 
 # **createRefund**
-> \Billwerk\Model\Refund createRefund($body)
+> \Frisbii\lib/Model\Refund createRefund($body)
 
 Create refund
 
@@ -17,18 +17,18 @@ Create refund
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\RefundApi(
+$apiInstance = new Frisbii\lib/Api\RefundApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateRefund(); // \Billwerk\Model\CreateRefund | 
+$body = new \Frisbii\lib/Model\CreateRefund(); // \Frisbii\lib/Model\CreateRefund | 
 
 try {
     $result = $apiInstance->createRefund($body);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateRefund**](../Model/CreateRefund.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateRefund**](../Model/CreateRefund.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Refund**](../Model/Refund.md)
+[**\Frisbii\lib/Model\Refund**](../Model/Refund.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRefund**
-> \Billwerk\Model\Refund getRefund($id)
+> \Frisbii\lib/Model\Refund getRefund($id)
 
 Get refund
 
@@ -70,12 +70,12 @@ Get refund
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\RefundApi(
+$apiInstance = new Frisbii\lib/Api\RefundApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Refund**](../Model/Refund.md)
+[**\Frisbii\lib/Model\Refund**](../Model/Refund.md)
 
 ### Authorization
 

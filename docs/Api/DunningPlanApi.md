@@ -1,6 +1,6 @@
-# Billwerk\DunningPlanApi
+# Frisbii\DunningPlanApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**updateJson**](DunningPlanApi.md#updatejson) | **PUT** /v1/dunning_plan/{handle} | Update dunning plan
 
 # **createDunningPlanJson**
-> \Billwerk\Model\DunningPlan createDunningPlanJson($body)
+> \Frisbii\lib/Model\DunningPlan createDunningPlanJson($body)
 
 Create dunning plan
 
@@ -20,18 +20,18 @@ Create dunning plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DunningPlanApi(
+$apiInstance = new Frisbii\lib/Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateDunningPlan(); // \Billwerk\Model\CreateDunningPlan | 
+$body = new \Frisbii\lib/Model\CreateDunningPlan(); // \Frisbii\lib/Model\CreateDunningPlan | 
 
 try {
     $result = $apiInstance->createDunningPlanJson($body);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateDunningPlan**](../Model/CreateDunningPlan.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateDunningPlan**](../Model/CreateDunningPlan.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\lib/Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDunningPlan**
-> \Billwerk\Model\DunningPlan deleteDunningPlan($handle)
+> \Frisbii\lib/Model\DunningPlan deleteDunningPlan($handle)
 
 Delete dunning plan
 
@@ -73,12 +73,12 @@ Delete dunning plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DunningPlanApi(
+$apiInstance = new Frisbii\lib/Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\lib/Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDunningPlan**
-> \Billwerk\Model\DunningPlan getDunningPlan($handle)
+> \Frisbii\lib/Model\DunningPlan getDunningPlan($handle)
 
 Get dunning plan
 
@@ -126,12 +126,12 @@ Get dunning plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DunningPlanApi(
+$apiInstance = new Frisbii\lib/Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\lib/Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDunningPlans**
-> \Billwerk\Model\DunningPlan[] getDunningPlans()
+> \Frisbii\lib/Model\DunningPlan[] getDunningPlans()
 
 Get list of dunning plans
 
@@ -179,12 +179,12 @@ Get list of dunning plans
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DunningPlanApi(
+$apiInstance = new Frisbii\lib/Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\DunningPlan[]**](../Model/DunningPlan.md)
+[**\Frisbii\lib/Model\DunningPlan[]**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateJson**
-> \Billwerk\Model\DunningPlan updateJson($body, $handle)
+> \Frisbii\lib/Model\DunningPlan updateJson($body, $handle)
 
 Update dunning plan
 
@@ -228,18 +228,18 @@ Update dunning plan
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DunningPlanApi(
+$apiInstance = new Frisbii\lib/Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateDunningPlan(); // \Billwerk\Model\UpdateDunningPlan | 
+$body = new \Frisbii\lib/Model\UpdateDunningPlan(); // \Frisbii\lib/Model\UpdateDunningPlan | 
 $handle = "handle_example"; // string | Dunning plan handle
 
 try {
@@ -255,12 +255,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateDunningPlan**](../Model/UpdateDunningPlan.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateDunningPlan**](../Model/UpdateDunningPlan.md)|  |
  **handle** | **string**| Dunning plan handle |
 
 ### Return type
 
-[**\Billwerk\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\lib/Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 

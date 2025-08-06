@@ -1,6 +1,6 @@
-# Billwerk\CreditApi
+# Frisbii\CreditApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getCredits**](CreditApi.md#getcredits) | **GET** /v1/credit/subscription/{handle} | Get credits for subscription
 
 # **cancelCredit**
-> \Billwerk\Model\Credit cancelCredit($handle)
+> \Frisbii\lib/Model\Credit cancelCredit($handle)
 
 Cancel credit
 
@@ -19,12 +19,12 @@ Cancel credit
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CreditApi(
+$apiInstance = new Frisbii\lib/Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Credit**](../Model/Credit.md)
+[**\Frisbii\lib/Model\Credit**](../Model/Credit.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCreditJson**
-> \Billwerk\Model\Credit createCreditJson($body)
+> \Frisbii\lib/Model\Credit createCreditJson($body)
 
 Create credit
 
@@ -72,18 +72,18 @@ Create credit
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CreditApi(
+$apiInstance = new Frisbii\lib/Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateCredit(); // \Billwerk\Model\CreateCredit | 
+$body = new \Frisbii\lib/Model\CreateCredit(); // \Frisbii\lib/Model\CreateCredit | 
 
 try {
     $result = $apiInstance->createCreditJson($body);
@@ -98,11 +98,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateCredit**](../Model/CreateCredit.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateCredit**](../Model/CreateCredit.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Credit**](../Model/Credit.md)
+[**\Frisbii\lib/Model\Credit**](../Model/Credit.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredit**
-> \Billwerk\Model\Credit getCredit($handle)
+> \Frisbii\lib/Model\Credit getCredit($handle)
 
 Get credit
 
@@ -125,12 +125,12 @@ Get credit
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CreditApi(
+$apiInstance = new Frisbii\lib/Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Credit**](../Model/Credit.md)
+[**\Frisbii\lib/Model\Credit**](../Model/Credit.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredits**
-> \Billwerk\Model\Credit[] getCredits($handle)
+> \Frisbii\lib/Model\Credit[] getCredits($handle)
 
 Get credits for subscription
 
@@ -178,12 +178,12 @@ Get credits for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\CreditApi(
+$apiInstance = new Frisbii\lib/Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Credit[]**](../Model/Credit.md)
+[**\Frisbii\lib/Model\Credit[]**](../Model/Credit.md)
 
 ### Authorization
 

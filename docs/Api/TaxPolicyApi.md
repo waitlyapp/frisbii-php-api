@@ -1,6 +1,6 @@
-# Billwerk\TaxPolicyApi
+# Frisbii\TaxPolicyApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**updateTaxPolicies**](TaxPolicyApi.md#updatetaxpolicies) | **PUT** /v1/tax_policy/{handle} | Update tax policy
 
 # **createTaxPolicies**
-> \Billwerk\Model\TaxPolicy createTaxPolicies($body)
+> \Frisbii\lib/Model\TaxPolicy createTaxPolicies($body)
 
 Create tax policy
 
@@ -21,18 +21,18 @@ Create tax policy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\TaxPolicyApi(
+$apiInstance = new Frisbii\lib/Api\TaxPolicyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateTaxPolicy(); // \Billwerk\Model\CreateTaxPolicy | 
+$body = new \Frisbii\lib/Model\CreateTaxPolicy(); // \Frisbii\lib/Model\CreateTaxPolicy | 
 
 try {
     $result = $apiInstance->createTaxPolicies($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateTaxPolicy**](../Model/CreateTaxPolicy.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\CreateTaxPolicy**](../Model/CreateTaxPolicy.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\TaxPolicy**](../Model/TaxPolicy.md)
+[**\Frisbii\lib/Model\TaxPolicy**](../Model/TaxPolicy.md)
 
 ### Authorization
 
@@ -74,12 +74,12 @@ Delete tax policy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\TaxPolicyApi(
+$apiInstance = new Frisbii\lib/Api\TaxPolicyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStandardTaxRates**
-> \Billwerk\Model\StandardTaxRatesResponseDto getStandardTaxRates()
+> \Frisbii\lib/Model\StandardTaxRatesResponseDto getStandardTaxRates()
 
 List of predefined standard tax rates
 
@@ -126,12 +126,12 @@ List of predefined standard tax rates
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\TaxPolicyApi(
+$apiInstance = new Frisbii\lib/Api\TaxPolicyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Billwerk\Model\StandardTaxRatesResponseDto**](../Model/StandardTaxRatesResponseDto.md)
+[**\Frisbii\lib/Model\StandardTaxRatesResponseDto**](../Model/StandardTaxRatesResponseDto.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaxPolicies**
-> \Billwerk\Model\TaxPolicy getTaxPolicies($handle)
+> \Frisbii\lib/Model\TaxPolicy getTaxPolicies($handle)
 
 Get tax policy
 
@@ -175,12 +175,12 @@ Get tax policy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\TaxPolicyApi(
+$apiInstance = new Frisbii\lib/Api\TaxPolicyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\TaxPolicy**](../Model/TaxPolicy.md)
+[**\Frisbii\lib/Model\TaxPolicy**](../Model/TaxPolicy.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaxRate**
-> \Billwerk\Model\TaxRate getTaxRate($handle, $country)
+> \Frisbii\lib/Model\TaxRate getTaxRate($handle, $country)
 
 Tax Rate for a country
 
@@ -228,12 +228,12 @@ Tax Rate for a country
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\TaxPolicyApi(
+$apiInstance = new Frisbii\lib/Api\TaxPolicyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\TaxRate**](../Model/TaxRate.md)
+[**\Frisbii\lib/Model\TaxRate**](../Model/TaxRate.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTaxPolicies**
-> \Billwerk\Model\TaxPolicy updateTaxPolicies($handle, $body)
+> \Frisbii\lib/Model\TaxPolicy updateTaxPolicies($handle, $body)
 
 Update tax policy
 
@@ -283,19 +283,19 @@ Update tax policy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\TaxPolicyApi(
+$apiInstance = new Frisbii\lib/Api\TaxPolicyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = "handle_example"; // string | Tax policy handle
-$body = new \Billwerk\Model\UpdateTaxPolicy(); // \Billwerk\Model\UpdateTaxPolicy | 
+$body = new \Frisbii\lib/Model\UpdateTaxPolicy(); // \Frisbii\lib/Model\UpdateTaxPolicy | 
 
 try {
     $result = $apiInstance->updateTaxPolicies($handle, $body);
@@ -311,11 +311,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **string**| Tax policy handle |
- **body** | [**\Billwerk\Model\UpdateTaxPolicy**](../Model/UpdateTaxPolicy.md)|  | [optional]
+ **body** | [**\Frisbii\lib/Model\UpdateTaxPolicy**](../Model/UpdateTaxPolicy.md)|  | [optional]
 
 ### Return type
 
-[**\Billwerk\Model\TaxPolicy**](../Model/TaxPolicy.md)
+[**\Frisbii\lib/Model\TaxPolicy**](../Model/TaxPolicy.md)
 
 ### Authorization
 

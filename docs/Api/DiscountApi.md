@@ -1,17 +1,20 @@
-# Billwerk\DiscountApi
+# Frisbii\DiscountApi
 
-All URIs are relative to *https://api.reepay.com/api.reepay.com*
+All URIs are relative to *https://api.frisbii.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createDiscount**](DiscountApi.md#creatediscount) | **POST** /v1/discount | Create discount
 [**deleteDiscount**](DiscountApi.md#deletediscount) | **DELETE** /v1/discount/{handle} | Delete discount
+[**deleteMetadata3**](DiscountApi.md#deletemetadata3) | **DELETE** /v1/discount/{handle}/metadata | Delete metadata
 [**getDiscount**](DiscountApi.md#getdiscount) | **GET** /v1/discount/{handle} | Get discount
+[**getMetadata3**](DiscountApi.md#getmetadata3) | **GET** /v1/discount/{handle}/metadata | Get metadata
 [**undeleteDiscount**](DiscountApi.md#undeletediscount) | **POST** /v1/discount/{handle}/undelete | Undelete discount
 [**updateDiscount**](DiscountApi.md#updatediscount) | **PUT** /v1/discount/{handle} | Update discount
+[**updateMetadata3**](DiscountApi.md#updatemetadata3) | **PUT** /v1/discount/{handle}/metadata | Create or update metadata
 
 # **createDiscount**
-> \Billwerk\Model\Discount createDiscount($body)
+> \Frisbii\lib/Model\Discount createDiscount($body)
 
 Create discount
 
@@ -20,18 +23,18 @@ Create discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DiscountApi(
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\CreateDiscount(); // \Billwerk\Model\CreateDiscount | 
+$body = new \Frisbii\lib/Model\CreateDiscount(); // \Frisbii\lib/Model\CreateDiscount | 
 
 try {
     $result = $apiInstance->createDiscount($body);
@@ -46,11 +49,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\CreateDiscount**](../Model/CreateDiscount.md)|  |
+ **body** | [**\Frisbii\lib/Model\CreateDiscount**](../Model/CreateDiscount.md)|  |
 
 ### Return type
 
-[**\Billwerk\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\lib/Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -64,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDiscount**
-> \Billwerk\Model\Discount deleteDiscount($handle)
+> \Frisbii\lib/Model\Discount deleteDiscount($handle)
 
 Delete discount
 
@@ -73,12 +76,12 @@ Delete discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DiscountApi(
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +106,59 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\lib/Model\Discount**](../Model/Discount.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteMetadata3**
+> deleteMetadata3($handle)
+
+Delete metadata
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Resource handle
+
+try {
+    $apiInstance->deleteMetadata3($handle);
+} catch (Exception $e) {
+    echo 'Exception when calling DiscountApi->deleteMetadata3: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Resource handle |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -117,7 +172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDiscount**
-> \Billwerk\Model\Discount getDiscount($handle)
+> \Frisbii\lib/Model\Discount getDiscount($handle)
 
 Get discount
 
@@ -126,12 +181,12 @@ Get discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DiscountApi(
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,7 +211,60 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\lib/Model\Discount**](../Model/Discount.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMetadata3**
+> map[string,object] getMetadata3($handle)
+
+Get metadata
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$handle = "handle_example"; // string | Resource handle
+
+try {
+    $result = $apiInstance->getMetadata3($handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DiscountApi->getMetadata3: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **handle** | **string**| Resource handle |
+
+### Return type
+
+**map[string,object]**
 
 ### Authorization
 
@@ -170,7 +278,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **undeleteDiscount**
-> \Billwerk\Model\Discount undeleteDiscount($handle)
+> \Frisbii\lib/Model\Discount undeleteDiscount($handle)
 
 Undelete discount
 
@@ -179,12 +287,12 @@ Undelete discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DiscountApi(
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -209,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Billwerk\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\lib/Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -223,7 +331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDiscount**
-> \Billwerk\Model\Discount updateDiscount($body, $handle)
+> \Frisbii\lib/Model\Discount updateDiscount($body, $handle)
 
 Update discount
 
@@ -232,18 +340,18 @@ Update discount
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = Billwerk\Configuration::getDefaultConfiguration()
+$config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Billwerk\API\DiscountApi(
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Billwerk\Model\UpdateDiscount(); // \Billwerk\Model\UpdateDiscount | 
+$body = new \Frisbii\lib/Model\UpdateDiscount(); // \Frisbii\lib/Model\UpdateDiscount | 
 $handle = "handle_example"; // string | Discount handle
 
 try {
@@ -259,12 +367,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Billwerk\Model\UpdateDiscount**](../Model/UpdateDiscount.md)|  |
+ **body** | [**\Frisbii\lib/Model\UpdateDiscount**](../Model/UpdateDiscount.md)|  |
  **handle** | **string**| Discount handle |
 
 ### Return type
 
-[**\Billwerk\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\lib/Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -273,6 +381,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateMetadata3**
+> map[string,object] updateMetadata3($body, $handle)
+
+Create or update metadata
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = Frisbii\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Frisbii\lib/Api\DiscountApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Frisbii\lib/Model\map(); // map[string,object] | 
+$handle = "handle_example"; // string | Resource handle
+
+try {
+    $result = $apiInstance->updateMetadata3($body, $handle);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DiscountApi->updateMetadata3: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**map[string,object]**](../Model/map.md)|  |
+ **handle** | **string**| Resource handle |
+
+### Return type
+
+**map[string,object]**
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
