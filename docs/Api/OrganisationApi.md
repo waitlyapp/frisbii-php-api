@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**update**](OrganisationApi.md#update) | **PUT** /v1/organisation | Update organisation
 
 # **getOrganisation**
-> \Frisbii\lib\Model\Organisation getOrganisation()
+> \Frisbii\Model\Organisation getOrganisation()
 
 Get organisation
 
@@ -22,7 +22,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\OrganisationApi(
+$apiInstance = new Frisbii\Api\OrganisationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\Organisation**](../Model/Organisation.md)
+[**\Frisbii\Model\Organisation**](../Model/Organisation.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **update**
-> \Frisbii\lib\Model\Organisation update($body)
+> \Frisbii\Model\Organisation update($body)
 
 Update organisation
 
@@ -71,13 +71,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\OrganisationApi(
+$apiInstance = new Frisbii\Api\OrganisationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateOrganisation(); // \Frisbii\lib\Model\UpdateOrganisation | 
+$body = new \Frisbii\Model\UpdateOrganisation(); // \Frisbii\Model\UpdateOrganisation | 
 
 try {
     $result = $apiInstance->update($body);
@@ -92,11 +92,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateOrganisation**](../Model/UpdateOrganisation.md)|  |
+ **body** | [**\Frisbii\Model\UpdateOrganisation**](../Model/UpdateOrganisation.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Organisation**](../Model/Organisation.md)
+[**\Frisbii\Model\Organisation**](../Model/Organisation.md)
 
 ### Authorization
 

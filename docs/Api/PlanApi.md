@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**updatePlanJson**](PlanApi.md#updateplanjson) | **PUT** /v1/plan/{handle} | Update plan
 
 # **changePlanAmountJson**
-> \Frisbii\lib\Model\Plan changePlanAmountJson($body, $handle)
+> \Frisbii\Model\Plan changePlanAmountJson($body, $handle)
 
 Change plan amount
 
@@ -33,13 +33,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\ChangePlanAmount(); // \Frisbii\lib\Model\ChangePlanAmount | 
+$body = new \Frisbii\Model\ChangePlanAmount(); // \Frisbii\Model\ChangePlanAmount | 
 $handle = "handle_example"; // string | Plan handle
 
 try {
@@ -55,12 +55,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\ChangePlanAmount**](../Model/ChangePlanAmount.md)|  |
+ **body** | [**\Frisbii\Model\ChangePlanAmount**](../Model/ChangePlanAmount.md)|  |
  **handle** | **string**| Plan handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createPlanJson**
-> \Frisbii\lib\Model\Plan createPlanJson($body)
+> \Frisbii\Model\Plan createPlanJson($body)
 
 Create plan
 
@@ -88,13 +88,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateSubscriptionPlan(); // \Frisbii\lib\Model\CreateSubscriptionPlan | 
+$body = new \Frisbii\Model\CreateSubscriptionPlan(); // \Frisbii\Model\CreateSubscriptionPlan | 
 
 try {
     $result = $apiInstance->createPlanJson($body);
@@ -109,11 +109,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateSubscriptionPlan**](../Model/CreateSubscriptionPlan.md)|  |
+ **body** | [**\Frisbii\Model\CreateSubscriptionPlan**](../Model/CreateSubscriptionPlan.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePlan**
-> \Frisbii\lib\Model\Plan deletePlan($handle)
+> \Frisbii\Model\Plan deletePlan($handle)
 
 Delete plan
 
@@ -193,7 +193,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCurrentPlan**
-> \Frisbii\lib\Model\Plan getCurrentPlan($handle, $tax_rate_for_country)
+> \Frisbii\Model\Plan getCurrentPlan($handle, $tax_rate_for_country)
 
 Get plan
 
@@ -246,7 +246,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlan**
-> \Frisbii\lib\Model\Plan getPlan($handle, $version, $tax_rate_for_country)
+> \Frisbii\Model\Plan getPlan($handle, $version, $tax_rate_for_country)
 
 Get plan version
 
@@ -354,7 +354,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlanEntitlements**
-> \Frisbii\lib\Model\Entitlement[] getPlanEntitlements($handle, $version)
+> \Frisbii\Model\Entitlement[] getPlanEntitlements($handle, $version)
 
 Get plan entitlements
 
@@ -411,7 +411,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Entitlement[]**](../Model/Entitlement.md)
+[**\Frisbii\Model\Entitlement[]**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlans**
-> \Frisbii\lib\Model\Plan[] getPlans($handle, $tax_rate_for_country)
+> \Frisbii\Model\Plan[] getPlans($handle, $tax_rate_for_country)
 
 Get list of plan versions
 
@@ -466,7 +466,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan[]**](../Model/Plan.md)
+[**\Frisbii\Model\Plan[]**](../Model/Plan.md)
 
 ### Authorization
 
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **supersedePlanJson**
-> \Frisbii\lib\Model\Plan supersedePlanJson($body, $handle)
+> \Frisbii\Model\Plan supersedePlanJson($body, $handle)
 
 Supersede plan
 
@@ -521,13 +521,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\SupersedeSubscriptionPlan(); // \Frisbii\lib\Model\SupersedeSubscriptionPlan | 
+$body = new \Frisbii\Model\SupersedeSubscriptionPlan(); // \Frisbii\Model\SupersedeSubscriptionPlan | 
 $handle = "handle_example"; // string | Plan handle
 
 try {
@@ -543,12 +543,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\SupersedeSubscriptionPlan**](../Model/SupersedeSubscriptionPlan.md)|  |
+ **body** | [**\Frisbii\Model\SupersedeSubscriptionPlan**](../Model/SupersedeSubscriptionPlan.md)|  |
  **handle** | **string**| Plan handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unDeletePlan**
-> \Frisbii\lib\Model\Plan unDeletePlan($handle)
+> \Frisbii\Model\Plan unDeletePlan($handle)
 
 Undelete plan
 
@@ -576,7 +576,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 
@@ -629,13 +629,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\map(); // map[string,object] | 
+$body = new \Frisbii\Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
@@ -670,7 +670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePlanJson**
-> \Frisbii\lib\Model\Plan updatePlanJson($body, $handle)
+> \Frisbii\Model\Plan updatePlanJson($body, $handle)
 
 Update plan
 
@@ -684,13 +684,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\PlanApi(
+$apiInstance = new Frisbii\Api\PlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateSubscriptionPlan(); // \Frisbii\lib\Model\UpdateSubscriptionPlan | 
+$body = new \Frisbii\Model\UpdateSubscriptionPlan(); // \Frisbii\Model\UpdateSubscriptionPlan | 
 $handle = "handle_example"; // string | Subscription handle
 
 try {
@@ -706,12 +706,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateSubscriptionPlan**](../Model/UpdateSubscriptionPlan.md)|  |
+ **body** | [**\Frisbii\Model\UpdateSubscriptionPlan**](../Model/UpdateSubscriptionPlan.md)|  |
  **handle** | **string**| Subscription handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Plan**](../Model/Plan.md)
+[**\Frisbii\Model\Plan**](../Model/Plan.md)
 
 ### Authorization
 

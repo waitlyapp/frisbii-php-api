@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **default_require_sca** | **bool** | Default behaviour if no specific SCA handing is defined in payment sessions. If enabled SCA will be required and un-enrolled cards will be declined. | [optional] 
 **disallow_threed_secure_attempted** | **bool** | Disallow 3D Secure status attempted which means that card issuer does not support 3D Secure so authentication could not be performed. An attempted 3D Secure flow normally results in liability shift. | [optional] 
 **payout** | **bool** | Use agreement for payout (if supported by provider) | [optional] 
-**vts_configuration** | [**\Frisbii\lib\Model\EmvConfiguration**](EmvConfiguration.md) |  | [optional] 
-**scof_configuration** | [**\Frisbii\lib\Model\EmvConfiguration**](EmvConfiguration.md) |  | [optional] 
+**vts_configuration** | [**\Frisbii\Model\EmvConfiguration**](EmvConfiguration.md) |  | [optional] 
+**scof_configuration** | [**\Frisbii\Model\EmvConfiguration**](EmvConfiguration.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**validateCode**](CouponApi.md#validatecode) | **GET** /v1/coupon/code/validate | Validate coupon
 
 # **createCoupon**
-> \Frisbii\lib\Model\Coupon createCoupon($body)
+> \Frisbii\Model\Coupon createCoupon($body)
 
 Create coupon
 
@@ -29,13 +29,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateCoupon(); // \Frisbii\lib\Model\CreateCoupon | 
+$body = new \Frisbii\Model\CreateCoupon(); // \Frisbii\Model\CreateCoupon | 
 
 try {
     $result = $apiInstance->createCoupon($body);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateCoupon**](../Model/CreateCoupon.md)|  |
+ **body** | [**\Frisbii\Model\CreateCoupon**](../Model/CreateCoupon.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCoupon**
-> \Frisbii\lib\Model\Coupon deleteCoupon($handle)
+> \Frisbii\Model\Coupon deleteCoupon($handle)
 
 Delete coupon
 
@@ -82,7 +82,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -173,7 +173,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **expireCoupon**
-> \Frisbii\lib\Model\Coupon expireCoupon($handle)
+> \Frisbii\Model\Coupon expireCoupon($handle)
 
 Expire coupon
 
@@ -187,7 +187,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCoupon**
-> \Frisbii\lib\Model\Coupon getCoupon($handle)
+> \Frisbii\Model\Coupon getCoupon($handle)
 
 Get coupon
 
@@ -240,7 +240,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCoupon**
-> \Frisbii\lib\Model\Coupon updateCoupon($body, $handle)
+> \Frisbii\Model\Coupon updateCoupon($body, $handle)
 
 Update coupon
 
@@ -346,13 +346,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateCoupon(); // \Frisbii\lib\Model\UpdateCoupon | 
+$body = new \Frisbii\Model\UpdateCoupon(); // \Frisbii\Model\UpdateCoupon | 
 $handle = "handle_example"; // string | Coupon handle
 
 try {
@@ -368,12 +368,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateCoupon**](../Model/UpdateCoupon.md)|  |
+ **body** | [**\Frisbii\Model\UpdateCoupon**](../Model/UpdateCoupon.md)|  |
  **handle** | **string**| Coupon handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 
@@ -401,13 +401,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\map(); // map[string,object] | 
+$body = new \Frisbii\Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **validateCode**
-> \Frisbii\lib\Model\Coupon validateCode($code, $plan, $customer, $subscription)
+> \Frisbii\Model\Coupon validateCode($code, $plan, $customer, $subscription)
 
 Validate coupon
 
@@ -456,7 +456,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CouponApi(
+$apiInstance = new Frisbii\Api\CouponApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Coupon**](../Model/Coupon.md)
+[**\Frisbii\Model\Coupon**](../Model/Coupon.md)
 
 ### Authorization
 

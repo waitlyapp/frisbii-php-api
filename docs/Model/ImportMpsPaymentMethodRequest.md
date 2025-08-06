@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reference** | **string** | Optional reference given to the created payment method. Max length 64 with allowable characters [a-zA-Z0-9_.-@]. | [optional] 
-**customer** | [**\Frisbii\lib\Model\CreateCustomer**](CreateCustomer.md) |  | [optional] 
+**customer** | [**\Frisbii\Model\CreateCustomer**](CreateCustomer.md) |  | [optional] 
 **customer_handle** | **string** | Customer reference to an existing customer. Either this argument or &#x60;customer&#x60; must be provided. | [optional] 
 **mobile_pay_id** | **string** |  | 
 **cancel_redirect_url** | **string** |  | [optional] 

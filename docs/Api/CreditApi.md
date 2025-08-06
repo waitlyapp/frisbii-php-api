@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getCredits**](CreditApi.md#getcredits) | **GET** /v1/credit/subscription/{handle} | Get credits for subscription
 
 # **cancelCredit**
-> \Frisbii\lib\Model\Credit cancelCredit($handle)
+> \Frisbii\Model\Credit cancelCredit($handle)
 
 Cancel credit
 
@@ -24,7 +24,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CreditApi(
+$apiInstance = new Frisbii\Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Credit**](../Model/Credit.md)
+[**\Frisbii\Model\Credit**](../Model/Credit.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCreditJson**
-> \Frisbii\lib\Model\Credit createCreditJson($body)
+> \Frisbii\Model\Credit createCreditJson($body)
 
 Create credit
 
@@ -77,13 +77,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CreditApi(
+$apiInstance = new Frisbii\Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateCredit(); // \Frisbii\lib\Model\CreateCredit | 
+$body = new \Frisbii\Model\CreateCredit(); // \Frisbii\Model\CreateCredit | 
 
 try {
     $result = $apiInstance->createCreditJson($body);
@@ -98,11 +98,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateCredit**](../Model/CreateCredit.md)|  |
+ **body** | [**\Frisbii\Model\CreateCredit**](../Model/CreateCredit.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Credit**](../Model/Credit.md)
+[**\Frisbii\Model\Credit**](../Model/Credit.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredit**
-> \Frisbii\lib\Model\Credit getCredit($handle)
+> \Frisbii\Model\Credit getCredit($handle)
 
 Get credit
 
@@ -130,7 +130,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CreditApi(
+$apiInstance = new Frisbii\Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Credit**](../Model/Credit.md)
+[**\Frisbii\Model\Credit**](../Model/Credit.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredits**
-> \Frisbii\lib\Model\Credit[] getCredits($handle)
+> \Frisbii\Model\Credit[] getCredits($handle)
 
 Get credits for subscription
 
@@ -183,7 +183,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\CreditApi(
+$apiInstance = new Frisbii\Api\CreditApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Credit[]**](../Model/Credit.md)
+[**\Frisbii\Model\Credit[]**](../Model/Credit.md)
 
 ### Authorization
 

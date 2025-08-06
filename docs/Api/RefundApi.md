@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRefund**](RefundApi.md#getrefund) | **GET** /v1/refund/{id} | Get refund
 
 # **createRefund**
-> \Frisbii\lib\Model\Refund createRefund($body)
+> \Frisbii\Model\Refund createRefund($body)
 
 Create refund
 
@@ -22,13 +22,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\RefundApi(
+$apiInstance = new Frisbii\Api\RefundApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateRefund(); // \Frisbii\lib\Model\CreateRefund | 
+$body = new \Frisbii\Model\CreateRefund(); // \Frisbii\Model\CreateRefund | 
 
 try {
     $result = $apiInstance->createRefund($body);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateRefund**](../Model/CreateRefund.md)|  |
+ **body** | [**\Frisbii\Model\CreateRefund**](../Model/CreateRefund.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Refund**](../Model/Refund.md)
+[**\Frisbii\Model\Refund**](../Model/Refund.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRefund**
-> \Frisbii\lib\Model\Refund getRefund($id)
+> \Frisbii\Model\Refund getRefund($id)
 
 Get refund
 
@@ -75,7 +75,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\RefundApi(
+$apiInstance = new Frisbii\Api\RefundApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Refund**](../Model/Refund.md)
+[**\Frisbii\Model\Refund**](../Model/Refund.md)
 
 ### Authorization
 

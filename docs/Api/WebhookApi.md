@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**updateWebhooks**](WebhookApi.md#updatewebhooks) | **POST** /v1/webhook/update | Update and resend webhooks
 
 # **disableWebhooks**
-> \Frisbii\lib\Model\Webhook[] disableWebhooks($body)
+> \Frisbii\Model\Webhook[] disableWebhooks($body)
 
 Disable webhooks
 
@@ -26,13 +26,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\WebhookApi(
+$apiInstance = new Frisbii\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\WebhookDisableRequest(); // \Frisbii\lib\Model\WebhookDisableRequest | 
+$body = new \Frisbii\Model\WebhookDisableRequest(); // \Frisbii\Model\WebhookDisableRequest | 
 
 try {
     $result = $apiInstance->disableWebhooks($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\WebhookDisableRequest**](../Model/WebhookDisableRequest.md)|  |
+ **body** | [**\Frisbii\Model\WebhookDisableRequest**](../Model/WebhookDisableRequest.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhook**
-> \Frisbii\lib\Model\Webhook[] getWebhook($id)
+> \Frisbii\Model\Webhook[] getWebhook($id)
 
 Get webhooks
 
@@ -79,7 +79,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\WebhookApi(
+$apiInstance = new Frisbii\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookRequests**
-> \Frisbii\lib\Model\WebhookRequest[] getWebhookRequests($id)
+> \Frisbii\Model\WebhookRequest[] getWebhookRequests($id)
 
 Get webhook requests
 
@@ -132,7 +132,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\WebhookApi(
+$apiInstance = new Frisbii\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\WebhookRequest[]**](../Model/WebhookRequest.md)
+[**\Frisbii\Model\WebhookRequest[]**](../Model/WebhookRequest.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhooks**
-> \Frisbii\lib\Model\Webhook[] getWebhooks($created_before, $size, $state, $event, $created_after)
+> \Frisbii\Model\Webhook[] getWebhooks($created_before, $size, $state, $event, $created_after)
 
 Get list of webhooks
 
@@ -185,7 +185,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\WebhookApi(
+$apiInstance = new Frisbii\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resendJson**
-> \Frisbii\lib\Model\Webhook[] resendJson($body)
+> \Frisbii\Model\Webhook[] resendJson($body)
 
 Re-send webhooks
 
@@ -246,13 +246,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\WebhookApi(
+$apiInstance = new Frisbii\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\WebhookResendRequest(); // \Frisbii\lib\Model\WebhookResendRequest | 
+$body = new \Frisbii\Model\WebhookResendRequest(); // \Frisbii\Model\WebhookResendRequest | 
 
 try {
     $result = $apiInstance->resendJson($body);
@@ -267,11 +267,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\WebhookResendRequest**](../Model/WebhookResendRequest.md)|  |
+ **body** | [**\Frisbii\Model\WebhookResendRequest**](../Model/WebhookResendRequest.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateWebhooks**
-> \Frisbii\lib\Model\Webhook[] updateWebhooks($body)
+> \Frisbii\Model\Webhook[] updateWebhooks($body)
 
 Update and resend webhooks
 
@@ -299,13 +299,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\WebhookApi(
+$apiInstance = new Frisbii\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\WebhookUpdateRequest(); // \Frisbii\lib\Model\WebhookUpdateRequest | 
+$body = new \Frisbii\Model\WebhookUpdateRequest(); // \Frisbii\Model\WebhookUpdateRequest | 
 
 try {
     $result = $apiInstance->updateWebhooks($body);
@@ -320,11 +320,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\WebhookUpdateRequest**](../Model/WebhookUpdateRequest.md)|  |
+ **body** | [**\Frisbii\Model\WebhookUpdateRequest**](../Model/WebhookUpdateRequest.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Webhook[]**](../Model/Webhook.md)
+[**\Frisbii\Model\Webhook[]**](../Model/Webhook.md)
 
 ### Authorization
 

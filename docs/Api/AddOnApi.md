@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**updateMetadata**](AddOnApi.md#updatemetadata) | **PUT** /v1/add_on/{handle}/metadata | Create or update metadata
 
 # **createAddOn**
-> \Frisbii\lib\Model\AddOn createAddOn($body)
+> \Frisbii\Model\AddOn createAddOn($body)
 
 Create add-on
 
@@ -29,13 +29,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateAddOn(); // \Frisbii\lib\Model\CreateAddOn | 
+$body = new \Frisbii\Model\CreateAddOn(); // \Frisbii\Model\CreateAddOn | 
 
 try {
     $result = $apiInstance->createAddOn($body);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateAddOn**](../Model/CreateAddOn.md)|  |
+ **body** | [**\Frisbii\Model\CreateAddOn**](../Model/CreateAddOn.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAddOn**
-> \Frisbii\lib\Model\AddOn deleteAddOn($handle)
+> \Frisbii\Model\AddOn deleteAddOn($handle)
 
 Delete add-on
 
@@ -82,7 +82,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -173,7 +173,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAddOn**
-> \Frisbii\lib\Model\AddOn getAddOn($handle, $tax_rate_for_country)
+> \Frisbii\Model\AddOn getAddOn($handle, $tax_rate_for_country)
 
 Get add-on
 
@@ -187,7 +187,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAddOnEntitlements**
-> \Frisbii\lib\Model\Entitlement[] getAddOnEntitlements($handle)
+> \Frisbii\Model\Entitlement[] getAddOnEntitlements($handle)
 
 Get add-on entitlements
 
@@ -242,7 +242,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Entitlement[]**](../Model/Entitlement.md)
+[**\Frisbii\Model\Entitlement[]**](../Model/Entitlement.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **undeleteAddOn**
-> \Frisbii\lib\Model\AddOn undeleteAddOn($handle)
+> \Frisbii\Model\AddOn undeleteAddOn($handle)
 
 Un-delete add-on
 
@@ -348,7 +348,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddOn**
-> \Frisbii\lib\Model\AddOn updateAddOn($body, $handle)
+> \Frisbii\Model\AddOn updateAddOn($body, $handle)
 
 Update add-on
 
@@ -401,13 +401,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateAddOn(); // \Frisbii\lib\Model\UpdateAddOn | 
+$body = new \Frisbii\Model\UpdateAddOn(); // \Frisbii\Model\UpdateAddOn | 
 $handle = "handle_example"; // string | Add-on handle
 
 try {
@@ -423,12 +423,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateAddOn**](../Model/UpdateAddOn.md)|  |
+ **body** | [**\Frisbii\Model\UpdateAddOn**](../Model/UpdateAddOn.md)|  |
  **handle** | **string**| Add-on handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\AddOn**](../Model/AddOn.md)
+[**\Frisbii\Model\AddOn**](../Model/AddOn.md)
 
 ### Authorization
 
@@ -456,13 +456,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AddOnApi(
+$apiInstance = new Frisbii\Api\AddOnApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\map(); // map[string,object] | 
+$body = new \Frisbii\Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {

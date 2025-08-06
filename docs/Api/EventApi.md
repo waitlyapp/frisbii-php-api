@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getEvents**](EventApi.md#getevents) | **GET** /v1/event | Get list of events
 
 # **getEvent**
-> \Frisbii\lib\Model\Event getEvent($id)
+> \Frisbii\Model\Event getEvent($id)
 
 Get event
 
@@ -22,7 +22,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\EventApi(
+$apiInstance = new Frisbii\Api\EventApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Event**](../Model/Event.md)
+[**\Frisbii\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \Frisbii\lib\Model\EventList getEvents($page, $size, $customer, $subscription, $invoice)
+> \Frisbii\Model\EventList getEvents($page, $size, $customer, $subscription, $invoice)
 
 Get list of events
 
@@ -75,7 +75,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\EventApi(
+$apiInstance = new Frisbii\Api\EventApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\EventList**](../Model/EventList.md)
+[**\Frisbii\Model\EventList**](../Model/EventList.md)
 
 ### Authorization
 

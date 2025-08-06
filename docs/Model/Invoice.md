@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **settled** | [**\DateTime**](\DateTime.md) | When the invoice settled, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **cancelled** | [**\DateTime**](\DateTime.md) | When the invoice was cancelled, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **authorized** | [**\DateTime**](\DateTime.md) | When the invoice was authorized, if the invoice went through an authorize and settle flow, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
-**credits** | [**\Frisbii\lib\Model\CreditInvoice[]**](CreditInvoice.md) | Credits applied to invoice | 
+**credits** | [**\Frisbii\Model\CreditInvoice[]**](CreditInvoice.md) | Credits applied to invoice | 
 **created** | [**\DateTime**](\DateTime.md) | When the invoice was created, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | 
 **plan_version** | **int** | Subscription plan version | [optional] 
 **dunning_plan** | **string** | Dunning plan handle | [optional] 
@@ -33,9 +33,9 @@ Name | Type | Description | Notes
 **credited_amount** | **int** | Credited amount | [optional] 
 **period_number** | **int** | The subscription period this invoice is for | [optional] 
 **recurring_payment_method** | **string** | Optional reference to recurring payment method created in conjunction with charging | [optional] 
-**order_lines** | [**\Frisbii\lib\Model\OrderLine[]**](OrderLine.md) | Order lines for invoice sorted by descending timestamp | 
+**order_lines** | [**\Frisbii\Model\OrderLine[]**](OrderLine.md) | Order lines for invoice sorted by descending timestamp | 
 **additional_costs** | **string[]** | Additional cost handles for any additional costs added to this invoice | 
-**transactions** | [**\Frisbii\lib\Model\Transaction[]**](Transaction.md) | Invoice transactions, ascending order and limited to 100 transactions | 
+**transactions** | [**\Frisbii\Model\Transaction[]**](Transaction.md) | Invoice transactions, ascending order and limited to 100 transactions | 
 **dunning_start** | [**\DateTime**](\DateTime.md) | When dunning for the invoice was started, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **dunning_count** | **int** | Number of dunning events for invoice (number of reminders sent) | [optional] 
 **dunning_expired** | [**\DateTime**](\DateTime.md) | When dunning for the invoice expired, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
@@ -43,14 +43,14 @@ Name | Type | Description | Notes
 **period_to** | [**\DateTime**](\DateTime.md) | The end of billing period if the invoice is for a specific billing period, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **settle_later** | **bool** | Whether this is a customer one-time invoice that will be settled later | [optional] 
 **settle_later_payment_method** | **string** | The payment method to use for a later settle of a one-time customer invoice | [optional] 
-**billing_address** | [**\Frisbii\lib\Model\InvoiceBillingAddress**](InvoiceBillingAddress.md) |  | [optional] 
-**shipping_address** | [**\Frisbii\lib\Model\InvoiceShippingAddress**](InvoiceShippingAddress.md) |  | [optional] 
+**billing_address** | [**\Frisbii\Model\InvoiceBillingAddress**](InvoiceBillingAddress.md) |  | [optional] 
+**shipping_address** | [**\Frisbii\Model\InvoiceShippingAddress**](InvoiceShippingAddress.md) |  | [optional] 
 **accounting_number** | **string** | Invoice accounting number | [optional] 
 **debtor_id** | **int** | Customer debtor id | [optional] 
 **download_url** | **string** | Link to the invoice or credit note PDF, available if PDF generation and accounting features are enabled (only for subscription invoices, not charges). Access requires authentication. See https://docs.frisbii.com/reference/authentication. The response is a binary PDF file. | [optional] 
 **accounting_created_date** | [**\DateTime**](\DateTime.md) | When the accounting invoice was created. An accounting invoice is created when a non-charging invoice is created with the state &#x60;pending&#x60; or the invoice moved from state &#x60;created&#x60;. Timestamp in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **invoice_file_type** | **string** | The type of invoice file, e.g. &#x60;pdf&#x60; | [optional] 
-**credit_notes** | [**\Frisbii\lib\Model\InvoiceCreditNote[]**](InvoiceCreditNote.md) | Invoice credit notes | [optional] 
+**credit_notes** | [**\Frisbii\Model\InvoiceCreditNote[]**](InvoiceCreditNote.md) | Invoice credit notes | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
