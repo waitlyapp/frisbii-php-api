@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**updateWebhookSettingsJson**](AccountApi.md#updatewebhooksettingsjson) | **PUT** /v1/account/webhook_settings | Update webhook settings
 
 # **createPrivateKey**
-> \Frisbii\lib\Model\Key createPrivateKey($body)
+> \Frisbii\Model\Key createPrivateKey($body)
 
 Create private key
 
@@ -39,13 +39,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreatePrivateKey(); // \Frisbii\lib\Model\CreatePrivateKey | 
+$body = new \Frisbii\Model\CreatePrivateKey(); // \Frisbii\Model\CreatePrivateKey | 
 
 try {
     $result = $apiInstance->createPrivateKey($body);
@@ -60,11 +60,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreatePrivateKey**](../Model/CreatePrivateKey.md)|  | [optional]
+ **body** | [**\Frisbii\Model\CreatePrivateKey**](../Model/CreatePrivateKey.md)|  | [optional]
 
 ### Return type
 
-[**\Frisbii\lib\Model\Key**](../Model/Key.md)
+[**\Frisbii\Model\Key**](../Model/Key.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createPublicKey**
-> \Frisbii\lib\Model\Key createPublicKey()
+> \Frisbii\Model\Key createPublicKey()
 
 Create public key
 
@@ -92,7 +92,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\Key**](../Model/Key.md)
+[**\Frisbii\Model\Key**](../Model/Key.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -193,7 +193,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -231,7 +231,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **generateWebhookSecret**
-> \Frisbii\lib\Model\WebhookSettings generateWebhookSecret()
+> \Frisbii\Model\WebhookSettings generateWebhookSecret()
 
 Generate new webhook secret
 
@@ -245,7 +245,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -266,7 +266,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\WebhookSettings**](../Model/WebhookSettings.md)
+[**\Frisbii\Model\WebhookSettings**](../Model/WebhookSettings.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCurrentAccount**
-> \Frisbii\lib\Model\Account getCurrentAccount()
+> \Frisbii\Model\Account getCurrentAccount()
 
 Get account
 
@@ -294,7 +294,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -315,7 +315,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\Account**](../Model/Account.md)
+[**\Frisbii\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDiscountSettings**
-> \Frisbii\lib\Model\DiscountSettings getDiscountSettings()
+> \Frisbii\Model\DiscountSettings getDiscountSettings()
 
 Get discount settings
 
@@ -343,7 +343,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -364,7 +364,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\DiscountSettings**](../Model/DiscountSettings.md)
+[**\Frisbii\Model\DiscountSettings**](../Model/DiscountSettings.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailSettings**
-> \Frisbii\lib\Model\MailSettings getMailSettings()
+> \Frisbii\Model\MailSettings getMailSettings()
 
 Get mail settings
 
@@ -392,7 +392,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -413,7 +413,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\MailSettings**](../Model/MailSettings.md)
+[**\Frisbii\Model\MailSettings**](../Model/MailSettings.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMfaSettings**
-> \Frisbii\lib\Model\AccountMfaSettings getMfaSettings()
+> \Frisbii\Model\AccountMfaSettings getMfaSettings()
 
 Get account MFA settings
 
@@ -441,7 +441,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -462,7 +462,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\AccountMfaSettings**](../Model/AccountMfaSettings.md)
+[**\Frisbii\Model\AccountMfaSettings**](../Model/AccountMfaSettings.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPrivateKeysMasked**
-> \Frisbii\lib\Model\Key[] getPrivateKeysMasked()
+> \Frisbii\Model\Key[] getPrivateKeysMasked()
 
 Get list of masked private keys
 
@@ -490,7 +490,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -511,7 +511,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\Key[]**](../Model/Key.md)
+[**\Frisbii\Model\Key[]**](../Model/Key.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicKeys**
-> \Frisbii\lib\Model\Key[] getPublicKeys()
+> \Frisbii\Model\Key[] getPublicKeys()
 
 Get list of public keys
 
@@ -539,7 +539,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -560,7 +560,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\Key[]**](../Model/Key.md)
+[**\Frisbii\Model\Key[]**](../Model/Key.md)
 
 ### Authorization
 
@@ -574,7 +574,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTerms**
-> \Frisbii\lib\Model\Terms getTerms()
+> \Frisbii\Model\Terms getTerms()
 
 Get terms
 
@@ -588,7 +588,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -609,7 +609,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\Terms**](../Model/Terms.md)
+[**\Frisbii\Model\Terms**](../Model/Terms.md)
 
 ### Authorization
 
@@ -623,7 +623,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookSettings**
-> \Frisbii\lib\Model\WebhookSettings getWebhookSettings()
+> \Frisbii\Model\WebhookSettings getWebhookSettings()
 
 Get webhook settings
 
@@ -637,7 +637,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -658,7 +658,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\WebhookSettings**](../Model/WebhookSettings.md)
+[**\Frisbii\Model\WebhookSettings**](../Model/WebhookSettings.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccountJson**
-> \Frisbii\lib\Model\Account updateAccountJson($body)
+> \Frisbii\Model\Account updateAccountJson($body)
 
 Update account
 
@@ -686,13 +686,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateAccount(); // \Frisbii\lib\Model\UpdateAccount | 
+$body = new \Frisbii\Model\UpdateAccount(); // \Frisbii\Model\UpdateAccount | 
 
 try {
     $result = $apiInstance->updateAccountJson($body);
@@ -707,11 +707,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateAccount**](../Model/UpdateAccount.md)|  |
+ **body** | [**\Frisbii\Model\UpdateAccount**](../Model/UpdateAccount.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Account**](../Model/Account.md)
+[**\Frisbii\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDiscountSettings**
-> \Frisbii\lib\Model\DiscountSettings updateDiscountSettings($body)
+> \Frisbii\Model\DiscountSettings updateDiscountSettings($body)
 
 Update discount settings
 
@@ -739,13 +739,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\DiscountSettings(); // \Frisbii\lib\Model\DiscountSettings | 
+$body = new \Frisbii\Model\DiscountSettings(); // \Frisbii\Model\DiscountSettings | 
 
 try {
     $result = $apiInstance->updateDiscountSettings($body);
@@ -760,11 +760,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\DiscountSettings**](../Model/DiscountSettings.md)|  |
+ **body** | [**\Frisbii\Model\DiscountSettings**](../Model/DiscountSettings.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\DiscountSettings**](../Model/DiscountSettings.md)
+[**\Frisbii\Model\DiscountSettings**](../Model/DiscountSettings.md)
 
 ### Authorization
 
@@ -778,7 +778,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMailSettingsJson**
-> \Frisbii\lib\Model\MailSettings updateMailSettingsJson($body)
+> \Frisbii\Model\MailSettings updateMailSettingsJson($body)
 
 Update mail settings
 
@@ -792,13 +792,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\MailSettings(); // \Frisbii\lib\Model\MailSettings | 
+$body = new \Frisbii\Model\MailSettings(); // \Frisbii\Model\MailSettings | 
 
 try {
     $result = $apiInstance->updateMailSettingsJson($body);
@@ -813,11 +813,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\MailSettings**](../Model/MailSettings.md)|  |
+ **body** | [**\Frisbii\Model\MailSettings**](../Model/MailSettings.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\MailSettings**](../Model/MailSettings.md)
+[**\Frisbii\Model\MailSettings**](../Model/MailSettings.md)
 
 ### Authorization
 
@@ -831,7 +831,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMfaSettings**
-> \Frisbii\lib\Model\AccountMfaSettings updateMfaSettings($body)
+> \Frisbii\Model\AccountMfaSettings updateMfaSettings($body)
 
 Update account MFA settings
 
@@ -845,13 +845,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\AccountMfaSettings(); // \Frisbii\lib\Model\AccountMfaSettings | 
+$body = new \Frisbii\Model\AccountMfaSettings(); // \Frisbii\Model\AccountMfaSettings | 
 
 try {
     $result = $apiInstance->updateMfaSettings($body);
@@ -866,11 +866,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\AccountMfaSettings**](../Model/AccountMfaSettings.md)|  |
+ **body** | [**\Frisbii\Model\AccountMfaSettings**](../Model/AccountMfaSettings.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\AccountMfaSettings**](../Model/AccountMfaSettings.md)
+[**\Frisbii\Model\AccountMfaSettings**](../Model/AccountMfaSettings.md)
 
 ### Authorization
 
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTerms**
-> \Frisbii\lib\Model\Terms updateTerms($body)
+> \Frisbii\Model\Terms updateTerms($body)
 
 Create or update terms
 
@@ -898,13 +898,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\Terms(); // \Frisbii\lib\Model\Terms | 
+$body = new \Frisbii\Model\Terms(); // \Frisbii\Model\Terms | 
 
 try {
     $result = $apiInstance->updateTerms($body);
@@ -919,11 +919,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\Terms**](../Model/Terms.md)|  |
+ **body** | [**\Frisbii\Model\Terms**](../Model/Terms.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Terms**](../Model/Terms.md)
+[**\Frisbii\Model\Terms**](../Model/Terms.md)
 
 ### Authorization
 
@@ -937,7 +937,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateWebhookSettingsJson**
-> \Frisbii\lib\Model\WebhookSettings updateWebhookSettingsJson($body)
+> \Frisbii\Model\WebhookSettings updateWebhookSettingsJson($body)
 
 Update webhook settings
 
@@ -951,13 +951,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AccountApi(
+$apiInstance = new Frisbii\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateWebhookSettings(); // \Frisbii\lib\Model\UpdateWebhookSettings | 
+$body = new \Frisbii\Model\UpdateWebhookSettings(); // \Frisbii\Model\UpdateWebhookSettings | 
 
 try {
     $result = $apiInstance->updateWebhookSettingsJson($body);
@@ -972,11 +972,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateWebhookSettings**](../Model/UpdateWebhookSettings.md)|  |
+ **body** | [**\Frisbii\Model\UpdateWebhookSettings**](../Model/UpdateWebhookSettings.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\WebhookSettings**](../Model/WebhookSettings.md)
+[**\Frisbii\Model\WebhookSettings**](../Model/WebhookSettings.md)
 
 ### Authorization
 

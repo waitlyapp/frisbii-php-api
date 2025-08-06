@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**verifyAuthentication**](AuthenticateApi.md#verifyauthentication) | **GET** /v1/authenticate/verify | Verify authentication
 
 # **login**
-> \Frisbii\lib\Model\UserLogin login($email, $password, $new_password, $organisation, $account, $mfa_code)
+> \Frisbii\Model\UserLogin login($email, $password, $new_password, $organisation, $account, $mfa_code)
 
 User login
 
@@ -19,7 +19,7 @@ User login
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\AuthenticateApi(
+$apiInstance = new Frisbii\Api\AuthenticateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserLogin**](../Model/UserLogin.md)
+[**\Frisbii\Model\UserLogin**](../Model/UserLogin.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ User logout
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\AuthenticateApi(
+$apiInstance = new Frisbii\Api\AuthenticateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **renew**
-> \Frisbii\lib\Model\UserRenew renew()
+> \Frisbii\Model\UserRenew renew()
 
 Renew user login
 
@@ -118,7 +118,7 @@ Renew user login
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\AuthenticateApi(
+$apiInstance = new Frisbii\Api\AuthenticateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -138,7 +138,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserRenew**](../Model/UserRenew.md)
+[**\Frisbii\Model\UserRenew**](../Model/UserRenew.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AuthenticateApi(
+$apiInstance = new Frisbii\Api\AuthenticateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

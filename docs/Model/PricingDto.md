@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **amount_incl_vat** | **bool** | Whether the amount is including VAT. Defaults to true. | [optional] 
 **tax_policy** | **string** | Tax policy handle for the product. | [optional] 
 **pricing_model** | **string** | Pricing model for the product. | 
-**unit_ranges** | [**\Frisbii\lib\Model\UnitRangeDto[]**](UnitRangeDto.md) | Unit ranges for this product | 
+**unit_ranges** | [**\Frisbii\Model\UnitRangeDto[]**](UnitRangeDto.md) | Unit ranges for this product | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

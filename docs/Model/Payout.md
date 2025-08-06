@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **paid** | [**\DateTime**](\DateTime.md) | When the payout was paid, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **failed** | [**\DateTime**](\DateTime.md) | When the payout failed, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | [optional] 
 **created** | [**\DateTime**](\DateTime.md) | When the payout was created, in [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) extended offset date-time format. | 
-**transactions** | [**\Frisbii\lib\Model\PayoutTransaction[]**](PayoutTransaction.md) | List of transactions for payout | 
+**transactions** | [**\Frisbii\Model\PayoutTransaction[]**](PayoutTransaction.md) | List of transactions for payout | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

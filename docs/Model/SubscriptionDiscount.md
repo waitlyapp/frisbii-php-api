@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **percentage** | **int** | Percentage discount applied to each applicable order line | [optional] 
 **count** | **int** | Number of invoices this subscription discount has been applied to | 
 **invoices** | **string[]** | List of invoices this subscription discount has been applied to | 
-**discount_dto** | [**\Frisbii\lib\Model\Discount**](Discount.md) |  | 
+**discount_dto** | [**\Frisbii\Model\Discount**](Discount.md) |  | 
 **apply_to** | **string[]** | Which order lines the discount is applicable to: &#x60;all&#x60;, &#x60;setup_fee&#x60;, &#x60;plan&#x60;, &#x60;additional_cost&#x60;, &#x60;add_on&#x60;, &#x60;ondemand&#x60; and &#x60;metered_billing_product&#x60; | 
 **fixed_count** | **int** | Apply discount to a fixed number of invoices | [optional] 
 **fixed_period_unit** | **string** | Time unit use for fixed valid period | [optional] 

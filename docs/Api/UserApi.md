@@ -32,7 +32,7 @@ Cancel invitation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -83,7 +83,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -121,7 +121,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUser**
-> \Frisbii\lib\Model\UserAccount getUser($id)
+> \Frisbii\Model\UserAccount getUser($id)
 
 Get user
 
@@ -135,7 +135,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserInfo**
-> \Frisbii\lib\Model\UserInfo getUserInfo($id)
+> \Frisbii\Model\UserInfo getUserInfo($id)
 
 Get user info
 
@@ -183,7 +183,7 @@ Get user info
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserInfo**](../Model/UserInfo.md)
+[**\Frisbii\Model\UserInfo**](../Model/UserInfo.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserMfa**
-> \Frisbii\lib\Model\UserAccountMfa getUserMfa($id)
+> \Frisbii\Model\UserAccountMfa getUserMfa($id)
 
 Get MFA setup details
 
@@ -235,7 +235,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccountMfa**](../Model/UserAccountMfa.md)
+[**\Frisbii\Model\UserAccountMfa**](../Model/UserAccountMfa.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \Frisbii\lib\Model\UserAccount[] getUsers()
+> \Frisbii\Model\UserAccount[] getUsers()
 
 Get users
 
@@ -288,7 +288,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -309,7 +309,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount[]**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount[]**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteUser**
-> \Frisbii\lib\Model\UserAccount inviteUser($body)
+> \Frisbii\Model\UserAccount inviteUser($body)
 
 Invite user
 
@@ -337,13 +337,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\InviteUser(); // \Frisbii\lib\Model\InviteUser | 
+$body = new \Frisbii\Model\InviteUser(); // \Frisbii\Model\InviteUser | 
 
 try {
     $result = $apiInstance->inviteUser($body);
@@ -358,11 +358,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\InviteUser**](../Model/InviteUser.md)|  |
+ **body** | [**\Frisbii\Model\InviteUser**](../Model/InviteUser.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteUserAccept**
-> \Frisbii\lib\Model\UserAccount inviteUserAccept($body, $token)
+> \Frisbii\Model\UserAccount inviteUserAccept($body, $token)
 
 Accept invite
 
@@ -385,12 +385,12 @@ Accept invite
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Frisbii\lib\Model\InviteUserAccept(); // \Frisbii\lib\Model\InviteUserAccept | 
+$body = new \Frisbii\Model\InviteUserAccept(); // \Frisbii\Model\InviteUserAccept | 
 $token = "token_example"; // string | Invite token
 
 try {
@@ -406,12 +406,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\InviteUserAccept**](../Model/InviteUserAccept.md)|  |
+ **body** | [**\Frisbii\Model\InviteUserAccept**](../Model/InviteUserAccept.md)|  |
  **token** | **string**| Invite token |
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteUserGet**
-> \Frisbii\lib\Model\UserAccountMfa inviteUserGet($token)
+> \Frisbii\Model\UserAccountMfa inviteUserGet($token)
 
 Get invite
 
@@ -434,7 +434,7 @@ Get invite
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccountMfa**](../Model/UserAccountMfa.md)
+[**\Frisbii\Model\UserAccountMfa**](../Model/UserAccountMfa.md)
 
 ### Authorization
 
@@ -481,12 +481,12 @@ Reset password request
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Frisbii\lib\Model\UserResetRequestPassword(); // \Frisbii\lib\Model\UserResetRequestPassword | 
+$body = new \Frisbii\Model\UserResetRequestPassword(); // \Frisbii\Model\UserResetRequestPassword | 
 $version = 56; // int | 
 
 try {
@@ -501,7 +501,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UserResetRequestPassword**](../Model/UserResetRequestPassword.md)|  |
+ **body** | [**\Frisbii\Model\UserResetRequestPassword**](../Model/UserResetRequestPassword.md)|  |
  **version** | **int**|  | [optional]
 
 ### Return type
@@ -520,7 +520,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resetPasswordWithToken**
-> \Frisbii\lib\Model\User resetPasswordWithToken($body, $token)
+> \Frisbii\Model\User resetPasswordWithToken($body, $token)
 
 Reset password
 
@@ -529,12 +529,12 @@ Reset password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Frisbii\lib\Model\ResetUserPassword(); // \Frisbii\lib\Model\ResetUserPassword | 
+$body = new \Frisbii\Model\ResetUserPassword(); // \Frisbii\Model\ResetUserPassword | 
 $token = "token_example"; // string | Reset password token
 
 try {
@@ -550,12 +550,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\ResetUserPassword**](../Model/ResetUserPassword.md)|  |
+ **body** | [**\Frisbii\Model\ResetUserPassword**](../Model/ResetUserPassword.md)|  |
  **token** | **string**| Reset password token |
 
 ### Return type
 
-[**\Frisbii\lib\Model\User**](../Model/User.md)
+[**\Frisbii\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -569,7 +569,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setMfa**
-> \Frisbii\lib\Model\UserAccount setMfa($body, $id)
+> \Frisbii\Model\UserAccount setMfa($body, $id)
 
 Set user MFA
 
@@ -583,13 +583,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UserSetMfa(); // \Frisbii\lib\Model\UserSetMfa | 
+$body = new \Frisbii\Model\UserSetMfa(); // \Frisbii\Model\UserSetMfa | 
 $id = "id_example"; // string | User id
 
 try {
@@ -605,12 +605,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UserSetMfa**](../Model/UserSetMfa.md)|  |
+ **body** | [**\Frisbii\Model\UserSetMfa**](../Model/UserSetMfa.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAuth**
-> \Frisbii\lib\Model\UserAccount updateAuth($body, $id)
+> \Frisbii\Model\UserAccount updateAuth($body, $id)
 
 Update user groups
 
@@ -638,13 +638,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateUserGroups(); // \Frisbii\lib\Model\UpdateUserGroups | 
+$body = new \Frisbii\Model\UpdateUserGroups(); // \Frisbii\Model\UpdateUserGroups | 
 $id = "id_example"; // string | User id
 
 try {
@@ -660,12 +660,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateUserGroups**](../Model/UpdateUserGroups.md)|  |
+ **body** | [**\Frisbii\Model\UpdateUserGroups**](../Model/UpdateUserGroups.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePassword**
-> \Frisbii\lib\Model\UserAccount updatePassword($body, $id)
+> \Frisbii\Model\UserAccount updatePassword($body, $id)
 
 Change password
 
@@ -693,13 +693,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateUserPassword(); // \Frisbii\lib\Model\UpdateUserPassword | 
+$body = new \Frisbii\Model\UpdateUserPassword(); // \Frisbii\Model\UpdateUserPassword | 
 $id = "id_example"; // string | User id
 
 try {
@@ -715,12 +715,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateUserPassword**](../Model/UpdateUserPassword.md)|  |
+ **body** | [**\Frisbii\Model\UpdateUserPassword**](../Model/UpdateUserPassword.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUser**
-> \Frisbii\lib\Model\UserAccount updateUser($body, $id)
+> \Frisbii\Model\UserAccount updateUser($body, $id)
 
 Update user
 
@@ -748,13 +748,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateUser(); // \Frisbii\lib\Model\UpdateUser | 
+$body = new \Frisbii\Model\UpdateUser(); // \Frisbii\Model\UpdateUser | 
 $id = "id_example"; // string | User id
 
 try {
@@ -770,12 +770,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateUser**](../Model/UpdateUser.md)|  |
+ **body** | [**\Frisbii\Model\UpdateUser**](../Model/UpdateUser.md)|  |
  **id** | **string**| User id |
 
 ### Return type
 
-[**\Frisbii\lib\Model\UserAccount**](../Model/UserAccount.md)
+[**\Frisbii\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -789,7 +789,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **verifyEmail**
-> \Frisbii\lib\Model\User verifyEmail($token)
+> \Frisbii\Model\User verifyEmail($token)
 
 Verify email
 
@@ -798,7 +798,7 @@ Verify email
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -822,7 +822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\User**](../Model/User.md)
+[**\Frisbii\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -850,7 +850,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\UserApi(
+$apiInstance = new Frisbii\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**updateJson**](DunningPlanApi.md#updatejson) | **PUT** /v1/dunning_plan/{handle} | Update dunning plan
 
 # **createDunningPlanJson**
-> \Frisbii\lib\Model\DunningPlan createDunningPlanJson($body)
+> \Frisbii\Model\DunningPlan createDunningPlanJson($body)
 
 Create dunning plan
 
@@ -25,13 +25,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DunningPlanApi(
+$apiInstance = new Frisbii\Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateDunningPlan(); // \Frisbii\lib\Model\CreateDunningPlan | 
+$body = new \Frisbii\Model\CreateDunningPlan(); // \Frisbii\Model\CreateDunningPlan | 
 
 try {
     $result = $apiInstance->createDunningPlanJson($body);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateDunningPlan**](../Model/CreateDunningPlan.md)|  |
+ **body** | [**\Frisbii\Model\CreateDunningPlan**](../Model/CreateDunningPlan.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDunningPlan**
-> \Frisbii\lib\Model\DunningPlan deleteDunningPlan($handle)
+> \Frisbii\Model\DunningPlan deleteDunningPlan($handle)
 
 Delete dunning plan
 
@@ -78,7 +78,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DunningPlanApi(
+$apiInstance = new Frisbii\Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDunningPlan**
-> \Frisbii\lib\Model\DunningPlan getDunningPlan($handle)
+> \Frisbii\Model\DunningPlan getDunningPlan($handle)
 
 Get dunning plan
 
@@ -131,7 +131,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DunningPlanApi(
+$apiInstance = new Frisbii\Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDunningPlans**
-> \Frisbii\lib\Model\DunningPlan[] getDunningPlans()
+> \Frisbii\Model\DunningPlan[] getDunningPlans()
 
 Get list of dunning plans
 
@@ -184,7 +184,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DunningPlanApi(
+$apiInstance = new Frisbii\Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\lib\Model\DunningPlan[]**](../Model/DunningPlan.md)
+[**\Frisbii\Model\DunningPlan[]**](../Model/DunningPlan.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateJson**
-> \Frisbii\lib\Model\DunningPlan updateJson($body, $handle)
+> \Frisbii\Model\DunningPlan updateJson($body, $handle)
 
 Update dunning plan
 
@@ -233,13 +233,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DunningPlanApi(
+$apiInstance = new Frisbii\Api\DunningPlanApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateDunningPlan(); // \Frisbii\lib\Model\UpdateDunningPlan | 
+$body = new \Frisbii\Model\UpdateDunningPlan(); // \Frisbii\Model\UpdateDunningPlan | 
 $handle = "handle_example"; // string | Dunning plan handle
 
 try {
@@ -255,12 +255,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateDunningPlan**](../Model/UpdateDunningPlan.md)|  |
+ **body** | [**\Frisbii\Model\UpdateDunningPlan**](../Model/UpdateDunningPlan.md)|  |
  **handle** | **string**| Dunning plan handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\DunningPlan**](../Model/DunningPlan.md)
+[**\Frisbii\Model\DunningPlan**](../Model/DunningPlan.md)
 
 ### Authorization
 

@@ -3,7 +3,14 @@ if [ -d ../SwaggerClient-php ]; then
   for d in docs lib test; do
     if [ -d ../SwaggerClient-php/$d ]; then
       rm -rf ../$d
-      mv ../SwaggerClient-php/$d ../
+      mkdir -p ../$d
+      # Flatten nested $d/$d if it exists
+      if [ -d ../SwaggerClient-php/$d/$d ]; then
+        mv ../SwaggerClient-php/$d/$d/* ../$d/
+        rmdir ../SwaggerClient-php/$d/$d
+      fi
+      mv ../SwaggerClient-php/$d/* ../$d/ 2>/dev/null || true
+      rmdir ../SwaggerClient-php/$d
     fi
   done
   for f in ../SwaggerClient-php/*; do

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **updated** | [**\DateTime**](\DateTime.md) | Date of last update | 
 **name** | **string** | Name of the tax policy | 
 **handle** | **string** | Per account unique handle for tax policy | 
-**rates** | [**\Frisbii\lib\Model\TaxRate[]**](TaxRate.md) | Tax rates to apply to the tax policy | [optional] 
-**fallbacks** | [**\Frisbii\lib\Model\TaxPolicyFallbacks**](TaxPolicyFallbacks.md) |  | 
+**rates** | [**\Frisbii\Model\TaxRate[]**](TaxRate.md) | Tax rates to apply to the tax policy | [optional] 
+**fallbacks** | [**\Frisbii\Model\TaxPolicyFallbacks**](TaxPolicyFallbacks.md) |  | 
 **is_default** | **bool** |  | [optional] 
 **is_deletable** | **bool** |  | [optional] 
 

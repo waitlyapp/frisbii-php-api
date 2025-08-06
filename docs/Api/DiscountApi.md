@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**updateMetadata3**](DiscountApi.md#updatemetadata3) | **PUT** /v1/discount/{handle}/metadata | Create or update metadata
 
 # **createDiscount**
-> \Frisbii\lib\Model\Discount createDiscount($body)
+> \Frisbii\Model\Discount createDiscount($body)
 
 Create discount
 
@@ -28,13 +28,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateDiscount(); // \Frisbii\lib\Model\CreateDiscount | 
+$body = new \Frisbii\Model\CreateDiscount(); // \Frisbii\Model\CreateDiscount | 
 
 try {
     $result = $apiInstance->createDiscount($body);
@@ -49,11 +49,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateDiscount**](../Model/CreateDiscount.md)|  |
+ **body** | [**\Frisbii\Model\CreateDiscount**](../Model/CreateDiscount.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDiscount**
-> \Frisbii\lib\Model\Discount deleteDiscount($handle)
+> \Frisbii\Model\Discount deleteDiscount($handle)
 
 Delete discount
 
@@ -81,7 +81,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDiscount**
-> \Frisbii\lib\Model\Discount getDiscount($handle)
+> \Frisbii\Model\Discount getDiscount($handle)
 
 Get discount
 
@@ -186,7 +186,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **undeleteDiscount**
-> \Frisbii\lib\Model\Discount undeleteDiscount($handle)
+> \Frisbii\Model\Discount undeleteDiscount($handle)
 
 Undelete discount
 
@@ -292,7 +292,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDiscount**
-> \Frisbii\lib\Model\Discount updateDiscount($body, $handle)
+> \Frisbii\Model\Discount updateDiscount($body, $handle)
 
 Update discount
 
@@ -345,13 +345,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\UpdateDiscount(); // \Frisbii\lib\Model\UpdateDiscount | 
+$body = new \Frisbii\Model\UpdateDiscount(); // \Frisbii\Model\UpdateDiscount | 
 $handle = "handle_example"; // string | Discount handle
 
 try {
@@ -367,12 +367,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\UpdateDiscount**](../Model/UpdateDiscount.md)|  |
+ **body** | [**\Frisbii\Model\UpdateDiscount**](../Model/UpdateDiscount.md)|  |
  **handle** | **string**| Discount handle |
 
 ### Return type
 
-[**\Frisbii\lib\Model\Discount**](../Model/Discount.md)
+[**\Frisbii\Model\Discount**](../Model/Discount.md)
 
 ### Authorization
 
@@ -400,13 +400,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DiscountApi(
+$apiInstance = new Frisbii\Api\DiscountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\map(); // map[string,object] | 
+$body = new \Frisbii\Model\map(); // map[string,object] | 
 $handle = "handle_example"; // string | Resource handle
 
 try {

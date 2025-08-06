@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **test** | **bool** | Test flag. If given it will be verified that the account state matches the intended create state. | [optional] 
 **handle** | **string** | Per account unique handle for the subscription. Max length 255 with allowable characters [a-zA-Z0-9_.-@]. Must be provided if generate_handle not defined. | [optional] 
 **metadata** | **map[string,object]** | Custom metadata. | [optional] 
-**create_customer** | [**\Frisbii\lib\Model\CreateCustomer**](CreateCustomer.md) |  | [optional] 
+**create_customer** | [**\Frisbii\Model\CreateCustomer**](CreateCustomer.md) |  | [optional] 
 **plan_version** | **int** | Optional plan version, default is to use newest version of plan | [optional] 
 **amount_incl_vat** | **bool** | Whether the optional amount is including VAT. Defaults to true. | [optional] 
 **generate_handle** | **bool** | Auto generate handle on the form sub-[sequence_number] | [optional] 
@@ -20,13 +20,13 @@ Name | Type | Description | Notes
 **no_trial** | **bool** | Override plan trial settings and disable trial | [optional] 
 **no_setup_fee** | **bool** | Override plan setup fee settings and disable fee | [optional] 
 **trial_period** | **string** | Optional custom trial period overriding the setting on the subscription plan. Defined in ISO 8601 duration. See https://en.wikipedia.org/wiki/ISO_8601#Durations. E.g. &#x60;P7D&#x60; for seven days or &#x60;P1M&#x60; for one month. | [optional] 
-**subscription_discounts** | [**\Frisbii\lib\Model\CreateSubscriptionDiscount[]**](CreateSubscriptionDiscount.md) | Discounts to attach to subscription. A maximum of 100 discounts is allowed. | [optional] 
+**subscription_discounts** | [**\Frisbii\Model\CreateSubscriptionDiscount[]**](CreateSubscriptionDiscount.md) | Discounts to attach to subscription. A maximum of 100 discounts is allowed. | [optional] 
 **coupon_codes** | **string[]** | Coupon codes to redeem for subscription | [optional] 
-**add_ons** | [**\Frisbii\lib\Model\CreateSubscriptionAddOn[]**](CreateSubscriptionAddOn.md) | Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed. | [optional] 
-**additional_costs** | [**\Frisbii\lib\Model\CreateSubscriptionAdditionalCost[]**](CreateSubscriptionAdditionalCost.md) | Additional costs to add to subscription at creation time. A maximum of 100 additional costs is allowed. | [optional] 
+**add_ons** | [**\Frisbii\Model\CreateSubscriptionAddOn[]**](CreateSubscriptionAddOn.md) | Add-ons to attach to subscription. The same add-on can only be attached to subscription once unless unique handles are supplied for the subscription add-on. A maximum of 100 add-ons is allowed. | [optional] 
+**additional_costs** | [**\Frisbii\Model\CreateSubscriptionAdditionalCost[]**](CreateSubscriptionAdditionalCost.md) | Additional costs to add to subscription at creation time. A maximum of 100 additional costs is allowed. | [optional] 
 **additional_entitlements** | **string[]** | Additional entitlements to add to subscription at creation time. | [optional] 
 **excluded_entitlements** | **string[]** | Entitlements to exclude from subscription at creation time. | [optional] 
-**metered_billing_products** | [**\Frisbii\lib\Model\CreateSubscriptionMeteredBillingProduct[]**](CreateSubscriptionMeteredBillingProduct.md) | Metered billing products to attach to subscription. | [optional] 
+**metered_billing_products** | [**\Frisbii\Model\CreateSubscriptionMeteredBillingProduct[]**](CreateSubscriptionMeteredBillingProduct.md) | Metered billing products to attach to subscription. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

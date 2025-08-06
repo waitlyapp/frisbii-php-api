@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getDispute**](DisputeApi.md#getdispute) | **GET** /v1/dispute/{id} | Get dispute
 
 # **getDispute**
-> \Frisbii\lib\Model\Dispute getDispute($id)
+> \Frisbii\Model\Dispute getDispute($id)
 
 Get dispute
 
@@ -21,7 +21,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\DisputeApi(
+$apiInstance = new Frisbii\Api\DisputeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\Dispute**](../Model/Dispute.md)
+[**\Frisbii\Model\Dispute**](../Model/Dispute.md)
 
 ### Authorization
 

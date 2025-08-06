@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getAdditionalCosts**](AdditionalCostApi.md#getadditionalcosts) | **GET** /v1/additional_cost/subscription/{handle} | Get additional costs for subscription
 
 # **cancelAdditionalCost**
-> \Frisbii\lib\Model\AdditionalCost cancelAdditionalCost($handle)
+> \Frisbii\Model\AdditionalCost cancelAdditionalCost($handle)
 
 Cancel pending additional cost
 
@@ -24,7 +24,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AdditionalCostApi(
+$apiInstance = new Frisbii\Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\AdditionalCost**](../Model/AdditionalCost.md)
+[**\Frisbii\Model\AdditionalCost**](../Model/AdditionalCost.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAdditionalCostJson**
-> \Frisbii\lib\Model\AdditionalCost createAdditionalCostJson($body)
+> \Frisbii\Model\AdditionalCost createAdditionalCostJson($body)
 
 Create additional cost
 
@@ -77,13 +77,13 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AdditionalCostApi(
+$apiInstance = new Frisbii\Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\lib\Model\CreateAdditionalCost(); // \Frisbii\lib\Model\CreateAdditionalCost | 
+$body = new \Frisbii\Model\CreateAdditionalCost(); // \Frisbii\Model\CreateAdditionalCost | 
 
 try {
     $result = $apiInstance->createAdditionalCostJson($body);
@@ -98,11 +98,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\lib\Model\CreateAdditionalCost**](../Model/CreateAdditionalCost.md)|  |
+ **body** | [**\Frisbii\Model\CreateAdditionalCost**](../Model/CreateAdditionalCost.md)|  |
 
 ### Return type
 
-[**\Frisbii\lib\Model\AdditionalCost**](../Model/AdditionalCost.md)
+[**\Frisbii\Model\AdditionalCost**](../Model/AdditionalCost.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAdditionalCost**
-> \Frisbii\lib\Model\AdditionalCost getAdditionalCost($handle)
+> \Frisbii\Model\AdditionalCost getAdditionalCost($handle)
 
 Get additional cost
 
@@ -130,7 +130,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AdditionalCostApi(
+$apiInstance = new Frisbii\Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\AdditionalCost**](../Model/AdditionalCost.md)
+[**\Frisbii\Model\AdditionalCost**](../Model/AdditionalCost.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAdditionalCosts**
-> \Frisbii\lib\Model\AdditionalCost[] getAdditionalCosts($handle)
+> \Frisbii\Model\AdditionalCost[] getAdditionalCosts($handle)
 
 Get additional costs for subscription
 
@@ -183,7 +183,7 @@ $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Frisbii\lib\Api\AdditionalCostApi(
+$apiInstance = new Frisbii\Api\AdditionalCostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Frisbii\lib\Model\AdditionalCost[]**](../Model/AdditionalCost.md)
+[**\Frisbii\Model\AdditionalCost[]**](../Model/AdditionalCost.md)
 
 ### Authorization
 
