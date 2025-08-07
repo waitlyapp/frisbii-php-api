@@ -1,22 +1,29 @@
 # Frisbii\PayoutApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createPayout**](PayoutApi.md#createpayout) | **POST** /v1/payout | Create payout
-[**getPayout**](PayoutApi.md#getpayout) | **GET** /v1/payout/{handle} | Get payout
-[**transactionDetails1**](PayoutApi.md#transactiondetails1) | **GET** /v1/payout/{id}/transaction/{transaction}/details | Get transaction details
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createPayout()**](PayoutApi.md#createPayout) | **POST** /v1/payout | Create payout |
+| [**getPayout()**](PayoutApi.md#getPayout) | **GET** /v1/payout/{handle} | Get payout |
+| [**transactionDetails1()**](PayoutApi.md#transactionDetails1) | **GET** /v1/payout/{id}/transaction/{transaction}/details | Get transaction details |
 
-# **createPayout**
-> \Frisbii\Model\Payout createPayout($body)
+
+## `createPayout()`
+
+```php
+createPayout($createPayout): \Frisbii\Model\Payout
+```
 
 Create payout
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -29,22 +36,21 @@ $apiInstance = new Frisbii\Api\PayoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreatePayout(); // \Frisbii\Model\CreatePayout | 
+$createPayout = new \Frisbii\Model\CreatePayout(); // \Frisbii\Model\CreatePayout
 
 try {
-    $result = $apiInstance->createPayout($body);
+    $result = $apiInstance->createPayout($createPayout);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutApi->createPayout: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreatePayout**](../Model/CreatePayout.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createPayout** | [**\Frisbii\Model\CreatePayout**](../Model/CreatePayout.md)|  | |
 
 ### Return type
 
@@ -56,20 +62,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getPayout**
-> \Frisbii\Model\Payout getPayout($handle)
+## `getPayout()`
+
+```php
+getPayout($handle): \Frisbii\Model\Payout
+```
 
 Get payout
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -82,7 +96,7 @@ $apiInstance = new Frisbii\Api\PayoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Payout handle
+$handle = 'handle_example'; // string | Payout handle
 
 try {
     $result = $apiInstance->getPayout($handle);
@@ -90,14 +104,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PayoutApi->getPayout: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Payout handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Payout handle | |
 
 ### Return type
 
@@ -109,20 +122,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **transactionDetails1**
-> map[string,object] transactionDetails1($id, $transaction)
+## `transactionDetails1()`
+
+```php
+transactionDetails1($id, $transaction): array<string,object>
+```
 
 Get transaction details
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -135,8 +156,8 @@ $apiInstance = new Frisbii\Api\PayoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
-$transaction = "transaction_example"; // string | Transaction id
+$id = 'id_example'; // string | Invoice id or handle
+$transaction = 'transaction_example'; // string | Transaction id
 
 try {
     $result = $apiInstance->transactionDetails1($id, $transaction);
@@ -144,19 +165,18 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PayoutApi->transactionDetails1: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
- **transaction** | **string**| Transaction id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **transaction** | **string**| Transaction id | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -164,8 +184,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

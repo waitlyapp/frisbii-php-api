@@ -1,21 +1,28 @@
 # Frisbii\EventApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getEvent**](EventApi.md#getevent) | **GET** /v1/event/{id} | Get event
-[**getEvents**](EventApi.md#getevents) | **GET** /v1/event | Get list of events
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getEvent()**](EventApi.md#getEvent) | **GET** /v1/event/{id} | Get event |
+| [**getEvents()**](EventApi.md#getEvents) | **GET** /v1/event | Get list of events |
 
-# **getEvent**
-> \Frisbii\Model\Event getEvent($id)
+
+## `getEvent()`
+
+```php
+getEvent($id): \Frisbii\Model\Event
+```
 
 Get event
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -28,7 +35,7 @@ $apiInstance = new Frisbii\Api\EventApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Event id
+$id = 'id_example'; // string | Event id
 
 try {
     $result = $apiInstance->getEvent($id);
@@ -36,14 +43,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventApi->getEvent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Event id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Event id | |
 
 ### Return type
 
@@ -55,20 +61,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getEvents**
-> \Frisbii\Model\EventList getEvents($page, $size, $customer, $subscription, $invoice)
+## `getEvents()`
+
+```php
+getEvents($page, $size, $customer, $subscription, $invoice): \Frisbii\Model\EventList
+```
 
 Get list of events
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -81,11 +95,11 @@ $apiInstance = new Frisbii\Api\EventApi(
     new GuzzleHttp\Client(),
     $config
 );
-$page = 1; // int | 
-$size = 20; // int | 
-$customer = "customer_example"; // string | 
-$subscription = "subscription_example"; // string | 
-$invoice = "invoice_example"; // string | 
+$page = 1; // int
+$size = 20; // int
+$customer = 'customer_example'; // string
+$subscription = 'subscription_example'; // string
+$invoice = 'invoice_example'; // string
 
 try {
     $result = $apiInstance->getEvents($page, $size, $customer, $subscription, $invoice);
@@ -93,18 +107,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventApi->getEvents: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**|  | [optional] [default to 1]
- **size** | **int**|  | [optional] [default to 20]
- **customer** | **string**|  | [optional]
- **subscription** | **string**|  | [optional]
- **invoice** | **string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **page** | **int**|  | [optional] [default to 1] |
+| **size** | **int**|  | [optional] [default to 20] |
+| **customer** | **string**|  | [optional] |
+| **subscription** | **string**|  | [optional] |
+| **invoice** | **string**|  | [optional] |
 
 ### Return type
 
@@ -116,8 +129,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

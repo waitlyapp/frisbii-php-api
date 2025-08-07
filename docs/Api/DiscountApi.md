@@ -1,27 +1,34 @@
 # Frisbii\DiscountApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createDiscount**](DiscountApi.md#creatediscount) | **POST** /v1/discount | Create discount
-[**deleteDiscount**](DiscountApi.md#deletediscount) | **DELETE** /v1/discount/{handle} | Delete discount
-[**deleteMetadata3**](DiscountApi.md#deletemetadata3) | **DELETE** /v1/discount/{handle}/metadata | Delete metadata
-[**getDiscount**](DiscountApi.md#getdiscount) | **GET** /v1/discount/{handle} | Get discount
-[**getMetadata3**](DiscountApi.md#getmetadata3) | **GET** /v1/discount/{handle}/metadata | Get metadata
-[**undeleteDiscount**](DiscountApi.md#undeletediscount) | **POST** /v1/discount/{handle}/undelete | Undelete discount
-[**updateDiscount**](DiscountApi.md#updatediscount) | **PUT** /v1/discount/{handle} | Update discount
-[**updateMetadata3**](DiscountApi.md#updatemetadata3) | **PUT** /v1/discount/{handle}/metadata | Create or update metadata
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createDiscount()**](DiscountApi.md#createDiscount) | **POST** /v1/discount | Create discount |
+| [**deleteDiscount()**](DiscountApi.md#deleteDiscount) | **DELETE** /v1/discount/{handle} | Delete discount |
+| [**deleteMetadata3()**](DiscountApi.md#deleteMetadata3) | **DELETE** /v1/discount/{handle}/metadata | Delete metadata |
+| [**getDiscount()**](DiscountApi.md#getDiscount) | **GET** /v1/discount/{handle} | Get discount |
+| [**getMetadata3()**](DiscountApi.md#getMetadata3) | **GET** /v1/discount/{handle}/metadata | Get metadata |
+| [**undeleteDiscount()**](DiscountApi.md#undeleteDiscount) | **POST** /v1/discount/{handle}/undelete | Undelete discount |
+| [**updateDiscount()**](DiscountApi.md#updateDiscount) | **PUT** /v1/discount/{handle} | Update discount |
+| [**updateMetadata3()**](DiscountApi.md#updateMetadata3) | **PUT** /v1/discount/{handle}/metadata | Create or update metadata |
 
-# **createDiscount**
-> \Frisbii\Model\Discount createDiscount($body)
+
+## `createDiscount()`
+
+```php
+createDiscount($createDiscount): \Frisbii\Model\Discount
+```
 
 Create discount
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -34,22 +41,21 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateDiscount(); // \Frisbii\Model\CreateDiscount | 
+$createDiscount = new \Frisbii\Model\CreateDiscount(); // \Frisbii\Model\CreateDiscount
 
 try {
-    $result = $apiInstance->createDiscount($body);
+    $result = $apiInstance->createDiscount($createDiscount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->createDiscount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateDiscount**](../Model/CreateDiscount.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createDiscount** | [**\Frisbii\Model\CreateDiscount**](../Model/CreateDiscount.md)|  | |
 
 ### Return type
 
@@ -61,20 +67,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteDiscount**
-> \Frisbii\Model\Discount deleteDiscount($handle)
+## `deleteDiscount()`
+
+```php
+deleteDiscount($handle): \Frisbii\Model\Discount
+```
 
 Delete discount
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -87,7 +101,7 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Discount handle
+$handle = 'handle_example'; // string | Discount handle
 
 try {
     $result = $apiInstance->deleteDiscount($handle);
@@ -95,14 +109,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->deleteDiscount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Discount handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Discount handle | |
 
 ### Return type
 
@@ -114,20 +127,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteMetadata3**
-> deleteMetadata3($handle)
+## `deleteMetadata3()`
+
+```php
+deleteMetadata3($handle)
+```
 
 Delete metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -140,21 +161,20 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $apiInstance->deleteMetadata3($handle);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->deleteMetadata3: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
@@ -166,20 +186,28 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getDiscount**
-> \Frisbii\Model\Discount getDiscount($handle)
+## `getDiscount()`
+
+```php
+getDiscount($handle): \Frisbii\Model\Discount
+```
 
 Get discount
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -192,7 +220,7 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Discount handle
+$handle = 'handle_example'; // string | Discount handle
 
 try {
     $result = $apiInstance->getDiscount($handle);
@@ -200,14 +228,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->getDiscount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Discount handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Discount handle | |
 
 ### Return type
 
@@ -219,20 +246,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getMetadata3**
-> map[string,object] getMetadata3($handle)
+## `getMetadata3()`
+
+```php
+getMetadata3($handle): array<string,object>
+```
 
 Get metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -245,7 +280,7 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $result = $apiInstance->getMetadata3($handle);
@@ -253,18 +288,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->getMetadata3: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -272,20 +306,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **undeleteDiscount**
-> \Frisbii\Model\Discount undeleteDiscount($handle)
+## `undeleteDiscount()`
+
+```php
+undeleteDiscount($handle): \Frisbii\Model\Discount
+```
 
 Undelete discount
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -298,7 +340,7 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Discount handle
+$handle = 'handle_example'; // string | Discount handle
 
 try {
     $result = $apiInstance->undeleteDiscount($handle);
@@ -306,14 +348,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->undeleteDiscount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Discount handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Discount handle | |
 
 ### Return type
 
@@ -325,20 +366,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateDiscount**
-> \Frisbii\Model\Discount updateDiscount($body, $handle)
+## `updateDiscount()`
+
+```php
+updateDiscount($handle, $updateDiscount): \Frisbii\Model\Discount
+```
 
 Update discount
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -351,24 +400,23 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\UpdateDiscount(); // \Frisbii\Model\UpdateDiscount | 
-$handle = "handle_example"; // string | Discount handle
+$handle = 'handle_example'; // string | Discount handle
+$updateDiscount = new \Frisbii\Model\UpdateDiscount(); // \Frisbii\Model\UpdateDiscount
 
 try {
-    $result = $apiInstance->updateDiscount($body, $handle);
+    $result = $apiInstance->updateDiscount($handle, $updateDiscount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->updateDiscount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\UpdateDiscount**](../Model/UpdateDiscount.md)|  |
- **handle** | **string**| Discount handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Discount handle | |
+| **updateDiscount** | [**\Frisbii\Model\UpdateDiscount**](../Model/UpdateDiscount.md)|  | |
 
 ### Return type
 
@@ -380,20 +428,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateMetadata3**
-> map[string,object] updateMetadata3($body, $handle)
+## `updateMetadata3()`
+
+```php
+updateMetadata3($handle, $requestBody): array<string,object>
+```
 
 Create or update metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -406,28 +462,27 @@ $apiInstance = new Frisbii\Api\DiscountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\map(); // map[string,object] | 
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
+$requestBody = array('key' => new \stdClass); // array<string,object>
 
 try {
-    $result = $apiInstance->updateMetadata3($body, $handle);
+    $result = $apiInstance->updateMetadata3($handle, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->updateMetadata3: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**map[string,object]**](../Model/map.md)|  |
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
+| **requestBody** | [**array<string,object>**](../Model/object.md)|  | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -435,8 +490,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

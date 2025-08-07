@@ -1,12 +1,12 @@
-# EmvConfiguration
+# # EmvConfiguration
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**emv_tokenization_status** | **string** |  | 
-**token_requestor_id** | **string** |  | 
-**onboarding_state** | **string** |  | [optional] 
-**card_scheme** | **string** |  | 
+**emvTokenizationStatus** | **string** |  |
+**tokenRequestorId** | **string** |  |
+**cardScheme** | **string** |  |
+**onboardingState** | **string** |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

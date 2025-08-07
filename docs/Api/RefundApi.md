@@ -1,21 +1,28 @@
 # Frisbii\RefundApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createRefund**](RefundApi.md#createrefund) | **POST** /v1/refund | Create refund
-[**getRefund**](RefundApi.md#getrefund) | **GET** /v1/refund/{id} | Get refund
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createRefund()**](RefundApi.md#createRefund) | **POST** /v1/refund | Create refund |
+| [**getRefund()**](RefundApi.md#getRefund) | **GET** /v1/refund/{id} | Get refund |
 
-# **createRefund**
-> \Frisbii\Model\Refund createRefund($body)
+
+## `createRefund()`
+
+```php
+createRefund($createRefund): \Frisbii\Model\Refund
+```
 
 Create refund
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -28,22 +35,21 @@ $apiInstance = new Frisbii\Api\RefundApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateRefund(); // \Frisbii\Model\CreateRefund | 
+$createRefund = new \Frisbii\Model\CreateRefund(); // \Frisbii\Model\CreateRefund
 
 try {
-    $result = $apiInstance->createRefund($body);
+    $result = $apiInstance->createRefund($createRefund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RefundApi->createRefund: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateRefund**](../Model/CreateRefund.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createRefund** | [**\Frisbii\Model\CreateRefund**](../Model/CreateRefund.md)|  | |
 
 ### Return type
 
@@ -55,20 +61,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getRefund**
-> \Frisbii\Model\Refund getRefund($id)
+## `getRefund()`
+
+```php
+getRefund($id): \Frisbii\Model\Refund
+```
 
 Get refund
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -81,7 +95,7 @@ $apiInstance = new Frisbii\Api\RefundApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Refund id
+$id = 'id_example'; // string | Refund id
 
 try {
     $result = $apiInstance->getRefund($id);
@@ -89,14 +103,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RefundApi->getRefund: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Refund id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Refund id | |
 
 ### Return type
 
@@ -108,8 +121,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

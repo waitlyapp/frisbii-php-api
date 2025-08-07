@@ -1,21 +1,28 @@
 # Frisbii\OrganisationApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getOrganisation**](OrganisationApi.md#getorganisation) | **GET** /v1/organisation | Get organisation
-[**update**](OrganisationApi.md#update) | **PUT** /v1/organisation | Update organisation
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getOrganisation()**](OrganisationApi.md#getOrganisation) | **GET** /v1/organisation | Get organisation |
+| [**update()**](OrganisationApi.md#update) | **PUT** /v1/organisation | Update organisation |
 
-# **getOrganisation**
-> \Frisbii\Model\Organisation getOrganisation()
+
+## `getOrganisation()`
+
+```php
+getOrganisation(): \Frisbii\Model\Organisation
+```
 
 Get organisation
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -35,10 +42,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->getOrganisation: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -51,20 +58,28 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **update**
-> \Frisbii\Model\Organisation update($body)
+## `update()`
+
+```php
+update($updateOrganisation): \Frisbii\Model\Organisation
+```
 
 Update organisation
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -77,22 +92,21 @@ $apiInstance = new Frisbii\Api\OrganisationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\UpdateOrganisation(); // \Frisbii\Model\UpdateOrganisation | 
+$updateOrganisation = new \Frisbii\Model\UpdateOrganisation(); // \Frisbii\Model\UpdateOrganisation
 
 try {
-    $result = $apiInstance->update($body);
+    $result = $apiInstance->update($updateOrganisation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->update: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\UpdateOrganisation**](../Model/UpdateOrganisation.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **updateOrganisation** | [**\Frisbii\Model\UpdateOrganisation**](../Model/UpdateOrganisation.md)|  | |
 
 ### Return type
 
@@ -104,8 +118,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

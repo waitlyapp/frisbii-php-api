@@ -1,24 +1,31 @@
 # Frisbii\DunningPlanApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createDunningPlanJson**](DunningPlanApi.md#createdunningplanjson) | **POST** /v1/dunning_plan | Create dunning plan
-[**deleteDunningPlan**](DunningPlanApi.md#deletedunningplan) | **DELETE** /v1/dunning_plan/{handle} | Delete dunning plan
-[**getDunningPlan**](DunningPlanApi.md#getdunningplan) | **GET** /v1/dunning_plan/{handle} | Get dunning plan
-[**getDunningPlans**](DunningPlanApi.md#getdunningplans) | **GET** /v1/dunning_plan | Get list of dunning plans
-[**updateJson**](DunningPlanApi.md#updatejson) | **PUT** /v1/dunning_plan/{handle} | Update dunning plan
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createDunningPlanJson()**](DunningPlanApi.md#createDunningPlanJson) | **POST** /v1/dunning_plan | Create dunning plan |
+| [**deleteDunningPlan()**](DunningPlanApi.md#deleteDunningPlan) | **DELETE** /v1/dunning_plan/{handle} | Delete dunning plan |
+| [**getDunningPlan()**](DunningPlanApi.md#getDunningPlan) | **GET** /v1/dunning_plan/{handle} | Get dunning plan |
+| [**getDunningPlans()**](DunningPlanApi.md#getDunningPlans) | **GET** /v1/dunning_plan | Get list of dunning plans |
+| [**updateJson()**](DunningPlanApi.md#updateJson) | **PUT** /v1/dunning_plan/{handle} | Update dunning plan |
 
-# **createDunningPlanJson**
-> \Frisbii\Model\DunningPlan createDunningPlanJson($body)
+
+## `createDunningPlanJson()`
+
+```php
+createDunningPlanJson($createDunningPlan): \Frisbii\Model\DunningPlan
+```
 
 Create dunning plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -31,22 +38,21 @@ $apiInstance = new Frisbii\Api\DunningPlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateDunningPlan(); // \Frisbii\Model\CreateDunningPlan | 
+$createDunningPlan = new \Frisbii\Model\CreateDunningPlan(); // \Frisbii\Model\CreateDunningPlan
 
 try {
-    $result = $apiInstance->createDunningPlanJson($body);
+    $result = $apiInstance->createDunningPlanJson($createDunningPlan);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DunningPlanApi->createDunningPlanJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateDunningPlan**](../Model/CreateDunningPlan.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createDunningPlan** | [**\Frisbii\Model\CreateDunningPlan**](../Model/CreateDunningPlan.md)|  | |
 
 ### Return type
 
@@ -58,20 +64,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteDunningPlan**
-> \Frisbii\Model\DunningPlan deleteDunningPlan($handle)
+## `deleteDunningPlan()`
+
+```php
+deleteDunningPlan($handle): \Frisbii\Model\DunningPlan
+```
 
 Delete dunning plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -84,7 +98,7 @@ $apiInstance = new Frisbii\Api\DunningPlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Dunning plan handle
+$handle = 'handle_example'; // string | Dunning plan handle
 
 try {
     $result = $apiInstance->deleteDunningPlan($handle);
@@ -92,14 +106,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DunningPlanApi->deleteDunningPlan: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Dunning plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Dunning plan handle | |
 
 ### Return type
 
@@ -111,20 +124,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getDunningPlan**
-> \Frisbii\Model\DunningPlan getDunningPlan($handle)
+## `getDunningPlan()`
+
+```php
+getDunningPlan($handle): \Frisbii\Model\DunningPlan
+```
 
 Get dunning plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -137,7 +158,7 @@ $apiInstance = new Frisbii\Api\DunningPlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Dunning plan handle
+$handle = 'handle_example'; // string | Dunning plan handle
 
 try {
     $result = $apiInstance->getDunningPlan($handle);
@@ -145,14 +166,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DunningPlanApi->getDunningPlan: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Dunning plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Dunning plan handle | |
 
 ### Return type
 
@@ -164,20 +184,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getDunningPlans**
-> \Frisbii\Model\DunningPlan[] getDunningPlans()
+## `getDunningPlans()`
+
+```php
+getDunningPlans(): \Frisbii\Model\DunningPlan[]
+```
 
 Get list of dunning plans
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -197,10 +225,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DunningPlanApi->getDunningPlans: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -213,20 +241,28 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateJson**
-> \Frisbii\Model\DunningPlan updateJson($body, $handle)
+## `updateJson()`
+
+```php
+updateJson($handle, $updateDunningPlan): \Frisbii\Model\DunningPlan
+```
 
 Update dunning plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -239,24 +275,23 @@ $apiInstance = new Frisbii\Api\DunningPlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\UpdateDunningPlan(); // \Frisbii\Model\UpdateDunningPlan | 
-$handle = "handle_example"; // string | Dunning plan handle
+$handle = 'handle_example'; // string | Dunning plan handle
+$updateDunningPlan = new \Frisbii\Model\UpdateDunningPlan(); // \Frisbii\Model\UpdateDunningPlan
 
 try {
-    $result = $apiInstance->updateJson($body, $handle);
+    $result = $apiInstance->updateJson($handle, $updateDunningPlan);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DunningPlanApi->updateJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\UpdateDunningPlan**](../Model/UpdateDunningPlan.md)|  |
- **handle** | **string**| Dunning plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Dunning plan handle | |
+| **updateDunningPlan** | [**\Frisbii\Model\UpdateDunningPlan**](../Model/UpdateDunningPlan.md)|  | |
 
 ### Return type
 
@@ -268,8 +303,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

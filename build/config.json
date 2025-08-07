@@ -5,5 +5,10 @@
 	"gitUserId" : "Frisbii",
 	"composerProjectName" : "frisbii-php-api",
 	"composerVendorName": "waitlyapp",
-	"invokerPackage" : "Frisbii"
+	"invokerPackage" : "Frisbii",
+	"variableNamingConvention": "camelCase",
+	"enumUnknownDefaultCase": true,
+	"generateAliasAsModel": false,
+	"composerPackage": "waitlyapp/frisbii-php-api",
+	"sortModelPropertiesByRequiredFlag": true
 }
