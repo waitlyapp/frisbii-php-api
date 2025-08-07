@@ -1,10 +1,10 @@
-# SepaMandate
+# # SepaMandate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**iban** | **string** | Mandate IBAN | [optional] 
-**sepa_mandate_bank_reference** | **string** | Bank reference | 
+**sepaMandateBankReference** | **string** | Bank reference |
+**iban** | **string** | Mandate IBAN | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

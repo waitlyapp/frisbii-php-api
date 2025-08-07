@@ -1,40 +1,47 @@
 # Frisbii\InvoiceApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**cancelAllDunningPending**](InvoiceApi.md#cancelalldunningpending) | **POST** /v1/invoice/cancel_all_dunning_pending/subscription/{handle} | Cancel all dunning and pending
-[**cancelInvoice**](InvoiceApi.md#cancelinvoice) | **POST** /v1/invoice/{id}/cancel | Cancel invoice
-[**cancelSettleLater**](InvoiceApi.md#cancelsettlelater) | **POST** /v1/invoice/{id}/settle/cancel | Cancel settle later
-[**cancelTransaction**](InvoiceApi.md#canceltransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/cancel | Cancel transaction
-[**createOrUpdateBillingAddress**](InvoiceApi.md#createorupdatebillingaddress) | **PUT** /v1/invoice/{id}/billing_address | Create or update invoice billing address
-[**createOrUpdateShippingAddress**](InvoiceApi.md#createorupdateshippingaddress) | **PUT** /v1/invoice/{id}/shipping_address | Create or update invoice shipping address
-[**deleteBillingAddress**](InvoiceApi.md#deletebillingaddress) | **DELETE** /v1/invoice/{id}/billing_address | Delete invoice billing address
-[**deleteMetadata4**](InvoiceApi.md#deletemetadata4) | **DELETE** /v1/invoice/{handle}/metadata | Delete metadata
-[**deleteShippingAddress**](InvoiceApi.md#deleteshippingaddress) | **DELETE** /v1/invoice/{id}/shipping_address | Delete invoice shipping address
-[**detachFromSubscription**](InvoiceApi.md#detachfromsubscription) | **POST** /v1/invoice/{id}/detach | Detach from subscription
-[**extendKAuthTransaction**](InvoiceApi.md#extendkauthtransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/extend | Extend authorization transaction
-[**extendKlarnaTransaction**](InvoiceApi.md#extendklarnatransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/extend_klarna | Extend Klarna authorization transaction
-[**failInvoice**](InvoiceApi.md#failinvoice) | **POST** /v1/invoice/{id}/fail | Fail invoice
-[**getInvoice**](InvoiceApi.md#getinvoice) | **GET** /v1/invoice/{id} | Get invoice
-[**getMetadata4**](InvoiceApi.md#getmetadata4) | **GET** /v1/invoice/{handle}/metadata | Get metadata
-[**manualSettle**](InvoiceApi.md#manualsettle) | **POST** /v1/invoice/{id}/manual_settle | Manual settle
-[**reactivateInvoice**](InvoiceApi.md#reactivateinvoice) | **POST** /v1/invoice/{id}/reactivate | Reactivate invoice
-[**settle**](InvoiceApi.md#settle) | **POST** /v1/invoice/{id}/settle | Settle
-[**transaction**](InvoiceApi.md#transaction) | **GET** /v1/invoice/{id}/transaction/{transaction} | Get transaction
-[**transactionDetails**](InvoiceApi.md#transactiondetails) | **GET** /v1/invoice/{id}/transaction/{transaction}/details | Get transaction details
-[**updateMetadata4**](InvoiceApi.md#updatemetadata4) | **PUT** /v1/invoice/{handle}/metadata | Create or update metadata
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**cancelAllDunningPending()**](InvoiceApi.md#cancelAllDunningPending) | **POST** /v1/invoice/cancel_all_dunning_pending/subscription/{handle} | Cancel all dunning and pending |
+| [**cancelInvoice()**](InvoiceApi.md#cancelInvoice) | **POST** /v1/invoice/{id}/cancel | Cancel invoice |
+| [**cancelSettleLater()**](InvoiceApi.md#cancelSettleLater) | **POST** /v1/invoice/{id}/settle/cancel | Cancel settle later |
+| [**cancelTransaction()**](InvoiceApi.md#cancelTransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/cancel | Cancel transaction |
+| [**createOrUpdateBillingAddress()**](InvoiceApi.md#createOrUpdateBillingAddress) | **PUT** /v1/invoice/{id}/billing_address | Create or update invoice billing address |
+| [**createOrUpdateShippingAddress()**](InvoiceApi.md#createOrUpdateShippingAddress) | **PUT** /v1/invoice/{id}/shipping_address | Create or update invoice shipping address |
+| [**deleteBillingAddress()**](InvoiceApi.md#deleteBillingAddress) | **DELETE** /v1/invoice/{id}/billing_address | Delete invoice billing address |
+| [**deleteMetadata4()**](InvoiceApi.md#deleteMetadata4) | **DELETE** /v1/invoice/{handle}/metadata | Delete metadata |
+| [**deleteShippingAddress()**](InvoiceApi.md#deleteShippingAddress) | **DELETE** /v1/invoice/{id}/shipping_address | Delete invoice shipping address |
+| [**detachFromSubscription()**](InvoiceApi.md#detachFromSubscription) | **POST** /v1/invoice/{id}/detach | Detach from subscription |
+| [**extendKAuthTransaction()**](InvoiceApi.md#extendKAuthTransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/extend | Extend authorization transaction |
+| [**extendKlarnaTransaction()**](InvoiceApi.md#extendKlarnaTransaction) | **POST** /v1/invoice/{id}/transaction/{transaction}/extend_klarna | Extend Klarna authorization transaction |
+| [**failInvoice()**](InvoiceApi.md#failInvoice) | **POST** /v1/invoice/{id}/fail | Fail invoice |
+| [**getInvoice()**](InvoiceApi.md#getInvoice) | **GET** /v1/invoice/{id} | Get invoice |
+| [**getMetadata4()**](InvoiceApi.md#getMetadata4) | **GET** /v1/invoice/{handle}/metadata | Get metadata |
+| [**manualSettle()**](InvoiceApi.md#manualSettle) | **POST** /v1/invoice/{id}/manual_settle | Manual settle |
+| [**reactivateInvoice()**](InvoiceApi.md#reactivateInvoice) | **POST** /v1/invoice/{id}/reactivate | Reactivate invoice |
+| [**settle()**](InvoiceApi.md#settle) | **POST** /v1/invoice/{id}/settle | Settle |
+| [**transaction()**](InvoiceApi.md#transaction) | **GET** /v1/invoice/{id}/transaction/{transaction} | Get transaction |
+| [**transactionDetails()**](InvoiceApi.md#transactionDetails) | **GET** /v1/invoice/{id}/transaction/{transaction}/details | Get transaction details |
+| [**updateMetadata4()**](InvoiceApi.md#updateMetadata4) | **PUT** /v1/invoice/{handle}/metadata | Create or update metadata |
 
-# **cancelAllDunningPending**
-> \Frisbii\Model\Invoice[] cancelAllDunningPending($handle)
+
+## `cancelAllDunningPending()`
+
+```php
+cancelAllDunningPending($handle): \Frisbii\Model\Invoice[]
+```
 
 Cancel all dunning and pending
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -47,7 +54,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Subscription handle
+$handle = 'handle_example'; // string | Subscription handle
 
 try {
     $result = $apiInstance->cancelAllDunningPending($handle);
@@ -55,14 +62,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->cancelAllDunningPending: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Subscription handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Subscription handle | |
 
 ### Return type
 
@@ -74,20 +80,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **cancelInvoice**
-> \Frisbii\Model\Invoice cancelInvoice($id)
+## `cancelInvoice()`
+
+```php
+cancelInvoice($id): \Frisbii\Model\Invoice
+```
 
 Cancel invoice
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -100,7 +114,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->cancelInvoice($id);
@@ -108,14 +122,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->cancelInvoice: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -127,20 +140,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **cancelSettleLater**
-> \Frisbii\Model\Invoice cancelSettleLater($id)
+## `cancelSettleLater()`
+
+```php
+cancelSettleLater($id): \Frisbii\Model\Invoice
+```
 
 Cancel settle later
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -153,7 +174,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->cancelSettleLater($id);
@@ -161,14 +182,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->cancelSettleLater: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -180,20 +200,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **cancelTransaction**
-> \Frisbii\Model\Transaction cancelTransaction($id, $transaction)
+## `cancelTransaction()`
+
+```php
+cancelTransaction($id, $transaction): \Frisbii\Model\Transaction
+```
 
 Cancel transaction
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -206,8 +234,8 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
-$transaction = "transaction_example"; // string | Transaction id
+$id = 'id_example'; // string | Invoice id or handle
+$transaction = 'transaction_example'; // string | Transaction id
 
 try {
     $result = $apiInstance->cancelTransaction($id, $transaction);
@@ -215,15 +243,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->cancelTransaction: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
- **transaction** | **string**| Transaction id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **transaction** | **string**| Transaction id | |
 
 ### Return type
 
@@ -235,20 +262,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createOrUpdateBillingAddress**
-> \Frisbii\Model\Invoice createOrUpdateBillingAddress($body, $id)
+## `createOrUpdateBillingAddress()`
+
+```php
+createOrUpdateBillingAddress($id, $invoiceBillingAddress): \Frisbii\Model\Invoice
+```
 
 Create or update invoice billing address
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -261,24 +296,23 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\InvoiceBillingAddress(); // \Frisbii\Model\InvoiceBillingAddress | 
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
+$invoiceBillingAddress = new \Frisbii\Model\InvoiceBillingAddress(); // \Frisbii\Model\InvoiceBillingAddress
 
 try {
-    $result = $apiInstance->createOrUpdateBillingAddress($body, $id);
+    $result = $apiInstance->createOrUpdateBillingAddress($id, $invoiceBillingAddress);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->createOrUpdateBillingAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\InvoiceBillingAddress**](../Model/InvoiceBillingAddress.md)|  |
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **invoiceBillingAddress** | [**\Frisbii\Model\InvoiceBillingAddress**](../Model/InvoiceBillingAddress.md)|  | |
 
 ### Return type
 
@@ -290,20 +324,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createOrUpdateShippingAddress**
-> \Frisbii\Model\Invoice createOrUpdateShippingAddress($body, $id)
+## `createOrUpdateShippingAddress()`
+
+```php
+createOrUpdateShippingAddress($id, $invoiceShippingAddress): \Frisbii\Model\Invoice
+```
 
 Create or update invoice shipping address
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -316,24 +358,23 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\InvoiceShippingAddress(); // \Frisbii\Model\InvoiceShippingAddress | 
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
+$invoiceShippingAddress = new \Frisbii\Model\InvoiceShippingAddress(); // \Frisbii\Model\InvoiceShippingAddress
 
 try {
-    $result = $apiInstance->createOrUpdateShippingAddress($body, $id);
+    $result = $apiInstance->createOrUpdateShippingAddress($id, $invoiceShippingAddress);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->createOrUpdateShippingAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\InvoiceShippingAddress**](../Model/InvoiceShippingAddress.md)|  |
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **invoiceShippingAddress** | [**\Frisbii\Model\InvoiceShippingAddress**](../Model/InvoiceShippingAddress.md)|  | |
 
 ### Return type
 
@@ -345,20 +386,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteBillingAddress**
-> \Frisbii\Model\Invoice deleteBillingAddress($id)
+## `deleteBillingAddress()`
+
+```php
+deleteBillingAddress($id): \Frisbii\Model\Invoice
+```
 
 Delete invoice billing address
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -371,7 +420,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->deleteBillingAddress($id);
@@ -379,14 +428,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->deleteBillingAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -398,20 +446,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteMetadata4**
-> deleteMetadata4($handle)
+## `deleteMetadata4()`
+
+```php
+deleteMetadata4($handle)
+```
 
 Delete metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -424,21 +480,20 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $apiInstance->deleteMetadata4($handle);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->deleteMetadata4: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
@@ -450,20 +505,28 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteShippingAddress**
-> \Frisbii\Model\Invoice deleteShippingAddress($id)
+## `deleteShippingAddress()`
+
+```php
+deleteShippingAddress($id): \Frisbii\Model\Invoice
+```
 
 Delete invoice shipping address
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -476,7 +539,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->deleteShippingAddress($id);
@@ -484,14 +547,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->deleteShippingAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -503,20 +565,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **detachFromSubscription**
-> \Frisbii\Model\Invoice detachFromSubscription($id)
+## `detachFromSubscription()`
+
+```php
+detachFromSubscription($id): \Frisbii\Model\Invoice
+```
 
 Detach from subscription
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -529,7 +599,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->detachFromSubscription($id);
@@ -537,14 +607,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->detachFromSubscription: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -556,20 +625,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **extendKAuthTransaction**
-> \Frisbii\Model\ExtendAuthResponse extendKAuthTransaction($id, $transaction)
+## `extendKAuthTransaction()`
+
+```php
+extendKAuthTransaction($id, $transaction): \Frisbii\Model\ExtendAuthResponse
+```
 
 Extend authorization transaction
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -582,8 +659,8 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
-$transaction = "transaction_example"; // string | Transaction id
+$id = 'id_example'; // string | Invoice id or handle
+$transaction = 'transaction_example'; // string | Transaction id
 
 try {
     $result = $apiInstance->extendKAuthTransaction($id, $transaction);
@@ -591,15 +668,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->extendKAuthTransaction: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
- **transaction** | **string**| Transaction id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **transaction** | **string**| Transaction id | |
 
 ### Return type
 
@@ -611,20 +687,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **extendKlarnaTransaction**
-> \Frisbii\Model\ExtendKlarnaAuthResponse extendKlarnaTransaction($id, $transaction)
+## `extendKlarnaTransaction()`
+
+```php
+extendKlarnaTransaction($id, $transaction): \Frisbii\Model\ExtendKlarnaAuthResponse
+```
 
 Extend Klarna authorization transaction
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -637,8 +721,8 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
-$transaction = "transaction_example"; // string | Transaction id
+$id = 'id_example'; // string | Invoice id or handle
+$transaction = 'transaction_example'; // string | Transaction id
 
 try {
     $result = $apiInstance->extendKlarnaTransaction($id, $transaction);
@@ -646,15 +730,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->extendKlarnaTransaction: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
- **transaction** | **string**| Transaction id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **transaction** | **string**| Transaction id | |
 
 ### Return type
 
@@ -666,20 +749,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **failInvoice**
-> \Frisbii\Model\Invoice failInvoice($id)
+## `failInvoice()`
+
+```php
+failInvoice($id): \Frisbii\Model\Invoice
+```
 
 Fail invoice
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -692,7 +783,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->failInvoice($id);
@@ -700,14 +791,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->failInvoice: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -719,20 +809,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getInvoice**
-> \Frisbii\Model\Invoice getInvoice($id)
+## `getInvoice()`
+
+```php
+getInvoice($id): \Frisbii\Model\Invoice
+```
 
 Get invoice
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -745,7 +843,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->getInvoice($id);
@@ -753,14 +851,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->getInvoice: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -772,20 +869,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getMetadata4**
-> map[string,object] getMetadata4($handle)
+## `getMetadata4()`
+
+```php
+getMetadata4($handle): array<string,object>
+```
 
 Get metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -798,7 +903,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $result = $apiInstance->getMetadata4($handle);
@@ -806,18 +911,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->getMetadata4: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -825,20 +929,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **manualSettle**
-> \Frisbii\Model\Invoice manualSettle($body, $id)
+## `manualSettle()`
+
+```php
+manualSettle($id, $manualSettleTransfer): \Frisbii\Model\Invoice
+```
 
 Manual settle
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -851,24 +963,23 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\ManualSettleTransfer(); // \Frisbii\Model\ManualSettleTransfer | 
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
+$manualSettleTransfer = new \Frisbii\Model\ManualSettleTransfer(); // \Frisbii\Model\ManualSettleTransfer
 
 try {
-    $result = $apiInstance->manualSettle($body, $id);
+    $result = $apiInstance->manualSettle($id, $manualSettleTransfer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->manualSettle: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\ManualSettleTransfer**](../Model/ManualSettleTransfer.md)|  |
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **manualSettleTransfer** | [**\Frisbii\Model\ManualSettleTransfer**](../Model/ManualSettleTransfer.md)|  | |
 
 ### Return type
 
@@ -880,20 +991,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **reactivateInvoice**
-> \Frisbii\Model\Invoice reactivateInvoice($id)
+## `reactivateInvoice()`
+
+```php
+reactivateInvoice($id): \Frisbii\Model\Invoice
+```
 
 Reactivate invoice
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -906,7 +1025,7 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
 
 try {
     $result = $apiInstance->reactivateInvoice($id);
@@ -914,14 +1033,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->reactivateInvoice: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
 
 ### Return type
 
@@ -933,20 +1051,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **settle**
-> \Frisbii\Model\Invoice settle($body, $id)
+## `settle()`
+
+```php
+settle($id, $settle): \Frisbii\Model\Invoice
+```
 
 Settle
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -959,24 +1085,23 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\Settle(); // \Frisbii\Model\Settle | 
-$id = "id_example"; // string | Invoice id or handle
+$id = 'id_example'; // string | Invoice id or handle
+$settle = new \Frisbii\Model\Settle(); // \Frisbii\Model\Settle
 
 try {
-    $result = $apiInstance->settle($body, $id);
+    $result = $apiInstance->settle($id, $settle);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->settle: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\Settle**](../Model/Settle.md)|  |
- **id** | **string**| Invoice id or handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **settle** | [**\Frisbii\Model\Settle**](../Model/Settle.md)|  | |
 
 ### Return type
 
@@ -988,20 +1113,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **transaction**
-> \Frisbii\Model\Transaction transaction($id, $transaction)
+## `transaction()`
+
+```php
+transaction($id, $transaction): \Frisbii\Model\Transaction
+```
 
 Get transaction
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -1014,8 +1147,8 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
-$transaction = "transaction_example"; // string | Transaction id
+$id = 'id_example'; // string | Invoice id or handle
+$transaction = 'transaction_example'; // string | Transaction id
 
 try {
     $result = $apiInstance->transaction($id, $transaction);
@@ -1023,15 +1156,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->transaction: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
- **transaction** | **string**| Transaction id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **transaction** | **string**| Transaction id | |
 
 ### Return type
 
@@ -1043,20 +1175,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **transactionDetails**
-> map[string,object] transactionDetails($id, $transaction)
+## `transactionDetails()`
+
+```php
+transactionDetails($id, $transaction): array<string,object>
+```
 
 Get transaction details
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -1069,8 +1209,8 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Invoice id or handle
-$transaction = "transaction_example"; // string | Transaction id
+$id = 'id_example'; // string | Invoice id or handle
+$transaction = 'transaction_example'; // string | Transaction id
 
 try {
     $result = $apiInstance->transactionDetails($id, $transaction);
@@ -1078,19 +1218,18 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->transactionDetails: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Invoice id or handle |
- **transaction** | **string**| Transaction id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Invoice id or handle | |
+| **transaction** | **string**| Transaction id | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -1098,20 +1237,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateMetadata4**
-> map[string,object] updateMetadata4($body, $handle)
+## `updateMetadata4()`
+
+```php
+updateMetadata4($handle, $requestBody): array<string,object>
+```
 
 Create or update metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -1124,28 +1271,27 @@ $apiInstance = new Frisbii\Api\InvoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\map(); // map[string,object] | 
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
+$requestBody = array('key' => new \stdClass); // array<string,object>
 
 try {
-    $result = $apiInstance->updateMetadata4($body, $handle);
+    $result = $apiInstance->updateMetadata4($handle, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceApi->updateMetadata4: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**map[string,object]**](../Model/map.md)|  |
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
+| **requestBody** | [**array<string,object>**](../Model/object.md)|  | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -1153,8 +1299,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

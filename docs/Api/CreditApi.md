@@ -1,23 +1,30 @@
 # Frisbii\CreditApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**cancelCredit**](CreditApi.md#cancelcredit) | **POST** /v1/credit/{handle}/cancel | Cancel credit
-[**createCreditJson**](CreditApi.md#createcreditjson) | **POST** /v1/credit | Create credit
-[**getCredit**](CreditApi.md#getcredit) | **GET** /v1/credit/{handle} | Get credit
-[**getCredits**](CreditApi.md#getcredits) | **GET** /v1/credit/subscription/{handle} | Get credits for subscription
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**cancelCredit()**](CreditApi.md#cancelCredit) | **POST** /v1/credit/{handle}/cancel | Cancel credit |
+| [**createCreditJson()**](CreditApi.md#createCreditJson) | **POST** /v1/credit | Create credit |
+| [**getCredit()**](CreditApi.md#getCredit) | **GET** /v1/credit/{handle} | Get credit |
+| [**getCredits()**](CreditApi.md#getCredits) | **GET** /v1/credit/subscription/{handle} | Get credits for subscription |
 
-# **cancelCredit**
-> \Frisbii\Model\Credit cancelCredit($handle)
+
+## `cancelCredit()`
+
+```php
+cancelCredit($handle): \Frisbii\Model\Credit
+```
 
 Cancel credit
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -30,7 +37,7 @@ $apiInstance = new Frisbii\Api\CreditApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Credit handle
+$handle = 'handle_example'; // string | Credit handle
 
 try {
     $result = $apiInstance->cancelCredit($handle);
@@ -38,14 +45,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CreditApi->cancelCredit: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Credit handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Credit handle | |
 
 ### Return type
 
@@ -57,20 +63,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createCreditJson**
-> \Frisbii\Model\Credit createCreditJson($body)
+## `createCreditJson()`
+
+```php
+createCreditJson($createCredit): \Frisbii\Model\Credit
+```
 
 Create credit
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -83,22 +97,21 @@ $apiInstance = new Frisbii\Api\CreditApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateCredit(); // \Frisbii\Model\CreateCredit | 
+$createCredit = new \Frisbii\Model\CreateCredit(); // \Frisbii\Model\CreateCredit
 
 try {
-    $result = $apiInstance->createCreditJson($body);
+    $result = $apiInstance->createCreditJson($createCredit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreditApi->createCreditJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateCredit**](../Model/CreateCredit.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createCredit** | [**\Frisbii\Model\CreateCredit**](../Model/CreateCredit.md)|  | |
 
 ### Return type
 
@@ -110,20 +123,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCredit**
-> \Frisbii\Model\Credit getCredit($handle)
+## `getCredit()`
+
+```php
+getCredit($handle): \Frisbii\Model\Credit
+```
 
 Get credit
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -136,7 +157,7 @@ $apiInstance = new Frisbii\Api\CreditApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Credit handle
+$handle = 'handle_example'; // string | Credit handle
 
 try {
     $result = $apiInstance->getCredit($handle);
@@ -144,14 +165,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CreditApi->getCredit: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Credit handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Credit handle | |
 
 ### Return type
 
@@ -163,20 +183,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCredits**
-> \Frisbii\Model\Credit[] getCredits($handle)
+## `getCredits()`
+
+```php
+getCredits($handle): \Frisbii\Model\Credit[]
+```
 
 Get credits for subscription
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -189,7 +217,7 @@ $apiInstance = new Frisbii\Api\CreditApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Subscription handle
+$handle = 'handle_example'; // string | Subscription handle
 
 try {
     $result = $apiInstance->getCredits($handle);
@@ -197,14 +225,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CreditApi->getCredits: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Subscription handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Subscription handle | |
 
 ### Return type
 
@@ -216,8 +243,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

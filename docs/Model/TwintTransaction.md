@@ -1,14 +1,14 @@
-# TwintTransaction
+# # TwintTransaction
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error** | **string** | Error code if failed. See [transaction errors](https://docs.frisbii.com/reference/transaction_errors). | [optional] 
-**ref_transaction** | **string** | Id of a possible referenced transaction | [optional] 
-**error_state** | **string** | Error state if failed: &#x60;pending&#x60;, &#x60;soft_declined&#x60;, &#x60;hard_declined&#x60; or &#x60;processing_error&#x60; | [optional] 
-**acquirer_message** | **string** | Acquirer message in case of error | [optional] 
-**twint_id** | **string** | Twint id | [optional] 
-**twint_mandate** | [**\Frisbii\Model\TwintMandate**](TwintMandate.md) |  | [optional] 
+**error** | **string** | Error code if failed. See [transaction errors](https://docs.frisbii.com/reference/transaction_errors). | [optional]
+**refTransaction** | **string** | Id of a possible referenced transaction | [optional]
+**errorState** | **string** | Error state if failed: &#x60;pending&#x60;, &#x60;soft_declined&#x60;, &#x60;hard_declined&#x60; or &#x60;processing_error&#x60; | [optional]
+**acquirerMessage** | **string** | Acquirer message in case of error | [optional]
+**twintId** | **string** | Twint id | [optional]
+**twintMandate** | **object** | Twint mandate object in case of Twint payment method | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

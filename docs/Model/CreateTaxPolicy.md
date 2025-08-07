@@ -1,13 +1,13 @@
-# CreateTaxPolicy
+# # CreateTaxPolicy
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** | Name of the tax policy | 
-**rates** | [**\Frisbii\Model\TaxRate[]**](TaxRate.md) | Tax rates to apply to the tax policy | [optional] 
-**fallbacks** | [**\Frisbii\Model\TaxPolicyFallbacks**](TaxPolicyFallbacks.md) |  | 
-**handle** | **string** | Per account unique handle for tax policy | 
-**is_default** | **bool** | Whether this should be the default tax policy, default is false | 
+**name** | **string** | Name of the tax policy |
+**fallbacks** | [**\Frisbii\Model\TaxPolicyFallbacks**](TaxPolicyFallbacks.md) |  |
+**handle** | **string** | Per account unique handle for tax policy |
+**isDefault** | **bool** | Whether this should be the default tax policy, default is false |
+**rates** | [**\Frisbii\Model\TaxRate[]**](TaxRate.md) | Tax rates to apply to the tax policy | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

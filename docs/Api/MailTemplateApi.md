@@ -1,20 +1,27 @@
 # Frisbii\MailTemplateApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getSample**](MailTemplateApi.md#getsample) | **GET** /v1/mail_template/sample | Get sample data
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getSample()**](MailTemplateApi.md#getSample) | **GET** /v1/mail_template/sample | Get sample data |
 
-# **getSample**
-> \Frisbii\Model\InlineResponse200 getSample()
+
+## `getSample()`
+
+```php
+getSample(): \Frisbii\Model\GetSample200Response
+```
 
 Get sample data
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -34,15 +41,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MailTemplateApi->getSample: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Frisbii\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Frisbii\Model\GetSample200Response**](../Model/GetSample200Response.md)
 
 ### Authorization
 
@@ -50,8 +57,9 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

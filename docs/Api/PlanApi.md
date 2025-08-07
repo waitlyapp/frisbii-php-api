@@ -1,32 +1,39 @@
 # Frisbii\PlanApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**changePlanAmountJson**](PlanApi.md#changeplanamountjson) | **PUT** /v1/plan/{handle}/amount | Change plan amount
-[**createPlanJson**](PlanApi.md#createplanjson) | **POST** /v1/plan | Create plan
-[**deleteMetadata6**](PlanApi.md#deletemetadata6) | **DELETE** /v1/plan/{handle}/metadata | Delete metadata
-[**deletePlan**](PlanApi.md#deleteplan) | **DELETE** /v1/plan/{handle} | Delete plan
-[**getCurrentPlan**](PlanApi.md#getcurrentplan) | **GET** /v1/plan/{handle}/current | Get plan
-[**getMetadata6**](PlanApi.md#getmetadata6) | **GET** /v1/plan/{handle}/metadata | Get metadata
-[**getPlan**](PlanApi.md#getplan) | **GET** /v1/plan/{handle}/{version} | Get plan version
-[**getPlanEntitlements**](PlanApi.md#getplanentitlements) | **GET** /v1/plan/{handle}/{version}/entitlement | Get plan entitlements
-[**getPlans**](PlanApi.md#getplans) | **GET** /v1/plan/{handle} | Get list of plan versions
-[**supersedePlanJson**](PlanApi.md#supersedeplanjson) | **POST** /v1/plan/{handle} | Supersede plan
-[**unDeletePlan**](PlanApi.md#undeleteplan) | **POST** /v1/plan/{handle}/undelete | Undelete plan
-[**updateMetadata6**](PlanApi.md#updatemetadata6) | **PUT** /v1/plan/{handle}/metadata | Create or update metadata
-[**updatePlanJson**](PlanApi.md#updateplanjson) | **PUT** /v1/plan/{handle} | Update plan
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**changePlanAmountJson()**](PlanApi.md#changePlanAmountJson) | **PUT** /v1/plan/{handle}/amount | Change plan amount |
+| [**createPlanJson()**](PlanApi.md#createPlanJson) | **POST** /v1/plan | Create plan |
+| [**deleteMetadata6()**](PlanApi.md#deleteMetadata6) | **DELETE** /v1/plan/{handle}/metadata | Delete metadata |
+| [**deletePlan()**](PlanApi.md#deletePlan) | **DELETE** /v1/plan/{handle} | Delete plan |
+| [**getCurrentPlan()**](PlanApi.md#getCurrentPlan) | **GET** /v1/plan/{handle}/current | Get plan |
+| [**getMetadata6()**](PlanApi.md#getMetadata6) | **GET** /v1/plan/{handle}/metadata | Get metadata |
+| [**getPlan()**](PlanApi.md#getPlan) | **GET** /v1/plan/{handle}/{version} | Get plan version |
+| [**getPlanEntitlements()**](PlanApi.md#getPlanEntitlements) | **GET** /v1/plan/{handle}/{version}/entitlement | Get plan entitlements |
+| [**getPlans()**](PlanApi.md#getPlans) | **GET** /v1/plan/{handle} | Get list of plan versions |
+| [**supersedePlanJson()**](PlanApi.md#supersedePlanJson) | **POST** /v1/plan/{handle} | Supersede plan |
+| [**unDeletePlan()**](PlanApi.md#unDeletePlan) | **POST** /v1/plan/{handle}/undelete | Undelete plan |
+| [**updateMetadata6()**](PlanApi.md#updateMetadata6) | **PUT** /v1/plan/{handle}/metadata | Create or update metadata |
+| [**updatePlanJson()**](PlanApi.md#updatePlanJson) | **PUT** /v1/plan/{handle} | Update plan |
 
-# **changePlanAmountJson**
-> \Frisbii\Model\Plan changePlanAmountJson($body, $handle)
+
+## `changePlanAmountJson()`
+
+```php
+changePlanAmountJson($handle, $changePlanAmount): \Frisbii\Model\Plan
+```
 
 Change plan amount
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -39,24 +46,23 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\ChangePlanAmount(); // \Frisbii\Model\ChangePlanAmount | 
-$handle = "handle_example"; // string | Plan handle
+$handle = 'handle_example'; // string | Plan handle
+$changePlanAmount = new \Frisbii\Model\ChangePlanAmount(); // \Frisbii\Model\ChangePlanAmount
 
 try {
-    $result = $apiInstance->changePlanAmountJson($body, $handle);
+    $result = $apiInstance->changePlanAmountJson($handle, $changePlanAmount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->changePlanAmountJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\ChangePlanAmount**](../Model/ChangePlanAmount.md)|  |
- **handle** | **string**| Plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Plan handle | |
+| **changePlanAmount** | [**\Frisbii\Model\ChangePlanAmount**](../Model/ChangePlanAmount.md)|  | |
 
 ### Return type
 
@@ -68,20 +74,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createPlanJson**
-> \Frisbii\Model\Plan createPlanJson($body)
+## `createPlanJson()`
+
+```php
+createPlanJson($createSubscriptionPlan): \Frisbii\Model\Plan
+```
 
 Create plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -94,22 +108,21 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateSubscriptionPlan(); // \Frisbii\Model\CreateSubscriptionPlan | 
+$createSubscriptionPlan = new \Frisbii\Model\CreateSubscriptionPlan(); // \Frisbii\Model\CreateSubscriptionPlan
 
 try {
-    $result = $apiInstance->createPlanJson($body);
+    $result = $apiInstance->createPlanJson($createSubscriptionPlan);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->createPlanJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateSubscriptionPlan**](../Model/CreateSubscriptionPlan.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createSubscriptionPlan** | [**\Frisbii\Model\CreateSubscriptionPlan**](../Model/CreateSubscriptionPlan.md)|  | |
 
 ### Return type
 
@@ -121,20 +134,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteMetadata6**
-> deleteMetadata6($handle)
+## `deleteMetadata6()`
+
+```php
+deleteMetadata6($handle)
+```
 
 Delete metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -147,21 +168,20 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $apiInstance->deleteMetadata6($handle);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->deleteMetadata6: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
@@ -173,20 +193,28 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deletePlan**
-> \Frisbii\Model\Plan deletePlan($handle)
+## `deletePlan()`
+
+```php
+deletePlan($handle): \Frisbii\Model\Plan
+```
 
 Delete plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -199,7 +227,7 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Subscription plan handle
+$handle = 'handle_example'; // string | Subscription plan handle
 
 try {
     $result = $apiInstance->deletePlan($handle);
@@ -207,14 +235,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->deletePlan: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Subscription plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Subscription plan handle | |
 
 ### Return type
 
@@ -226,20 +253,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCurrentPlan**
-> \Frisbii\Model\Plan getCurrentPlan($handle, $tax_rate_for_country)
+## `getCurrentPlan()`
+
+```php
+getCurrentPlan($handle, $taxRateForCountry): \Frisbii\Model\Plan
+```
 
 Get plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -252,24 +287,23 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Plan handle
-$tax_rate_for_country = "tax_rate_for_country_example"; // string | 
+$handle = 'handle_example'; // string | Plan handle
+$taxRateForCountry = 'taxRateForCountry_example'; // string
 
 try {
-    $result = $apiInstance->getCurrentPlan($handle, $tax_rate_for_country);
+    $result = $apiInstance->getCurrentPlan($handle, $taxRateForCountry);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->getCurrentPlan: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Plan handle |
- **tax_rate_for_country** | **string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Plan handle | |
+| **taxRateForCountry** | **string**|  | [optional] |
 
 ### Return type
 
@@ -281,20 +315,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getMetadata6**
-> map[string,object] getMetadata6($handle)
+## `getMetadata6()`
+
+```php
+getMetadata6($handle): array<string,object>
+```
 
 Get metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -307,7 +349,7 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $result = $apiInstance->getMetadata6($handle);
@@ -315,18 +357,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->getMetadata6: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -334,20 +375,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getPlan**
-> \Frisbii\Model\Plan getPlan($handle, $version, $tax_rate_for_country)
+## `getPlan()`
+
+```php
+getPlan($handle, $version, $taxRateForCountry): \Frisbii\Model\Plan
+```
 
 Get plan version
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -360,26 +409,25 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Plan handle
+$handle = 'handle_example'; // string | Plan handle
 $version = 56; // int | Plan version
-$tax_rate_for_country = "tax_rate_for_country_example"; // string | 
+$taxRateForCountry = 'taxRateForCountry_example'; // string
 
 try {
-    $result = $apiInstance->getPlan($handle, $version, $tax_rate_for_country);
+    $result = $apiInstance->getPlan($handle, $version, $taxRateForCountry);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->getPlan: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Plan handle |
- **version** | **int**| Plan version |
- **tax_rate_for_country** | **string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Plan handle | |
+| **version** | **int**| Plan version | |
+| **taxRateForCountry** | **string**|  | [optional] |
 
 ### Return type
 
@@ -391,20 +439,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getPlanEntitlements**
-> \Frisbii\Model\Entitlement[] getPlanEntitlements($handle, $version)
+## `getPlanEntitlements()`
+
+```php
+getPlanEntitlements($handle, $version): \Frisbii\Model\Entitlement[]
+```
 
 Get plan entitlements
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -417,7 +473,7 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Plan handle
+$handle = 'handle_example'; // string | Plan handle
 $version = 56; // int | Plan version
 
 try {
@@ -426,15 +482,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->getPlanEntitlements: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Plan handle |
- **version** | **int**| Plan version |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Plan handle | |
+| **version** | **int**| Plan version | |
 
 ### Return type
 
@@ -446,20 +501,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getPlans**
-> \Frisbii\Model\Plan[] getPlans($handle, $tax_rate_for_country)
+## `getPlans()`
+
+```php
+getPlans($handle, $taxRateForCountry): \Frisbii\Model\Plan[]
+```
 
 Get list of plan versions
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -472,24 +535,23 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Plan handle
-$tax_rate_for_country = "tax_rate_for_country_example"; // string | 
+$handle = 'handle_example'; // string | Plan handle
+$taxRateForCountry = 'taxRateForCountry_example'; // string
 
 try {
-    $result = $apiInstance->getPlans($handle, $tax_rate_for_country);
+    $result = $apiInstance->getPlans($handle, $taxRateForCountry);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->getPlans: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Plan handle |
- **tax_rate_for_country** | **string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Plan handle | |
+| **taxRateForCountry** | **string**|  | [optional] |
 
 ### Return type
 
@@ -501,20 +563,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **supersedePlanJson**
-> \Frisbii\Model\Plan supersedePlanJson($body, $handle)
+## `supersedePlanJson()`
+
+```php
+supersedePlanJson($handle, $supersedeSubscriptionPlan): \Frisbii\Model\Plan
+```
 
 Supersede plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -527,24 +597,23 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\SupersedeSubscriptionPlan(); // \Frisbii\Model\SupersedeSubscriptionPlan | 
-$handle = "handle_example"; // string | Plan handle
+$handle = 'handle_example'; // string | Plan handle
+$supersedeSubscriptionPlan = new \Frisbii\Model\SupersedeSubscriptionPlan(); // \Frisbii\Model\SupersedeSubscriptionPlan
 
 try {
-    $result = $apiInstance->supersedePlanJson($body, $handle);
+    $result = $apiInstance->supersedePlanJson($handle, $supersedeSubscriptionPlan);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->supersedePlanJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\SupersedeSubscriptionPlan**](../Model/SupersedeSubscriptionPlan.md)|  |
- **handle** | **string**| Plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Plan handle | |
+| **supersedeSubscriptionPlan** | [**\Frisbii\Model\SupersedeSubscriptionPlan**](../Model/SupersedeSubscriptionPlan.md)|  | |
 
 ### Return type
 
@@ -556,20 +625,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **unDeletePlan**
-> \Frisbii\Model\Plan unDeletePlan($handle)
+## `unDeletePlan()`
+
+```php
+unDeletePlan($handle): \Frisbii\Model\Plan
+```
 
 Undelete plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -582,7 +659,7 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Subscription plan handle
+$handle = 'handle_example'; // string | Subscription plan handle
 
 try {
     $result = $apiInstance->unDeletePlan($handle);
@@ -590,14 +667,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->unDeletePlan: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Subscription plan handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Subscription plan handle | |
 
 ### Return type
 
@@ -609,20 +685,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateMetadata6**
-> map[string,object] updateMetadata6($body, $handle)
+## `updateMetadata6()`
+
+```php
+updateMetadata6($handle, $requestBody): array<string,object>
+```
 
 Create or update metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -635,28 +719,27 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\map(); // map[string,object] | 
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
+$requestBody = array('key' => new \stdClass); // array<string,object>
 
 try {
-    $result = $apiInstance->updateMetadata6($body, $handle);
+    $result = $apiInstance->updateMetadata6($handle, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->updateMetadata6: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**map[string,object]**](../Model/map.md)|  |
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
+| **requestBody** | [**array<string,object>**](../Model/object.md)|  | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -664,20 +747,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updatePlanJson**
-> \Frisbii\Model\Plan updatePlanJson($body, $handle)
+## `updatePlanJson()`
+
+```php
+updatePlanJson($handle, $updateSubscriptionPlan): \Frisbii\Model\Plan
+```
 
 Update plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -690,24 +781,23 @@ $apiInstance = new Frisbii\Api\PlanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\UpdateSubscriptionPlan(); // \Frisbii\Model\UpdateSubscriptionPlan | 
-$handle = "handle_example"; // string | Subscription handle
+$handle = 'handle_example'; // string | Subscription handle
+$updateSubscriptionPlan = new \Frisbii\Model\UpdateSubscriptionPlan(); // \Frisbii\Model\UpdateSubscriptionPlan
 
 try {
-    $result = $apiInstance->updatePlanJson($body, $handle);
+    $result = $apiInstance->updatePlanJson($handle, $updateSubscriptionPlan);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->updatePlanJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\UpdateSubscriptionPlan**](../Model/UpdateSubscriptionPlan.md)|  |
- **handle** | **string**| Subscription handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Subscription handle | |
+| **updateSubscriptionPlan** | [**\Frisbii\Model\UpdateSubscriptionPlan**](../Model/UpdateSubscriptionPlan.md)|  | |
 
 ### Return type
 
@@ -719,8 +809,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

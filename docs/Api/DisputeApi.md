@@ -1,20 +1,27 @@
 # Frisbii\DisputeApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getDispute**](DisputeApi.md#getdispute) | **GET** /v1/dispute/{id} | Get dispute
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getDispute()**](DisputeApi.md#getDispute) | **GET** /v1/dispute/{id} | Get dispute |
 
-# **getDispute**
-> \Frisbii\Model\Dispute getDispute($id)
+
+## `getDispute()`
+
+```php
+getDispute($id): \Frisbii\Model\Dispute
+```
 
 Get dispute
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -27,7 +34,7 @@ $apiInstance = new Frisbii\Api\DisputeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | 
+$id = 'id_example'; // string
 
 try {
     $result = $apiInstance->getDispute($id);
@@ -35,14 +42,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DisputeApi->getDispute: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**|  | |
 
 ### Return type
 
@@ -54,8 +60,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

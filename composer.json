@@ -1,19 +1,20 @@
 {
-    "name": "waitlyapp/frisbii-php-api",
-    "description": "",
+    "description": "REST API to manage Frisbii resources",
     "keywords": [
-        "swagger",
+        "openapitools",
+        "openapi-generator",
+        "openapi",
         "php",
         "sdk",
         "rest",
         "api"
     ],
-    "homepage": "http://swagger.io",
-    "license": "proprietary",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
@@ -32,6 +33,6 @@
         "psr-4": { "Frisbii\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Frisbii\\" : "test/" }
+        "psr-4": { "Frisbii\\Test\\" : "test/" }
     }
 }

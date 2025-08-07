@@ -1,11 +1,11 @@
-# UpdateUser
+# # UpdateUser
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **string** | User email | 
-**name** | **string** | User name | 
-**current_password** | **string** | Current password required for email change | [optional] 
+**email** | **string** | User email |
+**name** | **string** | User name |
+**currentPassword** | **string** | Current password required for email change | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,25 +1,32 @@
 # Frisbii\TaxPolicyApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createTaxPolicies**](TaxPolicyApi.md#createtaxpolicies) | **POST** /v1/tax_policy | Create tax policy
-[**deleteTaxPolicies**](TaxPolicyApi.md#deletetaxpolicies) | **DELETE** /v1/tax_policy/{handle} | Delete tax policy
-[**getStandardTaxRates**](TaxPolicyApi.md#getstandardtaxrates) | **GET** /v1/tax_policy/standard_tax_rates | List of predefined standard tax rates
-[**getTaxPolicies**](TaxPolicyApi.md#gettaxpolicies) | **GET** /v1/tax_policy/{handle} | Get tax policy
-[**getTaxRate**](TaxPolicyApi.md#gettaxrate) | **GET** /v1/tax_policy/{handle}/rates/{country} | Tax Rate for a country
-[**updateTaxPolicies**](TaxPolicyApi.md#updatetaxpolicies) | **PUT** /v1/tax_policy/{handle} | Update tax policy
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createTaxPolicies()**](TaxPolicyApi.md#createTaxPolicies) | **POST** /v1/tax_policy | Create tax policy |
+| [**deleteTaxPolicies()**](TaxPolicyApi.md#deleteTaxPolicies) | **DELETE** /v1/tax_policy/{handle} | Delete tax policy |
+| [**getStandardTaxRates()**](TaxPolicyApi.md#getStandardTaxRates) | **GET** /v1/tax_policy/standard_tax_rates | List of predefined standard tax rates |
+| [**getTaxPolicies()**](TaxPolicyApi.md#getTaxPolicies) | **GET** /v1/tax_policy/{handle} | Get tax policy |
+| [**getTaxRate()**](TaxPolicyApi.md#getTaxRate) | **GET** /v1/tax_policy/{handle}/rates/{country} | Tax Rate for a country |
+| [**updateTaxPolicies()**](TaxPolicyApi.md#updateTaxPolicies) | **PUT** /v1/tax_policy/{handle} | Update tax policy |
 
-# **createTaxPolicies**
-> \Frisbii\Model\TaxPolicy createTaxPolicies($body)
+
+## `createTaxPolicies()`
+
+```php
+createTaxPolicies($createTaxPolicy): \Frisbii\Model\TaxPolicy
+```
 
 Create tax policy
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -32,22 +39,21 @@ $apiInstance = new Frisbii\Api\TaxPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateTaxPolicy(); // \Frisbii\Model\CreateTaxPolicy | 
+$createTaxPolicy = new \Frisbii\Model\CreateTaxPolicy(); // \Frisbii\Model\CreateTaxPolicy
 
 try {
-    $result = $apiInstance->createTaxPolicies($body);
+    $result = $apiInstance->createTaxPolicies($createTaxPolicy);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TaxPolicyApi->createTaxPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateTaxPolicy**](../Model/CreateTaxPolicy.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createTaxPolicy** | [**\Frisbii\Model\CreateTaxPolicy**](../Model/CreateTaxPolicy.md)|  | [optional] |
 
 ### Return type
 
@@ -59,20 +65,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteTaxPolicies**
-> deleteTaxPolicies($handle)
+## `deleteTaxPolicies()`
+
+```php
+deleteTaxPolicies($handle)
+```
 
 Delete tax policy
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -85,21 +99,20 @@ $apiInstance = new Frisbii\Api\TaxPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Tax policy handle
+$handle = 'handle_example'; // string | Tax policy handle
 
 try {
     $apiInstance->deleteTaxPolicies($handle);
 } catch (Exception $e) {
     echo 'Exception when calling TaxPolicyApi->deleteTaxPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Tax policy handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Tax policy handle | |
 
 ### Return type
 
@@ -111,20 +124,28 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getStandardTaxRates**
-> \Frisbii\Model\StandardTaxRatesResponseDto getStandardTaxRates()
+## `getStandardTaxRates()`
+
+```php
+getStandardTaxRates(): \Frisbii\Model\StandardTaxRatesResponseDto
+```
 
 List of predefined standard tax rates
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -144,10 +165,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TaxPolicyApi->getStandardTaxRates: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -160,20 +181,28 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getTaxPolicies**
-> \Frisbii\Model\TaxPolicy getTaxPolicies($handle)
+## `getTaxPolicies()`
+
+```php
+getTaxPolicies($handle): \Frisbii\Model\TaxPolicy
+```
 
 Get tax policy
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -186,7 +215,7 @@ $apiInstance = new Frisbii\Api\TaxPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Tax policy handle
+$handle = 'handle_example'; // string | Tax policy handle
 
 try {
     $result = $apiInstance->getTaxPolicies($handle);
@@ -194,14 +223,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TaxPolicyApi->getTaxPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Tax policy handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Tax policy handle | |
 
 ### Return type
 
@@ -213,20 +241,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getTaxRate**
-> \Frisbii\Model\TaxRate getTaxRate($handle, $country)
+## `getTaxRate()`
+
+```php
+getTaxRate($handle, $country): \Frisbii\Model\TaxRate
+```
 
 Tax Rate for a country
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -239,8 +275,8 @@ $apiInstance = new Frisbii\Api\TaxPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Tax policy handle
-$country = "country_example"; // string | Country
+$handle = 'handle_example'; // string | Tax policy handle
+$country = 'country_example'; // string | Country
 
 try {
     $result = $apiInstance->getTaxRate($handle, $country);
@@ -248,15 +284,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TaxPolicyApi->getTaxRate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Tax policy handle |
- **country** | **string**| Country |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Tax policy handle | |
+| **country** | **string**| Country | |
 
 ### Return type
 
@@ -268,20 +303,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateTaxPolicies**
-> \Frisbii\Model\TaxPolicy updateTaxPolicies($handle, $body)
+## `updateTaxPolicies()`
+
+```php
+updateTaxPolicies($handle, $updateTaxPolicy): \Frisbii\Model\TaxPolicy
+```
 
 Update tax policy
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -294,24 +337,23 @@ $apiInstance = new Frisbii\Api\TaxPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Tax policy handle
-$body = new \Frisbii\Model\UpdateTaxPolicy(); // \Frisbii\Model\UpdateTaxPolicy | 
+$handle = 'handle_example'; // string | Tax policy handle
+$updateTaxPolicy = new \Frisbii\Model\UpdateTaxPolicy(); // \Frisbii\Model\UpdateTaxPolicy
 
 try {
-    $result = $apiInstance->updateTaxPolicies($handle, $body);
+    $result = $apiInstance->updateTaxPolicies($handle, $updateTaxPolicy);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TaxPolicyApi->updateTaxPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Tax policy handle |
- **body** | [**\Frisbii\Model\UpdateTaxPolicy**](../Model/UpdateTaxPolicy.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Tax policy handle | |
+| **updateTaxPolicy** | [**\Frisbii\Model\UpdateTaxPolicy**](../Model/UpdateTaxPolicy.md)|  | [optional] |
 
 ### Return type
 
@@ -323,8 +365,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

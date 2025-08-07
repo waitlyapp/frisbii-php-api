@@ -1,17 +1,17 @@
-# TaxPolicy
+# # TaxPolicy
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique id of the tax policy | 
-**created** | [**\DateTime**](\DateTime.md) | Date of creation | 
-**updated** | [**\DateTime**](\DateTime.md) | Date of last update | 
-**name** | **string** | Name of the tax policy | 
-**handle** | **string** | Per account unique handle for tax policy | 
-**rates** | [**\Frisbii\Model\TaxRate[]**](TaxRate.md) | Tax rates to apply to the tax policy | [optional] 
-**fallbacks** | [**\Frisbii\Model\TaxPolicyFallbacks**](TaxPolicyFallbacks.md) |  | 
-**is_default** | **bool** |  | [optional] 
-**is_deletable** | **bool** |  | [optional] 
+**id** | **string** | Unique id of the tax policy |
+**created** | **\DateTime** | Date of creation |
+**updated** | **\DateTime** | Date of last update |
+**name** | **string** | Name of the tax policy |
+**handle** | **string** | Per account unique handle for tax policy |
+**fallbacks** | [**\Frisbii\Model\TaxPolicyFallbacks**](TaxPolicyFallbacks.md) |  |
+**rates** | [**\Frisbii\Model\TaxRate[]**](TaxRate.md) | Tax rates to apply to the tax policy | [optional]
+**isDefault** | **bool** |  | [optional]
+**isDeletable** | **bool** |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

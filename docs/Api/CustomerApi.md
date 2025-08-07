@@ -1,29 +1,36 @@
 # Frisbii\CustomerApi
 
-All URIs are relative to *https://api.frisbii.com*
+All URIs are relative to https://api.frisbii.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createCustomerInvoice**](CustomerApi.md#createcustomerinvoice) | **POST** /v1/customer/{handle}/invoice | Create invoice for customer
-[**createCustomerJson**](CustomerApi.md#createcustomerjson) | **POST** /v1/customer | Create customer
-[**createCustomerNoteJson**](CustomerApi.md#createcustomernotejson) | **POST** /v1/customer/{handle}/note | Create customer note
-[**deleteCustomer**](CustomerApi.md#deletecustomer) | **DELETE** /v1/customer/{handle} | Delete customer
-[**deleteMetadata2**](CustomerApi.md#deletemetadata2) | **DELETE** /v1/customer/{handle}/metadata | Delete metadata
-[**getCustomer**](CustomerApi.md#getcustomer) | **GET** /v1/customer/{handle} | Get customer
-[**getCustomerNotes**](CustomerApi.md#getcustomernotes) | **GET** /v1/customer/{handle}/note | Get customer notes
-[**getMetadata2**](CustomerApi.md#getmetadata2) | **GET** /v1/customer/{handle}/metadata | Get metadata
-[**updateCustomerJson**](CustomerApi.md#updatecustomerjson) | **PUT** /v1/customer/{handle} | Update customer
-[**updateMetadata2**](CustomerApi.md#updatemetadata2) | **PUT** /v1/customer/{handle}/metadata | Create or update metadata
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createCustomerInvoice()**](CustomerApi.md#createCustomerInvoice) | **POST** /v1/customer/{handle}/invoice | Create invoice for customer |
+| [**createCustomerJson()**](CustomerApi.md#createCustomerJson) | **POST** /v1/customer | Create customer |
+| [**createCustomerNoteJson()**](CustomerApi.md#createCustomerNoteJson) | **POST** /v1/customer/{handle}/note | Create customer note |
+| [**deleteCustomer()**](CustomerApi.md#deleteCustomer) | **DELETE** /v1/customer/{handle} | Delete customer |
+| [**deleteMetadata2()**](CustomerApi.md#deleteMetadata2) | **DELETE** /v1/customer/{handle}/metadata | Delete metadata |
+| [**getCustomer()**](CustomerApi.md#getCustomer) | **GET** /v1/customer/{handle} | Get customer |
+| [**getCustomerNotes()**](CustomerApi.md#getCustomerNotes) | **GET** /v1/customer/{handle}/note | Get customer notes |
+| [**getMetadata2()**](CustomerApi.md#getMetadata2) | **GET** /v1/customer/{handle}/metadata | Get metadata |
+| [**updateCustomerJson()**](CustomerApi.md#updateCustomerJson) | **PUT** /v1/customer/{handle} | Update customer |
+| [**updateMetadata2()**](CustomerApi.md#updateMetadata2) | **PUT** /v1/customer/{handle}/metadata | Create or update metadata |
 
-# **createCustomerInvoice**
-> \Frisbii\Model\Invoice createCustomerInvoice($body, $handle)
+
+## `createCustomerInvoice()`
+
+```php
+createCustomerInvoice($handle, $createCustomerInvoice): \Frisbii\Model\Invoice
+```
 
 Create invoice for customer
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -36,24 +43,23 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateCustomerInvoice(); // \Frisbii\Model\CreateCustomerInvoice | 
-$handle = "handle_example"; // string | Customer handle
+$handle = 'handle_example'; // string | Customer handle
+$createCustomerInvoice = new \Frisbii\Model\CreateCustomerInvoice(); // \Frisbii\Model\CreateCustomerInvoice
 
 try {
-    $result = $apiInstance->createCustomerInvoice($body, $handle);
+    $result = $apiInstance->createCustomerInvoice($handle, $createCustomerInvoice);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->createCustomerInvoice: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateCustomerInvoice**](../Model/CreateCustomerInvoice.md)|  |
- **handle** | **string**| Customer handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Customer handle | |
+| **createCustomerInvoice** | [**\Frisbii\Model\CreateCustomerInvoice**](../Model/CreateCustomerInvoice.md)|  | |
 
 ### Return type
 
@@ -65,20 +71,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createCustomerJson**
-> \Frisbii\Model\Customer createCustomerJson($body)
+## `createCustomerJson()`
+
+```php
+createCustomerJson($createCustomer): \Frisbii\Model\Customer
+```
 
 Create customer
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -91,22 +105,21 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateCustomer(); // \Frisbii\Model\CreateCustomer | 
+$createCustomer = new \Frisbii\Model\CreateCustomer(); // \Frisbii\Model\CreateCustomer
 
 try {
-    $result = $apiInstance->createCustomerJson($body);
+    $result = $apiInstance->createCustomerJson($createCustomer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->createCustomerJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateCustomer**](../Model/CreateCustomer.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createCustomer** | [**\Frisbii\Model\CreateCustomer**](../Model/CreateCustomer.md)|  | |
 
 ### Return type
 
@@ -118,20 +131,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createCustomerNoteJson**
-> \Frisbii\Model\CustomerNote createCustomerNoteJson($body, $handle)
+## `createCustomerNoteJson()`
+
+```php
+createCustomerNoteJson($handle, $createCustomerNote): \Frisbii\Model\CustomerNote
+```
 
 Create customer note
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -144,24 +165,23 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\CreateCustomerNote(); // \Frisbii\Model\CreateCustomerNote | 
-$handle = "handle_example"; // string | 
+$handle = 'handle_example'; // string
+$createCustomerNote = new \Frisbii\Model\CreateCustomerNote(); // \Frisbii\Model\CreateCustomerNote
 
 try {
-    $result = $apiInstance->createCustomerNoteJson($body, $handle);
+    $result = $apiInstance->createCustomerNoteJson($handle, $createCustomerNote);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->createCustomerNoteJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\CreateCustomerNote**](../Model/CreateCustomerNote.md)|  |
- **handle** | **string**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**|  | |
+| **createCustomerNote** | [**\Frisbii\Model\CreateCustomerNote**](../Model/CreateCustomerNote.md)|  | |
 
 ### Return type
 
@@ -173,20 +193,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteCustomer**
-> \Frisbii\Model\Customer deleteCustomer($handle)
+## `deleteCustomer()`
+
+```php
+deleteCustomer($handle): \Frisbii\Model\Customer
+```
 
 Delete customer
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -199,7 +227,7 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Customer handle
+$handle = 'handle_example'; // string | Customer handle
 
 try {
     $result = $apiInstance->deleteCustomer($handle);
@@ -207,14 +235,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->deleteCustomer: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Customer handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Customer handle | |
 
 ### Return type
 
@@ -226,20 +253,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteMetadata2**
-> deleteMetadata2($handle)
+## `deleteMetadata2()`
+
+```php
+deleteMetadata2($handle)
+```
 
 Delete metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -252,21 +287,20 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $apiInstance->deleteMetadata2($handle);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->deleteMetadata2: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
@@ -278,20 +312,28 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCustomer**
-> \Frisbii\Model\Customer getCustomer($handle)
+## `getCustomer()`
+
+```php
+getCustomer($handle): \Frisbii\Model\Customer
+```
 
 Get customer
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -304,7 +346,7 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Customer handle
+$handle = 'handle_example'; // string | Customer handle
 
 try {
     $result = $apiInstance->getCustomer($handle);
@@ -312,14 +354,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->getCustomer: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Customer handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Customer handle | |
 
 ### Return type
 
@@ -331,20 +372,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCustomerNotes**
-> \Frisbii\Model\CustomerNote[] getCustomerNotes($handle)
+## `getCustomerNotes()`
+
+```php
+getCustomerNotes($handle): \Frisbii\Model\CustomerNote[]
+```
 
 Get customer notes
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -357,7 +406,7 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Customer handle
+$handle = 'handle_example'; // string | Customer handle
 
 try {
     $result = $apiInstance->getCustomerNotes($handle);
@@ -365,14 +414,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->getCustomerNotes: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Customer handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Customer handle | |
 
 ### Return type
 
@@ -384,20 +432,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getMetadata2**
-> map[string,object] getMetadata2($handle)
+## `getMetadata2()`
+
+```php
+getMetadata2($handle): array<string,object>
+```
 
 Get metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -410,7 +466,7 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
 
 try {
     $result = $apiInstance->getMetadata2($handle);
@@ -418,18 +474,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->getMetadata2: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -437,20 +492,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateCustomerJson**
-> \Frisbii\Model\Customer updateCustomerJson($body, $handle)
+## `updateCustomerJson()`
+
+```php
+updateCustomerJson($handle, $updateCustomer): \Frisbii\Model\Customer
+```
 
 Update customer
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -463,24 +526,23 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\UpdateCustomer(); // \Frisbii\Model\UpdateCustomer | 
-$handle = "handle_example"; // string | Customer handle
+$handle = 'handle_example'; // string | Customer handle
+$updateCustomer = new \Frisbii\Model\UpdateCustomer(); // \Frisbii\Model\UpdateCustomer
 
 try {
-    $result = $apiInstance->updateCustomerJson($body, $handle);
+    $result = $apiInstance->updateCustomerJson($handle, $updateCustomer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->updateCustomerJson: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Frisbii\Model\UpdateCustomer**](../Model/UpdateCustomer.md)|  |
- **handle** | **string**| Customer handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Customer handle | |
+| **updateCustomer** | [**\Frisbii\Model\UpdateCustomer**](../Model/UpdateCustomer.md)|  | |
 
 ### Return type
 
@@ -492,20 +554,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateMetadata2**
-> map[string,object] updateMetadata2($body, $handle)
+## `updateMetadata2()`
+
+```php
+updateMetadata2($handle, $requestBody): array<string,object>
+```
 
 Create or update metadata
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basicAuth
 $config = Frisbii\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -518,28 +588,27 @@ $apiInstance = new Frisbii\Api\CustomerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Frisbii\Model\map(); // map[string,object] | 
-$handle = "handle_example"; // string | Resource handle
+$handle = 'handle_example'; // string | Resource handle
+$requestBody = array('key' => new \stdClass); // array<string,object>
 
 try {
-    $result = $apiInstance->updateMetadata2($body, $handle);
+    $result = $apiInstance->updateMetadata2($handle, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->updateMetadata2: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**map[string,object]**](../Model/map.md)|  |
- **handle** | **string**| Resource handle |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **handle** | **string**| Resource handle | |
+| **requestBody** | [**array<string,object>**](../Model/object.md)|  | |
 
 ### Return type
 
-**map[string,object]**
+**array<string,object>**
 
 ### Authorization
 
@@ -547,8 +616,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

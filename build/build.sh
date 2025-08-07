@@ -1,4 +1,10 @@
-java -jar swagger-codegen-cli-3.0.52.jar generate -i https://api.frisbii.com/openapi.json -l php -c config.json -o ..
+#java -jar swagger-codegen-cli-3.0.71.jar generate -i https://api.frisbii.com/openapi.json -l php -c config.json -o ..
+java -jar openapi-generator-cli.jar generate \
+  -i https://api.frisbii.com/openapi.json \
+  -g php \
+  -c config.json \
+  -o ../SwaggerClient-php
+
 if [ -d ../SwaggerClient-php ]; then
   for d in docs lib test; do
     if [ -d ../SwaggerClient-php/$d ]; then

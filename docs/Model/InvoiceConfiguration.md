@@ -1,16 +1,16 @@
-# InvoiceConfiguration
+# # InvoiceConfiguration
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**einvoicing_enabled** | **bool** |  | [optional] 
-**pdf_generation_enabled** | **bool** | Is Pdf generation of invoices enabled | 
-**accounting_invoice_enabled** | **bool** | Is creation of accounting invoices enabled | 
-**invoice_email_attachments_enabled** | **bool** | Should add attachment to invoice email | [optional] 
-**e_invoicing_enabled** | **bool** | Is e-invoicing enabled | [optional] 
-**zero_amount_invoice_created** | **bool** | Defines whether an accounting invoice is created in case of zero amount | [optional] 
-**subscription_invoice_prefix** | **string** | Subscription invoice prefix | [optional] 
-**payment_text_displayed** | **bool** | Defines whether payment text is displayed on pdf invoices | [optional] 
+**pdfGenerationEnabled** | **bool** | Is Pdf generation of invoices enabled |
+**accountingInvoiceEnabled** | **bool** | Is creation of accounting invoices enabled |
+**einvoicingEnabled** | **bool** |  | [optional]
+**invoiceEmailAttachmentsEnabled** | **bool** | Should add attachment to invoice email | [optional]
+**eInvoicingEnabled** | **bool** | Is e-invoicing enabled | [optional]
+**zeroAmountInvoiceCreated** | **bool** | Defines whether an accounting invoice is created in case of zero amount | [optional]
+**subscriptionInvoicePrefix** | **string** | Subscription invoice prefix | [optional]
+**paymentTextDisplayed** | **bool** | Defines whether payment text is displayed on pdf invoices | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
